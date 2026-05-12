@@ -50,6 +50,12 @@ try:
 except ImportError:
     HAS_CURL_CFFI = False
 
+try:
+    from playwright.sync_api import sync_playwright  # type: ignore
+    HAS_PLAYWRIGHT = True
+except ImportError:
+    HAS_PLAYWRIGHT = False
+
 
 DEFAULT_HEADERS = {
     "User-Agent": (
@@ -105,9 +111,19 @@ def make_requests_session() -> requests.Session:
     return s
 
 
+class _FakeResponse:
+    """Минимальный аналог requests.Response для Playwright-бэкенда."""
+    def __init__(self, text: str, status: int, content_type: str = "text/html"):
+        self.text = text
+        self.status_code = status
+        self.headers = {"Content-Type": content_type}
+
+
 class Fetcher:
     def __init__(self, backend: str):
         self.backend = backend
+        self._pw = None  # ссылка на playwright, если используется
+
         if backend == "requests":
             self.session = make_requests_session()
         elif backend == "curl_cffi":
@@ -115,10 +131,95 @@ class Fetcher:
                 sys.exit("curl_cffi не установлен. pip install curl_cffi")
             self.session = cffi_requests.Session(impersonate="chrome124")
             self.session.headers.update(DEFAULT_HEADERS)
+        elif backend == "playwright":
+            if not HAS_PLAYWRIGHT:
+                sys.exit("playwright не установлен. pip install playwright && "
+                         "playwright install chromium")
+            self._pw = sync_playwright().start()
+            self._browser = self._pw.chromium.launch(headless=True)
+            self._context = self._browser.new_context(
+                user_agent=DEFAULT_HEADERS["User-Agent"],
+                viewport={"width": 1280, "height": 900},
+                locale="en-US",
+            )
+            # Блокируем тяжёлые ресурсы и трекинг — это ускоряет загрузку и
+            # помогает странице "стабилизироваться" быстрее. Нам нужен HTML
+            # и навигационные ссылки, картинки/шрифты/видео не нужны.
+            BLOCKED_RESOURCE_TYPES = {"image", "media", "font"}
+            BLOCKED_HOSTS = (
+                "google-analytics.com", "googletagmanager.com",
+                "doubleclick.net", "facebook.com", "facebook.net",
+                "hotjar.com", "segment.io", "segment.com",
+                "mixpanel.com", "amplitude.com", "fullstory.com",
+                "intercom.io", "intercom.com", "sentry.io",
+                "datadoghq.com", "plausible.io", "posthog.com",
+            )
+
+            def _route(route):  # type: ignore
+                req = route.request
+                if req.resource_type in BLOCKED_RESOURCE_TYPES:
+                    return route.abort()
+                if any(h in req.url for h in BLOCKED_HOSTS):
+                    return route.abort()
+                return route.continue_()
+
+            self._context.route("**/*", _route)
         else:
             sys.exit(f"Неизвестный backend: {backend}")
 
+    def close(self) -> None:
+        if self.backend == "playwright" and self._pw is not None:
+            try:
+                self._context.close()
+                self._browser.close()
+                self._pw.stop()
+            except Exception:
+                pass
+
     def get(self, url: str, referer: str | None = None, timeout: int = 30):
+        if self.backend == "playwright":
+            page = self._context.new_page()
+            try:
+                extra_headers = {"Accept-Language": "en-US,en;q=0.9,ru;q=0.8"}
+                if referer:
+                    extra_headers["Referer"] = referer
+                page.set_extra_http_headers(extra_headers)
+
+                # NB: НЕ используем wait_until="networkidle" — на современных
+                # SPA сайтах с аналитикой/телеметрией сеть никогда не стихает
+                # полностью, и goto падает по таймауту. Стратегия:
+                #   1) ждём domcontentloaded — это быстро и надёжно
+                #   2) пробуем дождаться контентного селектора (h1/main/article)
+                #   3) если не пришёл — даём короткое доп-время и всё равно
+                #      берём что есть
+                resp = page.goto(url, wait_until="domcontentloaded",
+                                 timeout=timeout * 1000)
+                status = resp.status if resp else 200
+
+                # Ждём появления реального контента. Перебираем селекторы:
+                # сначала самые специфичные, потом общие.
+                content_appeared = False
+                for sel in ["article", "main h1", "main", "h1",
+                            "[class*=markdown]", "[class*=prose]"]:
+                    try:
+                        page.wait_for_selector(sel, timeout=3000, state="visible")
+                        content_appeared = True
+                        break
+                    except Exception:
+                        continue
+
+                if not content_appeared:
+                    # последняя попытка — просто подождать чуть-чуть, может JS успеет
+                    try:
+                        page.wait_for_timeout(2000)
+                    except Exception:
+                        pass
+
+                html = page.content()
+                return _FakeResponse(html, status, "text/html")
+            finally:
+                page.close()
+
         headers = {}
         if referer:
             headers["Referer"] = referer
@@ -144,12 +245,19 @@ def in_scope(url: str, root: str) -> bool:
 
 
 def slugify(text: str, max_len: int = 60) -> str:
-    """welcome-to-pydantic из 'Welcome to Pydantic'."""
-    # Убираем диакритику: 'Café' → 'Cafe'
-    text = unicodedata.normalize("NFKD", text)
-    text = "".join(c for c in text if not unicodedata.combining(c))
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+    """
+    Превращает заголовок в slug, пригодный для имени файла.
+    Сохраняет Unicode-буквы (кириллицу и т.п.), так что 'Ресурсы' → 'ресурсы',
+    а не пустота. Пробелы и пунктуация → дефис.
+    """
+    # NFKC, а не NFKD: NFKD разлагает 'ё' на 'е'+'¨' и теряет смысл.
+    # NFKC компонует обратно и нормализует совместимые символы (полноширинные и т.п.).
+    text = unicodedata.normalize("NFKC", text).lower()
+    # Оставляем любые "буквы" (\w в Python с re.UNICODE по умолчанию) и цифры.
+    # Всё остальное (пробелы, пунктуация, эмодзи) → дефис.
+    text = re.sub(r"[^\w\d]+", "-", text, flags=re.UNICODE)
+    # подчёркивания превратим в дефисы, чтобы префикс `01_` остался единственным разделителем
+    text = text.replace("_", "-").strip("-")
     return text[:max_len] or "page"
 
 
@@ -178,11 +286,72 @@ NAV_CANDIDATES = [
 
 def find_nav_container(soup: BeautifulSoup, root: str) -> Tag | None:
     """
-    Находит контейнер навигации эвристикой. Среди кандидатов
-    (nav, aside, sidebar/menu/toc/navigation) выбираем тот, у которого
-    больше всего внутренних ссылок, но это НЕ body/html (защита от случая,
-    когда селектор `[class*=...]` случайно матчится на корень).
+    Находит контейнер навигации, перебирая стратегии от более точной к
+    более общей:
+      1) Несколько элементов с одинаковым id (Mintlify-подобные сайты, где
+         каждая группа сайдбара — <ul id="sidebar-group">) → их общий родитель.
+      2) Стандартные кандидаты: <nav>, <aside>, или класс содержит
+         sidebar/menu/toc/navigation. Выбирается тот, что с максимумом doc-ссылок.
+      3) Самый плотный по doc-ссылкам контейнер вообще (последний fallback).
     """
+    def tag_priority(t: Tag) -> int:
+        if t.name == "nav":
+            return 3
+        if t.name == "aside":
+            return 2
+        return 1
+
+    def count_doc_links(el: Tag) -> int:
+        n = 0
+        for a in el.find_all("a", href=True):
+            href = a["href"].strip()
+            if not href or href.startswith("#") or href.startswith("javascript:"):
+                continue
+            absurl = normalize(urljoin(root, href))
+            if absurl.startswith(root) and "#" not in href:
+                n += 1
+        return n
+
+    # === Стратегия 1: повторяющийся id-шаблон ===
+    # Mintlify / некоторые другие движки делают сайдбар из нескольких <ul>
+    # или <div> с одинаковым id (что валидно нарушает HTML-стандарт, но
+    # повсеместно встречается). Это очень сильный сигнал.
+    id_groups: dict[str, list[Tag]] = {}
+    for el in soup.find_all(["ul", "ol", "div", "section"]):
+        eid = el.get("id", "")
+        if eid:
+            id_groups.setdefault(eid, []).append(el)
+
+    def find_common_parent(elements: list[Tag]) -> Tag | None:
+        if len(elements) < 2:
+            return None
+        rest = elements[1:]
+        for p in elements[0].parents:
+            if p.name in ("body", "html"):
+                return None
+            if all(p in el.parents for el in rest):
+                return p
+        return None
+
+    id_candidates: list[tuple[int, int, Tag]] = []  # (doc_links, depth, parent)
+    for key, els in id_groups.items():
+        if len(els) < 2:
+            continue
+        group_links = sum(count_doc_links(e) for e in els)
+        if group_links < 5:
+            continue
+        parent = find_common_parent(els)
+        if parent is None:
+            continue
+        parent_links = count_doc_links(parent)
+        depth = len(list(parent.parents))
+        id_candidates.append((parent_links, depth, parent))
+
+    if id_candidates:
+        id_candidates.sort(key=lambda p: (p[0], p[1]), reverse=True)
+        return id_candidates[0][2]
+
+    # === Стратегия 2: стандартные семантические кандидаты ===
     best: Tag | None = None
     best_count = 0
     seen_elements: set[int] = set()
@@ -192,31 +361,45 @@ def find_nav_container(soup: BeautifulSoup, root: str) -> Tag | None:
             if id(el) in seen_elements:
                 continue
             seen_elements.add(id(el))
-
-            # явная защита от случайного выбора корня
             if el.name in ("body", "html"):
                 continue
-
-            links = [a for a in el.find_all("a", href=True)
-                     if normalize(urljoin(root, a["href"])).startswith(root)]
-            n = len(links)
+            n = count_doc_links(el)
             if n < 3:
                 continue
 
-            # Предпочитаем меньший контейнер с тем же количеством ссылок:
-            # если nav-container вложен в aside и оба имеют 50 ссылок —
-            # берём внутренний (он точнее). Но в нашем переборе порядок не
-            # гарантирован, поэтому добавим тай-брейк по глубине.
+            replace = False
             if n > best_count:
+                replace = True
+            elif n == best_count and best is not None:
+                if tag_priority(el) > tag_priority(best):
+                    replace = True
+                elif tag_priority(el) == tag_priority(best):
+                    if len(list(el.parents)) < len(list(best.parents)):
+                        replace = True
+            if replace:
                 best = el
                 best_count = n
-            elif n == best_count and best is not None:
-                # тот же счёт — предпочитаем менее глубокий (более внешний) элемент:
-                # это, как правило, и есть «корень» навигации, а не один из <li>.
-                if len(list(el.parents)) < len(list(best.parents)):
-                    best = el
 
-    return best
+    if best is not None:
+        return best
+
+    # === Стратегия 3: самый плотный по doc-ссылкам контейнер ===
+    candidate: Tag | None = None
+    candidate_count = 0
+    for el in soup.find_all(["div", "section", "ul"]):
+        if el.name in ("body", "html"):
+            continue
+        n = count_doc_links(el)
+        if n < 5:
+            continue
+        if n > candidate_count:
+            candidate = el
+            candidate_count = n
+        elif n == candidate_count and candidate is not None:
+            if len(list(el.parents)) > len(list(candidate.parents)):
+                candidate = el
+
+    return candidate
 
 
 def parse_nav_order(soup: BeautifulSoup, root: str
@@ -289,13 +472,26 @@ def parse_nav_order(soup: BeautifulSoup, root: str
             entries.append((link_depth(el), text, absurl))
             continue
 
-        # Группирующие заголовки. Берём только узкий набор:
+        # Группирующие заголовки. Берём узкий набор:
         #   - <summary> в <details>
+        #   - <label> с классом md-nav__title или подобным (MkDocs Material:
+        #     label служит "кликабельным" заголовком свёрнутого раздела,
+        #     внутри <li class*=nested> рядом с <input type=checkbox> и <nav>)
         #   - заголовки h2..h6
         #   - <span>/<button> с признаками заголовка (label/title/heading/group в классе/role)
-        #   - <span>/<button>, прямой ребёнок <li>, у которого есть сосед <ul>
+        #   - <span>/<button>/<label>, прямой ребёнок <li>, рядом — вложенный список или nav
         if el.name in ("summary", "h2", "h3", "h4", "h5", "h6"):
             entries.append((link_depth(el), text, None))
+            continue
+
+        if el.name == "label":
+            classes = " ".join(el.get("class", []))
+            # либо явный класс заголовка, либо label рядом с вложенным nav/ul
+            is_nav_title = re.search(r"title|nav__link|label|heading", classes, re.I)
+            is_li_label = (el.parent and el.parent.name == "li"
+                           and el.parent.find(["ul", "ol", "nav"], recursive=False))
+            if is_nav_title or is_li_label:
+                entries.append((link_depth(el), text, None))
             continue
 
         if el.name in ("span", "button"):
@@ -309,7 +505,6 @@ def parse_nav_order(soup: BeautifulSoup, root: str
             is_li_label = (el.parent and el.parent.name == "li"
                            and el.parent.find(["ul", "ol", "nav"], recursive=False))
             if looks_like_heading or is_li_label:
-                # убедимся, что мы не дублируем уже добавленную ссылку с тем же текстом
                 inner_a = el.find("a")
                 if inner_a is None or inner_a.get_text(" ", strip=True) != text:
                     entries.append((link_depth(el), text, None))
@@ -398,10 +593,13 @@ def extract(html: str, page_url: str) -> tuple[str, str, list[str]]:
     soup = BeautifulSoup(html, "html.parser")
 
     content = (
-        soup.select_one(".sl-markdown-content")
-        or soup.select_one(".md-content__inner")
+        soup.select_one(".sl-markdown-content")        # Astro Starlight
+        or soup.select_one(".md-content__inner")       # MkDocs Material
         or soup.select_one(".md-content")
         or soup.select_one("article")
+        or soup.select_one("#content-area")            # Mintlify
+        or soup.select_one("#body-content")            # Mintlify (внешний)
+        or soup.select_one("[id*=content-area]")
         or soup.select_one(".prose")
         or soup.find("main")
         or soup.body
@@ -530,6 +728,14 @@ def cleanup_duplicates(md: str) -> str:
 def crawl(start: str, output_dir: Path, max_pages: int,
           delay: float, backend: str, resume: bool) -> None:
     fetcher = Fetcher(backend)
+    try:
+        _crawl_impl(fetcher, start, output_dir, max_pages, delay, resume)
+    finally:
+        fetcher.close()
+
+
+def _crawl_impl(fetcher: Fetcher, start: str, output_dir: Path,
+                max_pages: int, delay: float, resume: bool) -> None:
     root = start if start.endswith("/") else start + "/"
 
     # Сначала качаем стартовую страницу и извлекаем навигацию для всего сайта.
@@ -655,17 +861,26 @@ def main() -> int:
     p.add_argument("--output", default="./docs_md")
     p.add_argument("--max-pages", type=int, default=2000)
     p.add_argument("--delay", type=float, default=0.3)
-    p.add_argument("--backend", choices=("requests", "curl_cffi"), default="requests")
+    p.add_argument("--backend",
+                   choices=("requests", "curl_cffi", "playwright"),
+                   default="requests",
+                   help="HTTP-бэкенд. playwright — рендеринг JS (для SPA)")
     p.add_argument("--resume", action="store_true")
     args = p.parse_args()
 
     out = Path(args.output).resolve()
     out.mkdir(parents=True, exist_ok=True)
 
+    backends_available = []
+    backends_available.append("requests")
+    if HAS_CURL_CFFI:
+        backends_available.append("curl_cffi")
+    if HAS_PLAYWRIGHT:
+        backends_available.append("playwright")
     print(f"→ корень обхода: {args.start}")
     print(f"→ сохраняю в:    {out}")
-    print(f"→ бэкенд:        {args.backend}"
-          f"{' (curl_cffi доступен)' if HAS_CURL_CFFI else ''}")
+    print(f"→ бэкенд:        {args.backend}  "
+          f"(доступны: {', '.join(backends_available)})")
     if args.resume:
         print(f"→ режим resume")
 

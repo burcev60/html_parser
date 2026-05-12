@@ -9,5 +9,6 @@ dependencies = [
     "brotli>=1.2.0",
     "curl-cffi>=0.15.0",
     "html2text>=2025.4.15",
+    "playwright>=1.59.0",
     "requests>=2.34.0",
 ]

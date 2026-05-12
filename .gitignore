@@ -13,3 +13,5 @@ debug.py
 diag.py
 diag2.py
 sample.html
+diag_nav.py
+*.html

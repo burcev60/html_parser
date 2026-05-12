@@ -1,0 +1,859 @@
+---
+title: Security
+source: https://qdrant.tech/documentation/security/?q=jwt
+---
+
+# Security
+
+Qdrant supports various security features to help you secure your instance. Most of these must to be explicitly configured to make your instance production ready. Please read the following section carefully.
+
+## Secure Your Instance
+
+Custom deployments are **not** secure by default and are **not** production ready. Qdrant Cloud deployments are always secure and production ready.
+
+By default, all self-deployed Qdrant instances are not secure. They are open to all network interfaces and do not have any kind of authentication configured. They may be open to everybody on the internet without any restrictions. You must therefore take security measures to make your instance production-ready. Please read through this section carefully for instructions on how to secure your instance.
+
+Instances deployed via Qdrant Cloud are always secure by default. Refer to [Authentication](https://qdrant.tech/documentation/cloud/authentication/) ([local](./../cloud/authentication.md)) and [Client IP Restrictions](https://qdrant.tech/documentation/cloud/configure-cluster/#client-ip-restrictions) ([local](./../cloud/configure-cluster.md#client-ip-restrictions)).
+
+To properly secure your own instance, we strongly recommend taking the following steps:
+
+  1. [Authentication](#authentication): set up an API key to prevent unauthorized access.  
+The most important step to prevent unauthenticated actors from accessing your data.
+  2. [Network Bind](#network-bind): bind to a specific network interface or IP address.  
+When developing locally, bind to `127.0.0.1` to prevent all external access. When deploying to production, bind to a private network interface or IP.
+  3. [TLS](#tls): enable encrypted traffic everywhere using TLS.
+
+## Authentication
+
+ _Available as of v1.2.0_
+
+Qdrant supports a simple form of client authentication using a static API key. This can be used to secure your instance.
+
+To enable API key based authentication in your own Qdrant instance you must specify a key in the configuration:
+
+```
+
+    service:
+      # Set an api-key.
+      # If set, all requests must include a header with the api-key.
+      # example header: `api-key: <API-KEY>`
+      #
+      # If you enable this you should also enable TLS.
+      # (Either above or via an external service like nginx.)
+      # Sending an api-key over an unencrypted channel is insecure.
+      api_key: your_secret_api_key_here
+    
+
+```
+
+Or alternatively, you can use the environment variable:
+
+```
+
+    docker run -p 6333:6333 \
+        -e QDRANT__SERVICE__API_KEY=your_secret_api_key_here \
+        qdrant/qdrant
+    
+
+```
+
+[TLS](#tls) must be used to prevent leaking the API key over an unencrypted connection.
+
+For using API key based authentication in Qdrant Cloud see the cloud [Authentication](https://qdrant.tech/documentation/cloud/authentication/) ([local](./../cloud/authentication.md)) section.
+
+The API key then needs to be present in all REST or gRPC requests to your instance. All official Qdrant clients for Python, Go, Rust, .NET and Java support the API key parameter.
+
+```
+
+    curl \
+      -X GET https://localhost:6333 \
+      --header 'api-key: your_secret_api_key_here'
+    
+
+```
+
+```
+
+    from qdrant_client import QdrantClient
+    
+    client = QdrantClient(
+        url="https://localhost:6333",
+        api_key="your_secret_api_key_here",
+    )
+    
+
+```
+
+```
+
+    import { QdrantClient } from "@qdrant/js-client-rest";
+    
+    const client = new QdrantClient({
+      url: "http://localhost",
+      port: 6333,
+      apiKey: "your_secret_api_key_here",
+    });
+    
+
+```
+
+```
+
+    use qdrant_client::Qdrant;
+    
+    let client = Qdrant::from_url("https://xyz-example.eu-central.aws.cloud.qdrant.io:6334")
+        .api_key("<paste-your-api-key-here>")
+        .build()?;
+    
+
+```
+
+```
+
+    import io.qdrant.client.QdrantClient;
+    import io.qdrant.client.QdrantGrpcClient;
+    
+    QdrantClient client =
+        new QdrantClient(
+            QdrantGrpcClient.newBuilder(
+                    "xyz-example.eu-central.aws.cloud.qdrant.io",
+                    6334,
+                    true)
+                .withApiKey("<paste-your-api-key-here>")
+                .build());
+    
+
+```
+
+```
+
+    using Qdrant.Client;
+    
+    var client = new QdrantClient(
+      host: "xyz-example.eu-central.aws.cloud.qdrant.io",
+      https: true,
+      apiKey: "<paste-your-api-key-here>"
+    );
+    
+
+```
+
+```
+
+    import "github.com/qdrant/go-client/qdrant"
+    
+    client, err := qdrant.NewClient(&qdrant.Config{
+    	Host:   "xyz-example.eu-central.aws.cloud.qdrant.io",
+    	Port:   6334,
+    	APIKey: "<paste-your-api-key-here>",
+    	UseTLS: true,
+    })
+    
+
+```
+
+Internal communication channels are **never** protected by an API key nor bearer tokens. Internal gRPC uses port 6335 by default if running in distributed mode. You must ensure that this port is not publicly reachable and can only be used for node communication. By default, this setting is disabled for Qdrant Cloud and the Qdrant Helm chart.
+
+### Read-Only API Key
+
+ _Available as of v1.7.0_
+
+In addition to the regular API key, Qdrant also supports a read-only API key. This key can be used to access read-only operations on the instance.
+
+```
+
+    service:
+      read_only_api_key: your_secret_read_only_api_key_here
+    
+
+```
+
+Or with the environment variable:
+
+```
+
+    export QDRANT__SERVICE__READ_ONLY_API_KEY=your_secret_read_only_api_key_here
+    
+
+```
+
+Both API keys can be used simultaneously.
+
+### Rotate an API Key
+
+ _Available as of v1.17.0_
+
+In a distributed deployment, you can rotate an API key without downtime. Use the `alt_api_key` setting to temporarily configure a second API key that acts identically to the primary `api_key`, allowing both the old and new API keys to be active at the same time.
+
+```
+
+    service:
+      api_key: your_current_api_key_here
+      alt_api_key: your_new_api_key_here
+    
+
+```
+
+To rotate an API key without downtime:
+
+  1. Configure each peer with the new key set as `alt_api_key`. Restart only one peer at a time to avoid downtime (rolling restart). During the rotation window, requests authenticated with either key are accepted.
+  2. Switch clients to the new key.
+  3. Perform another rolling restart of the peers, promoting the new key to `api_key` and removing `alt_api_key`.
+
+JWT tokens are tied to the key they were signed with and are **not** automatically migrated. They must be re-created after switching to the new key.
+
+### Granular Access Control with JWT
+
+ _Available as of v1.9.0_
+
+For more complex cases, Qdrant supports granular access control with [JSON Web Tokens (JWT)](https://jwt.io/). This allows you to create tokens which restrict access to data stored in your cluster, and build [Role-based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control) on top of that. In this way, you can define permissions for users and restrict access to sensitive endpoints.
+
+To enable JWT-based authentication in your own Qdrant instance you need to specify the `api-key` and enable the `jwt_rbac` feature in the configuration:
+
+```
+
+    service:
+      api_key: you_secret_api_key_here
+      jwt_rbac: true
+    
+
+```
+
+Or with the environment variables:
+
+```
+
+    export QDRANT__SERVICE__API_KEY=your_secret_api_key_here
+    export QDRANT__SERVICE__JWT_RBAC=true
+    
+
+```
+
+The `api_key` you set in the configuration will be used to encode and decode the JWTs, so –needless to say– keep it secure. If your `api_key` changes, all existing tokens will be invalid.
+
+To use JWT-based authentication, you need to provide it as a bearer token in the `Authorization` header, or as an key in the `Api-Key` header of your requests.
+
+```
+
+    Authorization: Bearer <JWT>
+    
+    // or
+    
+    Api-Key: <JWT>
+    
+
+```
+
+```
+
+    from qdrant_client import QdrantClient
+    
+    qdrant_client = QdrantClient(
+        "xyz-example.eu-central.aws.cloud.qdrant.io",
+        api_key="<JWT>",
+    )
+    
+
+```
+
+```
+
+    import { QdrantClient } from "@qdrant/js-client-rest";
+    
+    const client = new QdrantClient({
+      host: "xyz-example.eu-central.aws.cloud.qdrant.io",
+      apiKey: "<JWT>",
+    });
+    
+
+```
+
+```
+
+    use qdrant_client::Qdrant;
+    
+    let client = Qdrant::from_url("https://xyz-example.eu-central.aws.cloud.qdrant.io:6334")
+        .api_key("<JWT>")
+        .build()?;
+    
+
+```
+
+```
+
+    import io.qdrant.client.QdrantClient;
+    import io.qdrant.client.QdrantGrpcClient;
+    
+    QdrantClient client =
+        new QdrantClient(
+            QdrantGrpcClient.newBuilder(
+                    "xyz-example.eu-central.aws.cloud.qdrant.io",
+                    6334,
+                    true)
+                .withApiKey("<JWT>")
+                .build());
+    
+
+```
+
+```
+
+    using Qdrant.Client;
+    
+    var client = new QdrantClient(
+      host: "xyz-example.eu-central.aws.cloud.qdrant.io",
+      https: true,
+      apiKey: "<JWT>"
+    );
+    
+
+```
+
+```
+
+    import "github.com/qdrant/go-client/qdrant"
+    
+    client, err := qdrant.NewClient(&qdrant.Config{
+    	Host:   "xyz-example.eu-central.aws.cloud.qdrant.io",
+    	Port:   6334,
+    	APIKey: "<JWT>",
+    	UseTLS: true,
+    })
+    
+
+```
+
+#### Generating JSON Web Tokens
+
+Due to the nature of JWT, anyone who knows the `api_key` can generate tokens by using any of the existing libraries and tools, it is not necessary for them to have access to the Qdrant instance to generate them.
+
+For convenience, we have added a JWT generation tool the Qdrant Web UI under the 🔑 tab, if you’re using the default url, it will be at `http://localhost:6333/dashboard#/jwt`.
+
+  * **JWT Header** \- Qdrant uses the `HS256` algorithm to decode the tokens.
+
+```
+{
+          "alg": "HS256",
+          "typ": "JWT"
+        }
+        
+
+```
+
+  * **JWT Payload** \- You can include any combination of the [parameters available](#jwt-configuration) in the payload. Keep reading for more info on each one.
+
+```
+{
+          "exp": 1640995200, // Expiration time
+          "value_exists": ..., // Validate this token by looking for a point with a payload value
+          "access": "r", // Define the access level.
+        }
+        
+
+```
+
+**Signing the token** \- To confirm that the generated token is valid, it needs to be signed with the `api_key` you have set in the configuration. That would mean, that someone who knows the `api_key` gives the authorization for the new token to be used in the Qdrant instance. Qdrant can validate the signature, because it knows the `api_key` and can decode the token.
+
+The process of token generation can be done on the client side offline, and doesn’t require any communication with the Qdrant instance.
+
+Here is an example of libraries that can be used to generate JWT tokens:
+
+  * Python: [PyJWT](https://pyjwt.readthedocs.io/en/stable/)
+  * JavaScript: [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+  * Rust: [jsonwebtoken](https://crates.io/crates/jsonwebtoken)
+  * CLI: [jwt-cli](https://github.com/mike-engel/jwt-cli)
+
+Here is an example using `jwt-cli`:
+
+```
+
+    jwt encode --payload '{
+      "access": "r",
+      "exp": 1766055305
+    }' --secret 'your-api-key'
+    
+
+```
+
+#### JWT Configuration
+
+These are the available options, or **claims** in the JWT lingo. You can use them in the JWT payload to define its functionality.
+
+  * **`exp`** \- The expiration time of the token. This is a Unix timestamp in seconds. The token will be invalid after this time. The check for this claim includes a 30-second leeway to account for clock skew.
+
+```
+{
+          "exp": 1640995200, // Expiration time
+        }
+        
+
+```
+
+  * **`value_exists`** \- This is a claim that can be used to validate the token against the data stored in a collection. Structure of this claim is as follows:
+
+```
+{
+          "value_exists": {
+            "collection": "my_validation_collection",
+            "matches": [
+              { "key": "my_key", "value": "value_that_must_exist" }
+            ],
+          },
+        }
+        
+
+```
+
+If this claim is present, Qdrant will check if there is a point in the collection with the specified key-values. If it does, the token is valid.
+
+This claim is especially useful if you want to have an ability to revoke tokens without changing the `api_key`. Consider a case where you have a collection of users, and you want to revoke access to a specific user.
+
+```
+{
+          "value_exists": {
+            "collection": "users",
+            "matches": [
+              { "key": "user_id", "value": "andrey" },
+              { "key": "role", "value": "manager" }
+            ],
+          },
+        }
+        
+
+```
+
+You can create a token with this claim, and when you want to revoke access, you can change the `role` of the user to something else, and the token will be invalid.
+
+  * **`access`** \- This claim defines the [access level](#table-of-access) of the token. If this claim is present, Qdrant will check if the token has the required access level to perform the operation. If this claim is **not** present, **manage** access is assumed.
+
+It can provide global access with `r` for read-only, or `m` for manage. For example:
+
+```
+{
+          "access": "r"
+        }
+        
+
+```
+
+It can also be specific to one or more collections. The `access` level for each collection is `r` for read-only, or `rw` for read-write, like this:
+
+```
+{
+          "access": [
+            {
+              "collection": "my_collection",
+              "access": "rw"
+            }
+          ]
+        }
+        
+
+```
+
+### Table of Access
+
+Check out this table to see which actions are allowed or denied based on the access level.
+
+This is also applicable to using api keys instead of tokens. In that case, `api_key` maps to **manage** , while `read_only_api_key` maps to **read-only**.
+
+**Symbols:** ✅ Allowed | ❌ Denied | 🟡 Allowed, but filtered
+
+Action| manage| read-only| collection read-write| collection read-only  
+---|---|---|---|---  
+list collections| ✅| ✅| 🟡| 🟡  
+get collection info| ✅| ✅| ✅| ✅  
+create collection| ✅| ❌| ❌| ❌  
+delete collection| ✅| ❌| ❌| ❌  
+update collection params| ✅| ❌| ❌| ❌  
+get collection cluster info| ✅| ✅| ✅| ✅  
+collection exists| ✅| ✅| ✅| ✅  
+update collection cluster setup| ✅| ❌| ❌| ❌  
+update aliases| ✅| ❌| ❌| ❌  
+list collection aliases| ✅| ✅| 🟡| 🟡  
+list aliases| ✅| ✅| 🟡| 🟡  
+create shard key| ✅| ❌| ❌| ❌  
+delete shard key| ✅| ❌| ❌| ❌  
+create payload index| ✅| ❌| ✅| ❌  
+delete payload index| ✅| ❌| ✅| ❌  
+list collection snapshots| ✅| ✅| ✅| ✅  
+create collection snapshot| ✅| ❌| ✅| ❌  
+delete collection snapshot| ✅| ❌| ✅| ❌  
+download collection snapshot| ✅| ✅| ✅| ✅  
+upload collection snapshot| ✅| ❌| ❌| ❌  
+recover collection snapshot| ✅| ❌| ❌| ❌  
+list shard snapshots| ✅| ✅| ✅| ✅  
+create shard snapshot| ✅| ❌| ✅| ❌  
+delete shard snapshot| ✅| ❌| ✅| ❌  
+download shard snapshot| ✅| ✅| ✅| ✅  
+upload shard snapshot| ✅| ❌| ❌| ❌  
+recover shard snapshot| ✅| ❌| ❌| ❌  
+list full snapshots| ✅| ✅| ❌| ❌  
+create full snapshot| ✅| ❌| ❌| ❌  
+delete full snapshot| ✅| ❌| ❌| ❌  
+download full snapshot| ✅| ✅| ❌| ❌  
+get cluster info| ✅| ✅| ❌| ❌  
+recover raft state| ✅| ❌| ❌| ❌  
+delete peer| ✅| ❌| ❌| ❌  
+get point| ✅| ✅| ✅| ✅  
+get points| ✅| ✅| ✅| ✅  
+upsert points| ✅| ❌| ✅| ❌  
+update points batch| ✅| ❌| ✅| ❌  
+delete points| ✅| ❌| ✅| ❌  
+update vectors| ✅| ❌| ✅| ❌  
+delete vectors| ✅| ❌| ✅| ❌  
+set payload| ✅| ❌| ✅| ❌  
+overwrite payload| ✅| ❌| ✅| ❌  
+delete payload| ✅| ❌| ✅| ❌  
+clear payload| ✅| ❌| ✅| ❌  
+scroll points| ✅| ✅| ✅| ✅  
+query points| ✅| ✅| ✅| ✅  
+search points| ✅| ✅| ✅| ✅  
+search groups| ✅| ✅| ✅| ✅  
+recommend points| ✅| ✅| ✅| ✅  
+recommend groups| ✅| ✅| ✅| ✅  
+discover points| ✅| ✅| ✅| ✅  
+count points| ✅| ✅| ✅| ✅  
+version| ✅| ✅| ✅| ✅  
+readyz, healthz, livez| ✅| ✅| ✅| ✅  
+telemetry| ✅| ✅| ❌| ❌  
+metrics| ✅| ✅| ❌| ❌  
+  
+## Audit Logging
+
+ _Available as of v1.17.0_
+
+Audit logging records all API operations that require authentication or authorization, and writes them to a log file in JSON format.
+
+Audit logging is not enabled by default. To enable it, use the following configuration options:
+
+```
+
+    audit:
+      enabled: false
+      dir: ./storage/audit
+      rotation: daily
+      max_log_files: 7
+      # Only enable when Qdrant is behind a trusted reverse proxy or load balancer.
+      # When true, the client IP is taken from the X-Forwarded-For header instead of
+      # the TCP connection. Enabling this on a publicly reachable instance allows
+      # clients to spoof their IP address in audit logs.
+      trust_forwarded_headers: false
+    
+
+```
+
+By default, audit logs are rotated daily, and the seven most recent log files are kept. To configure hourly rotation, set `rotation` to `hourly`. When the number of log files exceeds `max_log_files`, the oldest log file is deleted.
+
+Audit logging is verbose and audit logs can grow in size rapidly. Ensure that you have sufficient disk space.
+
+### Tracing IDs
+
+ _Available as of v1.18.0_
+
+You can attach a tracing ID to individual requests. When audit logging is enabled, Qdrant includes the tracing ID in the audit log entry, enabling the correlation of client-side operations with their corresponding log entries.
+
+Qdrant reads the tracing ID from the first matching header in the following order: `x-request-id`, `x-tracing-id`, `traceparent`. Tracing IDs longer than 256 characters are truncated.
+
+```
+
+    curl -X GET http://localhost:6333/collections \
+        --header 'api-key: your_api_key_here' \
+        --header 'x-request-id: my-trace-id'
+    
+
+```
+
+```
+
+    from qdrant_client import QdrantClient
+    from qdrant_client.context_headers import headers
+    
+    with headers({"x-request-id": "my-trace-id"}):
+        client.get_collections()
+    
+
+```
+
+```
+
+    import { QdrantClient, withHeaders } from "@qdrant/js-client-rest";
+    
+    const result = await withHeaders({ "x-request-id": "my-trace-id" }, () =>
+        client.getCollections()
+    );
+    
+
+```
+
+```
+
+    use qdrant_client::Qdrant;
+    
+    client
+        .with_header("x-request-id", "my-trace-id")
+        .list_collections()
+        .await?;
+    
+
+```
+
+```
+
+    import io.qdrant.client.QdrantClient;
+    import io.qdrant.client.QdrantGrpcClient;
+    import io.qdrant.client.RequestHeaders;
+    import io.grpc.Context;
+    
+    Context ctx = RequestHeaders.withHeader(Context.current(), "x-request-id", "my-trace-id");
+    ctx.run(() -> client.listCollectionsAsync());
+    
+
+```
+
+```
+
+    using Qdrant.Client;
+    
+    using (RequestHeaders.Use("x-request-id", "my-trace-id"))
+        await client.ListCollectionsAsync();
+    
+
+```
+
+```
+
+    import (
+    	"context"
+    
+    	"github.com/qdrant/go-client/qdrant"
+    )
+    
+    ctx := qdrant.WithHeader(context.Background(), "x-request-id", "my-trace-id")
+    client.ListCollections(ctx)
+    
+
+```
+
+### Query Audit Logs
+
+ _Available as of v1.18.0_
+
+The audit log can be queried via the `/audit/logs` API (requires [manage-level access](#table-of-access)). For example:
+
+```
+
+    curl -X POST 'https://YOUR-CLUSTER-URL:6333/audit/logs' \
+      -H 'api-key: QDRANT_API_KEY' \
+      -H 'Content-Type: application/json' \
+      -d '{}'
+    
+
+```
+
+By default, the API returns the 100 most recent entries, but you can change this number with the `limit` parameter (max 10,000).
+
+In a distributed cluster, the API aggregates results from all nodes before returning them. An optional `timeout` (seconds) query parameter controls how long to wait for remote peers in a cluster.
+
+Entries are returned in reverse-chronological order (newest first). Each entry has the following fields:
+
+Field| Type| Description  
+---|---|---  
+`timestamp`| ISO-8601| When the access check occurred.  
+`method`| string| API method name, for example `upsert_points`, `search_points`.  
+`auth_type`| `"Jwt"` | `"ApiKey"` | `"None"`| How the request was authenticated.  
+`result`| `"ok"` | `"denied"`| Whether access was granted.  
+`subject`| string| JWT `sub` claim. Only present for JWT-authenticated requests.  
+`remote`| string| Client IP address, if available.  
+`collection`| string| Collection name, for collection-scoped operations.  
+`tracing_id`| string| Value of the `x-request-id`, `x-tracing-id`, or `traceparent` request header.  
+`error`| string| Reason access was denied. Only present when `result` is `"denied"`.  
+  
+#### Narrowing Results with Time Ranges and Filters
+
+To narrow results to a specific time range, use the `time_from` (inclusive) and `time_to` (exclusive) parameters.
+
+The `filters` parameter enables exact-match filtering of entries based on specific field values. The parameter accepts a dictionary of field-value pairs. When specifying more than one pair, only entries that match all specified criteria are returned (logical AND).
+
+Unknown filter fields silently return no matches. Filter field names are case-sensitive: filtering on a field name with incorrect casing silently returns no matches.
+
+You can filter on any field in the entry fields table except `timestamp`. Use `time_from` and `time_to` for time-range filtering instead.
+
+For example, to retrieve the 50 most recent denied requests to the `my_collection` collection on March 26, 2026:
+
+```
+
+    curl -X POST 'https://YOUR-CLUSTER-URL:6333/audit/logs' \
+      -H 'api-key: QDRANT_API_KEY' \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "limit": 50,
+        "time_from": "2026-03-26T00:00:00Z",
+        "time_to": "2026-03-27T00:00:00Z",
+        "filters": {
+          "result": "denied",
+          "collection": "my_collection"
+        }
+      }'
+    
+
+```
+
+## Network Bind
+
+By default, a custom Qdrant deployment binds to all network interfaces. Your instance may be open to everybody on the internet. On a local development machine you likely have a firewall in place to prevent public access, but that may not be the case on a public VPS or dedicated server.
+
+It is highly recommended to bind to a specific interface or IP address to prevent unwanted access:
+
+  * when developing locally, bind to `127.0.0.1` so no external access is possible
+  * or, when deploying to production, bind to a private network interface or IP
+
+When using Docker, you may use the publish flag to bind to a specific interface. For example:
+
+```
+
+    docker run -p 127.0.0.1:6333:6333 qdrant/qdrant
+    
+
+```
+
+If using another type of deployment you may configure the bind address in Qdrant itself. Either set `service.host: 127.0.0.1` in the configuration, or use an environment variable like this:
+
+```
+
+    QDRANT__SERVICE__HOST=127.0.0.1 ./qdrant
+    
+
+```
+
+Managed Qdrant Cloud deployments are always secure by default. They are publicly accessible and bound to the endpoint that is assigned to the cluster. You may configure authentication with [API keys](https://qdrant.tech/documentation/cloud/authentication/) ([local](./../cloud/authentication.md)), and restrict access to specific IP addresses through [Client IP Restrictions](https://qdrant.tech/documentation/cloud/configure-cluster/#client-ip-restrictions) ([local](./../cloud/configure-cluster.md#client-ip-restrictions)). [Hybrid Cloud](https://qdrant.tech/documentation/hybrid-cloud/networking-logging-monitoring/) ([local](./../hybrid-cloud/networking-logging-monitoring.md)) and [Private Cloud](https://qdrant.tech/documentation/private-cloud/qdrant-cluster-management/#exposing-a-cluster) ([local](./../private-cloud/qdrant-cluster-management.md#exposing-a-cluster)) deployments have their own kind of configuration.
+
+## TLS
+
+ _Available as of v1.2.0_
+
+TLS for encrypted connections can be enabled on your Qdrant instance to secure connections.
+
+Connections are unencrypted by default. This allows sniffing and [MitM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) attacks.
+
+First make sure you have a certificate and private key for TLS, usually in `.pem` format. On your local machine you may use [mkcert](https://github.com/FiloSottile/mkcert#readme) to generate a self signed certificate.
+
+To enable TLS, set the following properties in the Qdrant configuration with the correct paths and restart:
+
+```
+
+    service:
+      # Enable HTTPS for the REST and gRPC API
+      enable_tls: true
+    
+    # TLS configuration.
+    # Required if either service.enable_tls or cluster.p2p.enable_tls is true.
+    tls:
+      # Server certificate chain file
+      cert: ./tls/cert.pem
+    
+      # Server private key file
+      key: ./tls/key.pem
+    
+
+```
+
+For internal communication when running cluster mode, TLS can be enabled with:
+
+```
+
+    cluster:
+      # Configuration of the inter-cluster communication
+      p2p:
+        # Use TLS for communication between peers
+        enable_tls: true
+    
+
+```
+
+With TLS enabled, you must start using HTTPS connections. For example:
+
+```
+
+    curl -X GET https://localhost:6333
+    
+
+```
+
+```
+
+    from qdrant_client import QdrantClient
+    
+    client = QdrantClient(
+        url="https://localhost:6333",
+    )
+    
+
+```
+
+```
+
+    import { QdrantClient } from "@qdrant/js-client-rest";
+    
+    const client = new QdrantClient({ url: "https://localhost", port: 6333 });
+    
+
+```
+
+```
+
+    use qdrant_client::Qdrant;
+    
+    let client = Qdrant::from_url("http://localhost:6334").build()?;
+    
+
+```
+
+Certificate rotation is enabled with a default refresh time of one hour. This reloads certificate files every hour while Qdrant is running. This way changed certificates are picked up when they get updated externally. The refresh time can be tuned by changing the `tls.cert_ttl` setting. You can leave this on, even if you don’t plan to update your certificates. Currently this is only supported for the REST API.
+
+Optionally, you can enable client certificate validation on the server against a local certificate authority. Set the following properties and restart:
+
+```
+
+    service:
+      # Check user HTTPS client certificate against CA file specified in tls config
+      verify_https_client_certificate: false
+    
+    # TLS configuration.
+    # Required if either service.enable_tls or cluster.p2p.enable_tls is true.
+    tls:
+      # Certificate authority certificate file.
+      # This certificate will be used to validate the certificates
+      # presented by other nodes during inter-cluster communication.
+      #
+      # If verify_https_client_certificate is true, it will verify
+      # HTTPS client certificate
+      #
+      # Required if cluster.p2p.enable_tls is true.
+      ca_cert: ./tls/cacert.pem
+    
+
+```
+
+## Hardening
+
+We recommend reducing the amount of permissions granted to Qdrant containers so that you can reduce the risk of exploitation. Here are some ways to reduce the permissions of a Qdrant container:
+
+  * Run Qdrant as a non-root user. This can help mitigate the risk of future container breakout vulnerabilities. Qdrant does not need the privileges of the root user for any purpose.
+
+    * You can use the image `qdrant/qdrant:<version>-unprivileged` instead of the default Qdrant image.
+    * You can use the flag `--user=1000:2000` when running [`docker run`](https://docs.docker.com/reference/cli/docker/container/run/).
+    * You can set [`user: 1000`](https://docs.docker.com/compose/compose-file/05-services/#user) when using Docker Compose.
+    * You can set [`runAsUser: 1000`](https://kubernetes.io/docs/tasks/configure-pod-container/security-context) when running in Kubernetes (our [Helm chart](https://github.com/qdrant/qdrant-helm) does this by default).
+  * Run Qdrant with a read-only root filesystem. This can help mitigate vulnerabilities that require the ability to modify system files, which is a permission Qdrant does not need. As long as the container uses mounted volumes for storage (`/qdrant/storage` and `/qdrant/snapshots` by default), Qdrant can continue to operate while being prevented from writing data outside of those volumes.
+
+    * You can use the flag `--read-only` when running [`docker run`](https://docs.docker.com/reference/cli/docker/container/run/).
+    * You can set [`read_only: true`](https://docs.docker.com/compose/compose-file/05-services/#read_only) when using Docker Compose.
+    * You can set [`readOnlyRootFilesystem: true`](https://kubernetes.io/docs/tasks/configure-pod-container/security-context) when running in Kubernetes (our [Helm chart](https://github.com/qdrant/qdrant-helm) does this by default).
+  * Block Qdrant’s external network access. This can help mitigate [server side request forgery attacks](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery), like via the [snapshot recovery API](https://api.qdrant.tech/api-reference/snapshots/recover-from-snapshot). Single-node Qdrant clusters do not require any outbound network access. Multi-node Qdrant clusters only need the ability to connect to other Qdrant nodes via TCP ports 6333, 6334, and 6335.
+
+    * You can use [`docker network create --internal <name>`](https://docs.docker.com/reference/cli/docker/network/create/#internal) and use that network when running [`docker run --network <name>`](https://docs.docker.com/reference/cli/docker/container/run/#network).
+    * You can create an [internal network](https://docs.docker.com/compose/compose-file/06-networks/#internal) when using Docker Compose.
+    * You can create a [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/) when using Kubernetes. Note that multi-node Qdrant clusters [will also need access to cluster DNS in Kubernetes](https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/11-deny-egress-traffic-from-an-application.md#allowing-dns-traffic).
+
+There are other techniques for reducing the permissions such as dropping [Linux capabilities](https://www.man7.org/linux/man-pages/man7/capabilities.7.html) depending on your deployment method, but the methods mentioned above are the most important.
