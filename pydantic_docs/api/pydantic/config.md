@@ -3,13 +3,11 @@ title: Configuration
 source: https://pydantic.dev/docs/validation/latest/api/pydantic/config
 ---
 
-# Configuration
-
 Configuration for Pydantic models.
 
 ## ConfigDict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict> ([local](./config.md#pydantic.config.ConfigDict)))
 
 **Bases:** [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>)
 
@@ -17,11 +15,11 @@ A TypedDict for configuring Pydantic behaviour.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#attributes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#attributes> ([local](./config.md#attributes)))
 
 #### title 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.title>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.title> ([local](./config.md#pydantic.config.ConfigDict.title)))
 
 The title for the generated JSON schema, defaults to the model’s name
 
@@ -29,7 +27,7 @@ The title for the generated JSON schema, defaults to the model’s name
 
 #### model_title_generator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.model_title_generator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.model_title_generator> ([local](./config.md#pydantic.config.ConfigDict.model_title_generator)))
 
 A callable that takes a model class and returns the title for it. Defaults to `None`.
 
@@ -37,7 +35,7 @@ A callable that takes a model class and returns the title for it. Defaults to `N
 
 #### field_title_generator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.field_title_generator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.field_title_generator> ([local](./config.md#pydantic.config.ConfigDict.field_title_generator)))
 
 A callable that takes a field’s name and info and returns title for it. Defaults to `None`.
 
@@ -45,7 +43,7 @@ A callable that takes a field’s name and info and returns title for it. Defaul
 
 #### str_to_lower 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_to_lower>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_to_lower> ([local](./config.md#pydantic.config.ConfigDict.str_to_lower)))
 
 Whether to convert all characters to lowercase for str types. Defaults to `False`.
 
@@ -53,7 +51,7 @@ Whether to convert all characters to lowercase for str types. Defaults to `False
 
 #### str_to_upper 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_to_upper>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_to_upper> ([local](./config.md#pydantic.config.ConfigDict.str_to_upper)))
 
 Whether to convert all characters to uppercase for str types. Defaults to `False`.
 
@@ -61,7 +59,7 @@ Whether to convert all characters to uppercase for str types. Defaults to `False
 
 #### str_strip_whitespace 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_strip_whitespace>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_strip_whitespace> ([local](./config.md#pydantic.config.ConfigDict.str_strip_whitespace)))
 
 Whether to strip leading and trailing whitespace for str types.
 
@@ -69,7 +67,7 @@ Whether to strip leading and trailing whitespace for str types.
 
 #### str_min_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_min_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_min_length> ([local](./config.md#pydantic.config.ConfigDict.str_min_length)))
 
 The minimum length for str types. Defaults to `None`.
 
@@ -77,7 +75,7 @@ The minimum length for str types. Defaults to `None`.
 
 #### str_max_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_max_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.str_max_length> ([local](./config.md#pydantic.config.ConfigDict.str_max_length)))
 
 The maximum length for str types. Defaults to `None`.
 
@@ -85,7 +83,7 @@ The maximum length for str types. Defaults to `None`.
 
 #### extra 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.extra>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.extra> ([local](./config.md#pydantic.config.ConfigDict.extra)))
 
 Whether to ignore, allow, or forbid extra data during model initialization. Defaults to `'ignore'`.
 
@@ -108,11 +106,7 @@ Three configuration values are available:
 
 ```
 
-This is the default behaviour.
-
-The `age` argument is ignored.
-
-  * `'forbid'`: Providing extra data is not permitted, and a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>) will be raised if this is the case:
+  * `'forbid'`: Providing extra data is not permitted, and a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) will be raised if this is the case:
 
 ```
  from pydantic import BaseModel, ConfigDict, ValidationError
@@ -188,8 +182,6 @@ By default, no validation will be applied to these extra items, but you can set 
 
 ```
 
-The `= Field(init=False)` does not have any effect at runtime, but prevents the `__pydantic_extra__` field from being included as a parameter to the model's `__init__` method by type checkers.
-
 As well as specifying an `extra` configuration value on the model, you can also provide it as an argument to the validation methods. This will override any `extra` configuration value set on the model:
 
 ```
@@ -218,7 +210,7 @@ As well as specifying an `extra` configuration value on the model, you can also 
 
 #### frozen 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.frozen>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.frozen> ([local](./config.md#pydantic.config.ConfigDict.frozen)))
 
 Whether models are faux-immutable, i.e. whether `__setattr__` is allowed, and also generates a `__hash__()` method for the model. This makes instances of the model potentially hashable if all the attributes are hashable. Defaults to `False`.
 
@@ -226,17 +218,17 @@ Whether models are faux-immutable, i.e. whether `__setattr__` is allowed, and al
 
 #### populate_by_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.populate_by_name>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.populate_by_name> ([local](./config.md#pydantic.config.ConfigDict.populate_by_name)))
 
 Whether an aliased field may be populated by its name as given by the model attribute, as well as the alias. Defaults to `False`.
 
 Caution
 
-`populate_by_name` usage is not recommended in v2.11+ and will be deprecated in v3. Instead, you should use the [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name>) configuration setting.
+`populate_by_name` usage is not recommended in v2.11+ and will be deprecated in v3. Instead, you should use the [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name> ([local](./config.md#pydantic.config.ConfigDict.validate_by_name))) configuration setting.
 
 When `validate_by_name=True` and `validate_by_alias=True`, this is strictly equivalent to the previous behavior of `populate_by_name=True`.
 
-In v2.11, we also introduced a [`validate_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_alias>) setting that introduces more fine grained control for validation behavior.
+In v2.11, we also introduced a [`validate_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_alias> ([local](./config.md#pydantic.config.ConfigDict.validate_by_alias))) setting that introduces more fine grained control for validation behavior.
 
 Here’s how you might go about using the new settings to achieve the same behavior:
 
@@ -259,17 +251,11 @@ Here’s how you might go about using the new settings to achieve the same behav
 
 ```
 
-The field `'my_field'` has an alias `'my_alias'`.
-
-The model is populated by the alias `'my_alias'`.
-
-The model is populated by the attribute name `'my_field'`.
-
 **Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
 #### use_enum_values 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.use_enum_values>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.use_enum_values> ([local](./config.md#pydantic.config.ConfigDict.use_enum_values)))
 
 Whether to populate models with the `value` property of enums, rather than the raw enum. This may be useful if you want to serialize `model.model_dump()` later. Defaults to `False`.
 
@@ -312,7 +298,7 @@ If you have an `Optional[Enum]` value that you set a default for, you need to us
 
 #### validate_assignment 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_assignment>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_assignment> ([local](./config.md#pydantic.config.ConfigDict.validate_assignment)))
 
 Whether to validate the data when the model is changed. Defaults to `False`.
 
@@ -335,10 +321,6 @@ In case the user changes the data after the model is created, the model is _not_
     #> name=123
 
 ```
-
-The validation happens only when the model is created.
-
-The validation does not happen when the data is changed.
 
 In case you want to revalidate the model when the data is changed, you can use `validate_assignment=True`:
 
@@ -364,17 +346,11 @@ In case you want to revalidate the model when the data is changed, you can use `
 
 ```
 
-You can either use class keyword arguments, or `model_config` to set `validate_assignment=True`.
-
-The validation happens when the model is created.
-
-The validation _also_ happens when the data is changed.
-
 **Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
 #### arbitrary_types_allowed 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.arbitrary_types_allowed>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.arbitrary_types_allowed> ([local](./config.md#pydantic.config.ConfigDict.arbitrary_types_allowed)))
 
 Whether arbitrary types are allowed for field types. Defaults to `False`.
 
@@ -435,7 +411,7 @@ Whether arbitrary types are allowed for field types. Defaults to `False`.
 
 #### from_attributes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.from_attributes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.from_attributes> ([local](./config.md#pydantic.config.ConfigDict.from_attributes)))
 
 Whether to build models and look up discriminators of tagged unions using python object attributes.
 
@@ -443,7 +419,7 @@ Whether to build models and look up discriminators of tagged unions using python
 
 #### loc_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.loc_by_alias>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.loc_by_alias> ([local](./config.md#pydantic.config.ConfigDict.loc_by_alias)))
 
 Whether to use the actual key provided in the data (e.g. alias) for error `loc`s rather than the field’s name. Defaults to `True`.
 
@@ -451,11 +427,11 @@ Whether to use the actual key provided in the data (e.g. alias) for error `loc`s
 
 #### alias_generator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.alias_generator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.alias_generator> ([local](./config.md#pydantic.config.ConfigDict.alias_generator)))
 
-A callable that takes a field name and returns an alias for it or an instance of [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator>). Defaults to `None`.
+A callable that takes a field name and returns an alias for it or an instance of [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator> ([local](./aliases.md#pydantic.aliases.AliasGenerator))). Defaults to `None`.
 
-When using a callable, the alias generator is used for both validation and serialization. If you want to use different alias generators for validation and serialization, you can use [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator>) instead.
+When using a callable, the alias generator is used for both validation and serialization. If you want to use different alias generators for validation and serialization, you can use [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator> ([local](./aliases.md#pydantic.aliases.AliasGenerator))) instead.
 
 If data source field names do not match your code style (e.g. CamelCase fields), you can automatically generate aliases using `alias_generator`. Here’s an example with a basic callable:
 
@@ -479,7 +455,7 @@ If data source field names do not match your code style (e.g. CamelCase fields),
 
 ```
 
-If you want to use different alias generators for validation and serialization, you can use [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator>).
+If you want to use different alias generators for validation and serialization, you can use [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator> ([local](./aliases.md#pydantic.aliases.AliasGenerator))).
 
 ```
  
@@ -505,11 +481,11 @@ If you want to use different alias generators for validation and serialization, 
 
 ```
 
-**Type:** [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)], [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)], [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`AliasGenerator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasGenerator> ([local](./aliases.md#pydantic.aliases.AliasGenerator))) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
 
 #### ignored_types 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ignored_types>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ignored_types> ([local](./config.md#pydantic.config.ConfigDict.ignored_types)))
 
 A tuple of types that may occur as values of class attributes without annotations. This is typically used for custom descriptors (classes that behave like `property`). If an attribute is set on a class without an annotation and has a type that is not in this tuple (or otherwise recognized by _pydantic_), an error will be raised. Defaults to `()`.
 
@@ -517,7 +493,7 @@ A tuple of types that may occur as values of class attributes without annotation
 
 #### allow_inf_nan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.allow_inf_nan>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.allow_inf_nan> ([local](./config.md#pydantic.config.ConfigDict.allow_inf_nan)))
 
 Whether to allow infinity (`+inf` an `-inf`) and NaN values to float and decimal fields. Defaults to `True`.
 
@@ -525,7 +501,7 @@ Whether to allow infinity (`+inf` an `-inf`) and NaN values to float and decimal
 
 #### json_schema_extra 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_extra>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_extra> ([local](./config.md#pydantic.config.ConfigDict.json_schema_extra)))
 
 A dict or callable to provide extra JSON schema properties. Defaults to `None`.
 
@@ -533,7 +509,7 @@ A dict or callable to provide extra JSON schema properties. Defaults to `None`.
 
 #### json_encoders 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_encoders>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_encoders> ([local](./config.md#pydantic.config.ConfigDict.json_encoders)))
 
 A `dict` of custom JSON encoders for specific types. Defaults to `None`.
 
@@ -545,7 +521,7 @@ This configuration option is a carryover from v1. We originally planned to remov
 
 #### strict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.strict>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.strict> ([local](./config.md#pydantic.config.ConfigDict.strict)))
 
 Whether strict validation is applied to all fields on the model.
 
@@ -568,9 +544,9 @@ To configure strict mode for all fields on a model, you can set `strict=True` on
 
 ```
 
-See [Strict Mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>) for more details.
+See [Strict Mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))) for more details.
 
-See the [Conversion Table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table>) for more details on how Pydantic converts data in both strict and lax modes.
+See the [Conversion Table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table> ([local](./../../concepts/conversion_table.md))) for more details on how Pydantic converts data in both strict and lax modes.
 
 ✦ New in v2
 
@@ -578,7 +554,7 @@ See the [Conversion Table](<https://pydantic.dev/docs/validation/latest/concepts
 
 #### revalidate_instances 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.revalidate_instances>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.revalidate_instances> ([local](./config.md#pydantic.config.ConfigDict.revalidate_instances)))
 
 When and how to revalidate models and dataclasses during validation. Can be one of:
 
@@ -610,12 +586,6 @@ This configuration only affects _the current model_ it is applied on, and does _
 
 ```
 
-This is the default behavior.
-
-The assignment is _not_ validated, unless you set [`validate_assignment`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_assignment>) in the configuration.
-
-Since `revalidate_instances` is set to `'never'`, the user instance is not revalidated.
-
 Here is an example demonstrating the behavior of `'subclass-instances'`:
 
 ```
@@ -644,19 +614,13 @@ Here is an example demonstrating the behavior of `'subclass-instances'`:
 
 ```
 
-The assignment is _not_ validated, unless you set [`validate_assignment`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_assignment>) in the configuration.
-
-Because `my_user` is a "direct" instance of `User`, it is _not_ being revalidated. It would have been the case if `revalidate_instances` was set to `'always'`.
-
-Because `my_sub_user` is an instance of a `User` subclass, it is being revalidated. In this case, Pydantic coerces `my_sub_user` to the defined `User` class defined on `Transaction`. If one of its fields had an invalid value, a validation error would have been raised.
-
 ✦ New in v2
 
 **Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘always’, ‘never’, ‘subclass-instances’]
 
 #### ser_json_timedelta 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_timedelta>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_timedelta> ([local](./config.md#pydantic.config.ConfigDict.ser_json_timedelta)))
 
 The format of JSON serialized timedeltas. Accepts the string values of `'iso8601'` and `'float'`. Defaults to `'iso8601'`.
 
@@ -665,13 +629,13 @@ The format of JSON serialized timedeltas. Accepts the string values of `'iso8601
 
 ↻ Changed in v2.12
 
-It is now recommended to use the [`ser_json_temporal`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.ser_json_temporal>) setting. `ser_json_timedelta` will be deprecated in v3.
+It is now recommended to use the [`ser_json_temporal`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.ser_json_temporal> ([local](./config.md#pydantic.config.ConfigDict.ser_json_temporal))) setting. `ser_json_timedelta` will be deprecated in v3.
 
 **Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘iso8601’, ‘float’]
 
 #### ser_json_temporal 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_temporal>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_temporal> ([local](./config.md#pydantic.config.ConfigDict.ser_json_temporal)))
 
 The format of JSON serialized temporal types from the [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) module. This includes:
 
@@ -690,13 +654,13 @@ Defaults to `'iso8601'`.
 
 ✦ New in v2.12
 
-This setting replaces [`ser_json_timedelta`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.ser_json_timedelta>), which will be deprecated in v3. `ser_json_temporal` adds more configurability for the other temporal types.
+This setting replaces [`ser_json_timedelta`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.ser_json_timedelta> ([local](./config.md#pydantic.config.ConfigDict.ser_json_timedelta))), which will be deprecated in v3. `ser_json_temporal` adds more configurability for the other temporal types.
 
 **Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘iso8601’, ‘seconds’, ‘milliseconds’]
 
 #### val_temporal_unit 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.val_temporal_unit>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.val_temporal_unit> ([local](./config.md#pydantic.config.ConfigDict.val_temporal_unit)))
 
 The unit to assume for validating numeric input for datetime-like types ([`datetime.datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) and [`datetime.date`](<https://docs.python.org/3/library/datetime.html#datetime.date>)). Can be one of:
 
@@ -717,7 +681,7 @@ Defaults to `'infer'`.
 
 #### ser_json_bytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_bytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_bytes> ([local](./config.md#pydantic.config.ConfigDict.ser_json_bytes)))
 
 The encoding of JSON serialized bytes. Defaults to `'utf8'`. Set equal to `val_json_bytes` to get back an equal value after serialization round trip.
 
@@ -729,7 +693,7 @@ The encoding of JSON serialized bytes. Defaults to `'utf8'`. Set equal to `val_j
 
 #### val_json_bytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.val_json_bytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.val_json_bytes> ([local](./config.md#pydantic.config.ConfigDict.val_json_bytes)))
 
 ✦ New in v2.9
 
@@ -743,7 +707,7 @@ The encoding of JSON serialized bytes to decode. Defaults to `'utf8'`. Set equal
 
 #### ser_json_inf_nan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_inf_nan>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.ser_json_inf_nan> ([local](./config.md#pydantic.config.ConfigDict.ser_json_inf_nan)))
 
 The encoding of JSON serialized infinity and NaN float values. Defaults to `'null'`.
 
@@ -755,7 +719,7 @@ The encoding of JSON serialized infinity and NaN float values. Defaults to `'nul
 
 #### validate_default 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_default>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_default> ([local](./config.md#pydantic.config.ConfigDict.validate_default)))
 
 Whether to validate default values during validation. Defaults to `False`.
 
@@ -763,7 +727,7 @@ Whether to validate default values during validation. Defaults to `False`.
 
 #### validate_return 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_return>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_return> ([local](./config.md#pydantic.config.ConfigDict.validate_return)))
 
 Whether to validate the return value from call validators. Defaults to `False`.
 
@@ -771,7 +735,7 @@ Whether to validate the return value from call validators. Defaults to `False`.
 
 #### protected_namespaces 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.protected_namespaces>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.protected_namespaces> ([local](./config.md#pydantic.config.ConfigDict.protected_namespaces)))
 
 A tuple of strings and/or regex patterns that prevent models from having fields with names that conflict with its existing members/methods.
 
@@ -779,7 +743,7 @@ Strings are matched on a prefix basis. For instance, with `'dog'`, having a fiel
 
 Regex patterns are matched on the entire field name. For instance, with the pattern `'^dog, having a field named `’dog’` will be disallowed,`, having a field named �IC1� will be disallowed, but `'dog_name'` will be accepted.
 
-Defaults to `('model_validate', 'model_dump')`. This default is used to prevent collisions with the existing (and possibly future) [validation](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>) and [serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data>) methods.
+Defaults to `('model_validate', 'model_dump')`. This default is used to prevent collisions with the existing (and possibly future) [validation](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./../../concepts/models.md#validating-data))) and [serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./../../concepts/serialization.md#serializing-data))) methods.
 
 ```
  
@@ -873,7 +837,7 @@ The default protected namespaces was changed from `('model_',)` to `('model_vali
 
 #### hide_input_in_errors 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.hide_input_in_errors>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.hide_input_in_errors> ([local](./config.md#pydantic.config.ConfigDict.hide_input_in_errors)))
 
 Whether to hide inputs when printing errors. Defaults to `False`.
 
@@ -926,21 +890,21 @@ You can hide the input value and type by setting the `hide_input_in_errors` conf
 
 #### defer_build 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.defer_build>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.defer_build> ([local](./config.md#pydantic.config.ConfigDict.defer_build)))
 
 Whether to defer model validator and serializer construction until the first model validation. Defaults to False.
 
-This can be useful to avoid the overhead of building models which are only used nested within other models, or when you want to manually define type namespace via [`Model.model_rebuild(_types_namespace=...)`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>).
+This can be useful to avoid the overhead of building models which are only used nested within other models, or when you want to manually define type namespace via [`Model.model_rebuild(_types_namespace=...)`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./base_model.md#pydantic.BaseModel.model_rebuild))).
 
 ↻ Changed in v2.10
 
-The setting also applies to [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>) and [type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter>).
+The setting also applies to [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./../../concepts/dataclasses.md))) and [type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./../../concepts/type_adapter.md))).
 
 **Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
 #### plugin_settings 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.plugin_settings>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.plugin_settings> ([local](./config.md#pydantic.config.ConfigDict.plugin_settings)))
 
 A `dict` of settings for plugins. Defaults to `None`.
 
@@ -948,7 +912,7 @@ A `dict` of settings for plugins. Defaults to `None`.
 
 #### schema_generator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.schema_generator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.schema_generator> ([local](./config.md#pydantic.config.ConfigDict.schema_generator)))
 
 The `GenerateSchema` class to use during core schema generation.
 
@@ -960,7 +924,7 @@ The `GenerateSchema` class is private and highly subject to change.
 
 #### json_schema_serialization_defaults_required 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_serialization_defaults_required>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_serialization_defaults_required> ([local](./config.md#pydantic.config.ConfigDict.json_schema_serialization_defaults_required)))
 
 Whether fields with default values should be marked as required in the serialization schema. Defaults to `False`.
 
@@ -1004,7 +968,7 @@ However, there are scenarios where this may be undesirable — in particular, if
 
 #### json_schema_mode_override 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_mode_override>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.json_schema_mode_override> ([local](./config.md#pydantic.config.ConfigDict.json_schema_mode_override)))
 
 If not `None`, the specified mode will be used to generate the JSON schema regardless of what `mode` was passed to the function call. Defaults to `None`.
 
@@ -1060,7 +1024,7 @@ It can be useful when using frameworks (such as FastAPI) that may generate diffe
 
 #### coerce_numbers_to_str 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.coerce_numbers_to_str>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.coerce_numbers_to_str> ([local](./config.md#pydantic.config.ConfigDict.coerce_numbers_to_str)))
 
 If `True`, enables automatic coercion of any `Number` type to `str` in “lax” (non-strict) mode. Defaults to `False`.
 
@@ -1104,7 +1068,7 @@ Pydantic doesn’t allow number types (`int`, `float`, `Decimal`) to be coerced 
 
 #### regex_engine 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.regex_engine>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.regex_engine> ([local](./config.md#pydantic.config.ConfigDict.regex_engine)))
 
 The regex engine to be used for pattern validation. Defaults to `'rust-regex'`.
 
@@ -1146,7 +1110,7 @@ If you use a compiled regex pattern, the `'python-re'` engine will be used regar
 
 #### validation_error_cause 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validation_error_cause>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validation_error_cause> ([local](./config.md#pydantic.config.ConfigDict.validation_error_cause)))
 
 If `True`, Python exceptions that were part of a validation failure will be shown as an exception group as a cause. Can be useful for debugging. Defaults to `False`.
 
@@ -1156,7 +1120,7 @@ If `True`, Python exceptions that were part of a validation failure will be show
 
 #### use_attribute_docstrings 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.use_attribute_docstrings>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.use_attribute_docstrings> ([local](./config.md#pydantic.config.ConfigDict.use_attribute_docstrings)))
 
 Whether docstrings of attributes (bare string literals immediately following the attribute declaration) should be used for field descriptions. Defaults to `False`.
 
@@ -1202,7 +1166,7 @@ Due to current limitations, attribute docstrings detection may not work as expec
 
 #### cache_strings 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.cache_strings>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.cache_strings> ([local](./config.md#pydantic.config.ConfigDict.cache_strings)))
 
 Whether to cache strings to avoid constructing new Python objects. Defaults to True.
 
@@ -1226,7 +1190,7 @@ If repeated strings are rare, it’s recommended to use `'keys'` or `'none'` to 
 
 #### validate_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_by_alias>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_by_alias> ([local](./config.md#pydantic.config.ConfigDict.validate_by_alias)))
 
 Whether an aliased field may be populated by its alias. Defaults to `True`.
 
@@ -1247,27 +1211,23 @@ Here’s an example of disabling validation by alias:
 
 ```
 
-The field `'my_field'` has an alias `'my_alias'`.
-
-The model can only be populated by the attribute name `'my_field'`.
-
 Caution
 
 You cannot set both `validate_by_alias` and `validate_by_name` to `False`. This would make it impossible to populate an attribute.
 
-See [usage errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false>) for an example.
+See [usage errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false> ([local](./../../errors/usage_errors.md#validate-by-alias-and-name-false))) for an example.
 
 If you set `validate_by_alias` to `False`, under the hood, Pydantic dynamically sets `validate_by_name` to `True` to ensure that validation can still occur.
 
 ✦ New in v2.11
 
-This setting was introduced in conjunction with [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name>) to empower users with more fine grained validation control.
+This setting was introduced in conjunction with [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name> ([local](./config.md#pydantic.config.ConfigDict.validate_by_name))) to empower users with more fine grained validation control.
 
 **Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
 #### validate_by_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_by_name>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.validate_by_name> ([local](./config.md#pydantic.config.ConfigDict.validate_by_name)))
 
 Whether an aliased field may be populated by its name as given by the model attribute. Defaults to `False`.
 
@@ -1290,27 +1250,21 @@ Whether an aliased field may be populated by its name as given by the model attr
 
 ```
 
-The field `'my_field'` has an alias `'my_alias'`.
-
-The model is populated by the alias `'my_alias'`.
-
-The model is populated by the attribute name `'my_field'`.
-
 Caution
 
 You cannot set both `validate_by_alias` and `validate_by_name` to `False`. This would make it impossible to populate an attribute.
 
-See [usage errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false>) for an example.
+See [usage errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false> ([local](./../../errors/usage_errors.md#validate-by-alias-and-name-false))) for an example.
 
 ✦ New in v2.11
 
-This setting was introduced in conjunction with [`validate_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_alias>) to empower users with more fine grained validation control. It is an alternative to [`populate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.populate_by_name>), that enables validation by name **and** by alias.
+This setting was introduced in conjunction with [`validate_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_alias> ([local](./config.md#pydantic.config.ConfigDict.validate_by_alias))) to empower users with more fine grained validation control. It is an alternative to [`populate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.populate_by_name> ([local](./config.md#pydantic.config.ConfigDict.populate_by_name))), that enables validation by name **and** by alias.
 
 **Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
 #### serialize_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.serialize_by_alias>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.serialize_by_alias> ([local](./config.md#pydantic.config.ConfigDict.serialize_by_alias)))
 
 Whether an aliased field should be serialized by its alias. Defaults to `False`.
 
@@ -1331,10 +1285,6 @@ Note: In v2.11, `serialize_by_alias` was introduced to address the [popular requ
 
 ```
 
-The field `'my_field'` has an alias `'my_alias'`.
-
-The model is serialized using the alias `'my_alias'` for the `'my_field'` attribute.
-
 ✦ New in v2.11
 
 This setting was introduced to address the [popular request](<https://github.com/pydantic/pydantic/issues/8379>) for consistency with alias behavior for validation and serialization.
@@ -1345,7 +1295,7 @@ In v3, the default value is expected to change to `True` for consistency with th
 
 #### url_preserve_empty_path 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.url_preserve_empty_path>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.url_preserve_empty_path> ([local](./config.md#pydantic.config.ConfigDict.url_preserve_empty_path)))
 
 Whether to preserve empty URL paths when validating values for a URL type. Defaults to `False`.
 
@@ -1371,7 +1321,7 @@ Whether to preserve empty URL paths when validating values for a URL type. Defau
 
 #### polymorphic_serialization 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.polymorphic_serialization>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.polymorphic_serialization> ([local](./config.md#pydantic.config.ConfigDict.polymorphic_serialization)))
 
 Whether to use polymorphic serialization for subclasses of the model or Pydantic dataclass. Defaults to `False`.
 
@@ -1379,7 +1329,7 @@ Whether to use polymorphic serialization for subclasses of the model or Pydantic
 
 ## with_config 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.with_config>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.with_config> ([local](./config.md#pydantic.config.with_config)))
 
 ```
  
@@ -1392,9 +1342,9 @@ Whether to use polymorphic serialization for subclasses of the model or Pydantic
 
 Usage Documentation
 
-[Configuration with other types](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types>)
+[Configuration with other types](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types> ([local](./../../concepts/config.md#configuration-on-other-supported-types)))
 
-A convenience decorator to set a [Pydantic configuration](<https://pydantic.dev/docs/validation/latest/api/pydantic/config>) on a `TypedDict` or a `dataclass` from the standard library.
+A convenience decorator to set a [Pydantic configuration](<https://pydantic.dev/docs/validation/latest/api/pydantic/config> ([local](./config.md))) on a `TypedDict` or a `dataclass` from the standard library.
 
 Although the configuration can be set using the `__pydantic_config__` attribute, it does not play well with type checkers, especially with `TypedDict`.
 
@@ -1428,13 +1378,13 @@ Keyword arguments can be provided directly instead of a config dictionary.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns> ([local](./config.md#returns)))
 
 [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`_TypeT`], `_TypeT`]
 
 ## ExtraValues 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ExtraValues>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ExtraValues> ([local](./config.md#pydantic.config.ExtraValues)))
 
 **Default:** `Literal['allow', 'ignore', 'forbid']`
 
@@ -1442,7 +1392,7 @@ Alias generators for converting between different capitalization conventions.
 
 ## to_pascal 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_pascal>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_pascal> ([local](./config.md#pydantic.alias_generators.to_pascal)))
 
 ```
  
@@ -1455,23 +1405,23 @@ Convert a snake_case string to PascalCase.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-1> ([local](./config.md#returns-1)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The PascalCase string.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters> ([local](./config.md#parameters)))
 
 **`snake`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_pascal\(snake\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_pascal\(snake\)> ([local](./config.md#pydantic.alias_generators.to_pascal\(snake\))))
 
 The string to convert.
 
 ## to_camel 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_camel>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_camel> ([local](./config.md#pydantic.alias_generators.to_camel)))
 
 ```
  
@@ -1484,23 +1434,23 @@ Convert a snake_case string to camelCase.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-2> ([local](./config.md#returns-2)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The converted camelCase string.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters-1> ([local](./config.md#parameters-1)))
 
 **`snake`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_camel\(snake\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_camel\(snake\)> ([local](./config.md#pydantic.alias_generators.to_camel\(snake\))))
 
 The string to convert.
 
 ## to_snake 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_snake>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_snake> ([local](./config.md#pydantic.alias_generators.to_snake)))
 
 ```
  
@@ -1513,24 +1463,16 @@ Convert a PascalCase, camelCase, or kebab-case string to snake_case.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#returns-3> ([local](./config.md#returns-3)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The converted string in snake_case.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#parameters-2> ([local](./config.md#parameters-2)))
 
 **`camel`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_snake\(camel\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.alias_generators.to_snake\(camel\)> ([local](./config.md#pydantic.alias_generators.to_snake\(camel\))))
 
 The string to convert.
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Aliases ](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/>) [ Next   
-JSON Schema ](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/>)

@@ -3,17 +3,15 @@ title: Configuration
 source: https://pydantic.dev/docs/validation/latest/concepts/config
 ---
 
-# Configuration
-
-The behaviour of Pydantic can be controlled via a variety of configuration values, documented on the [`ConfigDict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict>) class. This page describes how configuration can be specified for Pydantic’s supported types.
+The behaviour of Pydantic can be controlled via a variety of configuration values, documented on the [`ConfigDict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))) class. This page describes how configuration can be specified for Pydantic’s supported types.
 
 ## Configuration on Pydantic models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-pydantic-models>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-pydantic-models> ([local](./config.md#configuration-on-pydantic-models)))
 
 On Pydantic models, configuration can be specified in two ways:
 
-  * Using the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config>) class attribute:
+  * Using the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_config))) class attribute:
 
 ```
  
@@ -38,8 +36,6 @@ On Pydantic models, configuration can be specified in two ways:
 
 ```
 
-A plain dictionary (i.e. `{'str_max_length': 5}`) can also be used.
-
 Note
 
 In Pydantic V1, the `Config` class was used. This is still supported, but **deprecated**.
@@ -56,13 +52,13 @@ In Pydantic V1, the `Config` class was used. This is still supported, but **depr
 
 ```
 
-Unlike the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config>) class attribute, static type checkers will recognize class arguments. For `frozen`, any instance mutation will be flagged as an type checking error.
+Unlike the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_config))) class attribute, static type checkers will recognize class arguments. For `frozen`, any instance mutation will be flagged as an type checking error.
 
 ## Configuration on Pydantic dataclasses
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-pydantic-dataclasses>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-pydantic-dataclasses> ([local](./config.md#configuration-on-pydantic-dataclasses)))
 
-[Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>) also support configuration (read more in the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config>)).
+[Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md))) also support configuration (read more in the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config)))).
 
 ```
  
@@ -91,9 +87,9 @@ Unlike the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pyd
 
 ## Configuration on `TypeAdapter`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-typeadapter>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-typeadapter> ([local](./config.md#configuration-on-typeadapter)))
 
-[Type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter>) (using the [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>) class) support configuration, by providing the `config` argument.
+[Type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./type_adapter.md))) (using the [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) class) support configuration, by providing the `config` argument.
 
 ```
  
@@ -107,11 +103,11 @@ Unlike the [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pyd
 
 ```
 
-Configuration can’t be provided if the type adapter directly wraps a type that support it, and a [usage error](<https://pydantic.dev/docs/validation/latest/errors/usage_errors>) is raised in this case. The [configuration propagation](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-propagation>) rules also apply.
+Configuration can’t be provided if the type adapter directly wraps a type that support it, and a [usage error](<https://pydantic.dev/docs/validation/latest/errors/usage_errors> ([local](./../errors/usage_errors.md))) is raised in this case. The [configuration propagation](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-propagation> ([local](./config.md#configuration-propagation))) rules also apply.
 
 ## Configuration on other supported types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types> ([local](./config.md#configuration-on-other-supported-types)))
 
 If you are using [standard library dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>) or [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>) classes, the configuration can be set in two ways:
 
@@ -133,7 +129,7 @@ If you are using [standard library dataclasses](<https://docs.python.org/3/libra
 
 ```
 
-  * Using the [`@with_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.with_config>) decorator (this avoids static type checking errors with [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>)):
+  * Using the [`@with_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.with_config> ([local](./../api/pydantic/config.md#pydantic.config.with_config))) decorator (this avoids static type checking errors with [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>)):
 
 ```
  from typing_extensions import TypedDict
@@ -150,13 +146,13 @@ If you are using [standard library dataclasses](<https://docs.python.org/3/libra
 
 ## Configuration on the `@validate_call` decorator
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-the-validate_call-decorator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-the-validate_call-decorator> ([local](./config.md#configuration-on-the-validate_call-decorator)))
 
-The [`@validate_call`](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator>) also supports setting custom configuration. See the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration>) for more details.
+The [`@validate_call`](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator> ([local](./validation_decorator.md))) also supports setting custom configuration. See the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration> ([local](./validation_decorator.md#custom-configuration))) for more details.
 
 ## Change behaviour globally
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#change-behaviour-globally>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#change-behaviour-globally> ([local](./config.md#change-behaviour-globally)))
 
 If you wish to change the behaviour of Pydantic globally, you can create your own custom parent class with a custom configuration, as the configuration is inherited:
 
@@ -212,7 +208,7 @@ If your model inherits from multiple bases, Pydantic currently _doesn’t_ follo
 
 ## Configuration propagation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-propagation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-propagation> ([local](./config.md#configuration-propagation)))
 
 When using types that support configuration as field annotations, configuration may not be propagated:
 
@@ -269,11 +265,3 @@ When using types that support configuration as field annotations, configuration 
         
 
 ```
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Alias ](<https://pydantic.dev/docs/validation/latest/concepts/alias/>) [ Next   
-Serialization ](<https://pydantic.dev/docs/validation/latest/concepts/serialization/>)

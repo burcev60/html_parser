@@ -3,17 +3,15 @@ title: Models
 source: https://pydantic.dev/docs/validation/latest/concepts/models
 ---
 
-# Models
-
 API Documentation
 
-[`pydantic.main.BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>)  
+[`pydantic.main.BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)))  
 
-One of the primary ways of defining schema in Pydantic is via models. Models are simply classes which inherit from [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>) and define fields as annotated attributes.
+One of the primary ways of defining schema in Pydantic is via models. Models are simply classes which inherit from [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) and define fields as annotated attributes.
 
 You can think of models as similar to structs in languages like C, or as the requirements of a single endpoint in an API.
 
-Models share many similarities with Python’s [dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>), but have been designed with some subtle-yet-important differences that streamline certain workflows related to validation, serialization, and JSON schema generation. You can find more discussion of this in the [Dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>) section of the docs.
+Models share many similarities with Python’s [dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>), but have been designed with some subtle-yet-important differences that streamline certain workflows related to validation, serialization, and JSON schema generation. You can find more discussion of this in the [Dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md))) section of the docs.
 
 Untrusted data can be passed to a model and, after parsing and validation, Pydantic guarantees that the fields of the resultant model instance will conform to the field types defined on the model.
 
@@ -21,7 +19,7 @@ Validation — a _deliberate_ misnomer
 
 ### TL;DR
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#tldr>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#tldr> ([local](./models.md#tldr)))
 
 We use the term “validation” to refer to the process of instantiating a model (or other type) that adheres to specified types and constraints. This task, which Pydantic is well known for, is most widely recognized as “validation” in colloquial terms, even though in other contexts the term “validation” may be more restrictive.
 
@@ -29,27 +27,27 @@ We use the term “validation” to refer to the process of instantiating a mode
 
 ### The long version
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#the-long-version>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#the-long-version> ([local](./models.md#the-long-version)))
 
 The potential confusion around the term “validation” arises from the fact that, strictly speaking, Pydantic’s primary focus doesn’t align precisely with the dictionary definition of “validation”:
 
 > ### validation
 > 
-> [](<https://pydantic.dev/docs/validation/latest/concepts/models#validation>)
+> [](<https://pydantic.dev/docs/validation/latest/concepts/models#validation> ([local](./models.md#validation)))
 > 
 > _noun_ the action of checking or proving the validity or accuracy of something.
 
 In Pydantic, the term “validation” refers to the process of instantiating a model (or other type) that adheres to specified types and constraints. Pydantic guarantees the types and constraints of the output, not the input data. This distinction becomes apparent when considering that Pydantic’s `ValidationError` is raised when data cannot be successfully parsed into a model instance.
 
-While this distinction may initially seem subtle, it holds practical significance. In some cases, “validation” goes beyond just model creation, and can include the copying and coercion of data. This can involve copying arguments passed to the constructor in order to perform coercion to a new type without mutating the original input data. For a more in-depth understanding of the implications for your usage, refer to the [Data Conversion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion>) and [Attribute Copies](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies>) sections below.
+While this distinction may initially seem subtle, it holds practical significance. In some cases, “validation” goes beyond just model creation, and can include the copying and coercion of data. This can involve copying arguments passed to the constructor in order to perform coercion to a new type without mutating the original input data. For a more in-depth understanding of the implications for your usage, refer to the [Data Conversion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion> ([local](./models.md#data-conversion))) and [Attribute Copies](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies> ([local](./models.md#attribute-copies))) sections below.
 
 In essence, Pydantic’s primary goal is to assure that the resulting structure post-processing (termed “validation”) precisely conforms to the applied type hints. Given the widespread adoption of “validation” as the colloquial term for this process, we will consistently use it in our documentation.
 
-While the terms “parse” and “validation” were previously used interchangeably, moving forward, we aim to exclusively employ “validate”, with “parse” reserved specifically for discussions related to [JSON parsing](<https://pydantic.dev/docs/validation/latest/concepts/json>).
+While the terms “parse” and “validation” were previously used interchangeably, moving forward, we aim to exclusively employ “validate”, with “parse” reserved specifically for discussions related to [JSON parsing](<https://pydantic.dev/docs/validation/latest/concepts/json> ([local](./json.md))).
 
 ## Basic model usage
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#basic-model-usage>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#basic-model-usage> ([local](./models.md#basic-model-usage)))
 
 Note
 
@@ -71,16 +69,14 @@ Pydantic relies heavily on the existing Python typing constructs to define model
 
 ```
 
-Pydantic models support a variety of [configuration values](<https://pydantic.dev/docs/validation/latest/concepts/config>) (see [here](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict>) for the available configuration values).
-
 In this example, `User` is a model with two fields:
 
   * `id`, which is an integer (defined using the [`int`](<https://docs.python.org/3/library/functions.html#int>) type) and is required
   * `name`, which is a string (defined using the [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) type) and is not required (it has a default value).
 
-The documentation on [types](<https://pydantic.dev/docs/validation/latest/concepts/types>) expands on the supported types.
+The documentation on [types](<https://pydantic.dev/docs/validation/latest/concepts/types> ([local](./types.md))) expands on the supported types.
 
-Fields can be customized in a number of ways using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function. See the [documentation on fields](<https://pydantic.dev/docs/validation/latest/concepts/fields>) for more information.
+Fields can be customized in a number of ways using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function. See the [documentation on fields](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) for more information.
 
 The model can then be instantiated:
 
@@ -91,7 +87,7 @@ The model can then be instantiated:
 
 ```
 
-`user` is an instance of `User`. Initialization of the object will perform all parsing and validation. If no [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>) exception is raised, you know the resulting model instance is valid.
+`user` is an instance of `User`. Initialization of the object will perform all parsing and validation. If no [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) exception is raised, you know the resulting model instance is valid.
 
 Fields of a model can be accessed as normal attributes of the `user` object:
 
@@ -103,11 +99,7 @@ Fields of a model can be accessed as normal attributes of the `user` object:
 
 ```
 
-`name` wasn't set when `user` was initialized, so the default value was used. The [`model_fields_set`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields_set>) attribute can be inspected to check the field names explicitly set during instantiation.
-
-Note that the string `'123'` was coerced to an integer and its value is `123`. More details on Pydantic's coercion logic can be found in the [data conversion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion>) section.
-
-The model instance can be serialized using the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>) method:
+The model instance can be serialized using the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))) method:
 
 ```
  
@@ -116,7 +108,7 @@ The model instance can be serialized using the [`model_dump()`](<https://pydanti
 
 ```
 
-Calling [dict](<https://docs.python.org/3/reference/expressions.html#dict>) on the instance will also provide a dictionary, but nested fields will not be recursively converted into dictionaries. [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>) also provides numerous arguments to customize the serialization result.
+Calling [dict](<https://docs.python.org/3/reference/expressions.html#dict>) on the instance will also provide a dictionary, but nested fields will not be recursively converted into dictionaries. [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))) also provides numerous arguments to customize the serialization result.
 
 By default, models are mutable and field values can be changed through attribute assignment:
 
@@ -154,39 +146,39 @@ Because of how Python evaluates [annotated assignment statements](<https://docs.
 
 ### Model methods and properties
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-methods-and-properties>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-methods-and-properties> ([local](./models.md#model-methods-and-properties)))
 
 The example above only shows the tip of the iceberg of what models can do. Model classes possess the following methods and attributes:
 
-  * [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>): Validates the given object against the Pydantic model. See [Validating data](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>).
-  * [`model_validate_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json>): Validates the given JSON data against the Pydantic model. See [Validating data](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>).
-  * [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>): Creates models without running validation. See [Creating models without validation](<https://pydantic.dev/docs/validation/latest/concepts/models#creating-models-without-validation>).
-  * [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>): Returns a dictionary of the model’s fields and values. See [Serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode>).
-  * [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json>): Returns a JSON string representation of [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>). See [Serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode>).
-  * [`model_copy()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy>): Returns a copy (by default, shallow copy) of the model. See [Model copy](<https://pydantic.dev/docs/validation/latest/concepts/models#model-copy>).
-  * [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>): Returns a jsonable dictionary representing the model’s JSON Schema. See [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema>).
-  * [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields>): A mapping between field names and their definitions ([`FieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.FieldInfo>) instances).
-  * [`model_computed_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_computed_fields>): A mapping between computed field names and their definitions ([`ComputedFieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.ComputedFieldInfo>) instances).
-  * [`model_parametrized_name()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_parametrized_name>): Computes the class name for parametrizations of generic classes.
-  * [`model_post_init()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_post_init>): Performs additional actions after the model is instantiated and all field validators are applied.
-  * [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>): Rebuilds the model schema, which also supports building recursive generic models. See [Rebuilding model schema](<https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema>).
+  * [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))): Validates the given object against the Pydantic model. See [Validating data](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))).
+  * [`model_validate_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json))): Validates the given JSON data against the Pydantic model. See [Validating data](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))).
+  * [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))): Creates models without running validation. See [Creating models without validation](<https://pydantic.dev/docs/validation/latest/concepts/models#creating-models-without-validation> ([local](./models.md#creating-models-without-validation))).
+  * [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))): Returns a dictionary of the model’s fields and values. See [Serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./serialization.md#python-mode))).
+  * [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))): Returns a JSON string representation of [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))). See [Serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./serialization.md#json-mode))).
+  * [`model_copy()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_copy))): Returns a copy (by default, shallow copy) of the model. See [Model copy](<https://pydantic.dev/docs/validation/latest/concepts/models#model-copy> ([local](./models.md#model-copy))).
+  * [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))): Returns a jsonable dictionary representing the model’s JSON Schema. See [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./json_schema.md))).
+  * [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields))): A mapping between field names and their definitions ([`FieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.FieldInfo> ([local](./../api/pydantic/fields.md#pydantic.fields.FieldInfo))) instances).
+  * [`model_computed_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_computed_fields> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_computed_fields))): A mapping between computed field names and their definitions ([`ComputedFieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.ComputedFieldInfo> ([local](./../api/pydantic/fields.md#pydantic.fields.ComputedFieldInfo))) instances).
+  * [`model_parametrized_name()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_parametrized_name> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_parametrized_name))): Computes the class name for parametrizations of generic classes.
+  * [`model_post_init()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_post_init> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_post_init))): Performs additional actions after the model is instantiated and all field validators are applied.
+  * [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))): Rebuilds the model schema, which also supports building recursive generic models. See [Rebuilding model schema](<https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema> ([local](./models.md#rebuilding-model-schema))).
 
 Model instances possess the following attributes:
 
-  * [`model_extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_extra>): The extra fields set during validation.
-  * [`model_fields_set`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields_set>): The set of fields which were explicitly provided when the model was initialized.
+  * [`model_extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_extra> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_extra))): The extra fields set during validation.
+  * [`model_fields_set`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields_set> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields_set))): The set of fields which were explicitly provided when the model was initialized.
 
 Note
 
-See the API documentation of [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>) for the class definition including a full list of methods and attributes.
+See the API documentation of [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) for the class definition including a full list of methods and attributes.
 
 Tip
 
-See [Changes to `pydantic.BaseModel`](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel>) in the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration>) for details on changes from Pydantic V1.
+See [Changes to `pydantic.BaseModel`](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel> ([local](./../get-started/migration.md#changes-to-pydanticbasemodel))) in the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration> ([local](./../get-started/migration.md))) for details on changes from Pydantic V1.
 
 ## Data conversion
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion> ([local](./models.md#data-conversion)))
 
 Pydantic may cast input data to force it to conform to model field types, and in some cases this may result in a loss of information. For example:
 
@@ -209,7 +201,7 @@ Pydantic may cast input data to force it to conform to model field types, and in
 
 This is a deliberate decision of Pydantic, and is frequently the most useful approach. See [this issue](<https://github.com/pydantic/pydantic/issues/578>) for a longer discussion on the subject.
 
-Nevertheless, Pydantic provides a [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>), where no data conversion is performed. Values must be of the same type as the declared field type.
+Nevertheless, Pydantic provides a [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))), where no data conversion is performed. Values must be of the same type as the declared field type.
 
 This is also the case for collections. In most cases, you shouldn’t make use of abstract container classes and just use a concrete type, such as [`list`](<https://docs.python.org/3/glossary.html#term-list>):
 
@@ -227,13 +219,11 @@ This is also the case for collections. In most cases, you shouldn’t make use o
 
 ```
 
-In this case, you might be tempted to use the abstract [`Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>) type to allow both lists and tuples. But Pydantic takes care of converting the tuple input to a list, so in most cases this isn't necessary.
-
-Besides, using these abstract types can also lead to [poor validation performance](<https://pydantic.dev/docs/validation/latest/concepts/performance#sequence-vs-list-or-tuple-with-mapping-vs-dict>), and in general using concrete container types will avoid unnecessary checks.
+Besides, using these abstract types can also lead to [poor validation performance](<https://pydantic.dev/docs/validation/latest/concepts/performance#sequence-vs-list-or-tuple-with-mapping-vs-dict> ([local](./performance.md#sequence-vs-list-or-tuple-with-mapping-vs-dict))), and in general using concrete container types will avoid unnecessary checks.
 
 ## Extra data
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data> ([local](./models.md#extra-data)))
 
 By default, Pydantic models **won’t error when you provide extra data** , and these values will simply be ignored:
 
@@ -252,7 +242,7 @@ By default, Pydantic models **won’t error when you provide extra data** , and 
 
 ```
 
-The [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) configuration value can be used to control this behavior:
+The [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) configuration value can be used to control this behavior:
 
 ```
  
@@ -271,23 +261,21 @@ The [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#
 
 ```
 
-If [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) was set to `'forbid'`, this would fail.
-
 The configuration can take three values:
 
   * `'ignore'`: Providing extra data is ignored (the default).
   * `'forbid'`: Providing extra data is not permitted.
   * `'allow'`: Providing extra data is allowed and stored in the `__pydantic_extra__` dictionary attribute. The `__pydantic_extra__` can explicitly be annotated to provide validation for extra fields.
 
-The validation methods (e.g. [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>)) have an optional `extra` argument that will override the `extra` configuration value of the model for that validation call.
+The validation methods (e.g. [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate)))) have an optional `extra` argument that will override the `extra` configuration value of the model for that validation call.
 
-For more details, refer to the [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) API documentation.
+For more details, refer to the [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) API documentation.
 
-Pydantic dataclasses also support extra data (see the [dataclass configuration](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config>) section).
+Pydantic dataclasses also support extra data (see the [dataclass configuration](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config))) section).
 
 ## Nested models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-models>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-models> ([local](./models.md#nested-models)))
 
 More complex hierarchical data structures can be defined using models themselves as types in annotations.
 
@@ -329,13 +317,13 @@ More complex hierarchical data structures can be defined using models themselves
 
 ```
 
-Self-referencing models are supported. For more details, see the documentation related to [forward annotations](<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#self-referencing-or-recursive-models>).
+Self-referencing models are supported. For more details, see the documentation related to [forward annotations](<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#self-referencing-or-recursive-models> ([local](./forward_annotations.md#self-referencing-or-recursive-models))).
 
 ## Rebuilding model schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema> ([local](./models.md#rebuilding-model-schema)))
 
-When you define a model class in your code, Pydantic will analyze the body of the class to collect a variety of information required to perform validation and serialization, gathered in a core schema. Notably, the model’s type annotations are evaluated to understand the valid types for each field (more information can be found in the [Architecture](<https://pydantic.dev/docs/validation/latest/internals/architecture>) documentation). However, it might be the case that annotations refer to symbols not defined when the model class is being created. To circumvent this issue, the [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) method can be used:
+When you define a model class in your code, Pydantic will analyze the body of the class to collect a variety of information required to perform validation and serialization, gathered in a core schema. Notably, the model’s type annotations are evaluated to understand the valid types for each field (more information can be found in the [Architecture](<https://pydantic.dev/docs/validation/latest/internals/architecture> ([local](./../internals/architecture.md))) documentation). However, it might be the case that annotations refer to symbols not defined when the model class is being created. To circumvent this issue, the [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) method can be used:
 
 ```
  
@@ -375,33 +363,31 @@ When you define a model class in your code, Pydantic will analyze the body of th
 
 ```
 
-`Bar` is not yet defined when the `Foo` class is being created. For this reason, a [forward annotation](<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations>) is being used.
+Pydantic tries to determine when this is necessary automatically and error if it wasn’t done, but you may want to call [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) proactively when dealing with recursive models or generics.
 
-Pydantic tries to determine when this is necessary automatically and error if it wasn’t done, but you may want to call [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) proactively when dealing with recursive models or generics.
-
-In V2, [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) replaced `update_forward_refs()` from V1. There are some slight differences with the new behavior. The biggest change is that when calling [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) on the outermost model, it builds a core schema used for validation of the whole model (nested models and all), so all types at all levels need to be ready before [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) is called.
+In V2, [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) replaced `update_forward_refs()` from V1. There are some slight differences with the new behavior. The biggest change is that when calling [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) on the outermost model, it builds a core schema used for validation of the whole model (nested models and all), so all types at all levels need to be ready before [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) is called.
 
 ## Validating data
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data)))
 
 Pydantic can validate data in three different modes: _Python_ , _JSON_ and _strings_.
 
 The _Python_ mode gets used when using:
 
   * The `__init__()` model constructor. Field values must be provided using keyword arguments.
-  * [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>): data can be provided either as a dictionary, or as a model instance (by default, instances are assumed to be valid; see the [`revalidate_instances`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.revalidate_instances>) setting). [Arbitrary objects](<https://pydantic.dev/docs/validation/latest/concepts/models#arbitrary-class-instances>) can also be provided if explicitly enabled.
+  * [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))): data can be provided either as a dictionary, or as a model instance (by default, instances are assumed to be valid; see the [`revalidate_instances`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.revalidate_instances> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.revalidate_instances))) setting). [Arbitrary objects](<https://pydantic.dev/docs/validation/latest/concepts/models#arbitrary-class-instances> ([local](./models.md#arbitrary-class-instances))) can also be provided if explicitly enabled.
 
 The _JSON_ and _strings_ modes can be used with dedicated methods:
 
-  * [`model_validate_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json>): data is validated as a JSON string or `bytes` object. If your incoming data is a JSON payload, this is generally considered faster (instead of manually parsing the data as a dictionary). Learn more about JSON parsing in the [JSON](<https://pydantic.dev/docs/validation/latest/concepts/json>) documentation.
-  * [`model_validate_strings()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_strings>): data is validated as a dictionary (can be nested) with string keys and values and validates the data in JSON mode so that said strings can be coerced into the correct types.
+  * [`model_validate_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json))): data is validated as a JSON string or `bytes` object. If your incoming data is a JSON payload, this is generally considered faster (instead of manually parsing the data as a dictionary). Learn more about JSON parsing in the [JSON](<https://pydantic.dev/docs/validation/latest/concepts/json> ([local](./json.md))) documentation.
+  * [`model_validate_strings()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_strings> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_strings))): data is validated as a dictionary (can be nested) with string keys and values and validates the data in JSON mode so that said strings can be coerced into the correct types.
 
-Compared to using the model constructor, it is possible to control several validation parameters when using the `model_validate_*()` methods ([strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>), [extra data](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data>), [validation context](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context>), etc.).
+Compared to using the model constructor, it is possible to control several validation parameters when using the `model_validate_*()` methods ([strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))), [extra data](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data> ([local](./models.md#extra-data))), [validation context](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context))), etc.).
 
 Note
 
-Depending on the types and model configuration involved, the _Python_ and _JSON_ modes may have different validation behavior (e.g. with [strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>)). If you have data coming from a non-JSON source, but want the same validation behavior and errors you’d get from the _JSON_ mode, our recommendation for now is to either dump your data to JSON (e.g. using [`json.dumps()`](<https://docs.python.org/3/library/json.html#json.dumps>)), or use [`model_validate_strings()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_strings>) if the data takes the form of a (potentially nested) dictionary with string keys and values. Progress for this feature can be tracked in [this issue](<https://github.com/pydantic/pydantic/issues/11154>).
+Depending on the types and model configuration involved, the _Python_ and _JSON_ modes may have different validation behavior (e.g. with [strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md)))). If you have data coming from a non-JSON source, but want the same validation behavior and errors you’d get from the _JSON_ mode, our recommendation for now is to either dump your data to JSON (e.g. using [`json.dumps()`](<https://docs.python.org/3/library/json.html#json.dumps>)), or use [`model_validate_strings()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_strings> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_strings))) if the data takes the form of a (potentially nested) dictionary with string keys and values. Progress for this feature can be tracked in [this issue](<https://github.com/pydantic/pydantic/issues/11154>).
 
 ```
  
@@ -458,9 +444,9 @@ Depending on the types and model configuration involved, the _Python_ and _JSON_
 
 ### Creating models without validation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#creating-models-without-validation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#creating-models-without-validation> ([local](./models.md#creating-models-without-validation)))
 
-Pydantic also provides the [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) method, which allows models to be created **without validation**. This can be useful in at least a few cases:
+Pydantic also provides the [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) method, which allows models to be created **without validation**. This can be useful in at least a few cases:
 
   * when working with complex data that is already known to be valid (for performance reasons)
   * when one or more of the validator functions are non-idempotent
@@ -468,36 +454,36 @@ Pydantic also provides the [`model_construct()`](<https://pydantic.dev/docs/vali
 
 Caution
 
-[`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) does not do any validation, meaning it can create models which are invalid. **You should only ever use the[`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) method with data which has already been validated, or that you definitely trust.**
+[`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) does not do any validation, meaning it can create models which are invalid. **You should only ever use the[`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) method with data which has already been validated, or that you definitely trust.**
 
 Note
 
-In Pydantic V2, the performance gap between validation (either with direct instantiation or the `model_validate*` methods) and [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) has been narrowed considerably. For simple models, going with validation may even be faster. If you are using [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) for performance reasons, you may want to profile your use case before assuming it is actually faster.
+In Pydantic V2, the performance gap between validation (either with direct instantiation or the `model_validate*` methods) and [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) has been narrowed considerably. For simple models, going with validation may even be faster. If you are using [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) for performance reasons, you may want to profile your use case before assuming it is actually faster.
 
-Note that for [root models](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types>), the root value can be passed to [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) positionally, instead of using a keyword argument.
+Note that for [root models](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./models.md#rootmodel-and-custom-root-types))), the root value can be passed to [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) positionally, instead of using a keyword argument.
 
-Here are some additional notes on the behavior of [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>):
+Here are some additional notes on the behavior of [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))):
 
   * When we say “no validation is performed” — this includes converting dictionaries to model instances. So if you have a field referring to a model type, you will need to convert the inner dictionary to a model yourself.
   * If you do not pass keyword arguments for fields with defaults, the default values will still be used.
   * For models with private attributes, the `__pydantic_private__` dictionary will be populated the same as it would be when creating the model with validation.
   * No `__init__` method from the model or any of its parent classes will be called, even when a custom `__init__` method is defined.
 
-On [extra data](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data>) behavior with [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>)
+On [extra data](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data> ([local](./models.md#extra-data))) behavior with [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct)))
 
-  * For models with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) set to `'allow'`, data not corresponding to fields will be correctly stored in the `__pydantic_extra__` dictionary and saved to the model’s `__dict__` attribute.
-  * For models with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) set to `'ignore'`, data not corresponding to fields will be ignored — that is, not stored in `__pydantic_extra__` or `__dict__` on the instance.
-  * Unlike when instantiating the model with validation, a call to [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct>) with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra>) set to `'forbid'` doesn’t raise an error in the presence of data not corresponding to fields. Rather, said input data is simply ignored.
+  * For models with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) set to `'allow'`, data not corresponding to fields will be correctly stored in the `__pydantic_extra__` dictionary and saved to the model’s `__dict__` attribute.
+  * For models with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) set to `'ignore'`, data not corresponding to fields will be ignored — that is, not stored in `__pydantic_extra__` or `__dict__` on the instance.
+  * Unlike when instantiating the model with validation, a call to [`model_construct()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_construct> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_construct))) with [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) set to `'forbid'` doesn’t raise an error in the presence of data not corresponding to fields. Rather, said input data is simply ignored.
 
 ### Defining a custom `__init__()`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#defining-a-custom-__init__>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#defining-a-custom-__init__> ([local](./models.md#defining-a-custom-__init__)))
 
 Pydantic provides a default `__init__()` implementation for Pydantic models, that is called _only_ when using the model constructor (and not with the `model_validate_*()` methods). This implementation delegates validation to `pydantic-core`.
 
-However, it is possible to define a custom `__init__()` on your models. In this case, it will be called unconditionally from all the [validation methods](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>), without performing validation (and so you should call `super().__init__(**kwargs)` in your implementation).
+However, it is possible to define a custom `__init__()` on your models. In this case, it will be called unconditionally from all the [validation methods](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))), without performing validation (and so you should call `super().__init__(**kwargs)` in your implementation).
 
-Defining a custom `__init__()` is not recommended, as all the validation parameters ([strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>), [extra data behavior](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data>), [validation context](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context>)) will be lost. If you need to perform actions after the model was initialized, you can make use of _after_ [field](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator>) or [model](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator>) validators, or define a [`model_post_init()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_post_init>) implementation:
+Defining a custom `__init__()` is not recommended, as all the validation parameters ([strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))), [extra data behavior](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data> ([local](./models.md#extra-data))), [validation context](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context)))) will be lost. If you need to perform actions after the model was initialized, you can make use of _after_ [field](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator> ([local](./validators.md#field-after-validator))) or [model](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator> ([local](./validators.md#model-after-validator))) validators, or define a [`model_post_init()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_post_init> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_post_init))) implementation:
 
 ```
  
@@ -518,13 +504,13 @@ Defining a custom `__init__()` is not recommended, as all the validation paramet
 
 ## Error handling
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling> ([local](./models.md#error-handling)))
 
-Pydantic will raise a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>) exception whenever it finds an error in the data it’s validating.
+Pydantic will raise a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) exception whenever it finds an error in the data it’s validating.
 
 A single exception will be raised regardless of the number of errors found, and that validation error will contain information about all of the errors and how they happened.
 
-See [Error Handling](<https://pydantic.dev/docs/validation/latest/errors/errors>) for details on standard and custom errors.
+See [Error Handling](<https://pydantic.dev/docs/validation/latest/errors/errors> ([local](./../errors/errors.md))) for details on standard and custom errors.
 
 As a demonstration:
 
@@ -560,13 +546,13 @@ As a demonstration:
 
 ## Arbitrary class instances
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#arbitrary-class-instances>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#arbitrary-class-instances> ([local](./models.md#arbitrary-class-instances)))
 
 (Formerly known as “ORM Mode”/`from_orm()`).
 
-When using the [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>) method, Pydantic can also validate arbitrary objects, by getting attributes on the object corresponding the field names. One common application of this functionality is integration with object-relational mappings (ORMs).
+When using the [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))) method, Pydantic can also validate arbitrary objects, by getting attributes on the object corresponding the field names. One common application of this functionality is integration with object-relational mappings (ORMs).
 
-This feature need to be manually enabled, either by setting the [`from_attributes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.from_attributes>) configuration value, or by using the `from_attributes` parameter on [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>).
+This feature need to be manually enabled, either by setting the [`from_attributes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.from_attributes> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.from_attributes))) configuration value, or by using the `from_attributes` parameter on [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))).
 
 The example here uses [SQLAlchemy](<https://www.sqlalchemy.org/>), but the same approach should work for any ORM.
 
@@ -618,7 +604,7 @@ The example here uses [SQLAlchemy](<https://www.sqlalchemy.org/>), but the same 
 
 ### Nested attributes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-attributes>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-attributes> ([local](./models.md#nested-attributes)))
 
 When using attributes to validate models, model instances will be created from both top-level attributes and deeper-nested attributes as appropriate.
 
@@ -665,13 +651,13 @@ Here is an example demonstrating the principle:
 
 ## Model copy
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-copy>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-copy> ([local](./models.md#model-copy)))
 
 API Documentation
 
-[`pydantic.main.BaseModel.model_copy`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy>)  
+[`pydantic.main.BaseModel.model_copy`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_copy)))  
 
-The [`model_copy()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy>) method allows models to be duplicated (with optional updates), which is particularly useful when working with frozen models.
+The [`model_copy()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_copy> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_copy))) method allows models to be duplicated (with optional updates), which is particularly useful when working with frozen models.
 
 ```
  
@@ -705,14 +691,14 @@ The [`model_copy()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/b
 
 ## Generic models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#generic-models>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#generic-models> ([local](./models.md#generic-models)))
 
 Pydantic supports the creation of generic models to make it easier to reuse a common model structure. Both the new [type parameter syntax](<https://docs.python.org/3/reference/compound_stmts.html#type-params>) (introduced by [PEP 695](<https://peps.python.org/pep-0695/>) in Python 3.12) and the old syntax are supported (refer to [the Python documentation](<https://docs.python.org/3/library/typing.html#building-generic-types-and-type-aliases>) for more details).
 
 Here is an example using a generic Pydantic model to create an easily-reused HTTP response payload wrapper:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/models#tab-panel-504>)
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/models#tab-panel-505>)
+  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/models#tab-panel-504> ([local](./models.md#tab-panel-504)))
+  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/models#tab-panel-505> ([local](./models.md#tab-panel-505)))
 
 ```
  
@@ -753,12 +739,6 @@ Here is an example using a generic Pydantic model to create an easily-reused HTT
 
 ```
 
-Declare one or more [type variables](<https://docs.python.org/3/library/typing.html#typing.TypeVar>) to use to parameterize your model.
-
-Declare a Pydantic model that inherits from [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>) and [`typing.Generic`](<https://docs.python.org/3/library/typing.html#typing.Generic>) (in this specific order), and add the list of type variables you declared previously as parameters to the [`Generic`](<https://docs.python.org/3/library/typing.html#typing.Generic>) parent.
-
-Use the type variables as annotations where you will want to replace them with other types.
-
 ```
  
     from pydantic import BaseModel, ValidationError
@@ -794,10 +774,6 @@ Use the type variables as annotations where you will want to replace them with o
 
 ```
 
-Declare a Pydantic model and add the list of type variables as type parameters.
-
-Use the type variables as annotations where you will want to replace them with other types.
-
 ✦ New in v2.11
 
 Full support for the [type parameter syntax](<https://docs.python.org/3/reference/compound_stmts.html#type-params>) and [type variable defaults](<https://typing.python.org/en/latest/spec/generics.html#type-parameter-defaults>).
@@ -806,7 +782,7 @@ Caution
 
 When parametrizing a model with a concrete type, Pydantic **does not** validate that the provided type is [assignable to the type variable](<https://typing.readthedocs.io/en/latest/spec/generics.html#type-variables-with-an-upper-bound>) if it has an upper bound.
 
-Any [configuration](<https://pydantic.dev/docs/validation/latest/concepts/config>), [validation](<https://pydantic.dev/docs/validation/latest/concepts/validators>) or [serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization>) logic set on the generic model will also be applied to the parametrized classes, in the same way as when inheriting from a model class. Any custom methods or attributes will also be inherited.
+Any [configuration](<https://pydantic.dev/docs/validation/latest/concepts/config> ([local](./config.md))), [validation](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./validators.md))) or [serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization> ([local](./serialization.md))) logic set on the generic model will also be applied to the parametrized classes, in the same way as when inheriting from a model class. Any custom methods or attributes will also be inherited.
 
 Generic models also integrate properly with type checkers, so you get all the type checking you would expect if you were to declare a distinct type for each parametrization.
 
@@ -869,7 +845,7 @@ You can also create a generic subclass of a model that partially or fully replac
 
 ```
 
-If the name of the concrete subclasses is important, you can also override the default name generation by overriding the [`model_parametrized_name()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_parametrized_name>) method:
+If the name of the concrete subclasses is important, you can also override the default name generation by overriding the [`model_parametrized_name()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_parametrized_name> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_parametrized_name))) method:
 
 ```
  
@@ -969,8 +945,6 @@ Using the same type variable in nested models allows you to enforce typing relat
 
 ```
 
-The `OuterT` model is parametrized with `int`, but the data associated with the `T` annotations during validation is of type `str`, leading to validation errors.
-
 Caution
 
 While it may not raise an error, we strongly advise against using parametrized generics in [`isinstance()`](<https://docs.python.org/3/library/functions.html#isinstance>) checks.
@@ -1054,7 +1028,7 @@ It’s also worth noting that this pattern will re-trigger any custom validation
 
 ### Validation of unparametrized type variables
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#validation-of-unparametrized-type-variables>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#validation-of-unparametrized-type-variables> ([local](./models.md#validation-of-unparametrized-type-variables)))
 
 When leaving type variables unparametrized, Pydantic treats generic models similarly to how it treats built-in generic types like [`list`](<https://docs.python.org/3/glossary.html#term-list>) and [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>):
 
@@ -1134,13 +1108,9 @@ In some cases, validation against an unparametrized generic model can lead to da
 
 ```
 
-When the generic isn't parametrized, the input data is validated against the `ItemT` upper bound. Given that `ItemBase` has no fields, the `item` field information is lost.
-
-In this case, the type variable is explicitly parametrized, so the input data is validated against the `IntItem` class.
-
 ### Serialization of unparametrized type variables
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#serialization-of-unparametrized-type-variables>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#serialization-of-unparametrized-type-variables> ([local](./models.md#serialization-of-unparametrized-type-variables)))
 
 The behavior of serialization differs when using type variables with [upper bounds](<https://typing.readthedocs.io/en/latest/reference/generics.html#type-variables-with-upper-bounds>), [constraints](<https://typing.readthedocs.io/en/latest/reference/generics.html#type-variables-with-constraints>), or a default value:
 
@@ -1233,7 +1203,7 @@ Here’s another example of the above behavior, enumerating all permutations reg
 
 ```
 
-However, if [constraints](<https://typing.readthedocs.io/en/latest/reference/generics.html#type-variables-with-constraints>) or a default value (as per [PEP 696](<https://peps.python.org/pep-0696/>)) is being used, then the default type or constraints will be used for both validation and serialization if the type variable is not parametrized. You can override this behavior using [`SerializeAsAny`](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializeasany-annotation>):
+However, if [constraints](<https://typing.readthedocs.io/en/latest/reference/generics.html#type-variables-with-constraints>) or a default value (as per [PEP 696](<https://peps.python.org/pep-0696/>)) is being used, then the default type or constraints will be used for both validation and serialization if the type variable is not parametrized. You can override this behavior using [`SerializeAsAny`](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializeasany-annotation> ([local](./serialization.md#serializeasany-annotation))):
 
 ```
  
@@ -1297,13 +1267,13 @@ However, if [constraints](<https://typing.readthedocs.io/en/latest/reference/gen
 
 ## Dynamic model creation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#dynamic-model-creation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#dynamic-model-creation> ([local](./models.md#dynamic-model-creation)))
 
 API Documentation
 
-[`pydantic.main.create_model`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.create_model>)  
+[`pydantic.main.create_model`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.create_model> ([local](./../api/pydantic/base_model.md#pydantic.create_model)))  
 
-There are some occasions where it is desirable to create a model using runtime information to specify the fields. Pydantic provides the [`create_model()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.create_model>) function to allow models to be created dynamically:
+There are some occasions where it is desirable to create a model using runtime information to specify the fields. Pydantic provides the [`create_model()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.create_model> ([local](./../api/pydantic/base_model.md#pydantic.create_model))) function to allow models to be created dynamically:
 
 ```
  
@@ -1324,7 +1294,7 @@ There are some occasions where it is desirable to create a model using runtime i
 Field definitions are specified as keyword arguments, and should either be:
 
   * A single element, representing the type annotation of the field.
-  * A two-tuple, the first element being the type and the second element the assigned value (either a default or the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function).
+  * A two-tuple, the first element being the type and the second element the assigned value (either a default or the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function).
 
 ↻ Changed in v2.11
 
@@ -1416,8 +1386,6 @@ You can also add validators by passing a dictionary to the `__validators__` argu
 
 ```
 
-Make sure that the validators names do not clash with any of the field names as internally, Pydantic gathers all members into a namespace and mimics the normal creation of a class using the [`types` module utilities](<https://docs.python.org/3/library/types.html#dynamic-type-creation>).
-
 Note
 
 To pickle a dynamically created model:
@@ -1431,19 +1399,19 @@ This function may execute arbitrary code contained in field annotations, if stri
 
 See [Security implications of introspecting annotations](<https://docs.python.org/3/library/annotationlib.html#annotationlib-security>) for more information.
 
-See also: the [dynamic model example](<https://pydantic.dev/docs/validation/latest/examples/dynamic_models>), providing guidelines to derive an optional model from another one.
+See also: the [dynamic model example](<https://pydantic.dev/docs/validation/latest/examples/dynamic_models> ([local](./../examples/dynamic_models.md))), providing guidelines to derive an optional model from another one.
 
 ## `RootModel` and custom root types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./models.md#rootmodel-and-custom-root-types)))
 
 API Documentation
 
-[`pydantic.root_model.RootModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel>)  
+[`pydantic.root_model.RootModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel> ([local](./../api/pydantic/root_model.md#pydantic.root_model.RootModel)))  
 
-Pydantic models can be defined with a “custom root type” by subclassing [`pydantic.RootModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel>).
+Pydantic models can be defined with a “custom root type” by subclassing [`pydantic.RootModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel> ([local](./../api/pydantic/root_model.md#pydantic.root_model.RootModel))).
 
-The root type can be any type supported by Pydantic, and is specified by the generic parameter to `RootModel`. The root value can be passed to the model `__init__` or [`model_validate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate>) via the first and only argument.
+The root type can be any type supported by Pydantic, and is specified by the generic parameter to `RootModel`. The root value can be passed to the model `__init__` or [`model_validate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))) via the first and only argument.
 
 Here’s an example of how this works:
 
@@ -1524,9 +1492,9 @@ You can also create subclasses of the parametrized root model directly:
 
 ## Faux immutability
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#faux-immutability>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#faux-immutability> ([local](./models.md#faux-immutability)))
 
-Models can be configured to be immutable via `model_config['frozen'] = True`. When this is set, attempting to change the values of instance attributes will raise errors. See the [API reference](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.frozen>) for more details.
+Models can be configured to be immutable via `model_config['frozen'] = True`. When this is set, attempting to change the values of instance attributes will raise errors. See the [API reference](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.frozen> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.frozen))) for more details.
 
 Note
 
@@ -1575,7 +1543,7 @@ Trying to change `a` caused an error, and `a` remains unchanged. However, the di
 
 ## Abstract base classes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#abstract-base-classes>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#abstract-base-classes> ([local](./models.md#abstract-base-classes)))
 
 Pydantic models can be used alongside Python’s [Abstract Base Classes](<https://docs.python.org/3/library/abc.html>) (ABCs).
 
@@ -1599,13 +1567,13 @@ Pydantic models can be used alongside Python’s [Abstract Base Classes](<https:
 
 ## Field ordering
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering> ([local](./models.md#field-ordering)))
 
 Field order affects models in the following ways:
 
-  * field order is preserved in the model [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema>)
-  * field order is preserved in [validation errors](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling>)
-  * field order is preserved when [serializing data](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data>)
+  * field order is preserved in the model [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./json_schema.md)))
+  * field order is preserved in [validation errors](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling> ([local](./models.md#error-handling)))
+  * field order is preserved when [serializing data](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data)))
 
 ```
  
@@ -1638,11 +1606,11 @@ Field order affects models in the following ways:
 
 ## Automatically excluded attributes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#automatically-excluded-attributes>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#automatically-excluded-attributes> ([local](./models.md#automatically-excluded-attributes)))
 
 ### Class variables
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#class-variables>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#class-variables> ([local](./models.md#class-variables)))
 
 Attributes annotated with [`ClassVar`](<https://docs.python.org/3/library/typing.html#typing.ClassVar>) are properly treated by Pydantic as class variables, and will not become fields on model instances:
 
@@ -1670,11 +1638,11 @@ Attributes annotated with [`ClassVar`](<https://docs.python.org/3/library/typing
 
 ### Private model attributes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#private-model-attributes>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#private-model-attributes> ([local](./models.md#private-model-attributes)))
 
 API Documentation
 
-[`pydantic.fields.PrivateAttr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.PrivateAttr>)  
+[`pydantic.fields.PrivateAttr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.PrivateAttr> ([local](./../api/pydantic/fields.md#pydantic.fields.PrivateAttr)))  
 
 Attributes whose name has a leading underscore are not treated as fields by Pydantic, and are not included in the model schema. Instead, these are converted into a “private attribute” which is not validated or even set during calls to `__init__`, `model_validate`, etc.
 
@@ -1715,7 +1683,7 @@ Default factories can take the validated model data as an argument.
 
 ## Model signature
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-signature>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#model-signature> ([local](./models.md#model-signature)))
 
 All Pydantic models will have their signature generated based on their fields:
 
@@ -1771,7 +1739,7 @@ If a field’s alias and name are _both_ not valid identifiers (which may be pos
 
 ## Structural pattern matching
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#structural-pattern-matching>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#structural-pattern-matching> ([local](./models.md#structural-pattern-matching)))
 
 Pydantic supports structural pattern matching for models, as introduced by [PEP 636](<https://peps.python.org/pep-0636/>) in Python 3.10.
 
@@ -1805,7 +1773,7 @@ A match-case statement may seem as if it creates a new model, but don’t be foo
 
 ## Attribute copies
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies> ([local](./models.md#attribute-copies)))
 
 In many cases, arguments passed to the constructor will be copied in order to perform validation and, where necessary, coercion.
 
@@ -1840,12 +1808,4 @@ In this example, note that the ID of the list changes after the class is constru
 
 Note
 
-There are some situations where Pydantic does not copy attributes, such as when passing models — we use the model as is. You can override this behaviour by setting [`model_config['revalidate_instances'] = 'always'`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict>).
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Changelog ](<https://pydantic.dev/docs/validation/latest/get-started/changelog/>) [ Next   
-Fields ](<https://pydantic.dev/docs/validation/latest/concepts/fields/>)
+There are some situations where Pydantic does not copy attributes, such as when passing models — we use the model as is. You can override this behaviour by setting [`model_config['revalidate_instances'] = 'always'`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))).

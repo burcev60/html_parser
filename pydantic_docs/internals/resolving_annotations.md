@@ -3,8 +3,6 @@ title: Resolving Annotations
 source: https://pydantic.dev/docs/validation/latest/internals/resolving_annotations
 ---
 
-# Resolving Annotations
-
 Note
 
 This section is part of the _internals_ documentation, and is partly targeted to contributors.
@@ -53,7 +51,7 @@ In Python 3.7, [PEP 563](<https://peps.python.org/pep-0563/>) introduced the con
 
 ## The challenges of runtime evaluation
 
-[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#the-challenges-of-runtime-evaluation>)
+[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#the-challenges-of-runtime-evaluation> ([local](./resolving_annotations.md#the-challenges-of-runtime-evaluation)))
 
 Static type checkers make use of the AST to analyze the defined annotations. Regarding the previous example, this has the benefit of being able to understand what `MyType` refers to when analyzing the class definition of `Foo`, even if `MyType` isn’t yet defined at runtime.
 
@@ -65,7 +63,7 @@ To evaluate forward references, Pydantic roughly follows the same logic as descr
 
 ## Resolving annotations at class definition
 
-[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-at-class-definition>)
+[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-at-class-definition> ([local](./resolving_annotations.md#resolving-annotations-at-class-definition)))
 
 The following example will be used as a reference throughout this section:
 
@@ -104,7 +102,7 @@ The following example will be used as a reference throughout this section:
 When the `Model` class is being built, different [namespaces](<https://docs.python.org/3/glossary.html#term-namespace>) are at play. For each base class of the `Model`’s [MRO](<https://docs.python.org/3/glossary.html#term-method-resolution-order>) (in reverse order — that is, starting with `Base`), the following logic is applied:
 
   1. Fetch the `__annotations__` key from the current base class’ `__dict__`, if present. For `Base`, this will be `{'f1': 'MyType'}`.
-  2. Iterate over the `__annotations__` items and try to evaluate the annotation [1](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#user-content-fn-1>) using a custom wrapper around the built-in [`eval()`](<https://docs.python.org/3/library/functions.html#eval>) function. This function takes two `globals` and `locals` arguments: 
+  2. Iterate over the `__annotations__` items and try to evaluate the annotation [1](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#user-content-fn-1> ([local](./resolving_annotations.md#user-content-fn-1))) using a custom wrapper around the built-in [`eval()`](<https://docs.python.org/3/library/functions.html#eval>) function. This function takes two `globals` and `locals` arguments: 
      * The current module’s `__dict__` is naturally used as `globals`. For `Base`, this will be `sys.modules['module1'].__dict__`.
      * For the `locals` argument, Pydantic will try to resolve symbols in the following namespaces, sorted by highest priority: 
        * A namespace created on the fly, containing the current class name (`{cls.__name__: cls}`). This is done in order to support recursive references.
@@ -124,7 +122,7 @@ Field name| Resolved annotation
   
 ### Limitations and backwards compatibility concerns
 
-[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#limitations-and-backwards-compatibility-concerns>)
+[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#limitations-and-backwards-compatibility-concerns> ([local](./resolving_annotations.md#limitations-and-backwards-compatibility-concerns)))
 
 While the namespace fetching logic is trying to be as accurate as possible, we still face some limitations:
 
@@ -173,41 +171,13 @@ For backwards compatibility reasons, and to be able to support valid use cases w
 
 ```
 
-Once the fields for `Bar` have been collected (meaning annotations resolved), the `GenerateSchema` class converts every field into a core schema. When it encounters another class-like field type (such as a dataclass), it will try to evaluate annotations, following roughly the same logic as [described above](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-at-class-definition>). However, to evaluate the `'Bar | None'` annotation, `Bar` needs to be present in the globals or locals, which is normally _not_ the case: `Bar` is being created, so it is not “assigned” to the current module’s `__dict__` at that point.
+Once the fields for `Bar` have been collected (meaning annotations resolved), the `GenerateSchema` class converts every field into a core schema. When it encounters another class-like field type (such as a dataclass), it will try to evaluate annotations, following roughly the same logic as [described above](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-at-class-definition> ([local](./resolving_annotations.md#resolving-annotations-at-class-definition))). However, to evaluate the `'Bar | None'` annotation, `Bar` needs to be present in the globals or locals, which is normally _not_ the case: `Bar` is being created, so it is not “assigned” to the current module’s `__dict__` at that point.
 
-To avoid having to call [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) on `Bar`, both the parent namespace (if `Bar` was to be defined inside a function, and [the namespace provided during a model rebuild](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#model-rebuild-semantics>)) and the `{Bar.__name__: Bar}` namespace are included in the locals during annotations evaluation of `Foo` (with the lowest priority) .
-
-This backwards compatibility logic can introduce some inconsistencies, such as the following:
-
-```
- 
-    from dataclasses import dataclass
-    
-    from pydantic import BaseModel
-    
-    
-    @dataclass
-    class Foo:
-    # `a` and `b` shouldn't resolve:
-    a: 'Model'
-    b: 'Inner'
-    
-    
-    def func():
-    Inner = int
-    
-    class Model(BaseModel):
-    foo: Foo
-    
-    Model.__pydantic_complete__
-    #> True, should be False.
-    
-
-```
+To avoid having to call [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) on `Bar`, both the parent namespace (if `Bar` was to be defined inside a function, and [the namespace provided during a model rebuild](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#model-rebuild-semantics> ([local](./resolving_annotations.md#model-rebuild-semantics)))) and the `{Bar.__name__: Bar}` namespace are included in the locals during annotations evaluation of `Foo` (with the lowest priority) .
 
 ## Resolving annotations when rebuilding a model
 
-[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-when-rebuilding-a-model>)
+[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#resolving-annotations-when-rebuilding-a-model> ([local](./resolving_annotations.md#resolving-annotations-when-rebuilding-a-model)))
 
 When a forward reference fails to evaluate, Pydantic will silently fail and stop the core schema generation process. This can be seen by inspecting the `__pydantic_core_schema__` of a model class:
 
@@ -239,24 +209,17 @@ If you then properly define `MyType`, you can rebuild the model:
 
 ```
 
-The [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild>) method uses a _rebuild namespace_ , with the following semantics:
+The [`model_rebuild()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_rebuild> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_rebuild))) method uses a _rebuild namespace_ , with the following semantics:
 
   * If an explicit `_types_namespace` argument is provided, it is used as the rebuild namespace.
   * If no namespace is provided, the namespace where the method is called will be used as the rebuild namespace.
 
-This _rebuild namespace_ will be merged with the model’s parent namespace (if it was defined in a function) and used as is (see the [backwards compatibility logic](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#backwards-compatibility-logic>) described above).
+This _rebuild namespace_ will be merged with the model’s parent namespace (if it was defined in a function) and used as is (see the [backwards compatibility logic](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#backwards-compatibility-logic> ([local](./resolving_annotations.md#backwards-compatibility-logic))) described above).
 
 ## Footnotes
 
-[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#footnote-label>)
+[](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#footnote-label> ([local](./resolving_annotations.md#footnote-label)))
 
-  1. This is done unconditionally, as forward annotations can be only present _as part_ of a type hint (e.g. `Optional['int']`), as dictated by the [typing specification](<https://typing.readthedocs.io/en/latest/spec/annotations.html#string-annotations>). [↩](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#user-content-fnref-1>)
+  1. This is done unconditionally, as forward annotations can be only present _as part_ of a type hint (e.g. `Optional['int']`), as dictated by the [typing specification](<https://typing.readthedocs.io/en/latest/spec/annotations.html#string-annotations>). [↩](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations#user-content-fnref-1> ([local](./resolving_annotations.md#user-content-fnref-1)))
 
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Architecture ](<https://pydantic.dev/docs/validation/latest/internals/architecture/>) [ Next   
-Validating File Data ](<https://pydantic.dev/docs/validation/latest/examples/files/>)
   *[AST]: Abstract Syntax Tree

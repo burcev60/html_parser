@@ -3,12 +3,10 @@ title: Installation
 source: https://pydantic.dev/docs/validation/latest/get-started/install
 ---
 
-# Installation
-
 Installation is as simple as:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-560>)
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-561>)
+  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-560> ([local](./install.md#tab-panel-560)))
+  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-561> ([local](./install.md#tab-panel-561)))
 
 Terminal
 
@@ -49,7 +47,7 @@ Terminal
 
 ## Optional dependencies
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/install#optional-dependencies>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/install#optional-dependencies> ([local](./install.md#optional-dependencies)))
 
 Pydantic has the following optional dependencies:
 
@@ -58,8 +56,8 @@ Pydantic has the following optional dependencies:
 
 To install optional dependencies along with Pydantic:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-562>)
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-563>)
+  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-562> ([local](./install.md#tab-panel-562)))
+  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-563> ([local](./install.md#tab-panel-563)))
 
 Terminal
 
@@ -89,12 +87,12 @@ Of course, you can also install requirements manually with `pip install email-va
 
 ## Install from repository
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/install#install-from-repository>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/install#install-from-repository> ([local](./install.md#install-from-repository)))
 
 And if you prefer to install Pydantic directly from the repository:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-564>)
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-565>)
+  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-564> ([local](./install.md#tab-panel-564)))
+  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-565> ([local](./install.md#tab-panel-565)))
 
 Terminal
 
@@ -117,11 +115,3 @@ Terminal
     
 
 ```
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Help with Pydantic ](<https://pydantic.dev/docs/validation/latest/get-started/help_with_pydantic/>) [ Next   
-Migration Guide ](<https://pydantic.dev/docs/validation/latest/get-started/migration/>)

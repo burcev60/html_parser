@@ -3,11 +3,9 @@ title: JSON Schema
 source: https://pydantic.dev/docs/validation/latest/concepts/json_schema
 ---
 
-# JSON Schema
-
 API Documentation
 
-[`pydantic.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema>)  
+[`pydantic.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema)))  
 
 Pydantic allows automatic creation and customization of JSON schemas from models. The generated JSON schemas are compliant with the following specifications:
 
@@ -16,27 +14,27 @@ Pydantic allows automatic creation and customization of JSON schemas from models
 
 ## Generating JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#generating-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#generating-json-schema> ([local](./json_schema.md#generating-json-schema)))
 
 Use the following functions to generate JSON schema:
 
-  * [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) returns a jsonable dict of a model’s schema.
-  * [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema>) returns a jsonable dict of an adapted type’s schema.
+  * [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) returns a jsonable dict of a model’s schema.
+  * [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.json_schema))) returns a jsonable dict of an adapted type’s schema.
 
 Note
 
-These methods are not to be confused with [`BaseModel.model_dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json>) and [`TypeAdapter.dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json>), which serialize instances of the model or adapted type, respectively. These methods return JSON strings. In comparison, [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema>) return a jsonable dict representing the JSON schema of the model or adapted type, respectively.
+These methods are not to be confused with [`BaseModel.model_dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))) and [`TypeAdapter.dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_json))), which serialize instances of the model or adapted type, respectively. These methods return JSON strings. In comparison, [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.json_schema))) return a jsonable dict representing the JSON schema of the model or adapted type, respectively.
 
 on the
 
-Regarding the “jsonable” nature of the [`model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) results, calling `json.dumps(m.model_json_schema())`on some `BaseModel` `m` returns a valid JSON string. Similarly, for [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema>), calling `json.dumps(TypeAdapter(<some_type>).json_schema())` returns a valid JSON string.
+Regarding the “jsonable” nature of the [`model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) results, calling `json.dumps(m.model_json_schema())`on some `BaseModel` `m` returns a valid JSON string. Similarly, for [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.json_schema))), calling `json.dumps(TypeAdapter(<some_type>).json_schema())` returns a valid JSON string.
 
 Tip
 
 Pydantic offers support for both of:
 
-  1. [Customizing JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema>)
-  2. [Customizing the JSON Schema Generation Process](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process>)
+  1. [Customizing JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema> ([local](./json_schema.md#customizing-json-schema)))
+  2. [Customizing the JSON Schema Generation Process](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process> ([local](./json_schema.md#customizing-the-json-schema-generation-process)))
 
 The first approach generally has a more narrow scope, allowing for customization of the JSON schema for more specific cases and types. The second approach generally has a more broad scope, allowing for customization of the JSON schema generation process overall. The same effects can be achieved with either approach, but depending on your use case, one approach might offer a more simple solution than the other.
 
@@ -158,13 +156,9 @@ Here’s an example of generating JSON schema from a `BaseModel`:
 
 ```
 
-This produces a "jsonable" dict of `MainModel`'s schema.
+The [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) class lets you create an object with methods for validating, serializing, and producing JSON schemas for arbitrary types. This serves as a complete replacement for `schema_of` in Pydantic V1 (which is now deprecated).
 
-Calling `json.dumps` on the schema dict produces a JSON string.
-
-The [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>) class lets you create an object with methods for validating, serializing, and producing JSON schemas for arbitrary types. This serves as a complete replacement for `schema_of` in Pydantic V1 (which is now deprecated).
-
-Here’s an example of generating JSON schema from a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>):
+Here’s an example of generating JSON schema from a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))):
 
 ```
  
@@ -177,7 +171,7 @@ Here’s an example of generating JSON schema from a [`TypeAdapter`](<https://py
 
 ```
 
-You can also generate JSON schemas for combinations of [`BaseModel`s](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>) and [`TypeAdapter`s](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>), as shown in this example:
+You can also generate JSON schemas for combinations of [`BaseModel`s](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) and [`TypeAdapter`s](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))), as shown in this example:
 
 ```
  
@@ -262,11 +256,11 @@ You can also generate JSON schemas for combinations of [`BaseModel`s](<https://p
 
 ### Configuring the `JsonSchemaMode`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#configuring-the-jsonschemamode>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#configuring-the-jsonschemamode> ([local](./json_schema.md#configuring-the-jsonschemamode)))
 
-Specify the mode of JSON schema generation via the `mode` parameter in the [`model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema>) methods. By default, the mode is set to `'validation'`, which produces a JSON schema corresponding to the model’s validation schema.
+Specify the mode of JSON schema generation via the `mode` parameter in the [`model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.json_schema))) methods. By default, the mode is set to `'validation'`, which produces a JSON schema corresponding to the model’s validation schema.
 
-The [`JsonSchemaMode`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.JsonSchemaMode>) is a type alias that represents the available options for the `mode` parameter:
+The [`JsonSchemaMode`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.JsonSchemaMode> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.JsonSchemaMode))) is a type alias that represents the available options for the `mode` parameter:
 
   * `'validation'`
   * `'serialization'`
@@ -326,31 +320,31 @@ Here’s an example of how to specify the `mode` parameter, and how it affects t
 
 ## Customizing JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema> ([local](./json_schema.md#customizing-json-schema)))
 
-The generated JSON schema can be customized at both the [field level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization>) and [model level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization>).
+The generated JSON schema can be customized at both the [field level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization> ([local](./json_schema.md#field-level-customization))) and [model level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization> ([local](./json_schema.md#model-level-customization))).
 
-At both the field and model levels, you can use the [`json_schema_extra` option](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra>) to add extra information to the JSON schema.
+At both the field and model levels, you can use the [`json_schema_extra` option](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra> ([local](./json_schema.md#using-json_schema_extra))) to add extra information to the JSON schema.
 
 For custom types, Pydantic offers other tools for customizing JSON schema generation:
 
-  1. [`WithJsonSchema` annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation>)
-  2. [`SkipJsonSchema` annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation>)
-  3. [Implementing `__get_pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_core_schema>)
-  4. [Implementing `__get_pydantic_json_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_json_schema>)
+  1. [`WithJsonSchema` annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation> ([local](./json_schema.md#withjsonschema-annotation)))
+  2. [`SkipJsonSchema` annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation> ([local](./json_schema.md#skipjsonschema-annotation)))
+  3. [Implementing `__get_pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_core_schema> ([local](./json_schema.md#implementing_get_pydantic_core_schema)))
+  4. [Implementing `__get_pydantic_json_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_json_schema> ([local](./json_schema.md#implementing_get_pydantic_json_schema)))
 
 ### Field-Level Customization
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization> ([local](./json_schema.md#field-level-customization)))
 
-[Fields](<https://pydantic.dev/docs/validation/latest/concepts/fields>) can have their JSON Schema customized. This is usually done using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function.
+[Fields](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) can have their JSON Schema customized. This is usually done using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function.
 
 Some field parameters are used exclusively to customize the generated JSON Schema:
 
   * `title`: The title of the field.
   * `description`: The description of the field.
   * `examples`: The examples of the field.
-  * `json_schema_extra`: Extra JSON Schema properties to be added to the field (see the [dedicated documentation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra>)).
+  * `json_schema_extra`: Extra JSON Schema properties to be added to the field (see the [dedicated documentation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra> ([local](./json_schema.md#using-json_schema_extra)))).
   * `field_title_generator`: A function that programmatically sets the field’s title, based on its name and info.
 
 Here’s an example:
@@ -421,11 +415,9 @@ Here’s an example:
 
 ```
 
-The [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern>) can also be used.
-
 ### Programmatic field title generation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#programmatic-field-title-generation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#programmatic-field-title-generation> ([local](./json_schema.md#programmatic-field-title-generation)))
 
 The `field_title_generator` parameter can be used to programmatically generate the title for a field based on its name and info.
 
@@ -481,25 +473,25 @@ See the following example:
 
 ### Model-Level Customization
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization> ([local](./json_schema.md#model-level-customization)))
 
-You can also use [model config](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict>) to customize JSON schema generation on a model. Specifically, the following config options are relevant:
+You can also use [model config](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))) to customize JSON schema generation on a model. Specifically, the following config options are relevant:
 
-  * [`title`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.title>)
-  * [`json_schema_extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.json_schema_extra>)
-  * [`json_schema_mode_override`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.json_schema_mode_override>)
-  * [`field_title_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.field_title_generator>)
-  * [`model_title_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.model_title_generator>)
+  * [`title`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.title> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.title)))
+  * [`json_schema_extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.json_schema_extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.json_schema_extra)))
+  * [`json_schema_mode_override`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.json_schema_mode_override> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.json_schema_mode_override)))
+  * [`field_title_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.field_title_generator> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.field_title_generator)))
+  * [`model_title_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.model_title_generator> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.model_title_generator)))
 
 ### Using `json_schema_extra`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra> ([local](./json_schema.md#using-json_schema_extra)))
 
-The `json_schema_extra` option can be used to add extra information to the JSON schema, either at the [Field level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization>) or at the [Model level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization>). You can pass a `dict` or a `Callable` to `json_schema_extra`.
+The `json_schema_extra` option can be used to add extra information to the JSON schema, either at the [Field level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization> ([local](./json_schema.md#field-level-customization))) or at the [Model level](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#model-level-customization> ([local](./json_schema.md#model-level-customization))). You can pass a `dict` or a `Callable` to `json_schema_extra`.
 
 #### Using `json_schema_extra` with a `dict`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra-with-a-dict>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra-with-a-dict> ([local](./json_schema.md#using-json_schema_extra-with-a-dict)))
 
 You can pass a `dict` to `json_schema_extra` to add extra information to the JSON schema:
 
@@ -549,7 +541,7 @@ You can pass a `dict` to `json_schema_extra` to add extra information to the JSO
 
 #### Using `json_schema_extra` with a `Callable`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra-with-a-callable>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-json_schema_extra-with-a-callable> ([local](./json_schema.md#using-json_schema_extra-with-a-callable)))
 
 You can pass a `Callable` to `json_schema_extra` to modify the JSON schema with a function:
 
@@ -593,7 +585,7 @@ You can pass a `Callable` to `json_schema_extra` to modify the JSON schema with 
 
 #### Merging `json_schema_extra`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#merging-json_schema_extra>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#merging-json_schema_extra> ([local](./json_schema.md#merging-json_schema_extra)))
 
 Starting in v2.9, Pydantic merges `json_schema_extra` dictionaries from annotated types. This pattern offers a more additive approach to merging rather than the previous override behavior. This can be quite helpful for cases of reusing json schema extra information across multiple types.
 
@@ -639,11 +631,11 @@ We no longer (and never fully did) support composing a mix of `dict` and `callab
 
 ### `WithJsonSchema` annotation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation> ([local](./json_schema.md#withjsonschema-annotation)))
 
 Tip
 
-Using [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema>) is preferred over [implementing `__get_pydantic_json_schema__()`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_json_schema>) for custom types, as it’s more simple and less error-prone.
+Using [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.WithJsonSchema))) is preferred over [implementing `__get_pydantic_json_schema__()`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing_get_pydantic_json_schema> ([local](./json_schema.md#implementing_get_pydantic_json_schema))) for custom types, as it’s more simple and less error-prone.
 
 An annotation used to override the JSON Schema for a type.
 
@@ -697,32 +689,32 @@ This is useful when you want to set a JSON Schema for a type that don’t produc
 
 ```
 
-See the [API documentation](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema>) for more details.
+See the [API documentation](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.WithJsonSchema))) for more details.
 
 Note
 
-You might be tempted to use the [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema>) annotation to fine-tune the JSON Schema of fields having [validators](<https://pydantic.dev/docs/validation/latest/concepts/validators>) attached. Instead, it is recommended to use [the `json_schema_input_type` argument](<https://pydantic.dev/docs/validation/latest/concepts/validators#json-schema-and-field-validators>).
+You might be tempted to use the [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.WithJsonSchema))) annotation to fine-tune the JSON Schema of fields having [validators](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./validators.md))) attached. Instead, it is recommended to use [the `json_schema_input_type` argument](<https://pydantic.dev/docs/validation/latest/concepts/validators#json-schema-and-field-validators> ([local](./validators.md#json-schema-and-field-validators))).
 
 ### `SkipJsonSchema` annotation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation> ([local](./json_schema.md#skipjsonschema-annotation)))
 
 API Documentation
 
-[`pydantic.json_schema.SkipJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.SkipJsonSchema>)  
+[`pydantic.json_schema.SkipJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.SkipJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.SkipJsonSchema)))  
 
-The [`SkipJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.SkipJsonSchema>) annotation can be used to skip an included field (or part of a field’s specifications) from the generated JSON schema. See the API docs for more details.
+The [`SkipJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.SkipJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.SkipJsonSchema))) annotation can be used to skip an included field (or part of a field’s specifications) from the generated JSON schema. See the API docs for more details.
 
 ### Implementing `__get_pydantic_core_schema__`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_core_schema__>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_core_schema__> ([local](./json_schema.md#implementing-__get_pydantic_core_schema__)))
 
 Custom types (used as `field_name: TheType` or `field_name: Annotated[TheType, ...]`) as well as `Annotated` metadata (used as `field_name: Annotated[int, SomeMetadata]`) can modify or override the generated schema by implementing `__get_pydantic_core_schema__`. This method receives two positional arguments:
 
   1. The type annotation that corresponds to this type (so in the case of `TheType[T](https://docs.python.org/3/library/functions.html#int)` it would be `TheType[int]`).
   2. A handler/callback to call the next implementer of `__get_pydantic_core_schema__`.
 
-The handler system works just like [_wrap_ field validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator>). In this case the input is the type and the output is a `core_schema`.
+The handler system works just like [_wrap_ field validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator> ([local](./validators.md#field-wrap-validator))). In this case the input is the type and the output is a `core_schema`.
 
 Here is an example of a custom type that _overrides_ the generated `core_schema`:
 
@@ -974,7 +966,7 @@ To override the schema completely, do not call the handler and return your own `
 
 ### Implementing `__get_pydantic_json_schema__`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_json_schema__>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_json_schema__> ([local](./json_schema.md#implementing-__get_pydantic_json_schema__)))
 
 You can also implement `__get_pydantic_json_schema__` to modify or override the generated json schema. Modifying this method only affects the JSON schema - it doesn’t affect the core schema, which is used for validation and serialization.
 
@@ -1059,7 +1051,7 @@ Here’s an example of modifying the generated JSON schema:
 
 ### Using `field_title_generator`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-field_title_generator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-field_title_generator> ([local](./json_schema.md#using-field_title_generator)))
 
 The `field_title_generator` parameter can be used to programmatically generate the title for a field based on its name and info. This is similar to the field level `field_title_generator`, but the `ConfigDict` option will be applied to all fields of the class.
 
@@ -1113,7 +1105,7 @@ See the following example:
 
 ### Using `model_title_generator`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-model_title_generator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#using-model_title_generator> ([local](./json_schema.md#using-model_title_generator)))
 
 The `model_title_generator` config option is similar to the `field_title_generator` option, but it applies to the title of the model itself, and accepts the model class as input.
 
@@ -1169,7 +1161,7 @@ See the following example:
 
 ## JSON schema types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#json-schema-types>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#json-schema-types> ([local](./json_schema.md#json-schema-types)))
 
 Types, custom field types, and constraints (like `max_length`) are mapped to the corresponding spec formats in the following priority order (when there is an equivalent available):
 
@@ -1252,7 +1244,7 @@ Python type| JSON Schema Type| Additional JSON Schema| Defined in| Notes
   
 ## Top-level schema generation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#top-level-schema-generation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#top-level-schema-generation> ([local](./json_schema.md#top-level-schema-generation)))
 
 You can also generate a top-level JSON schema that only includes a list of models and related sub-models in its `$defs`:
 
@@ -1335,13 +1327,13 @@ You can also generate a top-level JSON schema that only includes a list of model
 
 ## Customizing the JSON Schema Generation Process
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process> ([local](./json_schema.md#customizing-the-json-schema-generation-process)))
 
 API Documentation
 
-[`pydantic.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema>)  
+[`pydantic.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema)))  
 
-If you need custom schema generation, you can use a `schema_generator`, modifying the [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema>) class as necessary for your application.
+If you need custom schema generation, you can use a `schema_generator`, modifying the [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema))) class as necessary for your application.
 
 The various methods that can be used to produce JSON schema accept a keyword argument `schema_generator: type[GenerateJsonSchema] = GenerateJsonSchema`, and you can pass your custom subclass to these methods in order to use your own approach to generating JSON schema.
 
@@ -1428,7 +1420,7 @@ Below is an approach you can use to exclude any fields from the schema that don�
 
 ### JSON schema sorting
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#json-schema-sorting>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#json-schema-sorting> ([local](./json_schema.md#json-schema-sorting)))
 
 By default, Pydantic recursively sorts JSON schemas by alphabetically sorting keys. Notably, Pydantic skips sorting the values of the `properties` key, to preserve the order of the fields as they were defined in the model.
 
@@ -1499,9 +1491,9 @@ If you would like to customize this behavior, you can override the `sort` method
 
 ## Customizing the `$ref`s in JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-refs-in-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-refs-in-json-schema> ([local](./json_schema.md#customizing-the-refs-in-json-schema)))
 
-The format of `$ref`s can be altered by calling [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) or [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json>) with the `ref_template` keyword argument. The definitions are always stored under the key `$defs`, but a specified prefix can be used for the references.
+The format of `$ref`s can be altered by calling [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) or [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))) with the `ref_template` keyword argument. The definitions are always stored under the key `$defs`, but a specified prefix can be used for the references.
 
 This is useful if you need to extend or modify the JSON schema default definitions location. For example, with OpenAPI:
 
@@ -1570,7 +1562,7 @@ This is useful if you need to extend or modify the JSON schema default definitio
 
 ## Miscellaneous Notes on JSON Schema Generation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#miscellaneous-notes-on-json-schema-generation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#miscellaneous-notes-on-json-schema-generation> ([local](./json_schema.md#miscellaneous-notes-on-json-schema-generation)))
 
   * The JSON schema for `Optional` fields indicates that the value `null` is allowed.
   * The `Decimal` type is exposed in JSON schema (and serialized) as a string.
@@ -1578,12 +1570,4 @@ This is useful if you need to extend or modify the JSON schema default definitio
   * Sub-models used are added to the `$defs` JSON attribute and referenced, as per the spec.
   * Sub-models with modifications (via the `Field` class) like a custom title, description, or default value, are recursively included instead of referenced.
   * The `description` for models is taken from either the docstring of the class or the argument `description` to the `Field` class.
-  * The schema is generated by default using aliases as keys, but it can be generated using model property names instead by calling [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) or [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json>) with the `by_alias=False` keyword argument.
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Fields ](<https://pydantic.dev/docs/validation/latest/concepts/fields/>) [ Next   
-JSON ](<https://pydantic.dev/docs/validation/latest/concepts/json/>)
+  * The schema is generated by default using aliases as keys, but it can be generated using model property names instead by calling [`model_json_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_json_schema))) or [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))) with the `by_alias=False` keyword argument.

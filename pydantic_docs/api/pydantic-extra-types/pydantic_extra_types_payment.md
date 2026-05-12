@@ -3,21 +3,19 @@ title: Payment
 source: https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment
 ---
 
-# Payment
-
-The `pydantic_extra_types.payment` module provides the [`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment/#pydantic_extra_types.payment.PaymentCardNumber>) data type.
+The `pydantic_extra_types.payment` module provides the [`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment/#pydantic_extra_types.payment.PaymentCardNumber> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber))) data type.
 
 ## PaymentCardBrand 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardBrand>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardBrand> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardBrand)))
 
 **Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>), `Enum`
 
-Payment card brands supported by the [`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment/#pydantic_extra_types.payment.PaymentCardNumber>).
+Payment card brands supported by the [`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment/#pydantic_extra_types.payment.PaymentCardNumber> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber))).
 
 ## PaymentCardNumber 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber)))
 
 **Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
@@ -25,11 +23,11 @@ A [payment card number](<https://en.wikipedia.org/wiki/Payment_card_number>).
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#attributes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#attributes> ([local](./pydantic_extra_types_payment.md#attributes)))
 
 #### strip_whitespace 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.strip_whitespace>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.strip_whitespace> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.strip_whitespace)))
 
 Whether to strip whitespace from the input value.
 
@@ -37,7 +35,7 @@ Whether to strip whitespace from the input value.
 
 #### min_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.min_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.min_length> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.min_length)))
 
 The minimum length of the card number.
 
@@ -45,7 +43,7 @@ The minimum length of the card number.
 
 #### max_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.max_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.max_length> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.max_length)))
 
 The maximum length of the card number.
 
@@ -53,7 +51,7 @@ The maximum length of the card number.
 
 #### bin 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.bin>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.bin> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.bin)))
 
 The first 6 digits of the card number.
 
@@ -61,7 +59,7 @@ The first 6 digits of the card number.
 
 #### last4 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.last4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.last4> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.last4)))
 
 The last 4 digits of the card number.
 
@@ -69,7 +67,7 @@ The last 4 digits of the card number.
 
 #### brand 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.brand>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.brand> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.brand)))
 
 The brand of the card.
 
@@ -77,7 +75,7 @@ The brand of the card.
 
 #### masked 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.masked>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.masked> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.masked)))
 
 The masked card number.
 
@@ -85,11 +83,11 @@ The masked card number.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#methods>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#methods> ([local](./pydantic_extra_types_payment.md#methods)))
 
 #### validate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate)))
 
 `@classmethod`
 
@@ -108,29 +106,29 @@ Validate the `PaymentCardNumber` instance.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns> ([local](./pydantic_extra_types_payment.md#returns)))
 
-[`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PaymentCardNumber>) — The validated `PaymentCardNumber` instance.
+[`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PaymentCardNumber> ([local](./../pydantic/types.md#pydantic.types.PaymentCardNumber))) — The validated `PaymentCardNumber` instance.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters> ([local](./pydantic_extra_types_payment.md#parameters)))
 
 **`__input_value`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate\(__input_value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate\(__input_value\)> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate\(__input_value\))))
 
 The input value to validate.
 
 **`_`** : `core_schema.ValidationInfo`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate\(_\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate\(_\)> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate\(_\))))
 
 The validation info.
 
 #### validate_digits 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_digits>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_digits> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_digits)))
 
 `@classmethod`
 
@@ -145,29 +143,29 @@ Validate that the card number is all digits.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-1> ([local](./pydantic_extra_types_payment.md#returns-1)))
 
 [`None`](<https://docs.python.org/3/library/constants.html#None>)
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-1> ([local](./pydantic_extra_types_payment.md#parameters-1)))
 
 **`card_number`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_digits\(card_number\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_digits\(card_number\)> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_digits\(card_number\))))
 
 The card number to validate.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises> ([local](./pydantic_extra_types_payment.md#raises)))
 
   * `PydanticCustomError` — If the card number is not all digits.
 
 #### validate_luhn_check_digit 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit)))
 
 `@classmethod`
 
@@ -182,29 +180,29 @@ Validate the payment card number. Based on the [Luhn algorithm](<https://en.wiki
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-2> ([local](./pydantic_extra_types_payment.md#returns-2)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The validated card number.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-2> ([local](./pydantic_extra_types_payment.md#parameters-2)))
 
 **`card_number`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit\(card_number\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit\(card_number\)> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_luhn_check_digit\(card_number\))))
 
 The card number to validate.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises-1> ([local](./pydantic_extra_types_payment.md#raises-1)))
 
   * `PydanticCustomError` — If the card number is not valid.
 
 #### validate_brand 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_brand>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_brand> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_brand)))
 
 `@staticmethod`
 
@@ -219,30 +217,22 @@ Validate length based on [BIN](<https://en.wikipedia.org/wiki/Payment_card_numbe
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#returns-3> ([local](./pydantic_extra_types_payment.md#returns-3)))
 
 `PaymentCardBrand` — The validated card brand.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#parameters-3> ([local](./pydantic_extra_types_payment.md#parameters-3)))
 
 **`card_number`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_brand\(card_number\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#pydantic_extra_types.payment.PaymentCardNumber.validate_brand\(card_number\)> ([local](./pydantic_extra_types_payment.md#pydantic_extra_types.payment.PaymentCardNumber.validate_brand\(card_number\))))
 
 The card number to validate.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment#raises-2> ([local](./pydantic_extra_types_payment.md#raises-2)))
 
   * `PydanticCustomError` — If the card number is not valid.
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Country ](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_country/>) [ Next   
-Phone Numbers ](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/>)

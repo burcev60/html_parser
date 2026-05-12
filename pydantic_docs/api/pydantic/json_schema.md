@@ -3,31 +3,29 @@ title: JSON Schema
 source: https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema
 ---
 
-# JSON Schema
-
 Usage Documentation
 
-[JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema>)
+[JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./../../concepts/json_schema.md)))
 
 The `json_schema` module contains classes and functions to allow the way [JSON Schema](<https://json-schema.org/>) is generated to be customized.
 
-In general you shouldn’t need to use this module directly; instead, you can use [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema>) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema>).
+In general you shouldn’t need to use this module directly; instead, you can use [`BaseModel.model_json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_json_schema> ([local](./base_model.md#pydantic.BaseModel.model_json_schema))) and [`TypeAdapter.json_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.json_schema> ([local](./type_adapter.md#pydantic.type_adapter.TypeAdapter.json_schema))).
 
 ## PydanticJsonSchemaWarning 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.PydanticJsonSchemaWarning>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.PydanticJsonSchemaWarning> ([local](./json_schema.md#pydantic.json_schema.PydanticJsonSchemaWarning)))
 
 **Bases:** [`UserWarning`](<https://docs.python.org/3/library/exceptions.html#UserWarning>)
 
-This class is used to emit warnings produced during JSON schema generation. See the [`GenerateJsonSchema.emit_warning`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.emit_warning>) and [`GenerateJsonSchema.render_warning_message`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.render_warning_message>) methods for more details; these can be overridden to control warning behavior.
+This class is used to emit warnings produced during JSON schema generation. See the [`GenerateJsonSchema.emit_warning`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.emit_warning> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.emit_warning))) and [`GenerateJsonSchema.render_warning_message`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.render_warning_message> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.render_warning_message))) methods for more details; these can be overridden to control warning behavior.
 
 ## GenerateJsonSchema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema)))
 
 Usage Documentation
 
-[Customizing the JSON Schema Generation Process](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process>)
+[Customizing the JSON Schema Generation Process](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-the-json-schema-generation-process> ([local](./../../concepts/json_schema.md#customizing-the-json-schema-generation-process)))
 
 A class for generating JSON schemas.
 
@@ -35,17 +33,17 @@ This class generates JSON schemas based on configured parameters. The default sc
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#attributes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#attributes> ([local](./json_schema.md#attributes)))
 
 #### schema_dialect 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.schema_dialect>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.schema_dialect> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.schema_dialect)))
 
 The JSON schema dialect used to generate the schema. See [Declaring a Dialect](<https://json-schema.org/understanding-json-schema/reference/schema.html#id4>) in the JSON Schema documentation for more information about dialects.
 
 #### ignored_warning_kinds 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ignored_warning_kinds>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ignored_warning_kinds> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.ignored_warning_kinds)))
 
 Warnings to ignore when generating the schema. `self.render_warning_message` will do nothing if its argument `kind` is in `ignored_warning_kinds`; this value can be modified on subclasses to easily control which warnings are emitted.
 
@@ -53,19 +51,19 @@ Warnings to ignore when generating the schema. `self.render_warning_message` wil
 
 #### by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.by_alias>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.by_alias> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.by_alias)))
 
 Whether to use field aliases when generating the schema.
 
 #### ref_template 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ref_template>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ref_template> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.ref_template)))
 
 The format string used when generating reference names.
 
 #### core_to_json_refs 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.core_to_json_refs>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.core_to_json_refs> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.core_to_json_refs)))
 
 A mapping of core refs to JSON refs.
 
@@ -73,7 +71,7 @@ A mapping of core refs to JSON refs.
 
 #### core_to_defs_refs 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.core_to_defs_refs>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.core_to_defs_refs> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.core_to_defs_refs)))
 
 A mapping of core refs to definition refs.
 
@@ -81,7 +79,7 @@ A mapping of core refs to definition refs.
 
 #### defs_to_core_refs 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.defs_to_core_refs>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.defs_to_core_refs> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.defs_to_core_refs)))
 
 A mapping of definition refs to core refs.
 
@@ -89,7 +87,7 @@ A mapping of definition refs to core refs.
 
 #### json_to_defs_refs 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_to_defs_refs>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_to_defs_refs> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.json_to_defs_refs)))
 
 A mapping of JSON refs to definition refs.
 
@@ -97,7 +95,7 @@ A mapping of JSON refs to definition refs.
 
 #### definitions 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.definitions)))
 
 Definitions in the schema.
 
@@ -105,23 +103,23 @@ Definitions in the schema.
 
 ### Constructor Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#constructor-parameters>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#constructor-parameters> ([local](./json_schema.md#constructor-parameters)))
 
 **`by_alias`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) _Default:_ `True`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(by_alias\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(by_alias\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.__init__\(by_alias\))))
 
 Whether to use field aliases in the generated schemas.
 
 **`ref_template`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) _Default:_ `DEFAULT_REF_TEMPLATE`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(ref_template\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(ref_template\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.__init__\(ref_template\))))
 
 The format string to use when generating reference names.
 
 **`union_format`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘any_of’, ‘primitive_type_array’] _Default:_ `'any_of'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(union_format\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.__init__\(union_format\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.__init__\(union_format\))))
 
 The format to use when combining schemas from unions together. Can be one of:
 
@@ -130,11 +128,11 @@ The format to use when combining schemas from unions together. Can be one of:
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#methods>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#methods> ([local](./json_schema.md#methods)))
 
 #### build_schema_type_to_method 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.build_schema_type_to_method>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.build_schema_type_to_method> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.build_schema_type_to_method)))
 
 ```
  
@@ -149,19 +147,19 @@ Builds a dictionary mapping fields to methods for generating JSON schemas.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns> ([local](./json_schema.md#returns)))
 
 [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[`CoreSchemaOrFieldType`, [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`CoreSchemaOrField`], `JsonSchemaValue`]] — A dictionary containing the mapping of `CoreSchemaOrFieldType` to a handler method.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises> ([local](./json_schema.md#raises)))
 
   * `TypeError` — If no method has been defined for generating a JSON schema for a given pydantic core schema type.
 
 #### generate_definitions 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_definitions>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_definitions> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate_definitions)))
 
 ```
  
@@ -176,7 +174,7 @@ Generates JSON schema definitions from a list of core schemas, pairing the gener
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-1> ([local](./json_schema.md#returns-1)))
 
 [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[`JsonSchemaKeyT`, `JsonSchemaMode`], `JsonSchemaValue`], [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[`DefsRef`, `JsonSchemaValue`]] — A tuple where:
 
@@ -185,11 +183,11 @@ Generates JSON schema definitions from a list of core schemas, pairing the gener
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters> ([local](./json_schema.md#parameters)))
 
 **`inputs`** : [`Sequence`](<https://docs.python.org/3/library/typing.html#typing.Sequence>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[`JsonSchemaKeyT`, `JsonSchemaMode`, `core_schema.CoreSchema`]] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_definitions\(inputs\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_definitions\(inputs\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate_definitions\(inputs\))))
 
 A sequence of tuples, where:
 
@@ -199,13 +197,13 @@ A sequence of tuples, where:
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-1> ([local](./json_schema.md#raises-1)))
 
   * `PydanticUserError` — Raised if the JSON schema generator has already been used to generate a JSON schema.
 
 #### generate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate)))
 
 ```
  
@@ -218,35 +216,35 @@ Generates a JSON schema for a specified schema in a specified mode.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-2> ([local](./json_schema.md#returns-2)))
 
 `JsonSchemaValue` — A JSON schema representing the specified schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-1> ([local](./json_schema.md#parameters-1)))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate\(schema\))))
 
 A Pydantic model.
 
 **`mode`** : `JsonSchemaMode` _Default:_ `'validation'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate\(mode\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate\(mode\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate\(mode\))))
 
 The mode in which to generate the schema. Defaults to ‘validation’.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-2> ([local](./json_schema.md#raises-2)))
 
   * `PydanticUserError` — If the JSON schema generator has already been used to generate a JSON schema.
 
 #### generate_inner 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_inner>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_inner> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate_inner)))
 
 ```
  
@@ -261,23 +259,23 @@ TODO: the nested function definitions here seem like bad practice, I’d like to
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-3> ([local](./json_schema.md#returns-3)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-2> ([local](./json_schema.md#parameters-2)))
 
 **`schema`** : `CoreSchemaOrField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_inner\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generate_inner\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate_inner\(schema\))))
 
 The given core schema.
 
 #### sort 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.sort>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.sort> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.sort)))
 
 ```
  
@@ -292,13 +290,13 @@ By default, alphabetically sort the keys in the JSON schema, skipping the ‘pro
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-4> ([local](./json_schema.md#returns-4)))
 
 `JsonSchemaValue`
 
 #### invalid_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.invalid_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.invalid_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.invalid_schema)))
 
 ```
  
@@ -311,13 +309,13 @@ Placeholder - should never be called.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-5> ([local](./json_schema.md#returns-5)))
 
 `JsonSchemaValue`
 
 #### any_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.any_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.any_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.any_schema)))
 
 ```
  
@@ -330,23 +328,23 @@ Generates a JSON schema that matches any value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-6> ([local](./json_schema.md#returns-6)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-3> ([local](./json_schema.md#parameters-3)))
 
 **`schema`** : `core_schema.AnySchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.any_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.any_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.any_schema\(schema\))))
 
 The core schema.
 
 #### none_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.none_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.none_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.none_schema)))
 
 ```
  
@@ -359,23 +357,23 @@ Generates a JSON schema that matches `None`.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-7>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-7> ([local](./json_schema.md#returns-7)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-4> ([local](./json_schema.md#parameters-4)))
 
 **`schema`** : `core_schema.NoneSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.none_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.none_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.none_schema\(schema\))))
 
 The core schema.
 
 #### bool_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bool_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bool_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.bool_schema)))
 
 ```
  
@@ -388,23 +386,23 @@ Generates a JSON schema that matches a bool value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-8>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-8> ([local](./json_schema.md#returns-8)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-5> ([local](./json_schema.md#parameters-5)))
 
 **`schema`** : `core_schema.BoolSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bool_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bool_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.bool_schema\(schema\))))
 
 The core schema.
 
 #### int_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.int_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.int_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.int_schema)))
 
 ```
  
@@ -417,23 +415,23 @@ Generates a JSON schema that matches an int value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-9>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-9> ([local](./json_schema.md#returns-9)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-6> ([local](./json_schema.md#parameters-6)))
 
 **`schema`** : `core_schema.IntSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.int_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.int_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.int_schema\(schema\))))
 
 The core schema.
 
 #### float_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.float_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.float_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.float_schema)))
 
 ```
  
@@ -446,23 +444,23 @@ Generates a JSON schema that matches a float value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-10>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-10> ([local](./json_schema.md#returns-10)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-7>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-7> ([local](./json_schema.md#parameters-7)))
 
 **`schema`** : `core_schema.FloatSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.float_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.float_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.float_schema\(schema\))))
 
 The core schema.
 
 #### decimal_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.decimal_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.decimal_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.decimal_schema)))
 
 ```
  
@@ -475,23 +473,23 @@ Generates a JSON schema that matches a decimal value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-11>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-11> ([local](./json_schema.md#returns-11)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-8>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-8> ([local](./json_schema.md#parameters-8)))
 
 **`schema`** : `core_schema.DecimalSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.decimal_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.decimal_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.decimal_schema\(schema\))))
 
 The core schema.
 
 #### str_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.str_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.str_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.str_schema)))
 
 ```
  
@@ -504,23 +502,23 @@ Generates a JSON schema that matches a string value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-12>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-12> ([local](./json_schema.md#returns-12)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-9>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-9> ([local](./json_schema.md#parameters-9)))
 
 **`schema`** : `core_schema.StringSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.str_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.str_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.str_schema\(schema\))))
 
 The core schema.
 
 #### bytes_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bytes_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bytes_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.bytes_schema)))
 
 ```
  
@@ -533,23 +531,23 @@ Generates a JSON schema that matches a bytes value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-13>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-13> ([local](./json_schema.md#returns-13)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-10>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-10> ([local](./json_schema.md#parameters-10)))
 
 **`schema`** : `core_schema.BytesSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bytes_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.bytes_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.bytes_schema\(schema\))))
 
 The core schema.
 
 #### date_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.date_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.date_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.date_schema)))
 
 ```
  
@@ -562,23 +560,23 @@ Generates a JSON schema that matches a date value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-14>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-14> ([local](./json_schema.md#returns-14)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-11>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-11> ([local](./json_schema.md#parameters-11)))
 
 **`schema`** : `core_schema.DateSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.date_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.date_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.date_schema\(schema\))))
 
 The core schema.
 
 #### time_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.time_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.time_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.time_schema)))
 
 ```
  
@@ -591,23 +589,23 @@ Generates a JSON schema that matches a time value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-15>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-15> ([local](./json_schema.md#returns-15)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-12>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-12> ([local](./json_schema.md#parameters-12)))
 
 **`schema`** : `core_schema.TimeSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.time_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.time_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.time_schema\(schema\))))
 
 The core schema.
 
 #### datetime_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.datetime_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.datetime_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.datetime_schema)))
 
 ```
  
@@ -620,23 +618,23 @@ Generates a JSON schema that matches a datetime value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-16>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-16> ([local](./json_schema.md#returns-16)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-13>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-13> ([local](./json_schema.md#parameters-13)))
 
 **`schema`** : `core_schema.DatetimeSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.datetime_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.datetime_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.datetime_schema\(schema\))))
 
 The core schema.
 
 #### timedelta_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.timedelta_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.timedelta_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.timedelta_schema)))
 
 ```
  
@@ -649,23 +647,23 @@ Generates a JSON schema that matches a timedelta value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-17>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-17> ([local](./json_schema.md#returns-17)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-14>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-14> ([local](./json_schema.md#parameters-14)))
 
 **`schema`** : `core_schema.TimedeltaSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.timedelta_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.timedelta_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.timedelta_schema\(schema\))))
 
 The core schema.
 
 #### literal_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.literal_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.literal_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.literal_schema)))
 
 ```
  
@@ -678,23 +676,23 @@ Generates a JSON schema that matches a literal value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-18>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-18> ([local](./json_schema.md#returns-18)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-15>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-15> ([local](./json_schema.md#parameters-15)))
 
 **`schema`** : `core_schema.LiteralSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.literal_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.literal_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.literal_schema\(schema\))))
 
 The core schema.
 
 #### missing_sentinel_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema)))
 
 ```
  
@@ -709,23 +707,23 @@ Generates a JSON schema that matches the `MISSING` sentinel value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-19>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-19> ([local](./json_schema.md#returns-19)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-16>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-16> ([local](./json_schema.md#parameters-16)))
 
 **`schema`** : `core_schema.MissingSentinelSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.missing_sentinel_schema\(schema\))))
 
 The core schema.
 
 #### enum_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.enum_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.enum_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.enum_schema)))
 
 ```
  
@@ -738,23 +736,23 @@ Generates a JSON schema that matches an Enum value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-20>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-20> ([local](./json_schema.md#returns-20)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-17>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-17> ([local](./json_schema.md#parameters-17)))
 
 **`schema`** : `core_schema.EnumSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.enum_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.enum_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.enum_schema\(schema\))))
 
 The core schema.
 
 #### is_instance_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_instance_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_instance_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.is_instance_schema)))
 
 ```
  
@@ -769,23 +767,23 @@ Unless overridden in a subclass, this raises an error.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-21>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-21> ([local](./json_schema.md#returns-21)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-18>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-18> ([local](./json_schema.md#parameters-18)))
 
 **`schema`** : `core_schema.IsInstanceSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_instance_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_instance_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.is_instance_schema\(schema\))))
 
 The core schema.
 
 #### is_subclass_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema)))
 
 ```
  
@@ -800,23 +798,23 @@ For backwards compatibility with v1, this does not raise an error, but can be ov
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-22>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-22> ([local](./json_schema.md#returns-22)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-19>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-19> ([local](./json_schema.md#parameters-19)))
 
 **`schema`** : `core_schema.IsSubclassSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.is_subclass_schema\(schema\))))
 
 The core schema.
 
 #### callable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.callable_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.callable_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.callable_schema)))
 
 ```
  
@@ -831,23 +829,23 @@ Unless overridden in a subclass, this raises an error.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-23>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-23> ([local](./json_schema.md#returns-23)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-20>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-20> ([local](./json_schema.md#parameters-20)))
 
 **`schema`** : `core_schema.CallableSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.callable_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.callable_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.callable_schema\(schema\))))
 
 The core schema.
 
 #### list_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.list_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.list_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.list_schema)))
 
 ```
  
@@ -860,23 +858,23 @@ Returns a schema that matches a list schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-24>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-24> ([local](./json_schema.md#returns-24)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-21>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-21> ([local](./json_schema.md#parameters-21)))
 
 **`schema`** : `core_schema.ListSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.list_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.list_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.list_schema\(schema\))))
 
 The core schema.
 
 #### tuple_positional_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_positional_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_positional_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tuple_positional_schema)))
 
 ```
  
@@ -889,13 +887,13 @@ Replaced by `tuple_schema`.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-25>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-25> ([local](./json_schema.md#returns-25)))
 
 `JsonSchemaValue`
 
 #### tuple_variable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_variable_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_variable_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tuple_variable_schema)))
 
 ```
  
@@ -908,13 +906,13 @@ Replaced by `tuple_schema`.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-26>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-26> ([local](./json_schema.md#returns-26)))
 
 `JsonSchemaValue`
 
 #### tuple_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tuple_schema)))
 
 ```
  
@@ -927,23 +925,23 @@ Generates a JSON schema that matches a tuple schema e.g. `tuple[int, str, bool]`
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-27>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-27> ([local](./json_schema.md#returns-27)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-22>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-22> ([local](./json_schema.md#parameters-22)))
 
 **`schema`** : `core_schema.TupleSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tuple_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tuple_schema\(schema\))))
 
 The core schema.
 
 #### set_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.set_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.set_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.set_schema)))
 
 ```
  
@@ -956,23 +954,23 @@ Generates a JSON schema that matches a set schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-28>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-28> ([local](./json_schema.md#returns-28)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-23>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-23> ([local](./json_schema.md#parameters-23)))
 
 **`schema`** : `core_schema.SetSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.set_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.set_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.set_schema\(schema\))))
 
 The core schema.
 
 #### frozenset_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.frozenset_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.frozenset_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.frozenset_schema)))
 
 ```
  
@@ -985,23 +983,23 @@ Generates a JSON schema that matches a frozenset schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-29>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-29> ([local](./json_schema.md#returns-29)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-24>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-24> ([local](./json_schema.md#parameters-24)))
 
 **`schema`** : `core_schema.FrozenSetSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.frozenset_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.frozenset_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.frozenset_schema\(schema\))))
 
 The core schema.
 
 #### generator_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generator_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generator_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generator_schema)))
 
 ```
  
@@ -1014,23 +1012,23 @@ Returns a JSON schema that represents the provided GeneratorSchema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-30>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-30> ([local](./json_schema.md#returns-30)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-25>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-25> ([local](./json_schema.md#parameters-25)))
 
 **`schema`** : `core_schema.GeneratorSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generator_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.generator_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.generator_schema\(schema\))))
 
 The schema.
 
 #### dict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dict_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dict_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dict_schema)))
 
 ```
  
@@ -1043,23 +1041,23 @@ Generates a JSON schema that matches a dict schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-31>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-31> ([local](./json_schema.md#returns-31)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-26>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-26> ([local](./json_schema.md#parameters-26)))
 
 **`schema`** : `core_schema.DictSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dict_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dict_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dict_schema\(schema\))))
 
 The core schema.
 
 #### function_before_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_before_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_before_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_before_schema)))
 
 ```
  
@@ -1074,23 +1072,23 @@ Generates a JSON schema that matches a function-before schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-32>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-32> ([local](./json_schema.md#returns-32)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-27>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-27> ([local](./json_schema.md#parameters-27)))
 
 **`schema`** : `core_schema.BeforeValidatorFunctionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_before_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_before_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_before_schema\(schema\))))
 
 The core schema.
 
 #### function_after_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_after_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_after_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_after_schema)))
 
 ```
  
@@ -1105,23 +1103,23 @@ Generates a JSON schema that matches a function-after schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-33>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-33> ([local](./json_schema.md#returns-33)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-28>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-28> ([local](./json_schema.md#parameters-28)))
 
 **`schema`** : `core_schema.AfterValidatorFunctionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_after_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_after_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_after_schema\(schema\))))
 
 The core schema.
 
 #### function_plain_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_plain_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_plain_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_plain_schema)))
 
 ```
  
@@ -1136,23 +1134,23 @@ Generates a JSON schema that matches a function-plain schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-34>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-34> ([local](./json_schema.md#returns-34)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-29>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-29> ([local](./json_schema.md#parameters-29)))
 
 **`schema`** : `core_schema.PlainValidatorFunctionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_plain_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_plain_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_plain_schema\(schema\))))
 
 The core schema.
 
 #### function_wrap_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema)))
 
 ```
  
@@ -1167,23 +1165,23 @@ Generates a JSON schema that matches a function-wrap schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-35>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-35> ([local](./json_schema.md#returns-35)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-30>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-30> ([local](./json_schema.md#parameters-30)))
 
 **`schema`** : `core_schema.WrapValidatorFunctionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.function_wrap_schema\(schema\))))
 
 The core schema.
 
 #### default_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.default_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.default_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.default_schema)))
 
 ```
  
@@ -1196,23 +1194,23 @@ Generates a JSON schema that matches a schema with a default value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-36>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-36> ([local](./json_schema.md#returns-36)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-31>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-31> ([local](./json_schema.md#parameters-31)))
 
 **`schema`** : `core_schema.WithDefaultSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.default_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.default_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.default_schema\(schema\))))
 
 The core schema.
 
 #### get_default_value 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_default_value>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_default_value> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_default_value)))
 
 ```
  
@@ -1227,23 +1225,23 @@ The default implementation is to use the statically defined default value. This 
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-37>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-37> ([local](./json_schema.md#returns-37)))
 
-[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) — The default value to use, or [`NoDefault`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.NoDefault>) if no default value is available.
+[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) — The default value to use, or [`NoDefault`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.NoDefault> ([local](./json_schema.md#pydantic.json_schema.NoDefault))) if no default value is available.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-32>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-32> ([local](./json_schema.md#parameters-32)))
 
 **`schema`** : `core_schema.WithDefaultSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_default_value\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_default_value\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_default_value\(schema\))))
 
 The `'with-default'` core schema.
 
 #### nullable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.nullable_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.nullable_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.nullable_schema)))
 
 ```
  
@@ -1256,23 +1254,23 @@ Generates a JSON schema that matches a schema that allows null values.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-38>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-38> ([local](./json_schema.md#returns-38)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-33>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-33> ([local](./json_schema.md#parameters-33)))
 
 **`schema`** : `core_schema.NullableSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.nullable_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.nullable_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.nullable_schema\(schema\))))
 
 The core schema.
 
 #### union_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.union_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.union_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.union_schema)))
 
 ```
  
@@ -1285,23 +1283,23 @@ Generates a JSON schema that matches a schema that allows values matching any of
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-39>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-39> ([local](./json_schema.md#returns-39)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-34>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-34> ([local](./json_schema.md#parameters-34)))
 
 **`schema`** : `core_schema.UnionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.union_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.union_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.union_schema\(schema\))))
 
 The core schema.
 
 #### get_union_of_schemas 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas)))
 
 ```
  
@@ -1316,23 +1314,23 @@ The result depends on the configured `'union_format'`.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-40>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-40> ([local](./json_schema.md#returns-40)))
 
 `JsonSchemaValue` — The JSON Schema representing the union of schemas.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-35>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-35> ([local](./json_schema.md#parameters-35)))
 
 **`schemas`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`JsonSchemaValue`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas\(schemas\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas\(schemas\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_union_of_schemas\(schemas\))))
 
 The list of JSON Schemas to be included in the union.
 
 #### tagged_union_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema)))
 
 ```
  
@@ -1345,23 +1343,23 @@ Generates a JSON schema that matches a schema that allows values matching any of
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-41>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-41> ([local](./json_schema.md#returns-41)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-36>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-36> ([local](./json_schema.md#parameters-36)))
 
 **`schema`** : `core_schema.TaggedUnionSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.tagged_union_schema\(schema\))))
 
 The core schema.
 
 #### chain_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.chain_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.chain_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.chain_schema)))
 
 ```
  
@@ -1376,23 +1374,23 @@ When generating a schema for validation, we return the validation JSON schema fo
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-42>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-42> ([local](./json_schema.md#returns-42)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-37>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-37> ([local](./json_schema.md#parameters-37)))
 
 **`schema`** : `core_schema.ChainSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.chain_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.chain_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.chain_schema\(schema\))))
 
 The core schema.
 
 #### lax_or_strict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema)))
 
 ```
  
@@ -1405,23 +1403,23 @@ Generates a JSON schema that matches a schema that allows values matching either
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-43>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-43> ([local](./json_schema.md#returns-43)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-38>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-38> ([local](./json_schema.md#parameters-38)))
 
 **`schema`** : `core_schema.LaxOrStrictSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.lax_or_strict_schema\(schema\))))
 
 The core schema.
 
 #### json_or_python_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema)))
 
 ```
  
@@ -1436,23 +1434,23 @@ The JSON schema is used instead of the Python schema. If you want to use the Pyt
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-44>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-44> ([local](./json_schema.md#returns-44)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-39>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-39> ([local](./json_schema.md#parameters-39)))
 
 **`schema`** : `core_schema.JsonOrPythonSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.json_or_python_schema\(schema\))))
 
 The core schema.
 
 #### typed_dict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema)))
 
 ```
  
@@ -1465,23 +1463,23 @@ Generates a JSON schema that matches a schema that defines a typed dict.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-45>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-45> ([local](./json_schema.md#returns-45)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-40>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-40> ([local](./json_schema.md#parameters-40)))
 
 **`schema`** : `core_schema.TypedDictSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.typed_dict_schema\(schema\))))
 
 The core schema.
 
 #### typed_dict_field_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema)))
 
 ```
  
@@ -1494,23 +1492,23 @@ Generates a JSON schema that matches a schema that defines a typed dict field.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-46>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-46> ([local](./json_schema.md#returns-46)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-41>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-41> ([local](./json_schema.md#parameters-41)))
 
 **`schema`** : `core_schema.TypedDictField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.typed_dict_field_schema\(schema\))))
 
 The core schema.
 
 #### dataclass_field_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema)))
 
 ```
  
@@ -1523,23 +1521,23 @@ Generates a JSON schema that matches a schema that defines a dataclass field.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-47>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-47> ([local](./json_schema.md#returns-47)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-42>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-42> ([local](./json_schema.md#parameters-42)))
 
 **`schema`** : `core_schema.DataclassField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_field_schema\(schema\))))
 
 The core schema.
 
 #### model_field_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_field_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_field_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_field_schema)))
 
 ```
  
@@ -1552,23 +1550,23 @@ Generates a JSON schema that matches a schema that defines a model field.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-48>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-48> ([local](./json_schema.md#returns-48)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-43>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-43> ([local](./json_schema.md#parameters-43)))
 
 **`schema`** : `core_schema.ModelField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_field_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_field_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_field_schema\(schema\))))
 
 The core schema.
 
 #### computed_field_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.computed_field_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.computed_field_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.computed_field_schema)))
 
 ```
  
@@ -1581,23 +1579,23 @@ Generates a JSON schema that matches a schema that defines a computed field.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-49>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-49> ([local](./json_schema.md#returns-49)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-44>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-44> ([local](./json_schema.md#parameters-44)))
 
 **`schema`** : `core_schema.ComputedField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.computed_field_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.computed_field_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.computed_field_schema\(schema\))))
 
 The core schema.
 
 #### model_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_schema)))
 
 ```
  
@@ -1610,23 +1608,23 @@ Generates a JSON schema that matches a schema that defines a model.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-50>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-50> ([local](./json_schema.md#returns-50)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-45>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-45> ([local](./json_schema.md#parameters-45)))
 
 **`schema`** : `core_schema.ModelSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_schema\(schema\))))
 
 The core schema.
 
 #### resolve_ref_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema)))
 
 ```
  
@@ -1639,29 +1637,29 @@ Resolve a JsonSchemaValue to the non-ref schema if it is a $ref schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-51>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-51> ([local](./json_schema.md#returns-51)))
 
 `JsonSchemaValue` — The resolved schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-46>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-46> ([local](./json_schema.md#parameters-46)))
 
 **`json_schema`** : `JsonSchemaValue`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema\(json_schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema\(json_schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.resolve_ref_schema\(json_schema\))))
 
 The schema to resolve.
 
 ##### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#raises-3> ([local](./json_schema.md#raises-3)))
 
   * `RuntimeError` — If the schema reference can’t be found in definitions.
 
 #### model_fields_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_fields_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_fields_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_fields_schema)))
 
 ```
  
@@ -1674,23 +1672,23 @@ Generates a JSON schema that matches a schema that defines a model’s fields.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-52>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-52> ([local](./json_schema.md#returns-52)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-47>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-47> ([local](./json_schema.md#parameters-47)))
 
 **`schema`** : `core_schema.ModelFieldsSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_fields_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.model_fields_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.model_fields_schema\(schema\))))
 
 The core schema.
 
 #### field_is_present 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_present>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_present> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_is_present)))
 
 ```
  
@@ -1703,23 +1701,23 @@ Whether the field should be included in the generated JSON schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-53>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-53> ([local](./json_schema.md#returns-53)))
 
 [`bool`](<https://docs.python.org/3/library/functions.html#bool>) — `True` if the field should be included in the generated JSON schema, `False` otherwise.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-48>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-48> ([local](./json_schema.md#parameters-48)))
 
 **`field`** : `CoreSchemaField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_present\(field\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_present\(field\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_is_present\(field\))))
 
 The schema for the field itself.
 
 #### field_is_required 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_is_required)))
 
 ```
  
@@ -1735,29 +1733,29 @@ Whether the field should be marked as required in the generated JSON schema. (No
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-54>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-54> ([local](./json_schema.md#returns-54)))
 
 [`bool`](<https://docs.python.org/3/library/functions.html#bool>) — `True` if the field should be marked as required in the generated JSON schema, `False` otherwise.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-49>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-49> ([local](./json_schema.md#parameters-49)))
 
 **`field`** : `core_schema.ModelField` | `core_schema.DataclassField` | `core_schema.TypedDictField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required\(field\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required\(field\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_is_required\(field\))))
 
 The schema for the field itself.
 
 **`total`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required\(total\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_is_required\(total\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_is_required\(total\))))
 
 Only applies to `TypedDictField`s. Indicates if the `TypedDict` this field belongs to is total, in which case any fields that don’t explicitly specify `required=False` are required.
 
 #### dataclass_args_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema)))
 
 ```
  
@@ -1770,23 +1768,23 @@ Generates a JSON schema that matches a schema that defines a dataclass’s const
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-55>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-55> ([local](./json_schema.md#returns-55)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-50>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-50> ([local](./json_schema.md#parameters-50)))
 
 **`schema`** : `core_schema.DataclassArgsSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_args_schema\(schema\))))
 
 The core schema.
 
 #### dataclass_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_schema)))
 
 ```
  
@@ -1799,23 +1797,23 @@ Generates a JSON schema that matches a schema that defines a dataclass.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-56>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-56> ([local](./json_schema.md#returns-56)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-51>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-51> ([local](./json_schema.md#parameters-51)))
 
 **`schema`** : `core_schema.DataclassSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.dataclass_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.dataclass_schema\(schema\))))
 
 The core schema.
 
 #### arguments_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.arguments_schema)))
 
 ```
  
@@ -1828,23 +1826,23 @@ Generates a JSON schema that matches a schema that defines a function’s argume
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-57>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-57> ([local](./json_schema.md#returns-57)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-52>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-52> ([local](./json_schema.md#parameters-52)))
 
 **`schema`** : `core_schema.ArgumentsSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.arguments_schema\(schema\))))
 
 The core schema.
 
 #### kw_arguments_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema)))
 
 ```
  
@@ -1860,23 +1858,23 @@ Generates a JSON schema that matches a schema that defines a function’s keywor
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-58>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-58> ([local](./json_schema.md#returns-58)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-53>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-53> ([local](./json_schema.md#parameters-53)))
 
 **`arguments`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`core_schema.ArgumentsParameter`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema\(arguments\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema\(arguments\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.kw_arguments_schema\(arguments\))))
 
 The core schema.
 
 #### p_arguments_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema)))
 
 ```
  
@@ -1892,23 +1890,23 @@ Generates a JSON schema that matches a schema that defines a function’s positi
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-59>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-59> ([local](./json_schema.md#returns-59)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-54>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-54> ([local](./json_schema.md#parameters-54)))
 
 **`arguments`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`core_schema.ArgumentsParameter`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema\(arguments\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema\(arguments\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.p_arguments_schema\(arguments\))))
 
 The core schema.
 
 #### get_argument_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_argument_name>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_argument_name> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_argument_name)))
 
 ```
  
@@ -1923,23 +1921,23 @@ Retrieves the name of an argument.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-60>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-60> ([local](./json_schema.md#returns-60)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The name of the argument.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-55>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-55> ([local](./json_schema.md#parameters-55)))
 
 **`argument`** : `core_schema.ArgumentsParameter` | `core_schema.ArgumentsV3Parameter`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_argument_name\(argument\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_argument_name\(argument\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_argument_name\(argument\))))
 
 The core schema.
 
 #### arguments_v3_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema)))
 
 ```
  
@@ -1952,23 +1950,23 @@ Generates a JSON schema that matches a schema that defines a function’s argume
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-61>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-61> ([local](./json_schema.md#returns-61)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-56>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-56> ([local](./json_schema.md#parameters-56)))
 
 **`schema`** : `core_schema.ArgumentsV3Schema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.arguments_v3_schema\(schema\))))
 
 The core schema.
 
 #### call_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.call_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.call_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.call_schema)))
 
 ```
  
@@ -1981,23 +1979,23 @@ Generates a JSON schema that matches a schema that defines a function call.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-62>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-62> ([local](./json_schema.md#returns-62)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-57>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-57> ([local](./json_schema.md#parameters-57)))
 
 **`schema`** : `core_schema.CallSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.call_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.call_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.call_schema\(schema\))))
 
 The core schema.
 
 #### custom_error_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.custom_error_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.custom_error_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.custom_error_schema)))
 
 ```
  
@@ -2010,23 +2008,23 @@ Generates a JSON schema that matches a schema that defines a custom error.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-63>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-63> ([local](./json_schema.md#returns-63)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-58>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-58> ([local](./json_schema.md#parameters-58)))
 
 **`schema`** : `core_schema.CustomErrorSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.custom_error_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.custom_error_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.custom_error_schema\(schema\))))
 
 The core schema.
 
 #### json_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.json_schema)))
 
 ```
  
@@ -2039,23 +2037,23 @@ Generates a JSON schema that matches a schema that defines a JSON object.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-64>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-64> ([local](./json_schema.md#returns-64)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-59>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-59> ([local](./json_schema.md#parameters-59)))
 
 **`schema`** : `core_schema.JsonSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.json_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.json_schema\(schema\))))
 
 The core schema.
 
 #### url_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.url_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.url_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.url_schema)))
 
 ```
  
@@ -2068,23 +2066,23 @@ Generates a JSON schema that matches a schema that defines a URL.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-65>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-65> ([local](./json_schema.md#returns-65)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-60>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-60> ([local](./json_schema.md#parameters-60)))
 
 **`schema`** : `core_schema.UrlSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.url_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.url_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.url_schema\(schema\))))
 
 The core schema.
 
 #### multi_host_url_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema)))
 
 ```
  
@@ -2097,23 +2095,23 @@ Generates a JSON schema that matches a schema that defines a URL that can be use
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-66>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-66> ([local](./json_schema.md#returns-66)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-61>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-61> ([local](./json_schema.md#parameters-61)))
 
 **`schema`** : `core_schema.MultiHostUrlSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.multi_host_url_schema\(schema\))))
 
 The core schema.
 
 #### uuid_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.uuid_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.uuid_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.uuid_schema)))
 
 ```
  
@@ -2126,23 +2124,23 @@ Generates a JSON schema that matches a UUID.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-67>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-67> ([local](./json_schema.md#returns-67)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-62>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-62> ([local](./json_schema.md#parameters-62)))
 
 **`schema`** : `core_schema.UuidSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.uuid_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.uuid_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.uuid_schema\(schema\))))
 
 The core schema.
 
 #### definitions_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.definitions_schema)))
 
 ```
  
@@ -2155,23 +2153,23 @@ Generates a JSON schema that matches a schema that defines a JSON object with de
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-68>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-68> ([local](./json_schema.md#returns-68)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-63>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-63> ([local](./json_schema.md#parameters-63)))
 
 **`schema`** : `core_schema.DefinitionsSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definitions_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.definitions_schema\(schema\))))
 
 The core schema.
 
 #### definition_ref_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema)))
 
 ```
  
@@ -2186,23 +2184,23 @@ Generates a JSON schema that matches a schema that references a definition.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-69>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-69> ([local](./json_schema.md#returns-69)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-64>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-64> ([local](./json_schema.md#parameters-64)))
 
 **`schema`** : `core_schema.DefinitionReferenceSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.definition_ref_schema\(schema\))))
 
 The core schema.
 
 #### ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ser_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ser_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.ser_schema)))
 
 ```
  
@@ -2217,23 +2215,23 @@ Generates a JSON schema that matches a schema that defines a serialized object.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-70>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-70> ([local](./json_schema.md#returns-70)))
 
 `JsonSchemaValue` | [`None`](<https://docs.python.org/3/library/constants.html#None>) — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-65>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-65> ([local](./json_schema.md#parameters-65)))
 
 **`schema`** : `core_schema.SerSchema` | `core_schema.IncExSeqSerSchema` | `core_schema.IncExDictSerSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ser_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.ser_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.ser_schema\(schema\))))
 
 The core schema.
 
 #### complex_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.complex_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.complex_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.complex_schema)))
 
 ```
  
@@ -2248,23 +2246,23 @@ JSON has no standard way to represent complex numbers. Complex number is not a n
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-71>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-71> ([local](./json_schema.md#returns-71)))
 
 `JsonSchemaValue` — The generated JSON schema.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-66>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-66> ([local](./json_schema.md#parameters-66)))
 
 **`schema`** : `core_schema.ComplexSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.complex_schema\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.complex_schema\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.complex_schema\(schema\))))
 
 The core schema.
 
 #### get_title_from_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_title_from_name>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_title_from_name> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_title_from_name)))
 
 ```
  
@@ -2277,23 +2275,23 @@ Retrieves a title from a name.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-72>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-72> ([local](./json_schema.md#returns-72)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The title.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-67>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-67> ([local](./json_schema.md#parameters-67)))
 
 **`name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_title_from_name\(name\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_title_from_name\(name\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_title_from_name\(name\))))
 
 The name to retrieve a title from.
 
 #### field_title_should_be_set 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set)))
 
 ```
  
@@ -2308,23 +2306,23 @@ Intuitively, we want this to return true for schemas that wouldn’t otherwise p
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-73>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-73> ([local](./json_schema.md#returns-73)))
 
 [`bool`](<https://docs.python.org/3/library/functions.html#bool>) — `True` if the field should have a title set, `False` otherwise.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-68>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-68> ([local](./json_schema.md#parameters-68)))
 
 **`schema`** : `CoreSchemaOrField`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set\(schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set\(schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.field_title_should_be_set\(schema\))))
 
 The schema to check.
 
 #### normalize_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.normalize_name>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.normalize_name> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.normalize_name)))
 
 ```
  
@@ -2337,23 +2335,23 @@ Normalizes a name to be used as a key in a dictionary.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-74>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-74> ([local](./json_schema.md#returns-74)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The normalized name.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-69>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-69> ([local](./json_schema.md#parameters-69)))
 
 **`name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.normalize_name\(name\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.normalize_name\(name\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.normalize_name\(name\))))
 
 The name to normalize.
 
 #### get_defs_ref 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_defs_ref>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_defs_ref> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_defs_ref)))
 
 ```
  
@@ -2366,23 +2364,23 @@ Override this method to change the way that definitions keys are generated from 
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-75>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-75> ([local](./json_schema.md#returns-75)))
 
 `DefsRef` — The definitions key.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-70>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-70> ([local](./json_schema.md#parameters-70)))
 
 **`core_mode_ref`** : `CoreModeRef`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_defs_ref\(core_mode_ref\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_defs_ref\(core_mode_ref\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_defs_ref\(core_mode_ref\))))
 
 The core reference.
 
 #### get_cache_defs_ref_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema)))
 
 ```
  
@@ -2395,23 +2393,23 @@ This method wraps the get_defs_ref method with some cache-lookup/population logi
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-76>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-76> ([local](./json_schema.md#returns-76)))
 
 [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[`DefsRef`, `JsonSchemaValue`] — A tuple of the definitions reference and the JSON schema that will refer to it.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-71>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-71> ([local](./json_schema.md#parameters-71)))
 
 **`core_ref`** : `CoreRef`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema\(core_ref\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema\(core_ref\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_cache_defs_ref_schema\(core_ref\))))
 
 The core reference to get the definitions reference for.
 
 #### handle_ref_overrides 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides)))
 
 ```
  
@@ -2424,23 +2422,23 @@ Remove any sibling keys that are redundant with the referenced schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-77>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-77> ([local](./json_schema.md#returns-77)))
 
 `JsonSchemaValue` — The schema with redundant sibling keys removed.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-72>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-72> ([local](./json_schema.md#parameters-72)))
 
 **`json_schema`** : `JsonSchemaValue`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides\(json_schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides\(json_schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.handle_ref_overrides\(json_schema\))))
 
 The schema to remove redundant sibling keys from.
 
 #### encode_default 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.encode_default>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.encode_default> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.encode_default)))
 
 ```
  
@@ -2455,23 +2453,23 @@ This is used to encode default values for fields in the generated JSON schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-78>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-78> ([local](./json_schema.md#returns-78)))
 
 [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) — The encoded default value.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-73>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-73> ([local](./json_schema.md#parameters-73)))
 
 **`dft`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.encode_default\(dft\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.encode_default\(dft\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.encode_default\(dft\))))
 
 The default value to encode.
 
 #### update_with_validations 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.update_with_validations)))
 
 ```
  
@@ -2488,35 +2486,35 @@ Update the json_schema with the corresponding validations specified in the core_
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-79>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-79> ([local](./json_schema.md#returns-79)))
 
 [`None`](<https://docs.python.org/3/library/constants.html#None>)
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-74>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-74> ([local](./json_schema.md#parameters-74)))
 
 **`json_schema`** : `JsonSchemaValue`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(json_schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(json_schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(json_schema\))))
 
 The JSON schema to update.
 
 **`core_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(core_schema\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(core_schema\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(core_schema\))))
 
 The core schema to get the validations from.
 
 **`mapping`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(mapping\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(mapping\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.update_with_validations\(mapping\))))
 
 A mapping from core_schema attribute names to the corresponding JSON schema attribute names.
 
 #### get_json_ref_counts 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_json_ref_counts>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.get_json_ref_counts> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.get_json_ref_counts)))
 
 ```
  
@@ -2529,13 +2527,13 @@ Get all values corresponding to the key ‘$ref’ anywhere in the json_schema.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-80>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-80> ([local](./json_schema.md#returns-80)))
 
 [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[`JsonRef`, [`int`](<https://docs.python.org/3/library/functions.html#int>)]
 
 #### emit_warning 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.emit_warning>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.emit_warning> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.emit_warning)))
 
 ```
  
@@ -2548,13 +2546,13 @@ This method simply emits PydanticJsonSchemaWarnings based on handling in the `wa
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-81>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-81> ([local](./json_schema.md#returns-81)))
 
 [`None`](<https://docs.python.org/3/library/constants.html#None>)
 
 #### render_warning_message 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.render_warning_message)))
 
 ```
  
@@ -2569,17 +2567,17 @@ You can override the value of `ignored_warning_kinds` in a subclass of GenerateJ
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-82>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-82> ([local](./json_schema.md#returns-82)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) — The formatted warning message, or `None` if no warning should be emitted.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-75>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-75> ([local](./json_schema.md#parameters-75)))
 
 **`kind`** : `JsonSchemaWarningKind`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(kind\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(kind\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(kind\))))
 
 The kind of warning to render. It can be one of the following:
 
@@ -2588,17 +2586,17 @@ The kind of warning to render. It can be one of the following:
 
 **`detail`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(detail\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(detail\)> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.render_warning_message\(detail\))))
 
 A string with additional details about the warning.
 
 ## WithJsonSchema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.WithJsonSchema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.WithJsonSchema> ([local](./json_schema.md#pydantic.json_schema.WithJsonSchema)))
 
 Usage Documentation
 
-[`WithJsonSchema` Annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation>)
+[`WithJsonSchema` Annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#withjsonschema-annotation> ([local](./../../concepts/json_schema.md#withjsonschema-annotation)))
 
 An annotation used to override the JSON Schema for a type.
 
@@ -2608,9 +2606,9 @@ If `mode` is set this will only apply to that schema generation mode, allowing y
 
 Note
 
-If the `WithJsonSchema` annotation is coupled with the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function, the behavior overriding will vary depending on the location:
+If the `WithJsonSchema` annotation is coupled with the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function, the behavior overriding will vary depending on the location:
 
-  * If the [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) metadata is specified at the “top-level” field, `Field()` metadata arguments (excluding [constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints>)) such as `title` and `description` will be applied on top of the `WithJsonSchema`, no matter the order:
+  * If the [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) metadata is specified at the “top-level” field, `Field()` metadata arguments (excluding [constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./../../concepts/fields.md#field-constraints)))) such as `title` and `description` will be applied on top of the `WithJsonSchema`, no matter the order:
 
 ```
  from typing import Annotated
@@ -2652,11 +2650,11 @@ If the `WithJsonSchema` annotation is coupled with the [`Field()`](<https://pyda
 
 ```
 
-See also the documentation about [the annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern>).
+See also the documentation about [the annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./../../concepts/fields.md#the-annotated-pattern))).
 
 ## Examples 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.Examples>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.Examples> ([local](./json_schema.md#pydantic.json_schema.Examples)))
 
 Add examples to a JSON schema.
 
@@ -2666,17 +2664,17 @@ If `mode` is set this will only apply to that schema generation mode, allowing y
 
 ## SkipJsonSchema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.SkipJsonSchema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.SkipJsonSchema> ([local](./json_schema.md#pydantic.json_schema.SkipJsonSchema)))
 
 Usage Documentation
 
-[`SkipJsonSchema` Annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation>)
+[`SkipJsonSchema` Annotation](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#skipjsonschema-annotation> ([local](./../../concepts/json_schema.md#skipjsonschema-annotation)))
 
 Add this as an annotation on a field to skip generating a JSON schema for that field.
 
 ## model_json_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema> ([local](./json_schema.md#pydantic.json_schema.model_json_schema)))
 
 ```
  
@@ -2696,35 +2694,35 @@ Utility function to generate a JSON Schema for a model.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-83>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-83> ([local](./json_schema.md#returns-83)))
 
 [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] — The generated JSON Schema.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-76>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-76> ([local](./json_schema.md#parameters-76)))
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>)] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`] 
+**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./base_model.md#pydantic.BaseModel)))] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(cls\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(cls\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(cls\))))
 
 The model class to generate a JSON Schema for.
 
 **`by_alias`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) _Default:_ `True`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(by_alias\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(by_alias\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(by_alias\))))
 
 If `True` (the default), fields will be serialized according to their alias. If `False`, fields will be serialized according to their attribute name.
 
 **`ref_template`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) _Default:_ `DEFAULT_REF_TEMPLATE`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(ref_template\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(ref_template\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(ref_template\))))
 
 The template to use for generating JSON Schema references.
 
 **`union_format`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘any_of’, ‘primitive_type_array’] _Default:_ `'any_of'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(union_format\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(union_format\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(union_format\))))
 
 The format to use when combining schemas from unions together. Can be one of:
 
@@ -2733,13 +2731,13 @@ The format to use when combining schemas from unions together. Can be one of:
 
 **`schema_generator`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`GenerateJsonSchema`] _Default:_ `GenerateJsonSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(schema_generator\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(schema_generator\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(schema_generator\))))
 
 The class to use for generating the JSON Schema.
 
 **`mode`** : `JsonSchemaMode` _Default:_ `'validation'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(mode\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.model_json_schema\(mode\)> ([local](./json_schema.md#pydantic.json_schema.model_json_schema\(mode\))))
 
 The mode to use for generating the JSON Schema. It can be one of the following:
 
@@ -2748,7 +2746,7 @@ The mode to use for generating the JSON Schema. It can be one of the following:
 
 ## models_json_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema> ([local](./json_schema.md#pydantic.json_schema.models_json_schema)))
 
 ```
  
@@ -2769,50 +2767,50 @@ Utility function to generate a JSON Schema for multiple models.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-84>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#returns-84> ([local](./json_schema.md#returns-84)))
 
-[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>)] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`], `JsonSchemaMode`], `JsonSchemaValue`], `JsonSchemaValue`] — A tuple where:
+[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./base_model.md#pydantic.BaseModel)))] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`], `JsonSchemaMode`], `JsonSchemaValue`], `JsonSchemaValue`] — A tuple where:
 
   * The first element is a dictionary whose keys are tuples of JSON schema key type and JSON mode, and whose values are the JSON schema corresponding to that pair of inputs. (These schemas may have JsonRef references to definitions that are defined in the second returned element.)
   * The second element is a JSON schema containing all definitions referenced in the first returned element, along with the optional title and description keys.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-77>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#parameters-77> ([local](./json_schema.md#parameters-77)))
 
-**`models`** : [`Sequence`](<https://docs.python.org/3/library/typing.html#typing.Sequence>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>)] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`], `JsonSchemaMode`]] 
+**`models`** : [`Sequence`](<https://docs.python.org/3/library/typing.html#typing.Sequence>)[[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./base_model.md#pydantic.BaseModel)))] | [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`PydanticDataclass`], `JsonSchemaMode`]] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(models\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(models\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(models\))))
 
 A sequence of tuples of the form (model, mode).
 
 **`by_alias`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) _Default:_ `True`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(by_alias\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(by_alias\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(by_alias\))))
 
 Whether field aliases should be used as keys in the generated JSON Schema.
 
 **`title`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(title\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(title\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(title\))))
 
 The title of the generated JSON Schema.
 
 **`description`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(description\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(description\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(description\))))
 
 The description of the generated JSON Schema.
 
 **`ref_template`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) _Default:_ `DEFAULT_REF_TEMPLATE`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(ref_template\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(ref_template\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(ref_template\))))
 
 The reference template to use for generating JSON Schema references.
 
 **`union_format`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘any_of’, ‘primitive_type_array’] _Default:_ `'any_of'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(union_format\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(union_format\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(union_format\))))
 
 The format to use when combining schemas from unions together. Can be one of:
 
@@ -2821,13 +2819,13 @@ The format to use when combining schemas from unions together. Can be one of:
 
 **`schema_generator`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`GenerateJsonSchema`] _Default:_ `GenerateJsonSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(schema_generator\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.models_json_schema\(schema_generator\)> ([local](./json_schema.md#pydantic.json_schema.models_json_schema\(schema_generator\))))
 
 The schema generator to use for generating the JSON Schema.
 
 ## CoreSchemaOrFieldType 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.CoreSchemaOrFieldType>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.CoreSchemaOrFieldType> ([local](./json_schema.md#pydantic.json_schema.CoreSchemaOrFieldType)))
 
 A type alias for defined schema types that represents a union of `core_schema.CoreSchemaType` and `core_schema.CoreSchemaFieldType`.
 
@@ -2835,7 +2833,7 @@ A type alias for defined schema types that represents a union of `core_schema.Co
 
 ## JsonSchemaValue 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaValue>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaValue> ([local](./json_schema.md#pydantic.json_schema.JsonSchemaValue)))
 
 A type alias for a JSON schema value. This is a dictionary of string keys to arbitrary JSON values.
 
@@ -2843,7 +2841,7 @@ A type alias for a JSON schema value. This is a dictionary of string keys to arb
 
 ## JsonSchemaMode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaMode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaMode> ([local](./json_schema.md#pydantic.json_schema.JsonSchemaMode)))
 
 A type alias that represents the mode of a JSON schema; either ‘validation’ or ‘serialization’.
 
@@ -2853,17 +2851,17 @@ For some types, the inputs to validation differ from the outputs of serializatio
 
 ## JsonSchemaWarningKind 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaWarningKind>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.JsonSchemaWarningKind> ([local](./json_schema.md#pydantic.json_schema.JsonSchemaWarningKind)))
 
 A type alias representing the kinds of warnings that can be emitted during JSON schema generation.
 
-See [`GenerateJsonSchema.render_warning_message`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.render_warning_message>) for more details.
+See [`GenerateJsonSchema.render_warning_message`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.render_warning_message> ([local](./json_schema.md#pydantic.json_schema.GenerateJsonSchema.render_warning_message))) for more details.
 
 **Default:** `Literal['skipped-choice', 'non-serializable-default', 'skipped-discriminator']`
 
 ## NoDefault 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.NoDefault>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.NoDefault> ([local](./json_schema.md#pydantic.json_schema.NoDefault)))
 
 A sentinel value used to indicate that no default value should be used when generating a JSON Schema for a core schema with a default value.
 
@@ -2871,16 +2869,8 @@ A sentinel value used to indicate that no default value should be used when gene
 
 ## DEFAULT_REF_TEMPLATE 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.DEFAULT_REF_TEMPLATE>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.DEFAULT_REF_TEMPLATE> ([local](./json_schema.md#pydantic.json_schema.DEFAULT_REF_TEMPLATE)))
 
 The default format string used to generate reference names.
 
 **Default:** `'#/$defs/{model}'`
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Configuration ](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/>) [ Next   
-Errors ](<https://pydantic.dev/docs/validation/latest/api/pydantic/errors/>)

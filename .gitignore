@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+fast_api_docs_ru
+debug.py
+diag.py
+diag2.py
+sample.html

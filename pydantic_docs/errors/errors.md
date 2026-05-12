@@ -3,15 +3,13 @@ title: Error Handling
 source: https://pydantic.dev/docs/validation/latest/errors/errors
 ---
 
-# Error Handling
-
 Pydantic will raise a `ValidationError` whenever it finds an error in the data it’s validating.
 
 Note
 
 Validation code should not raise the `ValidationError` itself, but rather raise a `ValueError` or a `AssertionError` (or subclass thereof) which will be caught and used to populate the final `ValidationError`.
 
-For more details, refer to the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors>) of the validators documentation.
+For more details, refer to the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./../concepts/validators.md#raising-validation-errors))) of the validators documentation.
 
 That `ValidationError` will contain information about all the errors and how they happened.
 
@@ -35,7 +33,7 @@ Property| Description
 `type`| A computer-readable identifier of the error type.  
 `url`| The documentation URL giving information about the error.  
   
-The first item in the `loc` list will be the field where the error occurred, and if the field is a [sub-model](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-models>), subsequent items will be present to indicate the nested location of the error.
+The first item in the `loc` list will be the field where the error occurred, and if the field is a [sub-model](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-models> ([local](./../concepts/models.md#nested-models))), subsequent items will be present to indicate the nested location of the error.
 
 As a demonstration:
 
@@ -145,16 +143,16 @@ As a demonstration:
 
 ## Error messages
 
-[](<https://pydantic.dev/docs/validation/latest/errors/errors#error-messages>)
+[](<https://pydantic.dev/docs/validation/latest/errors/errors#error-messages> ([local](./errors.md#error-messages)))
 
 Pydantic attempts to provide useful default error messages for validation and usage errors, which can be found here:
 
-  * [Validation Errors](<https://pydantic.dev/docs/validation/latest/errors/validation_errors>): Errors that happen during data validation.
-  * [Usage Errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors>): Errors that happen when using Pydantic.
+  * [Validation Errors](<https://pydantic.dev/docs/validation/latest/errors/validation_errors> ([local](./validation_errors.md))): Errors that happen during data validation.
+  * [Usage Errors](<https://pydantic.dev/docs/validation/latest/errors/usage_errors> ([local](./usage_errors.md))): Errors that happen when using Pydantic.
 
 ### Customize error messages
 
-[](<https://pydantic.dev/docs/validation/latest/errors/errors#customize-error-messages>)
+[](<https://pydantic.dev/docs/validation/latest/errors/errors#customize-error-messages> ([local](./errors.md#customize-error-messages)))
 
 You can customize error messages by creating a custom error handler.
 
@@ -291,15 +289,3 @@ Another example is customizing the way that the `'loc'` value of an error is rep
       """
 
 ```
-
-By default, `e.errors()` produces a list of errors with `loc` values that take the form of tuples.
-
-With our custom `loc_to_dot_sep` function, we've modified the form of the `loc` representation.
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Agent libraries – Pydantic AI ](<https://pydantic.dev/docs/validation/latest/examples/pydantic_ai/>) [ Next   
-Validation Errors ](<https://pydantic.dev/docs/validation/latest/errors/validation_errors/>)

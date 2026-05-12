@@ -3,15 +3,13 @@ title: Validation Decorator
 source: https://pydantic.dev/docs/validation/latest/concepts/validation_decorator
 ---
 
-# Validation Decorator
-
 API Documentation
 
-[`pydantic.validate_call_decorator.validate_call`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>)  
+[`pydantic.validate_call_decorator.validate_call`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call)))  
 
-The [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>) decorator allows the arguments passed to a function to be parsed and validated using the function’s annotations before the function is called.
+The [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) decorator allows the arguments passed to a function to be parsed and validated using the function’s annotations before the function is called.
 
-While under the hood this uses the same approach of model creation and initialisation (see [Validators](<https://pydantic.dev/docs/validation/latest/concepts/validators>) for more details), it provides an extremely easy way to apply validation to your code with minimal boilerplate.
+While under the hood this uses the same approach of model creation and initialisation (see [Validators](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./validators.md))) for more details), it provides an extremely easy way to apply validation to your code with minimal boilerplate.
 
 Example of usage:
 
@@ -49,9 +47,9 @@ Example of usage:
 
 ## Parameter types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#parameter-types>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#parameter-types> ([local](./validation_decorator.md#parameter-types)))
 
-Parameter types are inferred from type annotations on the function, or as [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) if not annotated. All types listed in [types](<https://pydantic.dev/docs/validation/latest/concepts/types>) can be validated, including Pydantic models and [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types>). As with the rest of Pydantic, types are by default coerced by the decorator before they’re passed to the actual function:
+Parameter types are inferred from type annotations on the function, or as [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) if not annotated. All types listed in [types](<https://pydantic.dev/docs/validation/latest/concepts/types> ([local](./types.md))) can be validated, including Pydantic models and [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./types.md#custom-types))). As with the rest of Pydantic, types are by default coerced by the decorator before they’re passed to the actual function:
 
 ```
  
@@ -74,11 +72,7 @@ Parameter types are inferred from type annotations on the function, or as [`Any`
 
 ```
 
-Because `include_equal` has no type annotation, it will be inferred as [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>).
-
-Although `d1` is a string, it will be converted to a [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) object.
-
-Type coercion like this can be extremely helpful, but also confusing or not desired (see [model data conversion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion>)). [Strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>) can be enabled by using a [custom configuration](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration>).
+Type coercion like this can be extremely helpful, but also confusing or not desired (see [model data conversion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion> ([local](./models.md#data-conversion)))). [Strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))) can be enabled by using a [custom configuration](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration> ([local](./validation_decorator.md#custom-configuration))).
 
 Validating the return value
 
@@ -86,9 +80,9 @@ By default, the return value of the function is **not** validated. To do so, the
 
 ## Function signatures
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#function-signatures>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#function-signatures> ([local](./validation_decorator.md#function-signatures)))
 
-The [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>) decorator is designed to work with functions using all possible [parameter configurations](<https://docs.python.org/3/glossary.html#term-parameter>) and all possible combinations of these:
+The [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) decorator is designed to work with functions using all possible [parameter configurations](<https://docs.python.org/3/glossary.html#term-parameter>) and all possible combinations of these:
 
   * Positional or keyword parameters with or without defaults.
   * Keyword-only parameters: parameters after `*,`.
@@ -205,11 +199,11 @@ For reference, see the [related specification section](<https://typing.readthedo
 
 /// version-added | v2.10 ///
 
-## Using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function to describe function parameters
+## Using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function to describe function parameters
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#using-the-field-function-to-describe-function-parameters>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#using-the-field-function-to-describe-function-parameters> ([local](./validation_decorator.md#using-the-field-function-to-describe-function-parameters)))
 
-The [`Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/fields>) can also be used with the decorator to provide extra information about the field and validations. If you don’t make use of the `default` or `default_factory` parameter, it is recommended to use the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern>) (so that type checkers infer the parameter as being required). Otherwise, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function can be used as a default value (again, to trick type checkers into thinking a default value is provided for the parameter).
+The [`Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) can also be used with the decorator to provide extra information about the field and validations. If you don’t make use of the `default` or `default_factory` parameter, it is recommended to use the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) (so that type checkers infer the parameter as being required). Otherwise, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function can be used as a default value (again, to trick type checkers into thinking a default value is provided for the parameter).
 
 ```
  
@@ -245,7 +239,7 @@ The [`Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/f
 
 ```
 
-[Aliases](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases>) can be used with the decorator as normal:
+[Aliases](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases> ([local](./fields.md#field-aliases))) can be used with the decorator as normal:
 
 ```
  
@@ -266,9 +260,9 @@ The [`Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/f
 
 ## Accessing the original function
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#accessing-the-original-function>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#accessing-the-original-function> ([local](./validation_decorator.md#accessing-the-original-function)))
 
-The original function which was decorated can still be accessed by using the `raw_function` attribute. This is useful if in some scenarios you trust your input arguments and want to call the function in the most efficient way (see [notes on performance](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#performance>) below):
+The original function which was decorated can still be accessed by using the `raw_function` attribute. This is useful if in some scenarios you trust your input arguments and want to call the function in the most efficient way (see [notes on performance](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#performance> ([local](./validation_decorator.md#performance))) below):
 
 ```
  
@@ -294,9 +288,9 @@ The original function which was decorated can still be accessed by using the `ra
 
 ## Async functions
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#async-functions>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#async-functions> ([local](./validation_decorator.md#async-functions)))
 
-[`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>) can also be used on async functions:
+[`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) can also be used on async functions:
 
 ```
  
@@ -352,13 +346,13 @@ The original function which was decorated can still be accessed by using the `ra
 
 ## Compatibility with type checkers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#compatibility-with-type-checkers>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#compatibility-with-type-checkers> ([local](./validation_decorator.md#compatibility-with-type-checkers)))
 
-As the [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>) decorator preserves the decorated function’s signature, it should be compatible with type checkers (such as mypy and pyright). However, due to current limitations in the Python type system, the [`raw_function`](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#accessing-the-original-function>) or other attributes won’t be recognized and you will need to suppress the error using (usually with a `# type: ignore` comment).
+As the [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) decorator preserves the decorated function’s signature, it should be compatible with type checkers (such as mypy and pyright). However, due to current limitations in the Python type system, the [`raw_function`](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#accessing-the-original-function> ([local](./validation_decorator.md#accessing-the-original-function))) or other attributes won’t be recognized and you will need to suppress the error using (usually with a `# type: ignore` comment).
 
 ## Custom configuration
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#custom-configuration> ([local](./validation_decorator.md#custom-configuration)))
 
 Similarly to Pydantic models, the `config` parameter of the decorator can be used to specify a custom configuration:
 
@@ -404,7 +398,7 @@ Similarly to Pydantic models, the `config` parameter of the decorator can be use
 
 ## Extension — validating arguments before calling a function
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#extension--validating-arguments-before-calling-a-function>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#extension--validating-arguments-before-calling-a-function> ([local](./validation_decorator.md#extension--validating-arguments-before-calling-a-function)))
 
 In some cases, it may be helpful to separate validation of a function’s arguments from the function call itself. This might be useful when a particular function is costly/time consuming.
 
@@ -432,26 +426,18 @@ Here’s an example of a workaround you can use for that pattern:
 
 ## Limitations
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#limitations>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#limitations> ([local](./validation_decorator.md#limitations)))
 
 ### Validation exception
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#validation-exception>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#validation-exception> ([local](./validation_decorator.md#validation-exception)))
 
-Currently upon validation failure, a standard Pydantic [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>) is raised (see [model error handling](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling>) for details). This is also true for missing required arguments, where Python normally raises a [`TypeError`](<https://docs.python.org/3/library/exceptions.html#TypeError>).
+Currently upon validation failure, a standard Pydantic [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) is raised (see [model error handling](<https://pydantic.dev/docs/validation/latest/concepts/models#error-handling> ([local](./models.md#error-handling))) for details). This is also true for missing required arguments, where Python normally raises a [`TypeError`](<https://docs.python.org/3/library/exceptions.html#TypeError>).
 
 ### Performance
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#performance>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator#performance> ([local](./validation_decorator.md#performance)))
 
 We’ve made a big effort to make Pydantic as performant as possible. While the inspection of the decorated function is only performed once, there will still be a performance impact when making calls to the function compared to using the original function.
 
-In many situations, this will have little or no noticeable effect. However, be aware that [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call>) is not an equivalent or alternative to function definitions in strongly typed languages, and it never will be.
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Type Adapter ](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter/>) [ Next   
-Conversion Table ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table/>)
+In many situations, this will have little or no noticeable effect. However, be aware that [`validate_call()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) is not an equivalent or alternative to function definitions in strongly typed languages, and it never will be.

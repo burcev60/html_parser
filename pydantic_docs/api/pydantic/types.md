@@ -3,29 +3,27 @@ title: Pydantic Types
 source: https://pydantic.dev/docs/validation/latest/api/pydantic/types
 ---
 
-# Pydantic Types
-
 The types module contains custom types used by pydantic.
 
 ## Strict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Strict>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Strict> ([local](./types.md#pydantic.types.Strict)))
 
 **Bases:** `PydanticMetadata`, `BaseMetadata`
 
 Usage Documentation
 
-[Strict Mode with `Annotated` `Strict`](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#strict-mode-with-annotated-strict>)
+[Strict Mode with `Annotated` `Strict`](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#strict-mode-with-annotated-strict> ([local](./../../concepts/strict_mode.md#strict-mode-with-annotated-strict)))
 
 A field metadata class to indicate that a field should be validated in strict mode. Use this class as an annotation via [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>), as seen below.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes> ([local](./types.md#attributes)))
 
 #### strict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Strict.strict>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Strict.strict> ([local](./types.md#pydantic.types.Strict.strict)))
 
 Whether to validate the field in strict mode.
 
@@ -33,7 +31,7 @@ Whether to validate the field in strict mode.
 
 ## AllowInfNan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AllowInfNan>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AllowInfNan> ([local](./types.md#pydantic.types.AllowInfNan)))
 
 **Bases:** `PydanticMetadata`
 
@@ -43,11 +41,11 @@ Use this class as an annotation via [`Annotated`](<https://docs.python.org/3/lib
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-1> ([local](./types.md#attributes-1)))
 
 #### allow_inf_nan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AllowInfNan.allow_inf_nan>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AllowInfNan.allow_inf_nan> ([local](./types.md#pydantic.types.AllowInfNan.allow_inf_nan)))
 
 Whether to allow `-inf`, `inf`, and `nan`. Defaults to `True`.
 
@@ -55,23 +53,23 @@ Whether to allow `-inf`, `inf`, and `nan`. Defaults to `True`.
 
 ## StringConstraints 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints> ([local](./types.md#pydantic.types.StringConstraints)))
 
 **Bases:** `GroupedMetadata`
 
 Usage Documentation
 
-[String types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strings>)
+[String types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strings> ([local](./standard_library_types.md#strings)))
 
 A field metadata class to apply constraints to `str` types. Use this class as an annotation via [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>), as seen below.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-2> ([local](./types.md#attributes-2)))
 
 #### strip_whitespace 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.strip_whitespace>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.strip_whitespace> ([local](./types.md#pydantic.types.StringConstraints.strip_whitespace)))
 
 Whether to remove leading and trailing whitespace.
 
@@ -79,7 +77,7 @@ Whether to remove leading and trailing whitespace.
 
 #### to_upper 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.to_upper>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.to_upper> ([local](./types.md#pydantic.types.StringConstraints.to_upper)))
 
 Whether to convert the string to uppercase.
 
@@ -87,7 +85,7 @@ Whether to convert the string to uppercase.
 
 #### to_lower 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.to_lower>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.to_lower> ([local](./types.md#pydantic.types.StringConstraints.to_lower)))
 
 Whether to convert the string to lowercase.
 
@@ -95,7 +93,7 @@ Whether to convert the string to lowercase.
 
 #### strict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.strict>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.strict> ([local](./types.md#pydantic.types.StringConstraints.strict)))
 
 Whether to validate the string in strict mode.
 
@@ -103,7 +101,7 @@ Whether to validate the string in strict mode.
 
 #### min_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.min_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.min_length> ([local](./types.md#pydantic.types.StringConstraints.min_length)))
 
 The minimum length of the string.
 
@@ -111,7 +109,7 @@ The minimum length of the string.
 
 #### max_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.max_length>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.max_length> ([local](./types.md#pydantic.types.StringConstraints.max_length)))
 
 The maximum length of the string.
 
@@ -119,7 +117,7 @@ The maximum length of the string.
 
 #### pattern 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.pattern>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.pattern> ([local](./types.md#pydantic.types.StringConstraints.pattern)))
 
 A regex pattern that the string must match.
 
@@ -127,7 +125,7 @@ A regex pattern that the string must match.
 
 #### ascii_only 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.ascii_only>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StringConstraints.ascii_only> ([local](./types.md#pydantic.types.StringConstraints.ascii_only)))
 
 Whether the string should contain only ASCII characters.
 
@@ -135,7 +133,7 @@ Whether the string should contain only ASCII characters.
 
 ## ImportString 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ImportString>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ImportString> ([local](./types.md#pydantic.types.ImportString)))
 
 A type that can be used to import a Python object from a string.
 
@@ -219,7 +217,7 @@ Serializing an `ImportString` type to json is also possible.
 
 ## UuidVersion 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UuidVersion>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UuidVersion> ([local](./types.md#pydantic.types.UuidVersion)))
 
 A field metadata class to indicate a [UUID](<https://docs.python.org/3/library/uuid.html>) version.
 
@@ -227,11 +225,11 @@ Use this class as an annotation via [`Annotated`](<https://docs.python.org/3/lib
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-3> ([local](./types.md#attributes-3)))
 
 #### uuid_version 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UuidVersion.uuid_version>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UuidVersion.uuid_version> ([local](./types.md#pydantic.types.UuidVersion.uuid_version)))
 
 The version of the UUID. Must be one of 1, 3, 4, 5, 6, 7 or 8.
 
@@ -239,7 +237,7 @@ The version of the UUID. Must be one of 1, 3, 4, 5, 6, 7 or 8.
 
 ## Json 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Json>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Json> ([local](./types.md#pydantic.types.Json)))
 
 A special type wrapper which loads JSON before parsing.
 
@@ -318,7 +316,7 @@ When you dump the model using `model_dump` or `model_dump_json`, the dumped valu
 
 ## Secret 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Secret>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Secret> ([local](./types.md#pydantic.types.Secret)))
 
 **Bases:** `_SecretBase[SecretType]`
 
@@ -428,13 +426,9 @@ You can enforce constraints on the underlying type through annotations: For exam
 
 ```
 
-The input value is not greater than 0, so it raises a validation error.
-
-The input value is not an integer, so it raises a validation error because the `SecretPosInt` type has strict mode enabled.
-
 ## SecretStr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SecretStr>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SecretStr> ([local](./types.md#pydantic.types.SecretStr)))
 
 **Bases:** `_SecretField[str]`
 
@@ -462,9 +456,9 @@ When the secret value is nonempty, it is displayed as `'**********'` instead of 
 
 ```
 
-As seen above, by default, [`SecretStr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretStr>) (and [`SecretBytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretBytes>)) will be serialized as `**********` when serializing to json.
+As seen above, by default, [`SecretStr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretStr> ([local](./types.md#pydantic.types.SecretStr))) (and [`SecretBytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretBytes> ([local](./types.md#pydantic.types.SecretBytes)))) will be serialized as `**********` when serializing to json.
 
-You can use the [`field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer>) to dump the secret as plain-text when serializing to json.
+You can use the [`field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer))) to dump the secret as plain-text when serializing to json.
 
 ```
  
@@ -498,7 +492,7 @@ You can use the [`field_serializer`](<https://pydantic.dev/docs/validation/lates
 
 ## SecretBytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SecretBytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SecretBytes> ([local](./types.md#pydantic.types.SecretBytes)))
 
 **Bases:** `_SecretField[bytes]`
 
@@ -526,7 +520,7 @@ It displays `b'**********'` instead of the string value on `repr()` and `str()` 
 
 ## PaymentCardNumber 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber> ([local](./types.md#pydantic.types.PaymentCardNumber)))
 
 **Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
@@ -534,11 +528,11 @@ Based on: <https://en.wikipedia.org/wiki/Payment_card_number>.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-4> ([local](./types.md#attributes-4)))
 
 #### masked 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.masked>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.masked> ([local](./types.md#pydantic.types.PaymentCardNumber.masked)))
 
 Mask all but the last 4 digits of the card number.
 
@@ -546,11 +540,11 @@ Mask all but the last 4 digits of the card number.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods> ([local](./types.md#methods)))
 
 #### validate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate> ([local](./types.md#pydantic.types.PaymentCardNumber.validate)))
 
 `@classmethod`
 
@@ -565,13 +559,13 @@ Validate the card number and return a `PaymentCardNumber` instance.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns> ([local](./types.md#returns)))
 
-[`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PaymentCardNumber>)
+[`PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PaymentCardNumber> ([local](./types.md#pydantic.types.PaymentCardNumber)))
 
 #### validate_digits 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_digits>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_digits> ([local](./types.md#pydantic.types.PaymentCardNumber.validate_digits)))
 
 `@classmethod`
 
@@ -586,13 +580,13 @@ Validate that the card number is all digits.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-1> ([local](./types.md#returns-1)))
 
 [`None`](<https://docs.python.org/3/library/constants.html#None>)
 
 #### validate_luhn_check_digit 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_luhn_check_digit>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_luhn_check_digit> ([local](./types.md#pydantic.types.PaymentCardNumber.validate_luhn_check_digit)))
 
 `@classmethod`
 
@@ -607,13 +601,13 @@ Based on: <https://en.wikipedia.org/wiki/Luhn_algorithm>.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-2> ([local](./types.md#returns-2)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
 #### validate_brand 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_brand>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PaymentCardNumber.validate_brand> ([local](./types.md#pydantic.types.PaymentCardNumber.validate_brand)))
 
 `@staticmethod`
 
@@ -628,13 +622,13 @@ Validate length based on BIN for major brands: <https://en.wikipedia.org/wiki/Pa
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-3> ([local](./types.md#returns-3)))
 
 `PaymentCardBrand`
 
 ## ByteSize 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize> ([local](./types.md#pydantic.types.ByteSize)))
 
 **Bases:** [`int`](<https://docs.python.org/3/library/functions.html#int>)
 
@@ -676,11 +670,11 @@ Note that `1b` will be parsed as “1 byte” and not “1 bit”.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-1> ([local](./types.md#methods-1)))
 
 #### human_readable 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable> ([local](./types.md#pydantic.types.ByteSize.human_readable)))
 
 ```
  
@@ -693,29 +687,29 @@ Converts a byte size to a human readable string.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-4> ([local](./types.md#returns-4)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — A human readable string representation of the byte size.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters> ([local](./types.md#parameters)))
 
 **`decimal`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) _Default:_ `False`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable\(decimal\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable\(decimal\)> ([local](./types.md#pydantic.types.ByteSize.human_readable\(decimal\))))
 
 If True, use decimal units (e.g. 1000 bytes per KB). If False, use binary units (e.g. 1024 bytes per KiB).
 
 **`separator`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) _Default:_ `''`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable\(separator\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.human_readable\(separator\)> ([local](./types.md#pydantic.types.ByteSize.human_readable\(separator\))))
 
 A string used to split the value and unit. Defaults to an empty string (”).
 
 #### to 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.to>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.to> ([local](./types.md#pydantic.types.ByteSize.to)))
 
 ```
  
@@ -728,59 +722,59 @@ Converts a byte size to another unit, including both byte and bit units.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-5> ([local](./types.md#returns-5)))
 
 [`float`](<https://docs.python.org/3/library/functions.html#float>) — The byte size in the new unit.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-1> ([local](./types.md#parameters-1)))
 
 **`unit`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.to\(unit\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.ByteSize.to\(unit\)> ([local](./types.md#pydantic.types.ByteSize.to\(unit\))))
 
 The unit to convert to. Must be one of the following: B, KB, MB, GB, TB, PB, EB, KiB, MiB, GiB, TiB, PiB, EiB (byte units) and bit, kbit, mbit, gbit, tbit, pbit, ebit, kibit, mibit, gibit, tibit, pibit, eibit (bit units).
 
 ## PastDate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PastDate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PastDate> ([local](./types.md#pydantic.types.PastDate)))
 
 A date in the past.
 
 ## FutureDate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FutureDate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FutureDate> ([local](./types.md#pydantic.types.FutureDate)))
 
 A date in the future.
 
 ## AwareDatetime 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AwareDatetime>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.AwareDatetime> ([local](./types.md#pydantic.types.AwareDatetime)))
 
 A datetime that requires timezone info.
 
 ## NaiveDatetime 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NaiveDatetime>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NaiveDatetime> ([local](./types.md#pydantic.types.NaiveDatetime)))
 
 A datetime that doesn’t require timezone info.
 
 ## PastDatetime 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PastDatetime>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PastDatetime> ([local](./types.md#pydantic.types.PastDatetime)))
 
 A datetime that must be in the past.
 
 ## FutureDatetime 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FutureDatetime>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FutureDatetime> ([local](./types.md#pydantic.types.FutureDatetime)))
 
 A datetime that must be in the future.
 
 ## EncoderProtocol 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol> ([local](./types.md#pydantic.types.EncoderProtocol)))
 
 **Bases:** [`Protocol`](<https://docs.python.org/3/library/typing.html#typing.Protocol>)
 
@@ -788,11 +782,11 @@ Protocol for encoding and decoding data to and from bytes.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-2> ([local](./types.md#methods-2)))
 
 #### decode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.decode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.decode> ([local](./types.md#pydantic.types.EncoderProtocol.decode)))
 
 `@classmethod`
 
@@ -807,23 +801,23 @@ Decode the data using the encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-6> ([local](./types.md#returns-6)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The decoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-2>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-2> ([local](./types.md#parameters-2)))
 
 **`data`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.decode\(data\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.decode\(data\)> ([local](./types.md#pydantic.types.EncoderProtocol.decode\(data\))))
 
 The data to decode.
 
 #### encode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.encode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.encode> ([local](./types.md#pydantic.types.EncoderProtocol.encode)))
 
 `@classmethod`
 
@@ -838,23 +832,23 @@ Encode the data using the encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-7>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-7> ([local](./types.md#returns-7)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The encoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-3> ([local](./types.md#parameters-3)))
 
 **`value`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.encode\(value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.encode\(value\)> ([local](./types.md#pydantic.types.EncoderProtocol.encode\(value\))))
 
 The data to encode.
 
 #### get_json_format 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.get_json_format>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncoderProtocol.get_json_format> ([local](./types.md#pydantic.types.EncoderProtocol.get_json_format)))
 
 `@classmethod`
 
@@ -869,25 +863,25 @@ Get the JSON format for the encoded data.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-8>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-8> ([local](./types.md#returns-8)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The JSON format for the encoded data.
 
 ## Base64Encoder 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder> ([local](./types.md#pydantic.types.Base64Encoder)))
 
-**Bases:** [`EncoderProtocol`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.EncoderProtocol>)
+**Bases:** [`EncoderProtocol`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.EncoderProtocol> ([local](./types.md#pydantic.types.EncoderProtocol)))
 
 Standard (non-URL-safe) Base64 encoder.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-3> ([local](./types.md#methods-3)))
 
 #### decode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.decode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.decode> ([local](./types.md#pydantic.types.Base64Encoder.decode)))
 
 `@classmethod`
 
@@ -902,23 +896,23 @@ Decode the data from base64 encoded bytes to original bytes data.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-9>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-9> ([local](./types.md#returns-9)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The decoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-4> ([local](./types.md#parameters-4)))
 
 **`data`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.decode\(data\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.decode\(data\)> ([local](./types.md#pydantic.types.Base64Encoder.decode\(data\))))
 
 The data to decode.
 
 #### encode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.encode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.encode> ([local](./types.md#pydantic.types.Base64Encoder.encode)))
 
 `@classmethod`
 
@@ -933,23 +927,23 @@ Encode the data from bytes to a base64 encoded bytes.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-10>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-10> ([local](./types.md#returns-10)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The encoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-5> ([local](./types.md#parameters-5)))
 
 **`value`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.encode\(value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.encode\(value\)> ([local](./types.md#pydantic.types.Base64Encoder.encode\(value\))))
 
 The data to encode.
 
 #### get_json_format 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.get_json_format>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Encoder.get_json_format> ([local](./types.md#pydantic.types.Base64Encoder.get_json_format)))
 
 `@classmethod`
 
@@ -964,25 +958,25 @@ Get the JSON format for the encoded data.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-11>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-11> ([local](./types.md#returns-11)))
 
 [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘base64’] — The JSON format for the encoded data.
 
 ## Base64UrlEncoder 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder> ([local](./types.md#pydantic.types.Base64UrlEncoder)))
 
-**Bases:** [`EncoderProtocol`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.EncoderProtocol>)
+**Bases:** [`EncoderProtocol`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.EncoderProtocol> ([local](./types.md#pydantic.types.EncoderProtocol)))
 
 URL-safe Base64 encoder.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-4> ([local](./types.md#methods-4)))
 
 #### decode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.decode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.decode> ([local](./types.md#pydantic.types.Base64UrlEncoder.decode)))
 
 `@classmethod`
 
@@ -997,23 +991,23 @@ Decode the data from base64 encoded bytes to original bytes data.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-12>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-12> ([local](./types.md#returns-12)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The decoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-6> ([local](./types.md#parameters-6)))
 
 **`data`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.decode\(data\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.decode\(data\)> ([local](./types.md#pydantic.types.Base64UrlEncoder.decode\(data\))))
 
 The data to decode.
 
 #### encode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.encode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.encode> ([local](./types.md#pydantic.types.Base64UrlEncoder.encode)))
 
 `@classmethod`
 
@@ -1028,23 +1022,23 @@ Encode the data from bytes to a base64 encoded bytes.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-13>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-13> ([local](./types.md#returns-13)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The encoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-7>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-7> ([local](./types.md#parameters-7)))
 
 **`value`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.encode\(value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.encode\(value\)> ([local](./types.md#pydantic.types.Base64UrlEncoder.encode\(value\))))
 
 The data to encode.
 
 #### get_json_format 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.get_json_format>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlEncoder.get_json_format> ([local](./types.md#pydantic.types.Base64UrlEncoder.get_json_format)))
 
 `@classmethod`
 
@@ -1059,13 +1053,13 @@ Get the JSON format for the encoded data.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-14>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-14> ([local](./types.md#returns-14)))
 
 [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘base64url’] — The JSON format for the encoded data.
 
 ## EncodedBytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes> ([local](./types.md#pydantic.types.EncodedBytes)))
 
 A bytes type that is encoded and decoded using the specified encoder.
 
@@ -1124,11 +1118,11 @@ A bytes type that is encoded and decoded using the specified encoder.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-5> ([local](./types.md#methods-5)))
 
 #### decode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.decode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.decode> ([local](./types.md#pydantic.types.EncodedBytes.decode)))
 
 ```
  
@@ -1141,23 +1135,23 @@ Decode the data using the specified encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-15>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-15> ([local](./types.md#returns-15)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The decoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-8>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-8> ([local](./types.md#parameters-8)))
 
 **`data`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.decode\(data\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.decode\(data\)> ([local](./types.md#pydantic.types.EncodedBytes.decode\(data\))))
 
 The data to decode.
 
 #### encode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.encode>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.encode> ([local](./types.md#pydantic.types.EncodedBytes.encode)))
 
 ```
  
@@ -1170,23 +1164,23 @@ Encode the data using the specified encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-16>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-16> ([local](./types.md#returns-16)))
 
 [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) — The encoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-9>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-9> ([local](./types.md#parameters-9)))
 
 **`value`** : [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.encode\(value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedBytes.encode\(value\)> ([local](./types.md#pydantic.types.EncodedBytes.encode\(value\))))
 
 The data to encode.
 
 ## EncodedStr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr> ([local](./types.md#pydantic.types.EncodedStr)))
 
 A str type that is encoded and decoded using the specified encoder.
 
@@ -1245,11 +1239,11 @@ A str type that is encoded and decoded using the specified encoder.
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#methods-6> ([local](./types.md#methods-6)))
 
 #### decode_str 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.decode_str>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.decode_str> ([local](./types.md#pydantic.types.EncodedStr.decode_str)))
 
 ```
  
@@ -1262,23 +1256,23 @@ Decode the data using the specified encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-17>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-17> ([local](./types.md#returns-17)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The decoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-10>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-10> ([local](./types.md#parameters-10)))
 
 **`data`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.decode_str\(data\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.decode_str\(data\)> ([local](./types.md#pydantic.types.EncodedStr.decode_str\(data\))))
 
 The data to decode.
 
 #### encode_str 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.encode_str>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.encode_str> ([local](./types.md#pydantic.types.EncodedStr.encode_str)))
 
 ```
  
@@ -1291,27 +1285,27 @@ Encode the data using the specified encoder.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-18>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-18> ([local](./types.md#returns-18)))
 
 [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The encoded data.
 
 ##### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-11>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-11> ([local](./types.md#parameters-11)))
 
 **`value`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.encode_str\(value\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.EncodedStr.encode_str\(value\)> ([local](./types.md#pydantic.types.EncodedStr.encode_str\(value\))))
 
 The data to encode.
 
 ## GetPydanticSchema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.GetPydanticSchema>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.GetPydanticSchema> ([local](./types.md#pydantic.types.GetPydanticSchema)))
 
 Usage Documentation
 
-[Using `GetPydanticSchema` to Reduce Boilerplate](<https://pydantic.dev/docs/validation/latest/concepts/types#using-getpydanticschema-to-reduce-boilerplate>)
+[Using `GetPydanticSchema` to Reduce Boilerplate](<https://pydantic.dev/docs/validation/latest/concepts/types#using-getpydanticschema-to-reduce-boilerplate> ([local](./../../concepts/types.md#using-getpydanticschema-to-reduce-boilerplate)))
 
 A convenience class for creating an annotation that provides pydantic custom type hooks.
 
@@ -1338,7 +1332,7 @@ For example, to have a field treated by type checkers as `int`, but by pydantic 
 
 ## Tag 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Tag>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Tag> ([local](./types.md#pydantic.types.Tag)))
 
 Provides a way to specify the expected tag to use for a case of a (callable) discriminated union.
 
@@ -1405,17 +1399,17 @@ The primary role of the `Tag` here is to map the return value from the callable 
 
 Note
 
-You must specify a `Tag` for every case in a `Tag` that is associated with a callable `Discriminator`. Failing to do so will result in a `PydanticUserError` with code [`callable-discriminator-no-tag`](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-discriminator-no-tag>).
+You must specify a `Tag` for every case in a `Tag` that is associated with a callable `Discriminator`. Failing to do so will result in a `PydanticUserError` with code [`callable-discriminator-no-tag`](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-discriminator-no-tag> ([local](./../../errors/usage_errors.md#callable-discriminator-no-tag))).
 
-See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions>) concepts docs for more details on how to use `Tag`s.
+See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./../../concepts/unions.md#discriminated-unions))) concepts docs for more details on how to use `Tag`s.
 
 ## Discriminator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator> ([local](./types.md#pydantic.types.Discriminator)))
 
 Usage Documentation
 
-[Discriminated Unions with `Callable` `Discriminator`](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-callable-discriminator>)
+[Discriminated Unions with `Callable` `Discriminator`](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-callable-discriminator> ([local](./../../concepts/unions.md#discriminated-unions-with-callable-discriminator)))
 
 Provides a way to use a custom callable as the way to extract the value of a union discriminator.
 
@@ -1478,15 +1472,15 @@ Consider this example, which is much more performant with the use of `Discrimina
 
 ```
 
-See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions>) concepts docs for more details on how to use `Discriminator`s.
+See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./../../concepts/unions.md#discriminated-unions))) concepts docs for more details on how to use `Discriminator`s.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#attributes-5> ([local](./types.md#attributes-5)))
 
 #### discriminator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.discriminator>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.discriminator> ([local](./types.md#pydantic.types.Discriminator.discriminator)))
 
 The callable or field name for discriminating the type in a tagged union.
 
@@ -1496,15 +1490,15 @@ A `Callable` discriminator must extract the value of the discriminator from the 
 
 #### custom_error_type 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_type>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_type> ([local](./types.md#pydantic.types.Discriminator.custom_error_type)))
 
-Type to use in [custom errors](<https://pydantic.dev/docs/validation/latest/errors/errors>) replacing the standard discriminated union validation errors.
+Type to use in [custom errors](<https://pydantic.dev/docs/validation/latest/errors/errors> ([local](./../../errors/errors.md))) replacing the standard discriminated union validation errors.
 
 **Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) **Default:** `None`
 
 #### custom_error_message 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_message>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_message> ([local](./types.md#pydantic.types.Discriminator.custom_error_message)))
 
 Message to use in custom errors.
 
@@ -1512,7 +1506,7 @@ Message to use in custom errors.
 
 #### custom_error_context 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_context>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Discriminator.custom_error_context> ([local](./types.md#pydantic.types.Discriminator.custom_error_context)))
 
 Context to use in custom errors.
 
@@ -1520,7 +1514,7 @@ Context to use in custom errors.
 
 ## FailFast 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FailFast>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FailFast> ([local](./types.md#pydantic.types.FailFast)))
 
 **Bases:** `PydanticMetadata`, `BaseMetadata`
 
@@ -1555,7 +1549,7 @@ You might want to enable this setting if you want to validate your data faster (
 
 ## conint 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint> ([local](./types.md#pydantic.types.conint)))
 
 ```
  
@@ -1573,14 +1567,14 @@ You might want to enable this setting if you want to validate your data faster (
 
 Discouraged
 
-This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) instead.
+This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) instead.
 
 This function will be **deprecated** in Pydantic 3.0.
 
 The reason is that `conint` returns a type, which doesn’t play well with static analysis tools.
 
-  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-695>)
-  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-696>)
+  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-695> ([local](./types.md#tab-panel-695)))
+  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-696> ([local](./types.md#tab-panel-696)))
 
 ```
  
@@ -1639,53 +1633,53 @@ A wrapper around `int` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-19>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-19> ([local](./types.md#returns-19)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`int`](<https://docs.python.org/3/library/functions.html#int>)] — The wrapped integer type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-12>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-12> ([local](./types.md#parameters-12)))
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(strict\)> ([local](./types.md#pydantic.types.conint\(strict\))))
 
 Whether to validate the integer in strict mode. Defaults to `None`.
 
 **`gt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(gt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(gt\)> ([local](./types.md#pydantic.types.conint\(gt\))))
 
 The value must be greater than this.
 
 **`ge`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(ge\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(ge\)> ([local](./types.md#pydantic.types.conint\(ge\))))
 
 The value must be greater than or equal to this.
 
 **`lt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(lt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(lt\)> ([local](./types.md#pydantic.types.conint\(lt\))))
 
 The value must be less than this.
 
 **`le`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(le\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(le\)> ([local](./types.md#pydantic.types.conint\(le\))))
 
 The value must be less than or equal to this.
 
 **`multiple_of`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(multiple_of\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conint\(multiple_of\)> ([local](./types.md#pydantic.types.conint\(multiple_of\))))
 
 The value must be a multiple of this.
 
 ## confloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat> ([local](./types.md#pydantic.types.confloat)))
 
 ```
  
@@ -1704,14 +1698,14 @@ The value must be a multiple of this.
 
 Discouraged
 
-This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) instead.
+This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) instead.
 
 This function will be **deprecated** in Pydantic 3.0.
 
 The reason is that `confloat` returns a type, which doesn’t play well with static analysis tools.
 
-  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-697>)
-  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-698>)
+  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-697> ([local](./types.md#tab-panel-697)))
+  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-698> ([local](./types.md#tab-panel-698)))
 
 ```
  
@@ -1770,59 +1764,59 @@ A wrapper around `float` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-20>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-20> ([local](./types.md#returns-20)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`float`](<https://docs.python.org/3/library/functions.html#float>)] — The wrapped float type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-13>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-13> ([local](./types.md#parameters-13)))
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(strict\)> ([local](./types.md#pydantic.types.confloat\(strict\))))
 
 Whether to validate the float in strict mode.
 
 **`gt`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(gt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(gt\)> ([local](./types.md#pydantic.types.confloat\(gt\))))
 
 The value must be greater than this.
 
 **`ge`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(ge\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(ge\)> ([local](./types.md#pydantic.types.confloat\(ge\))))
 
 The value must be greater than or equal to this.
 
 **`lt`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(lt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(lt\)> ([local](./types.md#pydantic.types.confloat\(lt\))))
 
 The value must be less than this.
 
 **`le`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(le\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(le\)> ([local](./types.md#pydantic.types.confloat\(le\))))
 
 The value must be less than or equal to this.
 
 **`multiple_of`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(multiple_of\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(multiple_of\)> ([local](./types.md#pydantic.types.confloat\(multiple_of\))))
 
 The value must be a multiple of this.
 
 **`allow_inf_nan`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(allow_inf_nan\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confloat\(allow_inf_nan\)> ([local](./types.md#pydantic.types.confloat\(allow_inf_nan\))))
 
 Whether to allow `-inf`, `inf`, and `nan`.
 
 ## conbytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes> ([local](./types.md#pydantic.types.conbytes)))
 
 ```
  
@@ -1839,35 +1833,35 @@ A wrapper around `bytes` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-21>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-21> ([local](./types.md#returns-21)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>)] — The wrapped bytes type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-14>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-14> ([local](./types.md#parameters-14)))
 
 **`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(min_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(min_length\)> ([local](./types.md#pydantic.types.conbytes\(min_length\))))
 
 The minimum length of the bytes.
 
 **`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(max_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(max_length\)> ([local](./types.md#pydantic.types.conbytes\(max_length\))))
 
 The maximum length of the bytes.
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conbytes\(strict\)> ([local](./types.md#pydantic.types.conbytes\(strict\))))
 
 Whether to validate the bytes in strict mode.
 
 ## constr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr> ([local](./types.md#pydantic.types.constr)))
 
 ```
  
@@ -1887,14 +1881,14 @@ Whether to validate the bytes in strict mode.
 
 Discouraged
 
-This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`StringConstraints`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints>) instead.
+This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`StringConstraints`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints> ([local](./types.md#pydantic.types.StringConstraints))) instead.
 
 This function will be **deprecated** in Pydantic 3.0.
 
 The reason is that `constr` returns a type, which doesn’t play well with static analysis tools.
 
-  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-699>)
-  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-700>)
+  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-699> ([local](./types.md#tab-panel-699)))
+  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-700> ([local](./types.md#tab-panel-700)))
 
 ```
  
@@ -1941,65 +1935,65 @@ A wrapper around `str` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-22>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-22> ([local](./types.md#returns-22)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] — The wrapped string type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-15>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-15> ([local](./types.md#parameters-15)))
 
 **`strip_whitespace`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(strip_whitespace\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(strip_whitespace\)> ([local](./types.md#pydantic.types.constr\(strip_whitespace\))))
 
 Whether to remove leading and trailing whitespace.
 
 **`to_upper`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(to_upper\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(to_upper\)> ([local](./types.md#pydantic.types.constr\(to_upper\))))
 
 Whether to turn all characters to uppercase.
 
 **`to_lower`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(to_lower\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(to_lower\)> ([local](./types.md#pydantic.types.constr\(to_lower\))))
 
 Whether to turn all characters to lowercase.
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(strict\)> ([local](./types.md#pydantic.types.constr\(strict\))))
 
 Whether to validate the string in strict mode.
 
 **`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(min_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(min_length\)> ([local](./types.md#pydantic.types.constr\(min_length\))))
 
 The minimum length of the string.
 
 **`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(max_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(max_length\)> ([local](./types.md#pydantic.types.constr\(max_length\))))
 
 The maximum length of the string.
 
 **`pattern`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`Pattern`](<https://docs.python.org/3/library/typing.html#typing.Pattern>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(pattern\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(pattern\)> ([local](./types.md#pydantic.types.constr\(pattern\))))
 
 A regex pattern to validate the string against.
 
 **`ascii_only`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(ascii_only\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.constr\(ascii_only\)> ([local](./types.md#pydantic.types.constr\(ascii_only\))))
 
 Whether the string should contain only ASCII characters.
 
 ## conset 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset> ([local](./types.md#pydantic.types.conset)))
 
 ```
  
@@ -2016,35 +2010,35 @@ A wrapper around `typing.Set` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-23>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-23> ([local](./types.md#returns-23)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`set`](<https://docs.python.org/3/reference/expressions.html#set>)[`HashableItemType`]] — The wrapped set type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-16>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-16> ([local](./types.md#parameters-16)))
 
 **`item_type`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`HashableItemType`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(item_type\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(item_type\)> ([local](./types.md#pydantic.types.conset\(item_type\))))
 
 The type of the items in the set.
 
 **`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(min_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(min_length\)> ([local](./types.md#pydantic.types.conset\(min_length\))))
 
 The minimum length of the set.
 
 **`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(max_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conset\(max_length\)> ([local](./types.md#pydantic.types.conset\(max_length\))))
 
 The maximum length of the set.
 
 ## confrozenset 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset> ([local](./types.md#pydantic.types.confrozenset)))
 
 ```
  
@@ -2061,35 +2055,35 @@ A wrapper around `typing.FrozenSet` that allows for additional constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-24>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-24> ([local](./types.md#returns-24)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>)[`HashableItemType`]] — The wrapped frozenset type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-17>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-17> ([local](./types.md#parameters-17)))
 
 **`item_type`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`HashableItemType`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(item_type\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(item_type\)> ([local](./types.md#pydantic.types.confrozenset\(item_type\))))
 
 The type of the items in the frozenset.
 
 **`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(min_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(min_length\)> ([local](./types.md#pydantic.types.confrozenset\(min_length\))))
 
 The minimum length of the frozenset.
 
 **`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(max_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.confrozenset\(max_length\)> ([local](./types.md#pydantic.types.confrozenset\(max_length\))))
 
 The maximum length of the frozenset.
 
 ## conlist 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist> ([local](./types.md#pydantic.types.conlist)))
 
 ```
  
@@ -2107,35 +2101,35 @@ A wrapper around [`list`](<https://docs.python.org/3/glossary.html#term-list>) t
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-25>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-25> ([local](./types.md#returns-25)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[`AnyItemType`]] — The wrapped list type.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-18>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-18> ([local](./types.md#parameters-18)))
 
 **`item_type`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`AnyItemType`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(item_type\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(item_type\)> ([local](./types.md#pydantic.types.conlist\(item_type\))))
 
 The type of the items in the list.
 
 **`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(min_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(min_length\)> ([local](./types.md#pydantic.types.conlist\(min_length\))))
 
 The minimum length of the list. Defaults to None.
 
 **`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(max_length\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(max_length\)> ([local](./types.md#pydantic.types.conlist\(max_length\))))
 
 The maximum length of the list. Defaults to None.
 
 **`unique_items`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(unique_items\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.conlist\(unique_items\)> ([local](./types.md#pydantic.types.conlist\(unique_items\))))
 
 Whether the items in the list must be unique. Defaults to None.
 
@@ -2145,7 +2139,7 @@ The `unique_items` parameter is deprecated, use `Set` instead. See [this issue](
 
 ## condecimal 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal> ([local](./types.md#pydantic.types.condecimal)))
 
 ```
  
@@ -2166,14 +2160,14 @@ The `unique_items` parameter is deprecated, use `Set` instead. See [this issue](
 
 Discouraged
 
-This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) instead.
+This function is **discouraged** in favor of using [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) with [`Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) instead.
 
 This function will be **deprecated** in Pydantic 3.0.
 
 The reason is that `condecimal` returns a type, which doesn’t play well with static analysis tools.
 
-  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-701>)
-  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-702>)
+  * [ :x: Don't do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-701> ([local](./types.md#tab-panel-701)))
+  * [ :white_check_mark: Do this ](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#tab-panel-702> ([local](./types.md#tab-panel-702)))
 
 ```
  
@@ -2235,71 +2229,71 @@ A wrapper around Decimal that adds validation.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-26>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-26> ([local](./types.md#returns-26)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`Decimal`]
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-19>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-19> ([local](./types.md#parameters-19)))
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(strict\)> ([local](./types.md#pydantic.types.condecimal\(strict\))))
 
 Whether to validate the value in strict mode. Defaults to `None`.
 
 **`gt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(gt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(gt\)> ([local](./types.md#pydantic.types.condecimal\(gt\))))
 
 The value must be greater than this. Defaults to `None`.
 
 **`ge`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(ge\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(ge\)> ([local](./types.md#pydantic.types.condecimal\(ge\))))
 
 The value must be greater than or equal to this. Defaults to `None`.
 
 **`lt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(lt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(lt\)> ([local](./types.md#pydantic.types.condecimal\(lt\))))
 
 The value must be less than this. Defaults to `None`.
 
 **`le`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(le\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(le\)> ([local](./types.md#pydantic.types.condecimal\(le\))))
 
 The value must be less than or equal to this. Defaults to `None`.
 
 **`multiple_of`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(multiple_of\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(multiple_of\)> ([local](./types.md#pydantic.types.condecimal\(multiple_of\))))
 
 The value must be a multiple of this. Defaults to `None`.
 
 **`max_digits`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(max_digits\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(max_digits\)> ([local](./types.md#pydantic.types.condecimal\(max_digits\))))
 
 The maximum number of digits. Defaults to `None`.
 
 **`decimal_places`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(decimal_places\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(decimal_places\)> ([local](./types.md#pydantic.types.condecimal\(decimal_places\))))
 
 The number of decimal places. Defaults to `None`.
 
 **`allow_inf_nan`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(allow_inf_nan\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condecimal\(allow_inf_nan\)> ([local](./types.md#pydantic.types.condecimal\(allow_inf_nan\))))
 
 Whether to allow infinity and NaN. Defaults to `None`.
 
 ## condate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate> ([local](./types.md#pydantic.types.condate)))
 
 ```
  
@@ -2318,47 +2312,47 @@ A wrapper for date that adds constraints.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-27>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#returns-27> ([local](./types.md#returns-27)))
 
 [`type`](<https://docs.python.org/3/glossary.html#term-type>)[`date`] — A date type with the specified constraints.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-20>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#parameters-20> ([local](./types.md#parameters-20)))
 
 **`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(strict\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(strict\)> ([local](./types.md#pydantic.types.condate\(strict\))))
 
 Whether to validate the date value in strict mode. Defaults to `None`.
 
 **`gt`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(gt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(gt\)> ([local](./types.md#pydantic.types.condate\(gt\))))
 
 The value must be greater than this. Defaults to `None`.
 
 **`ge`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(ge\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(ge\)> ([local](./types.md#pydantic.types.condate\(ge\))))
 
 The value must be greater than or equal to this. Defaults to `None`.
 
 **`lt`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(lt\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(lt\)> ([local](./types.md#pydantic.types.condate\(lt\))))
 
 The value must be less than this. Defaults to `None`.
 
 **`le`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(le\)>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.condate\(le\)> ([local](./types.md#pydantic.types.condate\(le\))))
 
 The value must be less than or equal to this. Defaults to `None`.
 
 ## StrictBool 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictBool>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictBool> ([local](./types.md#pydantic.types.StrictBool)))
 
 A boolean that must be either `True` or `False`.
 
@@ -2366,7 +2360,7 @@ A boolean that must be either `True` or `False`.
 
 ## PositiveInt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PositiveInt>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PositiveInt> ([local](./types.md#pydantic.types.PositiveInt)))
 
 An integer that must be greater than zero.
 
@@ -2405,7 +2399,7 @@ An integer that must be greater than zero.
 
 ## NegativeInt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NegativeInt>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NegativeInt> ([local](./types.md#pydantic.types.NegativeInt)))
 
 An integer that must be less than zero.
 
@@ -2444,7 +2438,7 @@ An integer that must be less than zero.
 
 ## NonPositiveInt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonPositiveInt>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonPositiveInt> ([local](./types.md#pydantic.types.NonPositiveInt)))
 
 An integer that must be less than or equal to zero.
 
@@ -2483,7 +2477,7 @@ An integer that must be less than or equal to zero.
 
 ## NonNegativeInt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonNegativeInt>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonNegativeInt> ([local](./types.md#pydantic.types.NonNegativeInt)))
 
 An integer that must be greater than or equal to zero.
 
@@ -2522,7 +2516,7 @@ An integer that must be greater than or equal to zero.
 
 ## StrictInt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictInt>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictInt> ([local](./types.md#pydantic.types.StrictInt)))
 
 An integer that must be validated in strict mode.
 
@@ -2550,7 +2544,7 @@ An integer that must be validated in strict mode.
 
 ## PositiveFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PositiveFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.PositiveFloat> ([local](./types.md#pydantic.types.PositiveFloat)))
 
 A float that must be greater than zero.
 
@@ -2589,7 +2583,7 @@ A float that must be greater than zero.
 
 ## NegativeFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NegativeFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NegativeFloat> ([local](./types.md#pydantic.types.NegativeFloat)))
 
 A float that must be less than zero.
 
@@ -2628,7 +2622,7 @@ A float that must be less than zero.
 
 ## NonPositiveFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonPositiveFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonPositiveFloat> ([local](./types.md#pydantic.types.NonPositiveFloat)))
 
 A float that must be less than or equal to zero.
 
@@ -2667,7 +2661,7 @@ A float that must be less than or equal to zero.
 
 ## NonNegativeFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonNegativeFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NonNegativeFloat> ([local](./types.md#pydantic.types.NonNegativeFloat)))
 
 A float that must be greater than or equal to zero.
 
@@ -2706,7 +2700,7 @@ A float that must be greater than or equal to zero.
 
 ## StrictFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictFloat> ([local](./types.md#pydantic.types.StrictFloat)))
 
 A float that must be validated in strict mode.
 
@@ -2734,7 +2728,7 @@ A float that must be validated in strict mode.
 
 ## FiniteFloat 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FiniteFloat>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FiniteFloat> ([local](./types.md#pydantic.types.FiniteFloat)))
 
 A float that must be finite (not `-inf`, `inf`, or `nan`).
 
@@ -2756,7 +2750,7 @@ A float that must be finite (not `-inf`, `inf`, or `nan`).
 
 ## StrictBytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictBytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictBytes> ([local](./types.md#pydantic.types.StrictBytes)))
 
 A bytes that must be validated in strict mode.
 
@@ -2764,7 +2758,7 @@ A bytes that must be validated in strict mode.
 
 ## StrictStr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictStr>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.StrictStr> ([local](./types.md#pydantic.types.StrictStr)))
 
 A string that must be validated in strict mode.
 
@@ -2772,7 +2766,7 @@ A string that must be validated in strict mode.
 
 ## UUID1 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID1>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID1> ([local](./types.md#pydantic.types.UUID1)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 1.
 
@@ -2794,7 +2788,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 1.
 
 ## UUID3 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID3>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID3> ([local](./types.md#pydantic.types.UUID3)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 3.
 
@@ -2816,7 +2810,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 3.
 
 ## UUID4 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID4>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID4> ([local](./types.md#pydantic.types.UUID4)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 4.
 
@@ -2838,7 +2832,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 4.
 
 ## UUID5 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID5>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID5> ([local](./types.md#pydantic.types.UUID5)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 5.
 
@@ -2860,7 +2854,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 5.
 
 ## UUID6 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID6>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID6> ([local](./types.md#pydantic.types.UUID6)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 6.
 
@@ -2882,7 +2876,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 6.
 
 ## UUID7 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID7>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID7> ([local](./types.md#pydantic.types.UUID7)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 7.
 
@@ -2904,7 +2898,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 7.
 
 ## UUID8 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID8>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.UUID8> ([local](./types.md#pydantic.types.UUID8)))
 
 A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 8.
 
@@ -2926,7 +2920,7 @@ A [UUID](<https://docs.python.org/3/library/uuid.html>) that must be version 8.
 
 ## FilePath 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FilePath>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.FilePath> ([local](./types.md#pydantic.types.FilePath)))
 
 A path that must point to a file.
 
@@ -2976,7 +2970,7 @@ A path that must point to a file.
 
 ## DirectoryPath 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.DirectoryPath>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.DirectoryPath> ([local](./types.md#pydantic.types.DirectoryPath)))
 
 A path that must point to a directory.
 
@@ -3026,7 +3020,7 @@ A path that must point to a directory.
 
 ## NewPath 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NewPath>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.NewPath> ([local](./types.md#pydantic.types.NewPath)))
 
 A path for a new file or directory that must not already exist. The parent directory must already exist.
 
@@ -3034,7 +3028,7 @@ A path for a new file or directory that must not already exist. The parent direc
 
 ## SocketPath 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SocketPath>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.SocketPath> ([local](./types.md#pydantic.types.SocketPath)))
 
 A path to an existing socket file
 
@@ -3042,7 +3036,7 @@ A path to an existing socket file
 
 ## Base64Bytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Bytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Bytes> ([local](./types.md#pydantic.types.Base64Bytes)))
 
 A bytes type that is encoded and decoded using the standard (non-URL-safe) base64 encoder.
 
@@ -3122,7 +3116,7 @@ These methods are considered legacy implementation. If you’d still like to use
 
 ## Base64Str 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Str>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64Str> ([local](./types.md#pydantic.types.Base64Str)))
 
 A string type that is encoded and decoded using the standard (non-URL-safe) base64 encoder.
 
@@ -3130,7 +3124,7 @@ A string type that is encoded and decoded using the standard (non-URL-safe) base
 
 `Base64Str` now uses [`base64.b64encode()`](<https://docs.python.org/3/library/base64.html#base64.b64encode>) and [`base64.b64decode()`](<https://docs.python.org/3/library/base64.html#base64.b64decode>) instead of [`base64.encodebytes()`](<https://docs.python.org/3/library/base64.html#base64.encodebytes>) and [`base64.decodebytes()`](<https://docs.python.org/3/library/base64.html#base64.decodebytes>).
 
-These methods are considered legacy implementation. See the documentation about the [`Base64Bytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Base64Bytes>) type for more information on how to replicate the old behavior with the legacy encoders/decoders.
+These methods are considered legacy implementation. See the documentation about the [`Base64Bytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Base64Bytes> ([local](./types.md#pydantic.types.Base64Bytes))) type for more information on how to replicate the old behavior with the legacy encoders/decoders.
 
 ```
  
@@ -3168,7 +3162,7 @@ These methods are considered legacy implementation. See the documentation about 
 
 ## Base64UrlBytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlBytes>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlBytes> ([local](./types.md#pydantic.types.Base64UrlBytes)))
 
 A bytes type that is encoded and decoded using the URL-safe base64 encoder.
 
@@ -3191,7 +3185,7 @@ A bytes type that is encoded and decoded using the URL-safe base64 encoder.
 
 ## Base64UrlStr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlStr>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.Base64UrlStr> ([local](./types.md#pydantic.types.Base64UrlStr)))
 
 A str type that is encoded and decoded using the URL-safe base64 encoder.
 
@@ -3214,7 +3208,7 @@ A str type that is encoded and decoded using the URL-safe base64 encoder.
 
 ## JsonValue 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.JsonValue>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.JsonValue> ([local](./types.md#pydantic.types.JsonValue)))
 
 A `JsonValue` is used to represent a value that can be serialized to JSON.
 
@@ -3264,16 +3258,8 @@ The following example demonstrates how to use `JsonValue` to validate JSON data,
 
 ## OnErrorOmit 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.OnErrorOmit>)
+[](<https://pydantic.dev/docs/validation/latest/api/pydantic/types#pydantic.types.OnErrorOmit> ([local](./types.md#pydantic.types.OnErrorOmit)))
 
-When used as an item in a list, the key type in a dict, optional values of a TypedDict, etc. this annotation omits the item from the iteration if there is any error validating it. That is, instead of a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>) being propagated up and the entire iterable being discarded any invalid items are discarded and the valid ones are returned.
+When used as an item in a list, the key type in a dict, optional values of a TypedDict, etc. this annotation omits the item from the iteration if there is any error validating it. That is, instead of a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) being propagated up and the entire iterable being discarded any invalid items are discarded and the valid ones are returned.
 
 **Default:** `Annotated[T, _OnErrorOmit]`
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Standard Library Types ](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types/>) [ Next   
-Network Types ](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/>)

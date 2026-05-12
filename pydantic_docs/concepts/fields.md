@@ -3,15 +3,13 @@ title: Fields
 source: https://pydantic.dev/docs/validation/latest/concepts/fields
 ---
 
-# Fields
-
 API Documentation
 
-[`pydantic.fields.Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>)  
+[`pydantic.fields.Field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field)))  
 
-In this section, we will go through the available mechanisms to customize Pydantic model fields: [default values](<https://pydantic.dev/docs/validation/latest/concepts/fields#default-values>), [JSON Schema metadata](<https://pydantic.dev/docs/validation/latest/concepts/fields#customizing-json-schema>), [constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints>), etc.
+In this section, we will go through the available mechanisms to customize Pydantic model fields: [default values](<https://pydantic.dev/docs/validation/latest/concepts/fields#default-values> ([local](./fields.md#default-values))), [JSON Schema metadata](<https://pydantic.dev/docs/validation/latest/concepts/fields#customizing-json-schema> ([local](./fields.md#customizing-json-schema))), [constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints))), etc.
 
-To do so, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function is used a lot, and behaves the same way as the standard library [`field()`](<https://docs.python.org/3/library/dataclasses.html#dataclasses.field>) function for dataclasses – by assigning to the annotated attribute:
+To do so, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function is used a lot, and behaves the same way as the standard library [`field()`](<https://docs.python.org/3/library/dataclasses.html#dataclasses.field>) function for dataclasses – by assigning to the annotated attribute:
 
 ```
  
@@ -40,9 +38,9 @@ However, its usage is discouraged as it doesn’t play well with static type che
 
 ## The annotated pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern)))
 
-To apply constraints or attach [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) functions to a model field, Pydantic also supports the [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) typing construct to attach metadata to an annotation:
+To apply constraints or attach [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) functions to a model field, Pydantic also supports the [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) typing construct to attach metadata to an annotation:
 
 ```
  
@@ -62,14 +60,14 @@ As far as static type checkers are concerned, `name` is still typed as `str`, bu
 Using this pattern has some advantages:
 
   * Using the `f: <type> = Field(...)` form can be confusing and might trick users into thinking `f` has a default value, while in reality it is still required.
-  * You can provide an arbitrary amount of metadata elements for a field. As shown in the example above, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function only supports a limited set of constraints/metadata, and you may have to use different Pydantic utilities such as [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema>) in some cases.
-  * Types can be made reusable (see the documentation on [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern>) using this pattern).
+  * You can provide an arbitrary amount of metadata elements for a field. As shown in the example above, the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function only supports a limited set of constraints/metadata, and you may have to use different Pydantic utilities such as [`WithJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.WithJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.WithJsonSchema))) in some cases.
+  * Types can be made reusable (see the documentation on [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern> ([local](./types.md#using-the-annotated-pattern))) using this pattern).
 
-However, note that certain arguments to the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function (namely, `default`, `default_factory`, and `alias`) are taken into account by static type checkers to synthesize a correct `__init__()` method. The annotated pattern is _not_ understood by them, so you should use the normal assignment form instead.
+However, note that certain arguments to the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function (namely, `default`, `default_factory`, and `alias`) are taken into account by static type checkers to synthesize a correct `__init__()` method. The annotated pattern is _not_ understood by them, so you should use the normal assignment form instead.
 
 Tip
 
-The annotated pattern can also be used to add metadata to specific parts of the type. For instance, [validation constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints>) can be added this way:
+The annotated pattern can also be used to add metadata to specific parts of the type. For instance, [validation constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints))) can be added this way:
 
 ```
 
@@ -96,15 +94,11 @@ Be careful not mixing _field_ and _type_ metadata:
 
 ```
 
-The [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function is applied to `int` type, hence the `deprecated` flag won't have any effect. While this may be confusing given that the name of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function would imply it should apply to the field, the API was designed when this function was the only way to provide metadata. You can alternatively make use of the [`annotated_types`](<https://github.com/annotated-types/annotated-types>) library which is now supported by Pydantic.
-
-The [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function is applied to the "top-level" union type, hence the `deprecated` flag will be applied to the field.
-
 ## Inspecting model fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#inspecting-model-fields>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#inspecting-model-fields> ([local](./fields.md#inspecting-model-fields)))
 
-The fields of a model can be inspected using the [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields>) class attribute (or the `__pydantic_fields__` attribute for [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>)). It is a mapping of field names to their definition (represented as [`FieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.FieldInfo>) instances).
+The fields of a model can be inspected using the [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields))) class attribute (or the `__pydantic_fields__` attribute for [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md)))). It is a mapping of field names to their definition (represented as [`FieldInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.FieldInfo> ([local](./../api/pydantic/fields.md#pydantic.fields.FieldInfo))) instances).
 
 ```
  
@@ -132,11 +126,11 @@ The fields of a model can be inspected using the [`model_fields`](<https://pydan
 
 ⚠ Deprecated in v2.11, removed in v3
 
-[`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields>) can only be accessed from the class object, not the instance.
+[`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields))) can only be accessed from the class object, not the instance.
 
 ## Default values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#default-values>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#default-values> ([local](./fields.md#default-values)))
 
 Default values for fields can be provided using the normal assignment syntax or by providing a value to the `default` argument:
 
@@ -155,7 +149,7 @@ Default values for fields can be provided using the normal assignment syntax or 
 
 ↻ Changed in v2
 
-[In Pydantic V1](<https://pydantic.dev/docs/validation/latest/get-started/migration#required-optional-and-nullable-fields>), a type annotated as [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) or wrapped by [`Optional`](<https://docs.python.org/3/library/typing.html#typing.Optional>) would be given an implicit default of `None` even if no default was explicitly specified. This is no longer the case in Pydantic V2.
+[In Pydantic V1](<https://pydantic.dev/docs/validation/latest/get-started/migration#required-optional-and-nullable-fields> ([local](./../get-started/migration.md#required-optional-and-nullable-fields))), a type annotated as [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) or wrapped by [`Optional`](<https://docs.python.org/3/library/typing.html#typing.Optional>) would be given an implicit default of `None` even if no default was explicitly specified. This is no longer the case in Pydantic V2.
 
 You can also pass a callable to the `default_factory` argument that will be called to generate a default value:
 
@@ -191,7 +185,7 @@ The default factory can also take a single required argument, in which case the 
 
 ```
 
-The `data` argument will _only_ contain the already validated data, based on the [order of model fields](<https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering>) (the above example would fail if `username` were to be defined before `email`).
+The `data` argument will _only_ contain the already validated data, based on the [order of model fields](<https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering> ([local](./models.md#field-ordering))) (the above example would fail if `username` were to be defined before `email`).
 
 ✦ New in v2.10
 
@@ -199,13 +193,13 @@ Default factories can take already validated data as an argument.
 
 ✦ New in v2.13
 
-Default factories for [private attributes](<https://pydantic.dev/docs/validation/latest/concepts/models#private-model-attributes>) can take the validated data as an argument.
+Default factories for [private attributes](<https://pydantic.dev/docs/validation/latest/concepts/models#private-model-attributes> ([local](./models.md#private-model-attributes))) can take the validated data as an argument.
 
 ## Validate default values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values> ([local](./fields.md#validate-default-values)))
 
-By default, Pydantic will _not_ validate default values. The `validate_default` field parameter (or the [`validate_default`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_default>) configuration value) can be used to enable this behavior:
+By default, Pydantic will _not_ validate default values. The `validate_default` field parameter (or the [`validate_default`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_default> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.validate_default))) configuration value) can be used to enable this behavior:
 
 ```
  
@@ -231,7 +225,7 @@ By default, Pydantic will _not_ validate default values. The `validate_default` 
 
 ### Mutable default values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#mutable-default-values>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#mutable-default-values> ([local](./fields.md#mutable-default-values)))
 
 A common source of bugs in Python is to use a mutable object as a default value for a function or method argument, as the same instance ends up being reused in each call.
 
@@ -262,11 +256,11 @@ While the same thing can be done in Pydantic, it is not required. In the event t
 
 ## Field aliases
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases> ([local](./fields.md#field-aliases)))
 
 Tip
 
-Read more about aliases in the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/alias>).
+Read more about aliases in the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/alias> ([local](./alias.md))).
 
 For validation and serialization, you can define an alias for a field.
 
@@ -297,13 +291,9 @@ Here is an example of using the `alias` parameter:
 
 ```
 
-The alias `'username'` is used for instance creation and validation.
-
-We are using [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>) to convert the model into a serializable format.
-
 Note that the `by_alias` keyword argument defaults to `False`, and must be specified explicitly to dump models using the field (serialization) aliases.
 
-You can also use [`ConfigDict.serialize_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.serialize_by_alias>) to configure this behavior at the model level.
+You can also use [`ConfigDict.serialize_by_alias`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.serialize_by_alias> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.serialize_by_alias))) to configure this behavior at the model level.
 
 When `by_alias=True`, the alias `'username'` used during serialization.
 
@@ -326,10 +316,6 @@ If you want to use an alias _only_ for validation, you can use the `validation_a
 
 ```
 
-The validation alias `'username'` is used during validation.
-
-The field name `'name'` is used during serialization.
-
 If you only want to define an alias for _serialization_ , you can use the `serialization_alias` parameter:
 
 ```
@@ -349,15 +335,11 @@ If you only want to define an alias for _serialization_ , you can use the `seria
 
 ```
 
-The field name `'name'` is used for validation.
-
-The serialization alias `'username'` is used for serialization.
-
 Alias precedence and priority
 
 In case you use `alias` together with `validation_alias` or `serialization_alias` at the same time, the `validation_alias` will have priority over `alias` for validation, and `serialization_alias` will have priority over `alias` for serialization.
 
-If you provide a value for the [`alias_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.alias_generator>) model setting, you can control the order of precedence for field alias and generated aliases via the `alias_priority` field parameter. You can read more about alias precedence [here](<https://pydantic.dev/docs/validation/latest/concepts/alias#alias-precedence>).
+If you provide a value for the [`alias_generator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.alias_generator> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.alias_generator))) model setting, you can control the order of precedence for field alias and generated aliases via the `alias_priority` field parameter. You can read more about alias precedence [here](<https://pydantic.dev/docs/validation/latest/concepts/alias#alias-precedence> ([local](./alias.md#alias-precedence))).
 
 Static type checking/IDE support
 
@@ -376,9 +358,7 @@ If you provide a value for the `alias` field parameter, static type checkers wil
 
 ```
 
-Accepted by type checkers.
-
-This means that when using the [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name>) model setting (which allows both the field name and alias to be used during model validation), type checkers will error when the actual field name is used:
+This means that when using the [`validate_by_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.validate_by_name> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.validate_by_name))) model setting (which allows both the field name and alias to be used during model validation), type checkers will error when the actual field name is used:
 
 ```
  
@@ -395,9 +375,7 @@ This means that when using the [`validate_by_name`](<https://pydantic.dev/docs/v
 
 ```
 
-_Not_ accepted by type checkers.
-
-If you still want type checkers to use the field name and not the alias, the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern>) can be used (which is only understood by Pydantic):
+If you still want type checkers to use the field name and not the alias, the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) can be used (which is only understood by Pydantic):
 
 ```
  
@@ -417,13 +395,9 @@ If you still want type checkers to use the field name and not the alias, the [an
 
 ```
 
-Accepted by type checkers.
-
-_Not_ accepted by type checkers.
-
 ### Validation Alias
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#validation-alias>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#validation-alias> ([local](./fields.md#validation-alias)))
 
 Even though Pydantic treats `alias` and `validation_alias` the same when creating model instances, type checkers only understand the `alias` field parameter. As a workaround, you can instead specify both an `alias` and `serialization_alias` (identical to the field name), as the `serialization_alias` will override the `alias` during serialization:
 
@@ -461,9 +435,9 @@ with:
 
 ## Field constraints
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints)))
 
-The [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function can also be used to add constraints to specific types:
+The [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function can also be used to add constraints to specific types:
 
 ```
  
@@ -480,11 +454,11 @@ The [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields
 
 ```
 
-The available constraints for each type (and the way they affect the JSON Schema) are described in the [standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types>) documentation.
+The available constraints for each type (and the way they affect the JSON Schema) are described in the [standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types> ([local](./../api/pydantic/standard_library_types.md))) documentation.
 
 Note
 
-When adding constraints to a union type, if a member of the union is `None` or the [`MISSING` sentinel](<https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel>), the constraints will be automatically applied to the remaining type(s) of the union:
+When adding constraints to a union type, if a member of the union is `None` or the [`MISSING` sentinel](<https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel> ([local](./experimental.md#missing-sentinel))), the constraints will be automatically applied to the remaining type(s) of the union:
 
 ```
 
@@ -503,9 +477,9 @@ When adding constraints to a union type, if a member of the union is `None` or t
 
 ## Strict fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#strict-fields>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#strict-fields> ([local](./fields.md#strict-fields)))
 
-The `strict` parameter of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function specifies whether the field should be validated in [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>).
+The `strict` parameter of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function specifies whether the field should be validated in [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))).
 
 ```
  
@@ -523,17 +497,13 @@ The `strict` parameter of the [`Field()`](<https://pydantic.dev/docs/validation/
 
 ```
 
-This is the default value.
-
-The `age` field is validated in lax mode. Therefore, it can be assigned a string.
-
-The [standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types>) documentation describes the strict behavior for each type.
+The [standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types> ([local](./../api/pydantic/standard_library_types.md))) documentation describes the strict behavior for each type.
 
 ## Dataclass fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#dataclass-fields>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#dataclass-fields> ([local](./fields.md#dataclass-fields)))
 
-Some parameters of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field>) function can be used on [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>):
+Some parameters of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function can be used on [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md))):
 
   * `init`: Whether the field should be included in the synthesized `__init__()` method of the dataclass.
   * `init_var`: Whether the field should be [init-only](<https://docs.python.org/3/library/dataclasses.html#dataclasses-init-only-variables>) in the dataclass.
@@ -564,11 +534,9 @@ Here is an example:
 
 ```
 
-The `baz` field is not included in the serialized output, since it is an init-only field.
-
 ## Field Representation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-representation>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-representation> ([local](./fields.md#field-representation)))
 
 The parameter `repr` can be used to control whether the field should be included in the string representation of the model.
 
@@ -588,11 +556,9 @@ The parameter `repr` can be used to control whether the field should be included
 
 ```
 
-This is the default value.
-
 ## Discriminator
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#discriminator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#discriminator> ([local](./fields.md#discriminator)))
 
 The parameter `discriminator` can be used to control the field that will be used to discriminate between different models in a union. It takes either the name of a field or a `Discriminator` instance. The `Discriminator` approach can be useful when the discriminator fields aren’t the same for all the models in the `Union`.
 
@@ -623,8 +589,6 @@ The following example shows how to use `discriminator` with a field name:
     #> pet=Cat(pet_type='cat', age=12)
 
 ```
-
-See more about `model_validate()` in the [Validating data](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data>) documentation.
 
 The following example shows how to use the `discriminator` keyword argument with a `Discriminator` instance:
 
@@ -666,11 +630,11 @@ The following example shows how to use the `discriminator` keyword argument with
 
 ```
 
-You can also take advantage of `Annotated` to define your discriminated unions. See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions>) documentation for more details.
+You can also take advantage of `Annotated` to define your discriminated unions. See the [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions))) documentation for more details.
 
 ## Immutability
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#immutability>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#immutability> ([local](./fields.md#immutability)))
 
 The parameter `frozen` is used to emulate the frozen dataclass behaviour. It is used to prevent the field from being assigned a new value after the model is created (immutability).
 
@@ -700,11 +664,9 @@ See the [frozen dataclass documentation](<https://docs.python.org/3/library/data
 
 ```
 
-Since `name` field is frozen, the assignment is not allowed.
-
 ## Excluding fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#excluding-fields>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#excluding-fields> ([local](./fields.md#excluding-fields)))
 
 The `exclude` and `exclude_if` parameters can be used to control which fields should be excluded from the model when exporting the model.
 
@@ -726,9 +688,7 @@ See the following example:
 
 ```
 
-The `age` field is not included in the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>) output, since it is excluded.
-
-See the dedicated [serialization section](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-inclusion-and-exclusion>) for more details.
+See the dedicated [serialization section](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-inclusion-and-exclusion> ([local](./serialization.md#field-inclusion-and-exclusion))) for more details.
 
 ✦ New in v2.12
 
@@ -736,7 +696,7 @@ The `exclude_if` parameter.
 
 ## Deprecated fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-fields>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-fields> ([local](./fields.md#deprecated-fields)))
 
 ✦ New in v2.7.0
 
@@ -749,7 +709,7 @@ This parameter accepts different types, described below.
 
 ### `deprecated` as a string
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-as-a-string>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-as-a-string> ([local](./fields.md#deprecated-as-a-string)))
 
 The value will be used as the deprecation message.
 
@@ -772,12 +732,12 @@ The value will be used as the deprecation message.
 
 ### `deprecated` via the `@warnings.deprecated` decorator
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-via-the-warningsdeprecated-decorator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-via-the-warningsdeprecated-decorator> ([local](./fields.md#deprecated-via-the-warningsdeprecated-decorator)))
 
 The [`@warnings.deprecated`](<https://docs.python.org/3/library/warnings.html#warnings.deprecated>) decorator (or the [`typing_extensions` backport](<https://typing-extensions.readthedocs.io/en/latest/index.html#typing_extensions.deprecated>) on Python 3.12 and lower) can be used as an instance.
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/fields#tab-panel-506>)
-  * [ Python 3.13 and above ](<https://pydantic.dev/docs/validation/latest/concepts/fields#tab-panel-507>)
+  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/fields#tab-panel-506> ([local](./fields.md#tab-panel-506)))
+  * [ Python 3.13 and above ](<https://pydantic.dev/docs/validation/latest/concepts/fields#tab-panel-507> ([local](./fields.md#tab-panel-507)))
 
 ```
  
@@ -820,7 +780,7 @@ The current implementation of this feature does not take into account the `categ
 
 ### `deprecated` as a boolean
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-as-a-boolean>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#deprecated-as-a-boolean> ([local](./fields.md#deprecated-as-a-boolean)))
 
 ```
  
@@ -866,7 +826,7 @@ When accessing a deprecated field inside a validator, the deprecation warning wi
 
 ## Customizing JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#customizing-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#customizing-json-schema> ([local](./fields.md#customizing-json-schema)))
 
 Some field parameters are used exclusively to customize the generated JSON schema. The parameters in question are:
 
@@ -875,21 +835,21 @@ Some field parameters are used exclusively to customize the generated JSON schem
   * `examples`
   * `json_schema_extra`
 
-Read more about JSON schema customization / modification with fields in the [Customizing JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization>) section of the JSON schema docs.
+Read more about JSON schema customization / modification with fields in the [Customizing JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#field-level-customization> ([local](./json_schema.md#field-level-customization))) section of the JSON schema docs.
 
 ## The `computed_field` decorator
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-computed_field-decorator>)
+[](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-computed_field-decorator> ([local](./fields.md#the-computed_field-decorator)))
 
 API Documentation
 
-[`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.computed_field>)  
+[`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.computed_field> ([local](./../api/pydantic/fields.md#pydantic.fields.computed_field)))  
 
 ✦ New in v2.13
 
 Computed fields can be conditionally excluded from the serialization output by using the `exclude_if` parameter of the decorator.
 
-The [`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.computed_field>) decorator can be used to include [properties](<https://docs.python.org/3/library/functions.html#property>) (or [cached properties](<https://docs.python.org/3/library/functools.html#functools.cached_property>)) when serializing a model or dataclass. The property will also be included in the JSON Schema (in serialization mode).
+The [`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.computed_field> ([local](./../api/pydantic/fields.md#pydantic.fields.computed_field))) decorator can be used to include [properties](<https://docs.python.org/3/library/functions.html#property>) (or [cached properties](<https://docs.python.org/3/library/functools.html#functools.cached_property>)) when serializing a model or dataclass. The property will also be included in the JSON Schema (in serialization mode).
 
 Note
 
@@ -932,9 +892,7 @@ Here’s an example of the JSON schema (in serialization mode) generated for a m
 
 ```
 
-If not specified, [`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.computed_field>) will implicitly convert the method to a [`@property`](<https://docs.python.org/3/library/functions.html#property>). However, it is preferable to explicitly use the [`@property`](<https://docs.python.org/3/library/functions.html#property>) decorator for type checking purposes.
-
-Here’s an example using the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump>) method with a computed field:
+Here’s an example using the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))) method with a computed field:
 
 ```
  
@@ -981,11 +939,3 @@ As with regular fields, computed fields can be marked as being deprecated:
     
 
 ```
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Models ](<https://pydantic.dev/docs/validation/latest/concepts/models/>) [ Next   
-JSON Schema ](<https://pydantic.dev/docs/validation/latest/concepts/json_schema/>)

@@ -3,13 +3,11 @@ title: Usage Errors
 source: https://pydantic.dev/docs/validation/latest/errors/usage_errors
 ---
 
-# Usage Errors
-
 Pydantic attempts to provide useful errors. The following sections provide details on common errors developers may encounter when working with Pydantic, along with suggestions for addressing the error condition.
 
 ## Class not fully defined 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#class-not-fully-defined>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#class-not-fully-defined> ([local](./usage_errors.md#class-not-fully-defined)))
 
 This error is raised when a type referenced in an annotation of a pydantic-validated type (such as a subclass of `BaseModel`, or a pydantic `dataclass`) is not defined:
 
@@ -92,7 +90,7 @@ In other cases, the error message should indicate how to rebuild the class with 
 
 ## Custom JSON Schema 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#custom-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#custom-json-schema> ([local](./usage_errors.md#custom-json-schema)))
 
 The `__modify_schema__` method is no longer supported in V2. You should use the `__get_pydantic_json_schema__` method instead.
 
@@ -151,7 +149,7 @@ New way
 
 ## Invalid decorator fields 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-invalid-fields>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-invalid-fields> ([local](./usage_errors.md#decorator-invalid-fields)))
 
 This error is raised when the field names provided to the `@field_validator` or `@field_serializer` decorators are not strings.
 
@@ -197,7 +195,7 @@ Fields should be provided as separate string arguments:
 
 ## Decorator with no fields 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-missing-arguments>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-missing-arguments> ([local](./usage_errors.md#decorator-missing-arguments)))
 
 This error is raised when the `@field_validator` or `@field_serializer` decorators are used bare, without any arguments.
 
@@ -241,7 +239,7 @@ At least one field name (and optionally other field names and keyword arguments)
 
 ## Decorator on missing field 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-missing-field>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#decorator-missing-field> ([local](./usage_errors.md#decorator-missing-field)))
 
 This error is raised when you define a decorator with a field that is not valid.
 
@@ -288,7 +286,7 @@ You can use `check_fields=False` if you’re inheriting from the model and inten
 
 ## Discriminator no field 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-no-field>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-no-field> ([local](./usage_errors.md#discriminator-no-field)))
 
 This error is raised when a model in discriminated unions doesn’t define a discriminator field.
 
@@ -322,7 +320,7 @@ This error is raised when a model in discriminated unions doesn’t define a dis
 
 ## Discriminator alias type 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-alias-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-alias-type> ([local](./usage_errors.md#discriminator-alias-type)))
 
 This error is raised when you define a non-string alias on a discriminator field.
 
@@ -359,7 +357,7 @@ This error is raised when you define a non-string alias on a discriminator field
 
 ## Discriminator needs literal 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-needs-literal>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-needs-literal> ([local](./usage_errors.md#discriminator-needs-literal)))
 
 This error is raised when you define a non-`Literal` type on a discriminator field.
 
@@ -394,7 +392,7 @@ This error is raised when you define a non-`Literal` type on a discriminator fie
 
 ## Discriminator alias 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-alias>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-alias> ([local](./usage_errors.md#discriminator-alias)))
 
 This error is raised when you define different aliases on discriminator fields.
 
@@ -429,7 +427,7 @@ This error is raised when you define different aliases on discriminator fields.
 
 ## Invalid discriminator validator 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-validator>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#discriminator-validator> ([local](./usage_errors.md#discriminator-validator)))
 
 This error is raised when you use a before, wrap, or plain validator on a discriminator field.
 
@@ -504,7 +502,7 @@ This can be worked around by using a standard `Union`, dropping the discriminato
 
 ## Callable discriminator case with no tag 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-discriminator-no-tag>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-discriminator-no-tag> ([local](./usage_errors.md#callable-discriminator-no-tag)))
 
 This error is raised when a `Union` that uses a callable `Discriminator` doesn’t have `Tag` annotations for all cases.
 
@@ -563,13 +561,13 @@ This error is raised when a `Union` that uses a callable `Discriminator` doesn�
 
 ## `TypedDict` version 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#typed-dict-version>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#typed-dict-version> ([local](./usage_errors.md#typed-dict-version)))
 
 This error is raised when you use typing.TypedDict instead of `typing_extensions.TypedDict` on Python < 3.12.
 
 ## Model parent field overridden 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-field-overridden>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-field-overridden> ([local](./usage_errors.md#model-field-overridden)))
 
 This error is raised when a field defined on a base class was overridden by a non-annotated attribute.
 
@@ -596,7 +594,7 @@ This error is raised when a field defined on a base class was overridden by a no
 
 ## Model field missing annotation 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-field-missing-annotation>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-field-missing-annotation> ([local](./usage_errors.md#model-field-missing-annotation)))
 
 This error is raised when a field doesn’t have an annotation.
 
@@ -655,7 +653,7 @@ Or updating `model_config['ignored_types']`:
 
 ## `Config` and `model_config` both defined 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#config-both>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#config-both> ([local](./usage_errors.md#config-both)))
 
 This error is raised when `class Config` and `model_config` are used together.
 
@@ -681,7 +679,7 @@ This error is raised when `class Config` and `model_config` are used together.
 
 ## Keyword arguments removed 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#removed-kwargs>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#removed-kwargs> ([local](./usage_errors.md#removed-kwargs)))
 
 This error is raised when the keyword arguments are not available in Pydantic V2.
 
@@ -704,7 +702,7 @@ For example, `regex` is removed from Pydantic V2:
 
 ## Circular reference schema 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#circular-reference-schema>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#circular-reference-schema> ([local](./usage_errors.md#circular-reference-schema)))
 
 This error is raised when a circular reference is found that would otherwise result in an infinite recursion.
 
@@ -731,7 +729,7 @@ while these are not:
 
 ## JSON schema invalid type 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-for-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-for-json-schema> ([local](./usage_errors.md#invalid-for-json-schema)))
 
 This error is raised when Pydantic fails to generate a JSON schema for some `CoreSchema`.
 
@@ -754,13 +752,13 @@ This error is raised when Pydantic fails to generate a JSON schema for some `Cor
 
 ## JSON schema already used 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#json-schema-already-used>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#json-schema-already-used> ([local](./usage_errors.md#json-schema-already-used)))
 
 This error is raised when the JSON schema generator has already been used to generate a JSON schema. You must create a new instance to generate a new JSON schema.
 
 ## BaseModel instantiated 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#base-model-instantiated>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#base-model-instantiated> ([local](./usage_errors.md#base-model-instantiated)))
 
 This error is raised when you instantiate `BaseModel` directly. Pydantic models should inherit from `BaseModel`.
 
@@ -778,7 +776,7 @@ This error is raised when you instantiate `BaseModel` directly. Pydantic models 
 
 ## Undefined annotation 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#undefined-annotation>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#undefined-annotation> ([local](./usage_errors.md#undefined-annotation)))
 
 This error is raised when handling undefined annotations during `CoreSchema` generation.
 
@@ -801,7 +799,7 @@ This error is raised when handling undefined annotations during `CoreSchema` gen
 
 ## Schema for unknown type 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#schema-for-unknown-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#schema-for-unknown-type> ([local](./usage_errors.md#schema-for-unknown-type)))
 
 This error is raised when Pydantic fails to generate a `CoreSchema` for some type.
 
@@ -822,15 +820,15 @@ This error is raised when Pydantic fails to generate a `CoreSchema` for some typ
 
 ## Import error 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#import-error>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#import-error> ([local](./usage_errors.md#import-error)))
 
 This error is raised when you try to import an object that was available in Pydantic V1, but has been removed in Pydantic V2.
 
-See the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration>) for more information.
+See the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration> ([local](./../get-started/migration.md))) for more information.
 
 ## `create_model` field definitions 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#create-model-field-definitions>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#create-model-field-definitions> ([local](./usage_errors.md#create-model-field-definitions)))
 
 This error is raised when you provide invalid field definitions in `create_model()`.
 
@@ -846,11 +844,11 @@ This error is raised when you provide invalid field definitions in `create_model
 
 ```
 
-The fields definition syntax can be found in the [dynamic model creation](<https://pydantic.dev/docs/validation/latest/concepts/models#dynamic-model-creation>) documentation.
+The fields definition syntax can be found in the [dynamic model creation](<https://pydantic.dev/docs/validation/latest/concepts/models#dynamic-model-creation> ([local](./../concepts/models.md#dynamic-model-creation))) documentation.
 
 ## Validator on instance method 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-instance-method>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-instance-method> ([local](./usage_errors.md#validator-instance-method)))
 
 This error is raised when you apply a validator on an instance method.
 
@@ -875,7 +873,7 @@ This error is raised when you apply a validator on an instance method.
 
 ## `json_schema_input_type` used with the wrong mode 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-input-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-input-type> ([local](./usage_errors.md#validator-input-type)))
 
 This error is raised when you explicitly specify a value for the `json_schema_input_type` argument and `mode` isn’t set to either `'before'`, `'plain'` or `'wrap'`.
 
@@ -903,17 +901,17 @@ Documenting the JSON Schema input type is only possible for validators where the
 
 ## Root validator, `pre`, `skip_on_failure`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#root-validator-pre-skip>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#root-validator-pre-skip> ([local](./usage_errors.md#root-validator-pre-skip)))
 
 If you use `@root_validator` with `pre=False` (the default) you MUST specify `skip_on_failure=True`. The `skip_on_failure=False` option is no longer available.
 
 If you were not trying to set `skip_on_failure=False`, you can safely set `skip_on_failure=True`. If you do, this root validator will no longer be called if validation fails for any of the fields.
 
-Please see the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration>) for more details.
+Please see the [Migration Guide](<https://pydantic.dev/docs/validation/latest/get-started/migration> ([local](./../get-started/migration.md))) for more details.
 
 ## `model_serializer` instance methods 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-serializer-instance-method>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-serializer-instance-method> ([local](./usage_errors.md#model-serializer-instance-method)))
 
 `@model_serializer` must be applied to instance methods.
 
@@ -962,7 +960,7 @@ Or on a class method:
 
 ## `validator`, `field`, `config`, and `info`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-field-config-info>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-field-config-info> ([local](./usage_errors.md#validator-field-config-info)))
 
 The `field` and `config` parameters are not available in Pydantic V2. Please use the `info` parameter instead.
 
@@ -972,7 +970,7 @@ The `field` argument is no longer available.
 
 ## Pydantic V1 validator signature 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-v1-signature>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-v1-signature> ([local](./usage_errors.md#validator-v1-signature)))
 
 This error is raised when you use an unsupported signature for Pydantic V1-style validator.
 
@@ -1001,7 +999,7 @@ This error is raised when you use an unsupported signature for Pydantic V1-style
 
 ## Unrecognized `field_validator` signature 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-signature>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validator-signature> ([local](./usage_errors.md#validator-signature)))
 
 This error is raised when a `field_validator` or `model_validator` function has the wrong signature.
 
@@ -1027,7 +1025,7 @@ This error is raised when a `field_validator` or `model_validator` function has 
 
 ## Unrecognized `field_serializer` signature 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#field-serializer-signature>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#field-serializer-signature> ([local](./usage_errors.md#field-serializer-signature)))
 
 This error is raised when the `field_serializer` function has the wrong signature.
 
@@ -1094,7 +1092,7 @@ Valid field serializer signatures are:
 
 ## Unrecognized `model_serializer` signature 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-serializer-signature>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-serializer-signature> ([local](./usage_errors.md#model-serializer-signature)))
 
 This error is raised when the `model_serializer` function has the wrong signature.
 
@@ -1143,7 +1141,7 @@ Valid model serializer signatures are:
 
 ## Multiple field serializers 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#multiple-field-serializers>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#multiple-field-serializers> ([local](./usage_errors.md#multiple-field-serializers)))
 
 This error is raised when multiple `model_serializer` functions are defined for a field.
 
@@ -1173,7 +1171,7 @@ This error is raised when multiple `model_serializer` functions are defined for 
 
 ## Invalid annotated type 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-annotated-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-annotated-type> ([local](./usage_errors.md#invalid-annotated-type)))
 
 This error is raised when an annotation cannot annotate a type.
 
@@ -1196,7 +1194,7 @@ This error is raised when an annotation cannot annotate a type.
 
 ## `config` is unused with `TypeAdapter`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#type-adapter-config-unused>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#type-adapter-config-unused> ([local](./usage_errors.md#type-adapter-config-unused)))
 
 You will get this error if you try to pass `config` to `TypeAdapter` when the type is a type that has its own config that cannot be overridden (currently this is only `BaseModel`, `TypedDict` and `dataclass`):
 
@@ -1242,7 +1240,7 @@ Instead you’ll need to subclass the type and override or set the config on it:
 
 ## Cannot specify `model_config['extra']` with `RootModel`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#root-model-extra>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#root-model-extra> ([local](./usage_errors.md#root-model-extra)))
 
 Because `RootModel` is not capable of storing or even accepting extra fields during initialization, we raise an error if you try to specify a value for the config setting `'extra'` when creating a subclass of `RootModel`:
 
@@ -1264,7 +1262,7 @@ Because `RootModel` is not capable of storing or even accepting extra fields dur
 
 ## Cannot evaluate type annotation 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#unevaluable-type-annotation>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#unevaluable-type-annotation> ([local](./usage_errors.md#unevaluable-type-annotation)))
 
 Because type annotations are evaluated _after_ assignments, you might get unexpected results when using a type annotation name that clashes with one of your fields. We raise an error in the following case:
 
@@ -1299,7 +1297,7 @@ As a workaround, you can either use an alias or change your import:
 
 ## Incompatible `dataclass` `init` and `extra` settings 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#dataclass-init-false-extra-allow>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#dataclass-init-false-extra-allow> ([local](./usage_errors.md#dataclass-init-false-extra-allow)))
 
 Pydantic does not allow the specification of the `extra='allow'` setting on a dataclass while any of the fields have `init=False` set.
 
@@ -1330,7 +1328,7 @@ The above snippet results in the following error during schema building for the 
 
 ## Incompatible `init` and `init_var` settings on `dataclass` field 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#clashing-init-and-init-var>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#clashing-init-and-init-var> ([local](./usage_errors.md#clashing-init-and-init-var)))
 
 The `init=False` and `init_var=True` settings are mutually exclusive. Doing so results in the `PydanticUserError` shown in the example below.
 
@@ -1354,7 +1352,7 @@ The `init=False` and `init_var=True` settings are mutually exclusive. Doing so r
 
 ## `model_config` is used as a model field 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-config-invalid-field-name>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#model-config-invalid-field-name> ([local](./usage_errors.md#model-config-invalid-field-name)))
 
 This error is raised when `model_config` is used as the name of a field.
 
@@ -1375,7 +1373,7 @@ This error is raised when `model_config` is used as the name of a field.
 
 ## `with_config` is used on a `BaseModel` subclass 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#with-config-on-model>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#with-config-on-model> ([local](./usage_errors.md#with-config-on-model)))
 
 This error is raised when the `with_config` decorator is used on a class which is already a Pydantic model (use the `model_config` attribute instead).
 
@@ -1397,7 +1395,7 @@ This error is raised when the `with_config` decorator is used on a class which i
 
 ## `dataclass` is used on a `BaseModel` subclass 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#dataclass-on-model>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#dataclass-on-model> ([local](./usage_errors.md#dataclass-on-model)))
 
 This error is raised when the Pydantic `dataclass` decorator is used on a class which is already a Pydantic model.
 
@@ -1420,13 +1418,13 @@ This error is raised when the Pydantic `dataclass` decorator is used on a class 
 
 ## Unsupported type for `validate_call`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-call-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-call-type> ([local](./usage_errors.md#validate-call-type)))
 
 `validate_call` has some limitations on the callables it can validate. This error is raised when you try to use it with an unsupported callable. Currently the supported callables are functions (including lambdas, but not built-ins) and methods and instances of `partial`. In the case of `partial`, the function being partially applied must be one of the supported callables.
 
 ### `@classmethod`, `@staticmethod`, and `@property`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#classmethod-staticmethod-and-property>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#classmethod-staticmethod-and-property> ([local](./usage_errors.md#classmethod-staticmethod-and-property)))
 
 These decorators must be put before `validate_call`.
 
@@ -1456,7 +1454,7 @@ These decorators must be put before `validate_call`.
 
 ### Classes
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#classes>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#classes> ([local](./usage_errors.md#classes)))
 
 While classes are callables themselves, `validate_call` can’t be applied on them, as it needs to know about which method to use (`__init__` or `__new__`) to fetch type annotations. If you want to validate the constructor of a class, you should put `validate_call` on top of the appropriate method instead.
 
@@ -1487,7 +1485,7 @@ While classes are callables themselves, `validate_call` can’t be applied on th
 
 ### Callable instances
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-instances>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#callable-instances> ([local](./usage_errors.md#callable-instances)))
 
 Although instances can be callable by implementing a `__call__` method, currently the instances of these types cannot be validated with `validate_call`. This may change in the future, but for now, you should use `validate_call` explicitly on `__call__` instead.
 
@@ -1517,7 +1515,7 @@ Although instances can be callable by implementing a `__call__` method, currentl
 
 ### Invalid signature
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-signature>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-signature> ([local](./usage_errors.md#invalid-signature)))
 
 This is generally less common, but a possible reason is that you are trying to validate a method that doesn’t have at least one argument (usually `self`).
 
@@ -1539,7 +1537,7 @@ This is generally less common, but a possible reason is that you are trying to v
 
 ## `Unpack` used without a `TypedDict`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#unpack-typed-dict>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#unpack-typed-dict> ([local](./usage_errors.md#unpack-typed-dict)))
 
 This error is raised when `Unpack` is used with something other than a `TypedDict` class object to type hint variadic keyword parameters.
 
@@ -1565,7 +1563,7 @@ For reference, see the [related specification section](<https://typing.readthedo
 
 ## Overlapping unpacked `TypedDict` fields and arguments 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#overlapping-unpack-typed-dict>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#overlapping-unpack-typed-dict> ([local](./usage_errors.md#overlapping-unpack-typed-dict)))
 
 This error is raised when the typed dictionary used to type hint variadic keywords parameters has field names overlapping with other parameters (unless positional only).
 
@@ -1596,7 +1594,7 @@ For reference, see the [related specification section](<https://typing.readthedo
 
 ## Invalid `Self` type 
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-self-type>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#invalid-self-type> ([local](./usage_errors.md#invalid-self-type)))
 
 Currently, `Self` can only be used to annotate a field of a class (specifically, subclasses of `BaseModel`, `NamedTuple`, `TypedDict`, or dataclasses). Attempting to use `Self` in any other ways will raise this error.
 
@@ -1641,7 +1639,7 @@ The following example of `validate_call()` will also raise this error, even thou
 
 ## `validate_by_alias` and `validate_by_name` both set to `False`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false>)
+[](<https://pydantic.dev/docs/validation/latest/errors/usage_errors#validate-by-alias-and-name-false> ([local](./usage_errors.md#validate-by-alias-and-name-false)))
 
 This error is raised when you set `validate_by_alias` and `validate_by_name` to `False` in the configuration.
 
@@ -1665,11 +1663,3 @@ This is not allowed because it would make it impossible to populate attributes.
     
 
 ```
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Validation Errors ](<https://pydantic.dev/docs/validation/latest/errors/validation_errors/>) [ Next   
-Pydantic Logfire ](<https://pydantic.dev/docs/validation/latest/integrations/logfire/>)

@@ -3,17 +3,15 @@ title: Conversion Table
 source: https://pydantic.dev/docs/validation/latest/concepts/conversion_table
 ---
 
-# Conversion Table
-
 The following table provides details on how Pydantic converts data during validation in both strict and lax modes.
 
-The “Strict” column contains checkmarks for type conversions that are allowed when validating in [Strict Mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode>).
+The “Strict” column contains checkmarks for type conversions that are allowed when validating in [Strict Mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))).
 
-  * [ All ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-540>)
-  * [ JSON ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-541>)
-  * [ JSON - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-542>)
-  * [ Python ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-543>)
-  * [ Python - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-544>)
+  * [ All ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-540> ([local](./conversion_table.md#tab-panel-540)))
+  * [ JSON ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-541> ([local](./conversion_table.md#tab-panel-541)))
+  * [ JSON - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-542> ([local](./conversion_table.md#tab-panel-542)))
+  * [ Python ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-543> ([local](./conversion_table.md#tab-panel-543)))
+  * [ Python - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-544> ([local](./conversion_table.md#tab-panel-544)))
 
 Field Type| Input| Strict| Input Source| Conditions  
 ---|---|---|---|---  
@@ -543,12 +541,4 @@ Field Type| Input| Strict| Input Source| Conditions
 `Sequence`| `list`| ✓| Python|   
 `TypedDict`| `dict`| ✓| Python|   
 `TypedDict`| `Any`| ✓| Python|   
-`UUID`| `UUID`| ✓| Python|   
-  
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Validation Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator/>) [ Next   
-Settings Management ](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings/>)
+`UUID`| `UUID`| ✓| Python|

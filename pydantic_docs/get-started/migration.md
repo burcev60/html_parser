@@ -3,15 +3,13 @@ title: Migration Guide
 source: https://pydantic.dev/docs/validation/latest/get-started/migration
 ---
 
-# Migration Guide
-
 Pydantic V2 introduces a number of changes to the API, including some breaking changes.
 
 This page provides a guide highlighting the most important changes to help you migrate your code from Pydantic V1 to Pydantic V2.
 
 ## Install Pydantic V2
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#install-pydantic-v2>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#install-pydantic-v2> ([local](./migration.md#install-pydantic-v2)))
 
 Pydantic V2 is now the current production release of Pydantic. You can install Pydantic V2 from PyPI:
 
@@ -26,11 +24,11 @@ Terminal
 
 If you encounter any issues, please [create an issue in GitHub](<https://github.com/pydantic/pydantic/issues>) using the `bug V2` label. This will help us to actively monitor and track errors, and to continue to improve the library’s performance.
 
-If you need to use latest Pydantic V1 for any reason, see the [Continue using Pydantic V1 features](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features>) section below for details on installation and imports from `pydantic.v1`.
+If you need to use latest Pydantic V1 for any reason, see the [Continue using Pydantic V1 features](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features> ([local](./migration.md#continue-using-pydantic-v1-features))) section below for details on installation and imports from `pydantic.v1`.
 
 ## Code transformation tool
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#code-transformation-tool>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#code-transformation-tool> ([local](./migration.md#code-transformation-tool)))
 
 We have created a tool to help you migrate your code. This tool is still in beta, but we hope it will help you to migrate your code more quickly.
 
@@ -59,7 +57,7 @@ See more about it on the [Bump Pydantic](<https://github.com/pydantic/bump-pydan
 
 ## Continue using Pydantic V1 features
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features> ([local](./migration.md#continue-using-pydantic-v1-features)))
 
 Pydantic V1 is still available when you need it, though we recommend migrating to Pydantic V2 for its improvements and new features.
 
@@ -98,7 +96,7 @@ Pydantic V1 documentation is available at <https://docs.pydantic.dev/1.10/>.
 
 ### Using Pydantic v1 features in a v1/v2 environment
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#using-pydantic-v1-features-in-a-v1v2-environment>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#using-pydantic-v1-features-in-a-v1v2-environment> ([local](./migration.md#using-pydantic-v1-features-in-a-v1v2-environment)))
 
 As of `pydantic>=1.10.17`, the `pydantic.v1` namespace can be used within V1. This makes it easier to migrate to V2, which also supports the `pydantic.v1` namespace. In order to unpin a `pydantic<2` dependency and continue using V1 features, take the following steps:
 
@@ -123,8 +121,8 @@ with:
 
 Here’s how you can import `pydantic`’s v1 features based on your version of `pydantic`:
 
-  * [ pydantic>=1.10.17,<3 ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-556>)
-  * [ pydantic<3 ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-557>)
+  * [ pydantic>=1.10.17,<3 ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-556> ([local](./migration.md#tab-panel-556)))
+  * [ pydantic<3 ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-557> ([local](./migration.md#tab-panel-557)))
 
 As of `v1.10.17` the `.v1` namespace is available in V1, allowing imports as below:
 
@@ -153,13 +151,13 @@ When importing modules using `pydantic>=1.10.17,<2` with the `.v1` namespace the
 
 ## Migration guide
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#migration-guide>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#migration-guide> ([local](./migration.md#migration-guide)))
 
 The following sections provide details on the most important changes in Pydantic V2.
 
 ### Changes to `pydantic.BaseModel`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel> ([local](./migration.md#changes-to-pydanticbasemodel)))
 
 Various method names have been changed; all non-deprecated `BaseModel` methods now have names matching either the format `model_.*` or `__.*pydantic.*__`. Where possible, we have retained the deprecated methods with their old names to help ease migration, but calling them will emit `DeprecationWarning`s.
 
@@ -188,13 +186,13 @@ Pydantic V1| Pydantic V2
       * Models are no longer equal to the dicts containing their data.
       * Non-generic models of different types are never equal.
       * Generic models with different origin types are never equal. We don’t require _exact_ type equality so that, for example, instances of `MyGenericModel[Any]` could be equal to instances of `MyGenericModel[int]`.
-  * We have replaced the use of the `__root__` field to specify a “custom root model” with a new type called [`RootModel`](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types>) which is intended to replace the functionality of using a field called `__root__` in Pydantic V1. Note, `RootModel` types no longer support the `arbitrary_types_allowed` config setting. See [this issue comment](<https://github.com/pydantic/pydantic/issues/6710#issuecomment-1700948167>) for an explanation.
-  * We have significantly expanded Pydantic’s capabilities related to customizing serialization. In particular, we have added the [`@field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer>), [`@model_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer>), and [`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields#pydantic.fields.computed_field>) decorators, which each address various shortcomings from Pydantic V1. 
-    * See [Custom serializers](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers>) for the usage docs of these new decorators.
+  * We have replaced the use of the `__root__` field to specify a “custom root model” with a new type called [`RootModel`](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./../concepts/models.md#rootmodel-and-custom-root-types))) which is intended to replace the functionality of using a field called `__root__` in Pydantic V1. Note, `RootModel` types no longer support the `arbitrary_types_allowed` config setting. See [this issue comment](<https://github.com/pydantic/pydantic/issues/6710#issuecomment-1700948167>) for an explanation.
+  * We have significantly expanded Pydantic’s capabilities related to customizing serialization. In particular, we have added the [`@field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer))), [`@model_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer))), and [`@computed_field`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields#pydantic.fields.computed_field> ([local](./../api/pydantic/fields.md#pydantic.fields.computed_field))) decorators, which each address various shortcomings from Pydantic V1. 
+    * See [Custom serializers](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./../concepts/serialization.md#serializers))) for the usage docs of these new decorators.
     * Due to performance overhead and implementation complexity, we have now deprecated support for specifying `json_encoders` in the model config. This functionality was originally added for the purpose of achieving custom serialization logic, and we think the new serialization decorators are a better choice in most common scenarios.
-  * We have changed the behavior related to serializing subclasses of models when they occur as nested fields in a parent model. In V1, we would always include all fields from the subclass instance. In V2, when we dump a model, we only include the fields that are defined on the annotated type of the field. This helps prevent some accidental security bugs. You can read more about this (including how to opt out of this behavior) in the [relevant section](<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-model-like-types>) of the model exporting docs.
+  * We have changed the behavior related to serializing subclasses of models when they occur as nested fields in a parent model. In V1, we would always include all fields from the subclass instance. In V2, when we dump a model, we only include the fields that are defined on the annotated type of the field. This helps prevent some accidental security bugs. You can read more about this (including how to opt out of this behavior) in the [relevant section](<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-model-like-types> ([local](./../concepts/serialization.md#subclasses-of-model-like-types))) of the model exporting docs.
   * `GetterDict` has been removed as it was just an implementation detail of `orm_mode`, which has been removed.
-  * In many cases, arguments passed to the constructor will be **copied** in order to perform validation and, where necessary, coercion (see the [documentation](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies>)). This is notable in the case of passing mutable objects as arguments to a constructor.
+  * In many cases, arguments passed to the constructor will be **copied** in order to perform validation and, where necessary, coercion (see the [documentation](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies> ([local](./../concepts/models.md#attribute-copies)))). This is notable in the case of passing mutable objects as arguments to a constructor.
   * The `.json()` method is deprecated, and attempting to use this deprecated method with arguments such as `indent` or `ensure_ascii` may lead to confusing errors. For best results, switch to V2’s equivalent, `model_dump_json()`. If you’d still like to use said arguments, you can use [this workaround](<https://github.com/pydantic/pydantic/issues/8825#issuecomment-1946206415>).
   * JSON serialization of non-string key values is generally done with `str(key)`, leading to some changes in behavior such as the following:
 
@@ -270,7 +268,7 @@ Pydantic V1| Pydantic V2
 
 ### Changes to `pydantic.generics.GenericModel`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticgenericsgenericmodel>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticgenericsgenericmodel> ([local](./migration.md#changes-to-pydanticgenericsgenericmodel)))
 
 The `pydantic.generics.GenericModel` class is no longer necessary, and has been removed. Instead, you can now create generic `BaseModel` subclasses by just adding `Generic` as a parent class on a `BaseModel` subclass directly. This looks like `class MyGenericModel(BaseModel, Generic[T]): ...`.
 
@@ -281,11 +279,11 @@ While it may not raise an error, we strongly advise against using _parametrized_
   * For example, you should not do `isinstance(my_model, MyGenericModel[int])`. However, it is fine to do `isinstance(my_model, MyGenericModel)`. (Note that for standard generics, it would raise an error to do a subclass check with a parameterized generic.)
   * If you need to perform `isinstance` checks against parametrized generics, you can do this by subclassing the parametrized generic class. This looks like `class MyIntModel(MyGenericModel[int]): ...` and `isinstance(my_model, MyIntModel)`.
 
-Find more information in the [Generic models](<https://pydantic.dev/docs/validation/latest/concepts/models#generic-models>) documentation.
+Find more information in the [Generic models](<https://pydantic.dev/docs/validation/latest/concepts/models#generic-models> ([local](./../concepts/models.md#generic-models))) documentation.
 
 ### Changes to `pydantic.Field`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticfield>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticfield> ([local](./migration.md#changes-to-pydanticfield)))
 
 `Field` no longer supports arbitrary keyword arguments to be added to the JSON schema. Instead, any extra data you want to add to the JSON schema should be passed as a dictionary to the `json_schema_extra` keyword argument.
 
@@ -305,22 +303,22 @@ Field constraints are no longer automatically pushed down to the parameters of g
 
 ### Changes to dataclasses
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-dataclasses>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-dataclasses> ([local](./migration.md#changes-to-dataclasses)))
 
-Pydantic [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses>) continue to be useful for enabling the data validation on standard dataclasses without having to subclass `BaseModel`. Pydantic V2 introduces the following changes to this dataclass behavior:
+Pydantic [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./../concepts/dataclasses.md))) continue to be useful for enabling the data validation on standard dataclasses without having to subclass `BaseModel`. Pydantic V2 introduces the following changes to this dataclass behavior:
 
   * When used as fields, dataclasses (Pydantic or vanilla) no longer accept tuples as validation inputs; dicts should be used instead.
   * The `__post_init__` in Pydantic dataclasses will now be called _after_ validation, rather than before. 
     * As a result, the `__post_init_post_parse__` method would have become redundant, so has been removed.
   * Pydantic no longer supports `extra='allow'` for Pydantic dataclasses, where extra fields passed to the initializer would be stored as extra attributes on the dataclass. `extra='ignore'` is still supported for the purpose of ignoring unexpected fields while parsing data, they just won’t be stored on the instance.
   * Pydantic dataclasses no longer have an attribute `__pydantic_model__`, and no longer use an underlying `BaseModel` to perform validation or provide other functionality. 
-    * To perform validation, generate a JSON schema, or make use of any other functionality that may have required `__pydantic_model__` in V1, you should now wrap the dataclass with a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>) ([discussed more below](<https://pydantic.dev/docs/validation/latest/get-started/migration#introduction-of-typeadapter>)) and make use of its methods.
+    * To perform validation, generate a JSON schema, or make use of any other functionality that may have required `__pydantic_model__` in V1, you should now wrap the dataclass with a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) ([discussed more below](<https://pydantic.dev/docs/validation/latest/get-started/migration#introduction-of-typeadapter> ([local](./migration.md#introduction-of-typeadapter)))) and make use of its methods.
   * In Pydantic V1, if you used a vanilla (i.e., non-Pydantic) dataclass as a field, the config of the parent type would be used as though it was the config for the dataclass itself as well. In Pydantic V2, this is no longer the case. 
-    * In Pydantic V2, to override the config (like you would with `model_config` on a `BaseModel`), you can use the `config` parameter on the `@dataclass` decorator. See [Dataclass Config](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config>) for examples.
+    * In Pydantic V2, to override the config (like you would with `model_config` on a `BaseModel`), you can use the `config` parameter on the `@dataclass` decorator. See [Dataclass Config](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./../concepts/dataclasses.md#dataclass-config))) for examples.
 
 ### Changes to config
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-config>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-config> ([local](./migration.md#changes-to-config)))
 
   * In Pydantic V2, to specify config on a model, you should set a class attribute called `model_config` to be a dict with the key/value pairs you want to be used as the config. The Pydantic V1 behavior to create a class called `Config` in the namespace of the parent `BaseModel` subclass is now deprecated.
 
@@ -328,7 +326,7 @@ Pydantic [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dat
 
   * The following config settings have been removed:
 
-    * `allow_mutation` — this has been removed. You should be able to use [frozen](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict>) equivalently (inverse of current use).
+    * `allow_mutation` — this has been removed. You should be able to use [frozen](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))) equivalently (inverse of current use).
     * `error_msg_templates`
     * `fields` — this was the source of various bugs, so has been removed. You should be able to use `Annotated` on fields to modify them as desired.
     * `getter_dict` — `orm_mode` has been removed, and this implementation detail is no longer necessary.
@@ -351,19 +349,19 @@ Pydantic [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dat
     * `schema_extra` → `json_schema_extra`
     * `validate_all` → `validate_default`
 
-See the [`ConfigDict` API reference](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict>) for more details.
+See the [`ConfigDict` API reference](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))) for more details.
 
 ### Changes to validators
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators> ([local](./migration.md#changes-to-validators)))
 
 #### `@validator` and `@root_validator` are deprecated
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validator-and-root_validator-are-deprecated>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validator-and-root_validator-are-deprecated> ([local](./migration.md#validator-and-root_validator-are-deprecated)))
 
-  * `@validator` has been deprecated, and should be replaced with [`@field_validator`](<https://pydantic.dev/docs/validation/latest/concepts/validators>), which provides various new features and improvements. 
-    * The new `@field_validator` decorator does not have the `each_item` keyword argument; validators you want to apply to items within a generic container should be added by annotating the type argument. See [validators in Annotated metadata](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern>) for details. This looks like `list[Annotated[int, Field(ge=0)]]`
-    * Even if you keep using the deprecated `@validator` decorator, you can no longer add the `field` or `config` arguments to the signature of validator functions. If you need access to these, you’ll need to migrate to `@field_validator` — see the [next section](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators-allowed-signatures>) for more details.
+  * `@validator` has been deprecated, and should be replaced with [`@field_validator`](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./../concepts/validators.md))), which provides various new features and improvements. 
+    * The new `@field_validator` decorator does not have the `each_item` keyword argument; validators you want to apply to items within a generic container should be added by annotating the type argument. See [validators in Annotated metadata](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern> ([local](./../concepts/types.md#using-the-annotated-pattern))) for details. This looks like `list[Annotated[int, Field(ge=0)]]`
+    * Even if you keep using the deprecated `@validator` decorator, you can no longer add the `field` or `config` arguments to the signature of validator functions. If you need access to these, you’ll need to migrate to `@field_validator` — see the [next section](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators-allowed-signatures> ([local](./migration.md#changes-to-validators-allowed-signatures))) for more details.
     * If you use the `always=True` keyword argument to a validator function, note that standard validators for the annotated type will _also_ be applied even to defaults, not just the custom validators. For example, despite the fact that the validator below will never error, the following code raises a `ValidationError`:
 
 Note
@@ -389,13 +387,13 @@ To avoid this, you can use the `validate_default` argument in the `Field` functi
 
 ```
 
-  * `@root_validator` has been deprecated, and should be replaced with [`@model_validator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators#pydantic.functional_validators.model_validator>), which also provides new features and improvements. Be aware that the allowed signatures have changed (see the [relevant documentation](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators>)). 
+  * `@root_validator` has been deprecated, and should be replaced with [`@model_validator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators#pydantic.functional_validators.model_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.model_validator))), which also provides new features and improvements. Be aware that the allowed signatures have changed (see the [relevant documentation](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators> ([local](./../concepts/validators.md#model-validators)))). 
     * Under some circumstances (such as assignment when `model_config['validate_assignment'] is True`), the `@model_validator` decorator will receive an instance of the model, not a dict of values. You may need to be careful to handle this case.
     * Even if you keep using the deprecated `@root_validator` decorator, due to refactors in validation logic, you can no longer run with `skip_on_failure=False` (which is the default value of this keyword argument, so must be set explicitly to `True`).
 
 #### Changes to `@validator`’s allowed signatures
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators-allowed-signatures>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-validators-allowed-signatures> ([local](./migration.md#changes-to-validators-allowed-signatures)))
 
 In Pydantic V1, functions wrapped by `@validator` could receive keyword arguments with metadata about what was being validated. Some of these arguments have been removed from `@field_validator` in Pydantic V2:
 
@@ -427,7 +425,7 @@ In Pydantic V1, functions wrapped by `@validator` could receive keyword argument
 
 #### `TypeError` is no longer converted to `ValidationError` in validators
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#typeerror-is-no-longer-converted-to-validationerror-in-validators>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#typeerror-is-no-longer-converted-to-validationerror-in-validators> ([local](./migration.md#typeerror-is-no-longer-converted-to-validationerror-in-validators)))
 
 Previously, when raising a `TypeError` within a validator function, that error would be wrapped into a `ValidationError` and, in some cases (such as with FastAPI), these errors might be displayed to end users. This led to a variety of undesirable behavior — for example, calling a function with the wrong signature might produce a user-facing `ValidationError`.
 
@@ -458,18 +456,18 @@ This applies to all validation decorators.
 
 #### Validator behavior changes
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validator-behavior-changes>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validator-behavior-changes> ([local](./migration.md#validator-behavior-changes)))
 
 Pydantic V2 includes some changes to type coercion. For example:
 
-  * coercing `int`, `float`, and `Decimal` values to strings is now optional and disabled by default, see [Coerce Numbers to Strings](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.coerce_numbers_to_str>).
+  * coercing `int`, `float`, and `Decimal` values to strings is now optional and disabled by default, see [Coerce Numbers to Strings](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.coerce_numbers_to_str> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.coerce_numbers_to_str))).
   * iterable of pairs is no longer coerced to a dict.
 
-See the [Conversion table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table>) for details on Pydantic V2 type coercion defaults.
+See the [Conversion table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table> ([local](./../concepts/conversion_table.md))) for details on Pydantic V2 type coercion defaults.
 
 #### The `allow_reuse` keyword argument is no longer necessary
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#the-allow_reuse-keyword-argument-is-no-longer-necessary>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#the-allow_reuse-keyword-argument-is-no-longer-necessary> ([local](./migration.md#the-allow_reuse-keyword-argument-is-no-longer-necessary)))
 
 Previously, Pydantic tracked “reused” functions in decorators as this was a common source of mistakes. We did this by comparing the function’s fully qualified name (module name + function name), which could result in false positives. The `allow_reuse` keyword argument could be used to disable this when it was intentional.
 
@@ -479,7 +477,7 @@ In nearly all cases, if you were using `allow_reuse=True`, you should be able to
 
 #### `@validate_arguments` has been renamed to `@validate_call`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validate_arguments-has-been-renamed-to-validate_call>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#validate_arguments-has-been-renamed-to-validate_call> ([local](./migration.md#validate_arguments-has-been-renamed-to-validate_call)))
 
 In Pydantic V2, the `@validate_arguments` decorator has been renamed to `@validate_call`.
 
@@ -487,7 +485,7 @@ In Pydantic V1, the decorated function had various attributes added, such as `ra
 
 ### Input types are not preserved
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#input-types-are-not-preserved>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#input-types-are-not-preserved> ([local](./migration.md#input-types-are-not-preserved)))
 
 In Pydantic V1 we made great efforts to preserve the types of all field inputs for generic collections when they were proper subtypes of the field annotations. For example, given the annotation `Mapping[str, int]` if you passed in a `collection.Counter()` you’d get a `collection.Counter()` as the value.
 
@@ -603,17 +601,17 @@ While we don’t promise to preserve input types everywhere, we _do_ preserve th
 
 ### Changes to Handling of Standard Types
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-handling-of-standard-types>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-handling-of-standard-types> ([local](./migration.md#changes-to-handling-of-standard-types)))
 
 #### Dicts
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#dicts>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#dicts> ([local](./migration.md#dicts)))
 
 Iterables of pairs (which include empty iterables) no longer pass validation for fields of type `dict`.
 
 #### Unions
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#unions>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#unions> ([local](./migration.md#unions)))
 
 While union types will still attempt validation of each choice from left to right, they now preserve the type of the input whenever possible, even if the correct type is not the first choice for which the input would pass validation. As a demonstration, consider the following example:
 
@@ -636,11 +634,11 @@ While union types will still attempt validation of each choice from left to righ
 
 In Pydantic V1, the printed result would have been `x=1`, since the value would pass validation as an `int`. In Pydantic V2, we recognize that the value is an instance of one of the cases and short-circuit the standard union validation.
 
-To revert to the non-short-circuiting left-to-right behavior of V1, annotate the union with `Field(union_mode='left_to_right')`. See [Union Mode](<https://pydantic.dev/docs/validation/latest/concepts/unions#union-modes>) for more details.
+To revert to the non-short-circuiting left-to-right behavior of V1, annotate the union with `Field(union_mode='left_to_right')`. See [Union Mode](<https://pydantic.dev/docs/validation/latest/concepts/unions#union-modes> ([local](./../concepts/unions.md#union-modes))) for more details.
 
 #### Required, optional, and nullable fields
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#required-optional-and-nullable-fields>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#required-optional-and-nullable-fields> ([local](./migration.md#required-optional-and-nullable-fields)))
 
 Pydantic V2 changes some of the logic for specifying whether a field annotated as `Optional` is required (i.e., has no default value) or not (i.e., has a default value of `None` or any other value of the corresponding type), and now more closely matches the behavior of `dataclasses`. Similarly, fields annotated as `Any` no longer have a default value of `None`.
 
@@ -695,15 +693,15 @@ Here is a code example demonstrating the above:
 
 #### Patterns / regex on strings
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#patterns--regex-on-strings>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#patterns--regex-on-strings> ([local](./migration.md#patterns--regex-on-strings)))
 
 Pydantic V1 used Python’s regex library. Pydantic V2 uses the Rust [regex crate](<https://github.com/rust-lang/regex>). This crate is not just a “Rust version of regular expressions”, it’s a completely different approach to regular expressions. In particular, it promises linear time searching of strings in exchange for dropping a couple of features (namely look arounds and backreferences). We believe this is a tradeoff worth making, in particular because Pydantic is used to validate untrusted input where ensuring things don’t accidentally run in exponential time depending on the untrusted input is important. On the flipside, for anyone not using these features complex regex validation should be orders of magnitude faster because it’s done in Rust and in linear time.
 
-If you still want to use Python’s regex library, you can use the [`regex_engine`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.regex_engine>) config setting.
+If you still want to use Python’s regex library, you can use the [`regex_engine`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config#pydantic.config.ConfigDict.regex_engine> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.regex_engine))) config setting.
 
 ### Type conversion from floats to integers
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#type-conversion-from-floats-to-integers>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#type-conversion-from-floats-to-integers> ([local](./migration.md#type-conversion-from-floats-to-integers)))
 
 In V1, whenever a field was annotated as `int`, any float value would be accepted, which could lead to a potential data loss if the float value contains a non-zero decimal part. In V2, type conversion from floats to integers is only allowed if the decimal part is zero:
 
@@ -733,13 +731,13 @@ In V1, whenever a field was annotated as `int`, any float value would be accepte
 
 ### Introduction of `TypeAdapter`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#introduction-of-typeadapter>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#introduction-of-typeadapter> ([local](./migration.md#introduction-of-typeadapter)))
 
 Pydantic V1 had weak support for validating or serializing non-`BaseModel` types.
 
 To work with them, you had to either create a “root” model or use the utility functions in `pydantic.tools` (namely, `parse_obj_as` and `schema_of`).
 
-In Pydantic V2 this is _a lot_ easier: the [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter>) class lets you create an object with methods for validating, serializing, and producing JSON schemas for arbitrary types. This serves as a complete replacement for `parse_obj_as` and `schema_of` (which are now deprecated), and also covers some of the use cases of “root” models. ([`RootModel`](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types>), [discussed above](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel>), covers the others.)
+In Pydantic V2 this is _a lot_ easier: the [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) class lets you create an object with methods for validating, serializing, and producing JSON schemas for arbitrary types. This serves as a complete replacement for `parse_obj_as` and `schema_of` (which are now deprecated), and also covers some of the use cases of “root” models. ([`RootModel`](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./../concepts/models.md#rootmodel-and-custom-root-types))), [discussed above](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-pydanticbasemodel> ([local](./migration.md#changes-to-pydanticbasemodel))), covers the others.)
 
 ```
  
@@ -765,11 +763,11 @@ Due to limitations of inferring generic types with common type checkers, to get 
 
 ```
 
-See [Type Adapter](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter>) for more information.
+See [Type Adapter](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./../concepts/type_adapter.md))) for more information.
 
 ### Defining custom types
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#defining-custom-types>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#defining-custom-types> ([local](./migration.md#defining-custom-types)))
 
 We have completely overhauled the way custom types are defined in pydantic.
 
@@ -779,16 +777,16 @@ We have also introduced ways to use [`typing.Annotated`](<https://docs.python.or
 
 The main changes are:
 
-  * `__get_validators__` should be replaced with `__get_pydantic_core_schema__`. See [Custom Data Types](<https://pydantic.dev/docs/validation/latest/concepts/types#customizing_validation_with_get_pydantic_core_schema>) for more information.
-  * `__modify_schema__` becomes `__get_pydantic_json_schema__`. See [JSON Schema Customization](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema>) for more information.
+  * `__get_validators__` should be replaced with `__get_pydantic_core_schema__`. See [Custom Data Types](<https://pydantic.dev/docs/validation/latest/concepts/types#customizing_validation_with_get_pydantic_core_schema> ([local](./../concepts/types.md#customizing_validation_with_get_pydantic_core_schema))) for more information.
+  * `__modify_schema__` becomes `__get_pydantic_json_schema__`. See [JSON Schema Customization](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#customizing-json-schema> ([local](./../concepts/json_schema.md#customizing-json-schema))) for more information.
 
 Additionally, you can use [`typing.Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) to modify or provide the `__get_pydantic_core_schema__` and `__get_pydantic_json_schema__` functions of a type by annotating it, rather than modifying the type itself. This provides a powerful and flexible mechanism for integrating third-party types with Pydantic, and in some cases may help you remove hacks from Pydantic V1 introduced to work around the limitations for custom types.
 
-See [Custom Data Types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types>) for more information.
+See [Custom Data Types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./../concepts/types.md#custom-types))) for more information.
 
 ### Changes to JSON schema generation
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-json-schema-generation>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#changes-to-json-schema-generation> ([local](./migration.md#changes-to-json-schema-generation)))
 
 We received many requests over the years to make changes to the JSON schemas that pydantic generates.
 
@@ -804,7 +802,7 @@ However, there have been many reasonable requests over the years for changes whi
 
 In Pydantic V1, even if you were willing to implement changes yourself, it was very difficult because the JSON schema generation process involved various recursive function calls; to override one, you’d have to copy and modify the whole implementation.
 
-In Pydantic V2, one of our design goals was to make it easier to customize JSON schema generation. To this end, we have introduced the class [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema>), which implements the translation of a type’s pydantic-core schema into a JSON schema. By design, this class breaks the JSON schema generation process into smaller methods that can be easily overridden in subclasses to modify the “global” approach to generating JSON schema.
+In Pydantic V2, one of our design goals was to make it easier to customize JSON schema generation. To this end, we have introduced the class [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema#pydantic.json_schema.GenerateJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema))), which implements the translation of a type’s pydantic-core schema into a JSON schema. By design, this class breaks the JSON schema generation process into smaller methods that can be easily overridden in subclasses to modify the “global” approach to generating JSON schema.
 
 The various methods that can be used to produce JSON schema (such as `BaseModel.model_json_schema` or `TypeAdapter.json_schema`) accept a keyword argument `schema_generator: type[GenerateJsonSchema] = GenerateJsonSchema`, and you can pass your custom subclass to these methods in order to use your own approach to generating JSON schema.
 
@@ -812,26 +810,26 @@ Hopefully this means that if you disagree with any of the choices we’ve made, 
 
 ### `BaseSettings` has moved to `pydantic-settings`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#basesettings-has-moved-to-pydantic-settings>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#basesettings-has-moved-to-pydantic-settings> ([local](./migration.md#basesettings-has-moved-to-pydantic-settings)))
 
-[`BaseSettings`](<https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.BaseSettings>), the base object for Pydantic [settings management](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings>), has been moved to a separate package, [`pydantic-settings`](<https://github.com/pydantic/pydantic-settings>).
+[`BaseSettings`](<https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.BaseSettings> ([local](./../api/pydantic_settings.md#pydantic_settings.BaseSettings))), the base object for Pydantic [settings management](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings> ([local](./../concepts/pydantic_settings.md))), has been moved to a separate package, [`pydantic-settings`](<https://github.com/pydantic/pydantic-settings>).
 
-Also, the `parse_env_var` classmethod has been removed. So, you need to [customise settings sources](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources>) to have your own parsing function.
+Also, the `parse_env_var` classmethod has been removed. So, you need to [customise settings sources](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources> ([local](./../concepts/pydantic_settings.md#customise-settings-sources))) to have your own parsing function.
 
 ### Color and Payment Card Numbers moved to `pydantic-extra-types`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types> ([local](./migration.md#color-and-payment-card-numbers-moved-to-pydantic-extra-types)))
 
 The following special-use types have been moved to the [Pydantic Extra Types](<https://github.com/pydantic/pydantic-extra-types>) package, which may be installed separately if needed.
 
-  * [Color Types](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_color>)
-  * [Payment Card Numbers](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment>)
+  * [Color Types](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_color> ([local](./../api/pydantic-extra-types/pydantic_extra_types_color.md)))
+  * [Payment Card Numbers](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_payment> ([local](./../api/pydantic-extra-types/pydantic_extra_types_payment.md)))
 
 ### Url and Dsn types in `pydantic.networks` no longer inherit from `str`
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#url-and-dsn-types-in-pydanticnetworks-no-longer-inherit-from-str>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#url-and-dsn-types-in-pydanticnetworks-no-longer-inherit-from-str> ([local](./migration.md#url-and-dsn-types-in-pydanticnetworks-no-longer-inherit-from-str)))
 
-In Pydantic V1 the [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl>) type inherited from `str`, and all the other `Url` and `Dsn` types inherited from these. In Pydantic V2 these types are built on two new `Url` and `MultiHostUrl` classes using `Annotated`.
+In Pydantic V1 the [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./../api/pydantic/networks.md#pydantic.networks.AnyUrl))) type inherited from `str`, and all the other `Url` and `Dsn` types inherited from these. In Pydantic V2 these types are built on two new `Url` and `MultiHostUrl` classes using `Annotated`.
 
 Inheriting from `str` had upsides and downsides, and for V2 we decided it would be better to remove this. To use these types in APIs which expect `str` you’ll now need to convert them (with `str(url)`).
 
@@ -853,7 +851,7 @@ If you still want to use the old behavior without the appended slash, take a loo
 
 ### Constrained types
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#constrained-types>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#constrained-types> ([local](./migration.md#constrained-types)))
 
 The `Constrained*` classes were _removed_ , and you should replace them by `Annotated[<type>, Field(...)]`, for example:
 
@@ -889,22 +887,22 @@ The `Constrained*` classes were _removed_ , and you should replace them by `Anno
 
 ```
 
-Read more about it in the [Composing types via `Annotated`](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern>) docs.
+Read more about it in the [Composing types via `Annotated`](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern> ([local](./../concepts/types.md#using-the-annotated-pattern))) docs.
 
-For `ConstrainedStr` you can use [`StringConstraints`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints>) instead.
+For `ConstrainedStr` you can use [`StringConstraints`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints> ([local](./../api/pydantic/types.md#pydantic.types.StringConstraints))) instead.
 
 ### Mypy plugins
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#mypy-plugins>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#mypy-plugins> ([local](./migration.md#mypy-plugins)))
 
 Pydantic V2 contains a [mypy](<https://mypy.readthedocs.io/en/stable/extending_mypy.html#configuring-mypy-to-use-plugins>) plugin in `pydantic.mypy`.
 
-When using [V1 features](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features>) the `pydantic.v1.mypy` plugin might need to also be enabled.
+When using [V1 features](<https://pydantic.dev/docs/validation/latest/get-started/migration#continue-using-pydantic-v1-features> ([local](./migration.md#continue-using-pydantic-v1-features))) the `pydantic.v1.mypy` plugin might need to also be enabled.
 
 To configure the mypy plugins:
 
-  * [ mypy.ini ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-558>)
-  * [ pyproject.toml ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-559>)
+  * [ mypy.ini ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-558> ([local](./migration.md#tab-panel-558)))
+  * [ pyproject.toml ](<https://pydantic.dev/docs/validation/latest/get-started/migration#tab-panel-559> ([local](./migration.md#tab-panel-559)))
 
 ```
  
@@ -927,29 +925,29 @@ To configure the mypy plugins:
 
 ## Other changes
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#other-changes>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#other-changes> ([local](./migration.md#other-changes)))
 
   * Dropped support for [`email-validator<2.0.0`](<https://github.com/JoshData/python-email-validator>). Make sure to update using `pip install -U email-validator`.
 
 ## Moved in Pydantic V2
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#moved-in-pydantic-v2>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#moved-in-pydantic-v2> ([local](./migration.md#moved-in-pydantic-v2)))
 
 Pydantic V1| Pydantic V2  
 ---|---  
-`pydantic.BaseSettings`| [`pydantic_settings.BaseSettings`](<https://pydantic.dev/docs/validation/latest/get-started/migration#basesettings-has-moved-to-pydantic-settings>)  
-`pydantic.color`| [`pydantic_extra_types.color`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_color/#pydantic_extra_types.color>)  
-`pydantic.types.PaymentCardBrand`| [`pydantic_extra_types.PaymentCardBrand`](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types>)  
-`pydantic.types.PaymentCardNumber`| [`pydantic_extra_types.PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types>)  
-`pydantic.utils.version_info`| [`pydantic.version.version_info`](<https://pydantic.dev/docs/validation/latest/api/pydantic/version/#pydantic.version.version_info>)  
-`pydantic.error_wrappers.ValidationError`| [`pydantic.ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError>)  
-`pydantic.utils.to_camel`| [`pydantic.alias_generators.to_pascal`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.alias_generators.to_pascal>)  
-`pydantic.utils.to_lower_camel`| [`pydantic.alias_generators.to_camel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.alias_generators.to_camel>)  
-`pydantic.PyObject`| [`pydantic.ImportString`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ImportString>)  
+`pydantic.BaseSettings`| [`pydantic_settings.BaseSettings`](<https://pydantic.dev/docs/validation/latest/get-started/migration#basesettings-has-moved-to-pydantic-settings> ([local](./migration.md#basesettings-has-moved-to-pydantic-settings)))  
+`pydantic.color`| [`pydantic_extra_types.color`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_color/#pydantic_extra_types.color> ([local](./../api/pydantic-extra-types/pydantic_extra_types_color.md#pydantic_extra_types.color)))  
+`pydantic.types.PaymentCardBrand`| [`pydantic_extra_types.PaymentCardBrand`](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types> ([local](./migration.md#color-and-payment-card-numbers-moved-to-pydantic-extra-types)))  
+`pydantic.types.PaymentCardNumber`| [`pydantic_extra_types.PaymentCardNumber`](<https://pydantic.dev/docs/validation/latest/get-started/migration#color-and-payment-card-numbers-moved-to-pydantic-extra-types> ([local](./migration.md#color-and-payment-card-numbers-moved-to-pydantic-extra-types)))  
+`pydantic.utils.version_info`| [`pydantic.version.version_info`](<https://pydantic.dev/docs/validation/latest/api/pydantic/version/#pydantic.version.version_info> ([local](./../api/pydantic/version.md#pydantic.version.version_info)))  
+`pydantic.error_wrappers.ValidationError`| [`pydantic.ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError)))  
+`pydantic.utils.to_camel`| [`pydantic.alias_generators.to_pascal`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.alias_generators.to_pascal> ([local](./../api/pydantic/config.md#pydantic.alias_generators.to_pascal)))  
+`pydantic.utils.to_lower_camel`| [`pydantic.alias_generators.to_camel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.alias_generators.to_camel> ([local](./../api/pydantic/config.md#pydantic.alias_generators.to_camel)))  
+`pydantic.PyObject`| [`pydantic.ImportString`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ImportString> ([local](./../api/pydantic/types.md#pydantic.types.ImportString)))  
   
 ## Deprecated and moved in Pydantic V2
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#deprecated-and-moved-in-pydantic-v2>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#deprecated-and-moved-in-pydantic-v2> ([local](./migration.md#deprecated-and-moved-in-pydantic-v2)))
 
 Pydantic V1| Pydantic V2  
 ---|---  
@@ -978,7 +976,7 @@ Pydantic V1| Pydantic V2
   
 ## Removed in Pydantic V2
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/migration#removed-in-pydantic-v2>)
+[](<https://pydantic.dev/docs/validation/latest/get-started/migration#removed-in-pydantic-v2> ([local](./migration.md#removed-in-pydantic-v2)))
 
   * `pydantic.ConstrainedBytes`
   * `pydantic.ConstrainedDate`
@@ -1172,11 +1170,3 @@ Pydantic V1| Pydantic V2
   * `pydantic.utils.path_type`
   * `pydantic.utils.validate_field_name`
   * `pydantic.validate_model`
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-Installation ](<https://pydantic.dev/docs/validation/latest/get-started/install/>) [ Next   
-Version Policy ](<https://pydantic.dev/docs/validation/latest/get-started/version-policy/>)

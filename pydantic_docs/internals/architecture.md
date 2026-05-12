@@ -3,8 +3,6 @@ title: Architecture
 source: https://pydantic.dev/docs/validation/latest/internals/architecture
 ---
 
-# Architecture
-
 Note
 
 This section is part of the _internals_ documentation, and is partly targeted to contributors.
@@ -20,18 +18,18 @@ Usage of the Pydantic library can be divided into two parts:
 
 ## Model definition
 
-[](<https://pydantic.dev/docs/validation/latest/internals/architecture#model-definition>)
+[](<https://pydantic.dev/docs/validation/latest/internals/architecture#model-definition> ([local](./architecture.md#model-definition)))
 
-Whenever a Pydantic [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel>) is defined, the metaclass will analyze the body of the model to collect a number of elements:
+Whenever a Pydantic [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) is defined, the metaclass will analyze the body of the model to collect a number of elements:
 
-  * Defined annotations to build model fields (collected in the [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields>) attribute).
-  * Model configuration, set with [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config>).
+  * Defined annotations to build model fields (collected in the [`model_fields`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields))) attribute).
+  * Model configuration, set with [`model_config`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_config> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_config))).
   * Additional validators/serializers.
   * Private attributes, class variables, identification of generic parametrization, etc.
 
 ### Communicating between `pydantic` and `pydantic-core`: the core schema
 
-[](<https://pydantic.dev/docs/validation/latest/internals/architecture#communicating-between-pydantic-and-pydantic-core-the-core-schema>)
+[](<https://pydantic.dev/docs/validation/latest/internals/architecture#communicating-between-pydantic-and-pydantic-core-the-core-schema> ([local](./architecture.md#communicating-between-pydantic-and-pydantic-core-the-core-schema)))
 
 We then need a way to communicate the collected information from the model definition to `pydantic-core`, so that validation and serialization is performed accordingly. To do so, Pydantic uses the concept of a core schema: a structured (and serializable) Python dictionary (represented using [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>) definitions) describing a specific validation and serialization logic. It is the core data structure used to communicate between the `pydantic` and `pydantic-core` packages. Every core schema has a required `type` key, and extra properties depending on this `type`.
 
@@ -41,11 +39,11 @@ Note
 
 It is not possible to define a custom core schema. A core schema needs to be understood by the `pydantic-core` package, and as such we only support a fixed number of core schema types. This is also part of the reason why the `GenerateSchema` isn’t truly exposed and properly documented.
 
-The core schema definitions can be found in the [`pydantic_core.core_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema>) module.
+The core schema definitions can be found in the [`pydantic_core.core_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema))) module.
 
-In the case of a Pydantic model, a core schema will be constructed and set as the [`__pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.__pydantic_core_schema__>) attribute.
+In the case of a Pydantic model, a core schema will be constructed and set as the [`__pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.__pydantic_core_schema__> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.__pydantic_core_schema__))) attribute.
 
-To illustrate what a core schema looks like, we will take the example of the [`bool`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema>) core schema:
+To illustrate what a core schema looks like, we will take the example of the [`bool`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.bool_schema))) core schema:
 
 ```
  
@@ -84,21 +82,7 @@ The core schema for the `foo` field will look like:
 
 ```
 
-As seen in the [`BoolSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema>) definition, the serialization logic is also defined in the core schema. If we were to define a custom serialization function for `foo` , the `serialization` key would look like:
-
-For example using the [`field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer>) decorator:
-
-```
- 
-    class Model(BaseModel):
-    foo: bool = Field(strict=True)
-    
-    @field_serializer('foo', mode='plain')
-    def serialize_foo(self, value: bool) -> Any:
-    ...
-    
-
-```
+As seen in the [`BoolSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.bool_schema))) definition, the serialization logic is also defined in the core schema. If we were to define a custom serialization function for `foo` , the `serialization` key would look like:
 
 ```
  
@@ -119,13 +103,13 @@ Core schemas cover a broad scope, and are used whenever we want to communicate b
 
 ### JSON Schema generation
 
-[](<https://pydantic.dev/docs/validation/latest/internals/architecture#json-schema-generation>)
+[](<https://pydantic.dev/docs/validation/latest/internals/architecture#json-schema-generation> ([local](./architecture.md#json-schema-generation)))
 
 You may have noticed that the previous serialization core schema has a `return_schema` key. This is because the core schema is also used to generate the corresponding JSON Schema.
 
-Similar to how the core schema is generated, the JSON Schema generation is handled by the [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema>) class. The [`generate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.generate>) method is the main entry point and is given the core schema of that model.
+Similar to how the core schema is generated, the JSON Schema generation is handled by the [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema))) class. The [`generate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.generate> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema.generate))) method is the main entry point and is given the core schema of that model.
 
-Coming back to our `bool` field example, the [`bool_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.bool_schema>) method will be given the previously generated [boolean core schema](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema>) and will return the following JSON Schema:
+Coming back to our `bool` field example, the [`bool_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema.bool_schema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema.bool_schema))) method will be given the previously generated [boolean core schema](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.bool_schema))) and will return the following JSON Schema:
 
 ```
  
@@ -138,17 +122,17 @@ Coming back to our `bool` field example, the [`bool_schema`](<https://pydantic.d
 
 ### Customizing the core schema and JSON schema
 
-[](<https://pydantic.dev/docs/validation/latest/internals/architecture#customizing-the-core-schema-and-json-schema>)
+[](<https://pydantic.dev/docs/validation/latest/internals/architecture#customizing-the-core-schema-and-json-schema> ([local](./architecture.md#customizing-the-core-schema-and-json-schema)))
 
 Usage Documentation
 
-[Custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types>)
+[Custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./../concepts/types.md#custom-types)))
 
-[Implementing `__get_pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_core_schema__>)
+[Implementing `__get_pydantic_core_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_core_schema__> ([local](./../concepts/json_schema.md#implementing-__get_pydantic_core_schema__)))
 
-[Implementing `__get_pydantic_json_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_json_schema__>)
+[Implementing `__get_pydantic_json_schema__`](<https://pydantic.dev/docs/validation/latest/concepts/json_schema#implementing-__get_pydantic_json_schema__> ([local](./../concepts/json_schema.md#implementing-__get_pydantic_json_schema__)))
 
-While the `GenerateSchema` and [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema>) classes handle the creation of the corresponding schemas, Pydantic offers a way to customize them in some cases, following a wrapper pattern. This customization is done through the `__get_pydantic_core_schema__` and `__get_pydantic_json_schema__` methods.
+While the `GenerateSchema` and [`GenerateJsonSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/json_schema/#pydantic.json_schema.GenerateJsonSchema> ([local](./../api/pydantic/json_schema.md#pydantic.json_schema.GenerateJsonSchema))) classes handle the creation of the corresponding schemas, Pydantic offers a way to customize them in some cases, following a wrapper pattern. This customization is done through the `__get_pydantic_core_schema__` and `__get_pydantic_json_schema__` methods.
 
 To understand this wrapper pattern, we will take the example of metadata classes used with [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>), where the `__get_pydantic_core_schema__` method can be used:
 
@@ -185,23 +169,17 @@ To understand this wrapper pattern, we will take the example of metadata classes
 
 ```
 
-`MyStrict` is the first annotation to be applied. At this point, `schema = {'type': 'int'}`.
-
-`MyGt` is the last annotation to be applied. At this point, `schema = {'type': 'int', 'strict': True}`.
-
 When the `GenerateSchema` class builds the core schema for `Annotated[int, MyStrict(), MyGt()]`, it will create an instance of a `GetCoreSchemaHandler` to be passed to the `MyGt.__get_pydantic_core_schema__` method. 
 
-In the case of our [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) pattern, the `GetCoreSchemaHandler` is defined in a nested way. Calling it will recursively call the other `__get_pydantic_core_schema__` methods until it reaches the `int` annotation, where a simple `{'type': 'int'}` schema is returned.
-
-The `source` argument depends on the core schema generation pattern. In the case of [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>), the `source` will be the type being annotated. When [defining a custom type](<https://pydantic.dev/docs/validation/latest/concepts/types#as-a-method-on-a-custom-type>), the `source` will be the actual class where `__get_pydantic_core_schema__` is defined.
+The `source` argument depends on the core schema generation pattern. In the case of [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>), the `source` will be the type being annotated. When [defining a custom type](<https://pydantic.dev/docs/validation/latest/concepts/types#as-a-method-on-a-custom-type> ([local](./../concepts/types.md#as-a-method-on-a-custom-type))), the `source` will be the actual class where `__get_pydantic_core_schema__` is defined.
 
 ## Model validation and serialization
 
-[](<https://pydantic.dev/docs/validation/latest/internals/architecture#model-validation-and-serialization>)
+[](<https://pydantic.dev/docs/validation/latest/internals/architecture#model-validation-and-serialization> ([local](./architecture.md#model-validation-and-serialization)))
 
 While model definition was scoped to the _class_ level (i.e. when defining your model), model validation and serialization happens at the _instance_ level. Both these concepts are handled in `pydantic-core` (providing a 5 to 20 performance increase compared to Pydantic V1), by using the previously built core schema.
 
-`pydantic-core` exposes a [`SchemaValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaValidator>) and [`SchemaSerializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaSerializer>) class to perform these tasks:
+`pydantic-core` exposes a [`SchemaValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaValidator> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.SchemaValidator))) and [`SchemaSerializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaSerializer> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.SchemaSerializer))) class to perform these tasks:
 
 ```
  
@@ -216,15 +194,3 @@ While model definition was scoped to the _class_ level (i.e. when defining your 
     dumped = model.model_dump()  # (2)
 
 ```
-
-The provided data is sent to `pydantic-core` by using the [`SchemaValidator.validate_python`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaValidator.validate_python>) method. `pydantic-core` will validate (following the core schema of the model) the data and populate the model's `__dict__` attribute.
-
-The `model` instance is sent to `pydantic-core` by using the [`SchemaSerializer.to_python`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaSerializer.to_python>) method. `pydantic-core` will read the instance's `__dict__` attribute and built the appropriate result (again, following the core schema of the model).
-
-Was this page helpful?
-
-Thanks for your feedback!
-
-[ Previous   
-ULID ](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_ulid/>) [ Next   
-Resolving Annotations ](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations/>)
