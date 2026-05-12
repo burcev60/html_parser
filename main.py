@@ -232,7 +232,9 @@ def to_markdown(html_fragment: str) -> str:
     h = html2text.HTML2Text()
     h.body_width = 0
     h.ignore_images = False
-    h.protect_links = True
+    # protect_links=True заставляет html2text оборачивать URL в <...>
+    # (выходит [text](<https://...>)), что портит наши регулярки. Выключаем.
+    h.protect_links = False
     h.mark_code = True
     md = h.handle(html_fragment)
     md = re.sub(r"\[code\]", "\n```\n", md)
@@ -244,22 +246,22 @@ def to_markdown(html_fragment: str) -> str:
 # --------------------------------------------------------------------------- #
 # Перелинковка
 # --------------------------------------------------------------------------- #
-# Три формата ссылок, которые может породить html2text:
-#   1) [text](https://url)               — обычная
-#   2) [text](https://url "title")       — с title
-#   3) <https://url>                     — автоссылка
-# Картинки ![...](...) исключаются через (?<!\!).
+# Поддерживаемые формы:
+#   [text](https://url)
+#   [text](https://url "title")
+#   [text](<https://url>)           ← html2text иногда так выдаёт
+#   [text](<https://url> "title")
+#   <https://url>                   ← голая автоссылка
+# Картинки ![...](...) исключаем через (?<!\!).
 MD_LINK_RE = re.compile(
-    r"(?<!\!)\[([^\]]+)\]\((https?://[^)\s]+)(?:\s+\"[^\"]*\")?\)"
+    r"(?<!\!)\[([^\]]*)\]"             # [text]   (text может быть пустым)
+    r"\(<?(https?://[^)>\s]+)>?"       # (url или (<url>
+    r"(?:\s+\"[^\"]*\")?\)"            # опциональный "title"
 )
 AUTOLINK_RE = re.compile(r"<(https?://[^>\s]+)>")
 
 
 def _lookup_local(url: str, url_to_local: dict[str, Path]) -> Path | None:
-    """
-    Ищет URL в карте, пробуя варианты со слешом и без — потому что в md
-    URL может быть https://x/a, а в карте https://x/a/ (или наоборот).
-    """
     candidates = [url]
     if url.endswith("/"):
         candidates.append(url.rstrip("/"))
@@ -273,13 +275,12 @@ def _lookup_local(url: str, url_to_local: dict[str, Path]) -> Path | None:
 
 def relink_markdown(md: str, current_file: Path, url_to_local: dict[str, Path]
                     ) -> tuple[str, int, int]:
-    """
-    Возвращает (новый_md, число_найденных_внешних_ссылок, число_замен).
-    """
+    """Возвращает (новый_md, найдено_ссылок, заменено)."""
     found = 0
     replaced = 0
 
-    def make_local_link(url: str) -> str | None:
+    def make_local_link(url: str) -> tuple[str, str] | None:
+        """Возвращает (чистый_url, относительный_путь_к_локальному_md) или None."""
         url_no_frag, frag = urldefrag(url)
         url_no_frag = normalize(url_no_frag)
         local = _lookup_local(url_no_frag, url_to_local)
@@ -288,26 +289,34 @@ def relink_markdown(md: str, current_file: Path, url_to_local: dict[str, Path]
         rel = os.path.relpath(local, start=current_file.parent).replace(os.sep, "/")
         if frag:
             rel = f"{rel}#{frag}"
-        return f"./{rel}"
+        return url, f"./{rel}"
 
     def repl_md_link(m: re.Match) -> str:
         nonlocal found, replaced
         found += 1
         text, url = m.group(1), m.group(2)
-        local = make_local_link(url)
-        if local is None:
-            return m.group(0)
+        result = make_local_link(url)
+        if result is None:
+            # ссылка не на скачанную страницу — оставляем чистый markdown без <>
+            if not text.strip():
+                return f"<{url}>"  # пустой текст → автоссылка
+            return f"[{text}]({url})"
         replaced += 1
-        return f"[{text}]({url}) ([local]({local}))"
+        clean_url, local = result
+        if not text.strip():
+            # пустой текст → используем URL как текст, рядом локальная ссылка
+            return f"<{clean_url}> ([local]({local}))"
+        return f"[{text}]({clean_url}) ([local]({local}))"
 
     def repl_autolink(m: re.Match) -> str:
         nonlocal found, replaced
         found += 1
         url = m.group(1)
-        local = make_local_link(url)
-        if local is None:
+        result = make_local_link(url)
+        if result is None:
             return m.group(0)
         replaced += 1
+        _, local = result
         return f"<{url}> ([local]({local}))"
 
     md = MD_LINK_RE.sub(repl_md_link, md)

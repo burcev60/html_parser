@@ -9,11 +9,11 @@ It’s hard to know why so many people have adopted Pydantic since its inception
 
 ## Type hints powering schema validation 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#type-hints> ([local](./why.md#type-hints)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#type-hints> ([local](./why.md#type-hints)) ([local](./why.md#type-hints))
 
-The schema that Pydantic validates against is generally defined by Python [type hints](<https://docs.python.org/3/glossary.html#term-type-hint>).
+The schema that Pydantic validates against is generally defined by Python [type hints](https://docs.python.org/3/glossary.html#term-type-hint).
 
-Type hints are great for this since, if you’re writing modern Python, you already know how to use them. Using type hints also means that Pydantic integrates well with static typing tools (like [mypy](<https://www.mypy-lang.org/>) and [Pyright](<https://github.com/microsoft/pyright/>)) and IDEs (like [PyCharm](<https://www.jetbrains.com/pycharm/>) and [VSCode](<https://code.visualstudio.com/>)).
+Type hints are great for this since, if you’re writing modern Python, you already know how to use them. Using type hints also means that Pydantic integrates well with static typing tools (like [mypy](https://www.mypy-lang.org/) and [Pyright](https://github.com/microsoft/pyright/)) and IDEs (like [PyCharm](https://www.jetbrains.com/pycharm/) and [VSCode](https://code.visualstudio.com/)).
 
 Example - just type hints
 
@@ -47,13 +47,13 @@ Example - just type hints
 
 Learn more
 
-See the [documentation on supported types](<https://pydantic.dev/docs/validation/latest/concepts/types> ([local](./../concepts/types.md))).
+See the [documentation on supported types](https://pydantic.dev/docs/validation/latest/concepts/types) ([local](./../concepts/types.md)).
 
 ## Performance
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#performance> ([local](./why.md#performance)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#performance> ([local](./why.md#performance)) ([local](./why.md#performance))
 
-Pydantic’s core validation logic is implemented in a separate package ([`pydantic-core`](<https://pypi.org/project/pydantic-core>)), where validation for most types is implemented in Rust.
+Pydantic’s core validation logic is implemented in a separate package ([`pydantic-core`](https://pypi.org/project/pydantic-core)), where validation for most types is implemented in Rust.
 
 As a result, Pydantic is among the fastest data validation libraries for Python.
 
@@ -124,15 +124,15 @@ Performance Example
 
 ```
 
-Unlike other performance-centric libraries written in compiled languages, Pydantic also has excellent support for customizing validation via [functional validators](<https://pydantic.dev/docs/validation/latest/get-started/why#customisation> ([local](./why.md#customisation))).
+Unlike other performance-centric libraries written in compiled languages, Pydantic also has excellent support for customizing validation via [functional validators](https://pydantic.dev/docs/validation/latest/get-started/why#customisation) ([local](./why.md#customisation)).
 
 Learn more
 
-Samuel Colvin’s [talk at PyCon 2023](<https://youtu.be/pWZw7hYoRVU>) explains how [`pydantic-core`](<https://pypi.org/project/pydantic-core>) works and how it integrates with Pydantic.
+Samuel Colvin’s [talk at PyCon 2023](https://youtu.be/pWZw7hYoRVU) explains how [`pydantic-core`](https://pypi.org/project/pydantic-core) works and how it integrates with Pydantic.
 
 ## Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#serialization> ([local](./why.md#serialization)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#serialization> ([local](./why.md#serialization)) ([local](./why.md#serialization))
 
 Pydantic provides functionality to serialize model in three ways:
 
@@ -170,13 +170,13 @@ Example - Serialization 3 ways
 
 Learn more
 
-See the [documentation on serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization> ([local](./../concepts/serialization.md))).
+See the [documentation on serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization) ([local](./../concepts/serialization.md)).
 
 ## JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#json-schema> ([local](./why.md#json-schema)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#json-schema> ([local](./why.md#json-schema)) ([local](./why.md#json-schema))
 
-A [JSON Schema](<https://json-schema.org/>) can be generated for any Pydantic schema — allowing self-documenting APIs and integration with a wide variety of tools which support the JSON Schema format.
+A [JSON Schema](https://json-schema.org/) can be generated for any Pydantic schema — allowing self-documenting APIs and integration with a wide variety of tools which support the JSON Schema format.
 
 Example - JSON Schema
 
@@ -228,23 +228,23 @@ Example - JSON Schema
 
 ```
 
-Pydantic is compliant with the latest version of JSON Schema specification ([2020-12](<https://json-schema.org/draft/2020-12/release-notes.html>)), which is compatible with [OpenAPI 3.1](<https://spec.openapis.org/oas/v3.1.0.html>).
+Pydantic is compliant with the latest version of JSON Schema specification ([2020-12](https://json-schema.org/draft/2020-12/release-notes.html)), which is compatible with [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0.html).
 
 Learn more
 
-See the [documentation on JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./../concepts/json_schema.md))).
+See the [documentation on JSON Schema](https://pydantic.dev/docs/validation/latest/concepts/json_schema) ([local](./../concepts/json_schema.md)).
 
 ## Strict mode and data coercion 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#strict-lax> ([local](./why.md#strict-lax)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#strict-lax> ([local](./why.md#strict-lax)) ([local](./why.md#strict-lax))
 
 By default, Pydantic is tolerant to common incorrect types and coerces data to the right type — e.g. a numeric string passed to an `int` field will be parsed as an `int`.
 
-Pydantic also has as [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../concepts/strict_mode.md))), where types are not coerced and a validation error is raised unless the input data exactly matches the expected schema.
+Pydantic also has as [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../concepts/strict_mode.md)), where types are not coerced and a validation error is raised unless the input data exactly matches the expected schema.
 
-But strict mode would be pretty useless when validating JSON data since JSON doesn’t have types matching many common Python types like [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>), [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) or [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>).
+But strict mode would be pretty useless when validating JSON data since JSON doesn’t have types matching many common Python types like [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime), [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) or [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes).
 
-To solve this, Pydantic can parse and validate JSON in one step. This allows sensible data conversion (e.g. when parsing strings into [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) objects). Since the JSON parsing is implemented in Rust, it’s also very performant.
+To solve this, Pydantic can parse and validate JSON in one step. This allows sensible data conversion (e.g. when parsing strings into [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) objects). Since the JSON parsing is implemented in Rust, it’s also very performant.
 
 Example - Strict mode that's actually useful
 
@@ -288,18 +288,18 @@ Example - Strict mode that's actually useful
 
 Learn more
 
-See the [documentation on strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../concepts/strict_mode.md))).
+See the [documentation on strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../concepts/strict_mode.md)).
 
 ## Dataclasses, TypedDicts, and more 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#dataclasses-typeddict-more> ([local](./why.md#dataclasses-typeddict-more)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#dataclasses-typeddict-more> ([local](./why.md#dataclasses-typeddict-more)) ([local](./why.md#dataclasses-typeddict-more))
 
 Pydantic provides four ways to create schemas and perform validation and serialization:
 
-  1. [`BaseModel`](<https://pydantic.dev/docs/validation/latest/concepts/models> ([local](./../concepts/models.md))) — Pydantic’s own super class with many common utilities available via instance methods.
-  2. [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./../concepts/dataclasses.md))) — a wrapper around standard dataclasses with additional validation performed.
-  3. [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) — a general way to adapt any type for validation and serialization. This allows types like [`TypedDict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#typeddict> ([local](./../api/pydantic/standard_library_types.md#typeddict))) and [`NamedTuple`](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#named-tuples> ([local](./../api/pydantic/standard_library_types.md#named-tuples))) to be validated as well as simple types (like [`int`](<https://docs.python.org/3/library/functions.html#int>) or [`timedelta`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>)) — [all types](<https://pydantic.dev/docs/validation/latest/concepts/types> ([local](./../concepts/types.md))) supported can be used with [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))).
-  4. [`validate_call`](<https://pydantic.dev/docs/validation/latest/concepts/validation_decorator> ([local](./../concepts/validation_decorator.md))) — a decorator to perform validation when calling a function.
+  1. [`BaseModel`](https://pydantic.dev/docs/validation/latest/concepts/models) ([local](./../concepts/models.md)) — Pydantic’s own super class with many common utilities available via instance methods.
+  2. [Pydantic dataclasses](https://pydantic.dev/docs/validation/latest/concepts/dataclasses) ([local](./../concepts/dataclasses.md)) — a wrapper around standard dataclasses with additional validation performed.
+  3. [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) — a general way to adapt any type for validation and serialization. This allows types like [`TypedDict`](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#typeddict) ([local](./../api/pydantic/standard_library_types.md#typeddict)) and [`NamedTuple`](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#named-tuples) ([local](./../api/pydantic/standard_library_types.md#named-tuples)) to be validated as well as simple types (like [`int`](https://docs.python.org/3/library/functions.html#int) or [`timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta)) — [all types](https://pydantic.dev/docs/validation/latest/concepts/types) ([local](./../concepts/types.md)) supported can be used with [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)).
+  4. [`validate_call`](https://pydantic.dev/docs/validation/latest/concepts/validation_decorator) ([local](./../concepts/validation_decorator.md)) — a decorator to perform validation when calling a function.
 
 Example - schema based on a `TypedDict`
 
@@ -344,7 +344,7 @@ Example - schema based on a `TypedDict`
 
 ## Customisation
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#customisation> ([local](./why.md#customisation)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#customisation> ([local](./why.md#customisation)) ([local](./why.md#customisation))
 
 Functional validators and serializers, as well as a powerful protocol for custom types, means the way Pydantic operates can be customized on a per-field or per-type basis.
 
@@ -390,74 +390,74 @@ Customisation Example - wrap validators
 
 Learn more
 
-See the documentation on [validators](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./../concepts/validators.md))), [custom serializers](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./../concepts/serialization.md#serializers))), and [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./../concepts/types.md#custom-types))).
+See the documentation on [validators](https://pydantic.dev/docs/validation/latest/concepts/validators) ([local](./../concepts/validators.md)), [custom serializers](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers) ([local](./../concepts/serialization.md#serializers)), and [custom types](https://pydantic.dev/docs/validation/latest/concepts/types#custom-types) ([local](./../concepts/types.md#custom-types)).
 
 ## Ecosystem
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#ecosystem> ([local](./why.md#ecosystem)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#ecosystem> ([local](./why.md#ecosystem)) ([local](./why.md#ecosystem))
 
 At the time of writing there are 466,400 repositories on GitHub and 8,119 packages on PyPI that depend on Pydantic.
 
 Some notable libraries that depend on Pydantic:
 
-  * [`huggingface/transformers`](<https://github.com/huggingface/transformers>) 138,570 stars
-  * [`hwchase17/langchain`](<https://github.com/hwchase17/langchain>) 99,542 stars
-  * [`tiangolo/fastapi`](<https://github.com/tiangolo/fastapi>) 80,497 stars
-  * [`apache/airflow`](<https://github.com/apache/airflow>) 38,577 stars
-  * [`lm-sys/FastChat`](<https://github.com/lm-sys/FastChat>) 37,650 stars
-  * [`microsoft/DeepSpeed`](<https://github.com/microsoft/DeepSpeed>) 36,521 stars
-  * [`OpenBB-finance/OpenBBTerminal`](<https://github.com/OpenBB-finance/OpenBBTerminal>) 35,971 stars
-  * [`gradio-app/gradio`](<https://github.com/gradio-app/gradio>) 35,740 stars
-  * [`ray-project/ray`](<https://github.com/ray-project/ray>) 35,176 stars
-  * [`pola-rs/polars`](<https://github.com/pola-rs/polars>) 31,698 stars
-  * [`Lightning-AI/lightning`](<https://github.com/Lightning-AI/lightning>) 28,902 stars
-  * [`mindsdb/mindsdb`](<https://github.com/mindsdb/mindsdb>) 27,141 stars
-  * [`embedchain/embedchain`](<https://github.com/embedchain/embedchain>) 24,379 stars
-  * [`pynecone-io/reflex`](<https://github.com/pynecone-io/reflex>) 21,558 stars
-  * [`heartexlabs/label-studio`](<https://github.com/heartexlabs/label-studio>) 20,571 stars
-  * [`Sanster/lama-cleaner`](<https://github.com/Sanster/lama-cleaner>) 20,313 stars
-  * [`mlflow/mlflow`](<https://github.com/mlflow/mlflow>) 19,393 stars
-  * [`RasaHQ/rasa`](<https://github.com/RasaHQ/rasa>) 19,337 stars
-  * [`spotDL/spotify-downloader`](<https://github.com/spotDL/spotify-downloader>) 18,604 stars
-  * [`chroma-core/chroma`](<https://github.com/chroma-core/chroma>) 17,393 stars
-  * [`airbytehq/airbyte`](<https://github.com/airbytehq/airbyte>) 17,120 stars
-  * [`openai/evals`](<https://github.com/openai/evals>) 15,437 stars
-  * [`tiangolo/sqlmodel`](<https://github.com/tiangolo/sqlmodel>) 15,127 stars
-  * [`ydataai/ydata-profiling`](<https://github.com/ydataai/ydata-profiling>) 12,687 stars
-  * [`pyodide/pyodide`](<https://github.com/pyodide/pyodide>) 12,653 stars
-  * [`dagster-io/dagster`](<https://github.com/dagster-io/dagster>) 12,440 stars
-  * [`PaddlePaddle/PaddleNLP`](<https://github.com/PaddlePaddle/PaddleNLP>) 12,312 stars
-  * [`matrix-org/synapse`](<https://github.com/matrix-org/synapse>) 11,857 stars
-  * [`lucidrains/DALLE2-pytorch`](<https://github.com/lucidrains/DALLE2-pytorch>) 11,207 stars
-  * [`great-expectations/great_expectations`](<https://github.com/great-expectations/great_expectations>) 10,164 stars
-  * [`modin-project/modin`](<https://github.com/modin-project/modin>) 10,002 stars
-  * [`aws/serverless-application-model`](<https://github.com/aws/serverless-application-model>) 9,402 stars
-  * [`sqlfluff/sqlfluff`](<https://github.com/sqlfluff/sqlfluff>) 8,535 stars
-  * [`replicate/cog`](<https://github.com/replicate/cog>) 8,344 stars
-  * [`autogluon/autogluon`](<https://github.com/autogluon/autogluon>) 8,326 stars
-  * [`lucidrains/imagen-pytorch`](<https://github.com/lucidrains/imagen-pytorch>) 8,164 stars
-  * [`brycedrennan/imaginAIry`](<https://github.com/brycedrennan/imaginAIry>) 8,050 stars
-  * [`vitalik/django-ninja`](<https://github.com/vitalik/django-ninja>) 7,685 stars
-  * [`NVlabs/SPADE`](<https://github.com/NVlabs/SPADE>) 7,632 stars
-  * [`bridgecrewio/checkov`](<https://github.com/bridgecrewio/checkov>) 7,340 stars
-  * [`bentoml/BentoML`](<https://github.com/bentoml/BentoML>) 7,322 stars
-  * [`skypilot-org/skypilot`](<https://github.com/skypilot-org/skypilot>) 7,113 stars
-  * [`apache/iceberg`](<https://github.com/apache/iceberg>) 6,853 stars
-  * [`deeppavlov/DeepPavlov`](<https://github.com/deeppavlov/DeepPavlov>) 6,777 stars
-  * [`PrefectHQ/marvin`](<https://github.com/PrefectHQ/marvin>) 5,454 stars
-  * [`NVIDIA/NeMo-Guardrails`](<https://github.com/NVIDIA/NeMo-Guardrails>) 4,383 stars
-  * [`microsoft/FLAML`](<https://github.com/microsoft/FLAML>) 4,035 stars
-  * [`jina-ai/discoart`](<https://github.com/jina-ai/discoart>) 3,846 stars
-  * [`docarray/docarray`](<https://github.com/docarray/docarray>) 3,007 stars
-  * [`aws-powertools/powertools-lambda-python`](<https://github.com/aws-powertools/powertools-lambda-python>) 2,980 stars
-  * [`roman-right/beanie`](<https://github.com/roman-right/beanie>) 2,172 stars
-  * [`art049/odmantic`](<https://github.com/art049/odmantic>) 1,096 stars
+  * [`huggingface/transformers`](https://github.com/huggingface/transformers) 138,570 stars
+  * [`hwchase17/langchain`](https://github.com/hwchase17/langchain) 99,542 stars
+  * [`tiangolo/fastapi`](https://github.com/tiangolo/fastapi) 80,497 stars
+  * [`apache/airflow`](https://github.com/apache/airflow) 38,577 stars
+  * [`lm-sys/FastChat`](https://github.com/lm-sys/FastChat) 37,650 stars
+  * [`microsoft/DeepSpeed`](https://github.com/microsoft/DeepSpeed) 36,521 stars
+  * [`OpenBB-finance/OpenBBTerminal`](https://github.com/OpenBB-finance/OpenBBTerminal) 35,971 stars
+  * [`gradio-app/gradio`](https://github.com/gradio-app/gradio) 35,740 stars
+  * [`ray-project/ray`](https://github.com/ray-project/ray) 35,176 stars
+  * [`pola-rs/polars`](https://github.com/pola-rs/polars) 31,698 stars
+  * [`Lightning-AI/lightning`](https://github.com/Lightning-AI/lightning) 28,902 stars
+  * [`mindsdb/mindsdb`](https://github.com/mindsdb/mindsdb) 27,141 stars
+  * [`embedchain/embedchain`](https://github.com/embedchain/embedchain) 24,379 stars
+  * [`pynecone-io/reflex`](https://github.com/pynecone-io/reflex) 21,558 stars
+  * [`heartexlabs/label-studio`](https://github.com/heartexlabs/label-studio) 20,571 stars
+  * [`Sanster/lama-cleaner`](https://github.com/Sanster/lama-cleaner) 20,313 stars
+  * [`mlflow/mlflow`](https://github.com/mlflow/mlflow) 19,393 stars
+  * [`RasaHQ/rasa`](https://github.com/RasaHQ/rasa) 19,337 stars
+  * [`spotDL/spotify-downloader`](https://github.com/spotDL/spotify-downloader) 18,604 stars
+  * [`chroma-core/chroma`](https://github.com/chroma-core/chroma) 17,393 stars
+  * [`airbytehq/airbyte`](https://github.com/airbytehq/airbyte) 17,120 stars
+  * [`openai/evals`](https://github.com/openai/evals) 15,437 stars
+  * [`tiangolo/sqlmodel`](https://github.com/tiangolo/sqlmodel) 15,127 stars
+  * [`ydataai/ydata-profiling`](https://github.com/ydataai/ydata-profiling) 12,687 stars
+  * [`pyodide/pyodide`](https://github.com/pyodide/pyodide) 12,653 stars
+  * [`dagster-io/dagster`](https://github.com/dagster-io/dagster) 12,440 stars
+  * [`PaddlePaddle/PaddleNLP`](https://github.com/PaddlePaddle/PaddleNLP) 12,312 stars
+  * [`matrix-org/synapse`](https://github.com/matrix-org/synapse) 11,857 stars
+  * [`lucidrains/DALLE2-pytorch`](https://github.com/lucidrains/DALLE2-pytorch) 11,207 stars
+  * [`great-expectations/great_expectations`](https://github.com/great-expectations/great_expectations) 10,164 stars
+  * [`modin-project/modin`](https://github.com/modin-project/modin) 10,002 stars
+  * [`aws/serverless-application-model`](https://github.com/aws/serverless-application-model) 9,402 stars
+  * [`sqlfluff/sqlfluff`](https://github.com/sqlfluff/sqlfluff) 8,535 stars
+  * [`replicate/cog`](https://github.com/replicate/cog) 8,344 stars
+  * [`autogluon/autogluon`](https://github.com/autogluon/autogluon) 8,326 stars
+  * [`lucidrains/imagen-pytorch`](https://github.com/lucidrains/imagen-pytorch) 8,164 stars
+  * [`brycedrennan/imaginAIry`](https://github.com/brycedrennan/imaginAIry) 8,050 stars
+  * [`vitalik/django-ninja`](https://github.com/vitalik/django-ninja) 7,685 stars
+  * [`NVlabs/SPADE`](https://github.com/NVlabs/SPADE) 7,632 stars
+  * [`bridgecrewio/checkov`](https://github.com/bridgecrewio/checkov) 7,340 stars
+  * [`bentoml/BentoML`](https://github.com/bentoml/BentoML) 7,322 stars
+  * [`skypilot-org/skypilot`](https://github.com/skypilot-org/skypilot) 7,113 stars
+  * [`apache/iceberg`](https://github.com/apache/iceberg) 6,853 stars
+  * [`deeppavlov/DeepPavlov`](https://github.com/deeppavlov/DeepPavlov) 6,777 stars
+  * [`PrefectHQ/marvin`](https://github.com/PrefectHQ/marvin) 5,454 stars
+  * [`NVIDIA/NeMo-Guardrails`](https://github.com/NVIDIA/NeMo-Guardrails) 4,383 stars
+  * [`microsoft/FLAML`](https://github.com/microsoft/FLAML) 4,035 stars
+  * [`jina-ai/discoart`](https://github.com/jina-ai/discoart) 3,846 stars
+  * [`docarray/docarray`](https://github.com/docarray/docarray) 3,007 stars
+  * [`aws-powertools/powertools-lambda-python`](https://github.com/aws-powertools/powertools-lambda-python) 2,980 stars
+  * [`roman-right/beanie`](https://github.com/roman-right/beanie) 2,172 stars
+  * [`art049/odmantic`](https://github.com/art049/odmantic) 1,096 stars
 
-More libraries using Pydantic can be found at [`Kludex/awesome-pydantic`](<https://github.com/Kludex/awesome-pydantic>).
+More libraries using Pydantic can be found at [`Kludex/awesome-pydantic`](https://github.com/Kludex/awesome-pydantic).
 
 ## Organisations using Pydantic 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#using-pydantic> ([local](./why.md#using-pydantic)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#using-pydantic> ([local](./why.md#using-pydantic)) ([local](./why.md#using-pydantic))
 
 Some notable companies and organisations using Pydantic together with comments on why/how we know they’re using Pydantic.
 
@@ -471,249 +471,249 @@ We’ve included some extra detail where appropriate and already in the public d
 
 ### Adobe 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-adobe> ([local](./why.md#org-adobe)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-adobe> ([local](./why.md#org-adobe)) ([local](./why.md#org-adobe))
 
-[`adobe/dy-sql`](<https://github.com/adobe/dy-sql>) uses Pydantic.
+[`adobe/dy-sql`](https://github.com/adobe/dy-sql) uses Pydantic.
 
 ### Amazon and AWS 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-amazon> ([local](./why.md#org-amazon)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-amazon> ([local](./why.md#org-amazon)) ([local](./why.md#org-amazon))
 
-  * [powertools-lambda-python](<https://github.com/aws-powertools/powertools-lambda-python>)
-  * [awslabs/gluonts](<https://github.com/awslabs/gluonts>)
-  * AWS [sponsored Samuel Colvin $5,000](<https://twitter.com/samuel_colvin/status/1549383169006239745>) to work on Pydantic in 2022
+  * [powertools-lambda-python](https://github.com/aws-powertools/powertools-lambda-python)
+  * [awslabs/gluonts](https://github.com/awslabs/gluonts)
+  * AWS [sponsored Samuel Colvin $5,000](https://twitter.com/samuel_colvin/status/1549383169006239745) to work on Pydantic in 2022
 
 ### Anthropic 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-anthropic> ([local](./why.md#org-anthropic)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-anthropic> ([local](./why.md#org-anthropic)) ([local](./why.md#org-anthropic))
 
-[`anthropics/anthropic-sdk-python`](<https://github.com/anthropics/anthropic-sdk-python>) uses Pydantic.
+[`anthropics/anthropic-sdk-python`](https://github.com/anthropics/anthropic-sdk-python) uses Pydantic.
 
 ### Apple 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-apple> ([local](./why.md#org-apple)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-apple> ([local](./why.md#org-apple)) ([local](./why.md#org-apple))
 
 _(Based on the criteria described above)_
 
 ### ASML 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-asml> ([local](./why.md#org-asml)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-asml> ([local](./why.md#org-asml)) ([local](./why.md#org-asml))
 
 _(Based on the criteria described above)_
 
 ### AstraZeneca 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-astrazeneca> ([local](./why.md#org-astrazeneca)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-astrazeneca> ([local](./why.md#org-astrazeneca)) ([local](./why.md#org-astrazeneca))
 
-[Multiple repos](<https://github.com/search?q=org%3AAstraZeneca+pydantic&type=code>) in the `AstraZeneca` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3AAstraZeneca+pydantic&type=code) in the `AstraZeneca` GitHub org depend on Pydantic.
 
 ### Cisco Systems 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-cisco> ([local](./why.md#org-cisco)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-cisco> ([local](./why.md#org-cisco)) ([local](./why.md#org-cisco))
 
-  * Pydantic is listed in their report of [Open Source Used In RADKit](<https://www.cisco.com/c/dam/en_us/about/doing_business/open_source/docs/RADKit-149-1687424532.pdf>).
-  * [`cisco/webex-assistant-sdk`](<https://github.com/cisco/webex-assistant-sdk>)
+  * Pydantic is listed in their report of [Open Source Used In RADKit](https://www.cisco.com/c/dam/en_us/about/doing_business/open_source/docs/RADKit-149-1687424532.pdf).
+  * [`cisco/webex-assistant-sdk`](https://github.com/cisco/webex-assistant-sdk)
 
 ### Capital One 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-capital_one> ([local](./why.md#org-capital_one)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-capital_one> ([local](./why.md#org-capital_one)) ([local](./why.md#org-capital_one))
 
 _(Based on the criteria described above)_
 
 ### Comcast 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-comcast> ([local](./why.md#org-comcast)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-comcast> ([local](./why.md#org-comcast)) ([local](./why.md#org-comcast))
 
 _(Based on the criteria described above)_
 
 ### Datadog 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-datadog> ([local](./why.md#org-datadog)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-datadog> ([local](./why.md#org-datadog)) ([local](./why.md#org-datadog))
 
-  * Extensive use of Pydantic in [`DataDog/integrations-core`](<https://github.com/DataDog/integrations-core>) and other repos
+  * Extensive use of Pydantic in [`DataDog/integrations-core`](https://github.com/DataDog/integrations-core) and other repos
   * Communication with engineers from Datadog about how they use Pydantic.
 
 ### Facebook 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-facebook> ([local](./why.md#org-facebook)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-facebook> ([local](./why.md#org-facebook)) ([local](./why.md#org-facebook))
 
-[Multiple repos](<https://github.com/search?q=org%3Afacebookresearch+pydantic&type=code>) in the `facebookresearch` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3Afacebookresearch+pydantic&type=code) in the `facebookresearch` GitHub org depend on Pydantic.
 
 ### GitHub 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-github> ([local](./why.md#org-github)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-github> ([local](./why.md#org-github)) ([local](./why.md#org-github))
 
 GitHub sponsored Pydantic $750 in 2022
 
 ### Google 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-google> ([local](./why.md#org-google)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-google> ([local](./why.md#org-google)) ([local](./why.md#org-google))
 
-Extensive use of Pydantic in [`google/turbinia`](<https://github.com/google/turbinia>) and other repos.
+Extensive use of Pydantic in [`google/turbinia`](https://github.com/google/turbinia) and other repos.
 
 ### HSBC 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-hsbc> ([local](./why.md#org-hsbc)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-hsbc> ([local](./why.md#org-hsbc)) ([local](./why.md#org-hsbc))
 
 _(Based on the criteria described above)_
 
 ### IBM 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-ibm> ([local](./why.md#org-ibm)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-ibm> ([local](./why.md#org-ibm)) ([local](./why.md#org-ibm))
 
-[Multiple repos](<https://github.com/search?q=org%3AIBM+pydantic&type=code>) in the `IBM` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3AIBM+pydantic&type=code) in the `IBM` GitHub org depend on Pydantic.
 
 ### Intel 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-intel> ([local](./why.md#org-intel)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-intel> ([local](./why.md#org-intel)) ([local](./why.md#org-intel))
 
 _(Based on the criteria described above)_
 
 ### Intuit 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-intuit> ([local](./why.md#org-intuit)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-intuit> ([local](./why.md#org-intuit)) ([local](./why.md#org-intuit))
 
 _(Based on the criteria described above)_
 
 ### Intergovernmental Panel on Climate Change 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-ipcc> ([local](./why.md#org-ipcc)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-ipcc> ([local](./why.md#org-ipcc)) ([local](./why.md#org-ipcc))
 
-[Tweet](<https://twitter.com/daniel_huppmann/status/1563461797973110785>) explaining how the IPCC use Pydantic.
+[Tweet](https://twitter.com/daniel_huppmann/status/1563461797973110785) explaining how the IPCC use Pydantic.
 
 ### JPMorgan 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-jpmorgan> ([local](./why.md#org-jpmorgan)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-jpmorgan> ([local](./why.md#org-jpmorgan)) ([local](./why.md#org-jpmorgan))
 
 _(Based on the criteria described above)_
 
 ### Jupyter 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-jupyter> ([local](./why.md#org-jupyter)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-jupyter> ([local](./why.md#org-jupyter)) ([local](./why.md#org-jupyter))
 
-  * The developers of the Jupyter notebook are using Pydantic [for subprojects](<https://github.com/pydantic/pydantic/issues/773>)
-  * Through the FastAPI-based Jupyter server [Jupyverse](<https://github.com/jupyter-server/jupyverse>)
-  * [FPS](<https://github.com/jupyter-server/fps>)’s configuration management.
+  * The developers of the Jupyter notebook are using Pydantic [for subprojects](https://github.com/pydantic/pydantic/issues/773)
+  * Through the FastAPI-based Jupyter server [Jupyverse](https://github.com/jupyter-server/jupyverse)
+  * [FPS](https://github.com/jupyter-server/fps)’s configuration management.
 
 ### Microsoft 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-microsoft> ([local](./why.md#org-microsoft)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-microsoft> ([local](./why.md#org-microsoft)) ([local](./why.md#org-microsoft))
 
-  * [DeepSpeed](<https://github.com/microsoft/DeepSpeed>) deep learning optimisation library uses Pydantic extensively
-  * [Multiple repos](<https://github.com/search?q=org%3Amicrosoft%20pydantic&type=code>) in the `microsoft` GitHub org depend on Pydantic, in particular their
-  * Pydantic is also [used](<https://github.com/search?q=org%3AAzure%20pydantic&type=code>) in the `Azure` GitHub org
-  * [Comments](<https://github.com/tiangolo/fastapi/pull/26>) on GitHub show Microsoft engineers using Pydantic as part of Windows and Office
+  * [DeepSpeed](https://github.com/microsoft/DeepSpeed) deep learning optimisation library uses Pydantic extensively
+  * [Multiple repos](https://github.com/search?q=org%3Amicrosoft%20pydantic&type=code) in the `microsoft` GitHub org depend on Pydantic, in particular their
+  * Pydantic is also [used](https://github.com/search?q=org%3AAzure%20pydantic&type=code) in the `Azure` GitHub org
+  * [Comments](https://github.com/tiangolo/fastapi/pull/26) on GitHub show Microsoft engineers using Pydantic as part of Windows and Office
 
 ### Molecular Science Software Institute 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-molssi> ([local](./why.md#org-molssi)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-molssi> ([local](./why.md#org-molssi)) ([local](./why.md#org-molssi))
 
-[Multiple repos](<https://github.com/search?q=org%3AMolSSI%20pydantic&type=code>) in the `MolSSI` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3AMolSSI%20pydantic&type=code) in the `MolSSI` GitHub org depend on Pydantic.
 
 ### NASA 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-nasa> ([local](./why.md#org-nasa)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-nasa> ([local](./why.md#org-nasa)) ([local](./why.md#org-nasa))
 
-[Multiple repos](<https://github.com/search?q=org%3Anasa%20pydantic&type=code>) in the `NASA` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3Anasa%20pydantic&type=code) in the `NASA` GitHub org depend on Pydantic.
 
-NASA are also using Pydantic via FastAPI in their JWST project to process images from the James Webb Space Telescope, see [this tweet](<https://twitter.com/benjamin_falk/status/1546947039363305472>).
+NASA are also using Pydantic via FastAPI in their JWST project to process images from the James Webb Space Telescope, see [this tweet](https://twitter.com/benjamin_falk/status/1546947039363305472).
 
 ### Netflix 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-netflix> ([local](./why.md#org-netflix)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-netflix> ([local](./why.md#org-netflix)) ([local](./why.md#org-netflix))
 
-[Multiple repos](<https://github.com/search?q=org%3Anetflix%20pydantic&type=code>) in the `Netflix` GitHub org depend on Pydantic.
+[Multiple repos](https://github.com/search?q=org%3Anetflix%20pydantic&type=code) in the `Netflix` GitHub org depend on Pydantic.
 
 ### NSA 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-nsa> ([local](./why.md#org-nsa)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-nsa> ([local](./why.md#org-nsa)) ([local](./why.md#org-nsa))
 
-The [`nsacyber/WALKOFF`](<https://github.com/nsacyber/WALKOFF>) repo depends on Pydantic.
+The [`nsacyber/WALKOFF`](https://github.com/nsacyber/WALKOFF) repo depends on Pydantic.
 
 ### NVIDIA 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-nvidia> ([local](./why.md#org-nvidia)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-nvidia> ([local](./why.md#org-nvidia)) ([local](./why.md#org-nvidia))
 
-[Multiple repositories](<https://github.com/search?q=org%3ANVIDIA%20pydantic&type=code>) in the `NVIDIA` GitHub org depend on Pydantic.
+[Multiple repositories](https://github.com/search?q=org%3ANVIDIA%20pydantic&type=code) in the `NVIDIA` GitHub org depend on Pydantic.
 
-Their “Omniverse Services” depends on Pydantic according to [their documentation](<https://web.archive.org/web/20220628161919/https://docs.omniverse.nvidia.com/prod_services/prod_services/core/index.html>).
+Their “Omniverse Services” depends on Pydantic according to [their documentation](https://web.archive.org/web/20220628161919/https://docs.omniverse.nvidia.com/prod_services/prod_services/core/index.html).
 
 ### OpenAI 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-openai> ([local](./why.md#org-openai)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-openai> ([local](./why.md#org-openai)) ([local](./why.md#org-openai))
 
-OpenAI use Pydantic for their ChatCompletions API, as per [this](<https://github.com/pydantic/pydantic/discussions/6372>) discussion on GitHub.
+OpenAI use Pydantic for their ChatCompletions API, as per [this](https://github.com/pydantic/pydantic/discussions/6372) discussion on GitHub.
 
 Anecdotally, OpenAI use Pydantic extensively for their internal services.
 
 ### Oracle 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-oracle> ([local](./why.md#org-oracle)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-oracle> ([local](./why.md#org-oracle)) ([local](./why.md#org-oracle))
 
 _(Based on the criteria described above)_
 
 ### Palantir 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-palantir> ([local](./why.md#org-palantir)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-palantir> ([local](./why.md#org-palantir)) ([local](./why.md#org-palantir))
 
 _(Based on the criteria described above)_
 
 ### Qualcomm 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-qualcomm> ([local](./why.md#org-qualcomm)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-qualcomm> ([local](./why.md#org-qualcomm)) ([local](./why.md#org-qualcomm))
 
 _(Based on the criteria described above)_
 
 ### Red Hat 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-redhat> ([local](./why.md#org-redhat)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-redhat> ([local](./why.md#org-redhat)) ([local](./why.md#org-redhat))
 
 _(Based on the criteria described above)_
 
 ### Revolut 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-revolut> ([local](./why.md#org-revolut)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-revolut> ([local](./why.md#org-revolut)) ([local](./why.md#org-revolut))
 
 Anecdotally, all internal services at Revolut are built with FastAPI and therefore Pydantic.
 
 ### Robusta 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-robusta> ([local](./why.md#org-robusta)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-robusta> ([local](./why.md#org-robusta)) ([local](./why.md#org-robusta))
 
-The [`robusta-dev/robusta`](<https://github.com/robusta-dev/robusta>) repo depends on Pydantic.
+The [`robusta-dev/robusta`](https://github.com/robusta-dev/robusta) repo depends on Pydantic.
 
 ### Salesforce 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-salesforce> ([local](./why.md#org-salesforce)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-salesforce> ([local](./why.md#org-salesforce)) ([local](./why.md#org-salesforce))
 
-Salesforce [sponsored Samuel Colvin $10,000](<https://twitter.com/samuel_colvin/status/1501288247670063104>) to work on Pydantic in 2022.
+Salesforce [sponsored Samuel Colvin $10,000](https://twitter.com/samuel_colvin/status/1501288247670063104) to work on Pydantic in 2022.
 
 ### Starbucks 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-starbucks> ([local](./why.md#org-starbucks)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-starbucks> ([local](./why.md#org-starbucks)) ([local](./why.md#org-starbucks))
 
 _(Based on the criteria described above)_
 
 ### Texas Instruments 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-ti> ([local](./why.md#org-ti)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-ti> ([local](./why.md#org-ti)) ([local](./why.md#org-ti))
 
 _(Based on the criteria described above)_
 
 ### Twilio 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-twilio> ([local](./why.md#org-twilio)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-twilio> ([local](./why.md#org-twilio)) ([local](./why.md#org-twilio))
 
 _(Based on the criteria described above)_
 
 ### Twitter 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-twitter> ([local](./why.md#org-twitter)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-twitter> ([local](./why.md#org-twitter)) ([local](./why.md#org-twitter))
 
-Twitter’s [`the-algorithm`](<https://github.com/twitter/the-algorithm>) repo where they [open sourced](<https://blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm>) their recommendation engine uses Pydantic.
+Twitter’s [`the-algorithm`](https://github.com/twitter/the-algorithm) repo where they [open sourced](https://blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recommendation-algorithm) their recommendation engine uses Pydantic.
 
 ### UK Home Office 
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/why#org-ukhomeoffice> ([local](./why.md#org-ukhomeoffice)))
+<https://pydantic.dev/docs/validation/latest/get-started/why#org-ukhomeoffice> ([local](./why.md#org-ukhomeoffice)) ([local](./why.md#org-ukhomeoffice))
 
 _(Based on the criteria described above)_

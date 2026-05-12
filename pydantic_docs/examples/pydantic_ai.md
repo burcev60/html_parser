@@ -3,11 +3,11 @@ title: Agent libraries – Pydantic AI
 source: https://pydantic.dev/docs/validation/latest/examples/pydantic_ai/
 ---
 
-[Pydantic AI](<https://ai.pydantic.dev/>) is a Python agent framework built by the Pydantic team that uses Pydantic validation for [structured output](<https://ai.pydantic.dev/output/#structured-output>) schema generation and validation. By specifying an `output_type` on an Agent, you can constrain the LLM to return data that matches your Pydantic model schema.
+[Pydantic AI](https://ai.pydantic.dev/) is a Python agent framework built by the Pydantic team that uses Pydantic validation for [structured output](https://ai.pydantic.dev/output/#structured-output) schema generation and validation. By specifying an `output_type` on an Agent, you can constrain the LLM to return data that matches your Pydantic model schema.
 
 ## LLM Structured Output
 
-[](<https://pydantic.dev/docs/validation/latest/examples/pydantic_ai/#llm-structured-output> ([local](./pydantic_ai.md#llm-structured-output)))
+<https://pydantic.dev/docs/validation/latest/examples/pydantic_ai/#llm-structured-output> ([local](./pydantic_ai.md#llm-structured-output)) ([local](./pydantic_ai.md#llm-structured-output))
 
 ```
  

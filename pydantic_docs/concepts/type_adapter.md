@@ -7,11 +7,11 @@ You may have types that are not `BaseModel`s that you want to validate data agai
 
 API Documentation
 
-[`pydantic.type_adapter.TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)))  
+[`pydantic.type_adapter.TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))  
 
-For use cases like this, Pydantic provides [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))), which can be used for type validation, serialization, and JSON schema generation without needing to create a [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))).
+For use cases like this, Pydantic provides [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)), which can be used for type validation, serialization, and JSON schema generation without needing to create a [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)).
 
-A [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) instance exposes some of the functionality from [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) instance methods for types that do not have such methods (such as dataclasses, primitive types, and more):
+A [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) instance exposes some of the functionality from [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)) instance methods for types that do not have such methods (such as dataclasses, primitive types, and more):
 
 ```
  
@@ -54,15 +54,15 @@ A [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type
 
 Note
 
-Despite some overlap in use cases with [`RootModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel> ([local](./../api/pydantic/root_model.md#pydantic.root_model.RootModel))), [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) should not be used as a type annotation for specifying fields of a `BaseModel`, etc.
+Despite some overlap in use cases with [`RootModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/root_model/#pydantic.root_model.RootModel) ([local](./../api/pydantic/root_model.md#pydantic.root_model.RootModel)), [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) should not be used as a type annotation for specifying fields of a `BaseModel`, etc.
 
 ## Parsing data into a specified type
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter#parsing-data-into-a-specified-type> ([local](./type_adapter.md#parsing-data-into-a-specified-type)))
+<https://pydantic.dev/docs/validation/latest/concepts/type_adapter#parsing-data-into-a-specified-type> ([local](./type_adapter.md#parsing-data-into-a-specified-type)) ([local](./type_adapter.md#parsing-data-into-a-specified-type))
 
-[`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) can be used to apply the parsing logic to populate Pydantic models in a more ad-hoc way. This function behaves similarly to [`BaseModel.model_validate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))), but works with arbitrary Pydantic-compatible types.
+[`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) can be used to apply the parsing logic to populate Pydantic models in a more ad-hoc way. This function behaves similarly to [`BaseModel.model_validate`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate)), but works with arbitrary Pydantic-compatible types.
 
-This is especially useful when you want to parse results into a type that is not a direct subclass of [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))). For example:
+This is especially useful when you want to parse results into a type that is not a direct subclass of [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)). For example:
 
 ```
  
@@ -85,28 +85,28 @@ This is especially useful when you want to parse results into a type that is not
 
 ```
 
-[`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) is capable of parsing data into any of the types Pydantic can handle as fields of a [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))).
+[`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) is capable of parsing data into any of the types Pydantic can handle as fields of a [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)).
 
 Performance considerations
 
-When creating an instance of [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))), the provided type must be analyzed and converted into a pydantic-core schema. This comes with some non-trivial overhead, so it is recommended to create a `TypeAdapter` for a given type just once and reuse it in loops or other performance-critical code.
+When creating an instance of [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)), the provided type must be analyzed and converted into a pydantic-core schema. This comes with some non-trivial overhead, so it is recommended to create a `TypeAdapter` for a given type just once and reuse it in loops or other performance-critical code.
 
 ## Rebuilding a `TypeAdapter`’s schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter#rebuilding-a-typeadapters-schema> ([local](./type_adapter.md#rebuilding-a-typeadapters-schema)))
+<https://pydantic.dev/docs/validation/latest/concepts/type_adapter#rebuilding-a-typeadapters-schema> ([local](./type_adapter.md#rebuilding-a-typeadapters-schema)) ([local](./type_adapter.md#rebuilding-a-typeadapters-schema))
 
 ✦ New in v2.10
 
-[`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)))’s support deferred schema building and manual rebuilds. This is helpful for the case of:
+[`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))’s support deferred schema building and manual rebuilds. This is helpful for the case of:
 
   * Types with forward references
   * Types for which core schema builds are expensive
 
-When you initialize a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) with a type, Pydantic analyzes the type and creates a core schema for it. This core schema contains the information needed to validate and serialize data for that type. See the [architecture documentation](<https://pydantic.dev/docs/validation/latest/internals/architecture> ([local](./../internals/architecture.md))) for more information on core schemas.
+When you initialize a [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) with a type, Pydantic analyzes the type and creates a core schema for it. This core schema contains the information needed to validate and serialize data for that type. See the [architecture documentation](https://pydantic.dev/docs/validation/latest/internals/architecture) ([local](./../internals/architecture.md)) for more information on core schemas.
 
-If you set [`defer_build`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.defer_build> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.defer_build))) to `True` when initializing a `TypeAdapter`, Pydantic will defer building the core schema until the first time it is needed (for validation or serialization).
+If you set [`defer_build`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.defer_build) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.defer_build)) to `True` when initializing a `TypeAdapter`, Pydantic will defer building the core schema until the first time it is needed (for validation or serialization).
 
-In order to manually trigger the building of the core schema, you can call the [`rebuild`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.rebuild> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.rebuild))) method on the [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) instance:
+In order to manually trigger the building of the core schema, you can call the [`rebuild`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.rebuild) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.rebuild)) method on the [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) instance:
 
 ```
  

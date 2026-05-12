@@ -7,35 +7,35 @@ This module contains definitions to build schemas which `pydantic_core` can vali
 
 ## CoreConfig 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig))
 
-**Bases:** [`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>)
+**Bases:** [`TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict)
 
 Base class for schema configuration options.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes> ([local](./pydantic_core_schema.md#attributes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes> ([local](./pydantic_core_schema.md#attributes)) ([local](./pydantic_core_schema.md#attributes))
 
 #### title 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.title> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.title)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.title> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.title)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.title))
 
 The name of the configuration.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 #### strict 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.strict> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.strict)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.strict> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.strict)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.strict))
 
 Whether the configuration should strictly adhere to specified rules.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### extra_fields_behavior 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.extra_fields_behavior> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.extra_fields_behavior)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.extra_fields_behavior> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.extra_fields_behavior)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.extra_fields_behavior))
 
 The behavior for handling extra fields.
 
@@ -43,215 +43,215 @@ The behavior for handling extra fields.
 
 #### typed_dict_total 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.typed_dict_total> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.typed_dict_total)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.typed_dict_total> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.typed_dict_total)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.typed_dict_total))
 
 Whether the TypedDict should be considered total. Default is `True`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### from_attributes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.from_attributes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.from_attributes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.from_attributes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.from_attributes)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.from_attributes))
 
 Whether to use attributes for models, dataclasses, and tagged union keys.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### loc_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.loc_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.loc_by_alias)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.loc_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.loc_by_alias)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.loc_by_alias))
 
 Whether to use the used alias (or first alias for “field required” errors) instead of `field_names` to construct error `loc`s. Default is `True`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### revalidate_instances 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.revalidate_instances> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.revalidate_instances)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.revalidate_instances> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.revalidate_instances)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.revalidate_instances))
 
 Whether instances of models and dataclasses should re-validate. Default is ‘never’.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘always’, ‘never’, ‘subclass-instances’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘always’, ‘never’, ‘subclass-instances’]
 
 #### validate_default 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_default> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_default)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_default> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_default)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_default))
 
 Whether to validate default values during validation. Default is `False`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### str_max_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_max_length> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_max_length)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_max_length> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_max_length)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_max_length))
 
 The maximum length for string fields.
 
-**Type:** [`int`](<https://docs.python.org/3/library/functions.html#int>)
+**Type:** [`int`](https://docs.python.org/3/library/functions.html#int)
 
 #### str_min_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_min_length> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_min_length)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_min_length> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_min_length)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_min_length))
 
 The minimum length for string fields.
 
-**Type:** [`int`](<https://docs.python.org/3/library/functions.html#int>)
+**Type:** [`int`](https://docs.python.org/3/library/functions.html#int)
 
 #### str_strip_whitespace 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_strip_whitespace> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_strip_whitespace)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_strip_whitespace> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_strip_whitespace)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_strip_whitespace))
 
 Whether to strip whitespace from string fields.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### str_to_lower 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_to_lower> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_lower)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_to_lower> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_lower)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_lower))
 
 Whether to convert string fields to lowercase.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### str_to_upper 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_to_upper> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_upper)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.str_to_upper> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_upper)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.str_to_upper))
 
 Whether to convert string fields to uppercase.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### allow_inf_nan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.allow_inf_nan> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.allow_inf_nan)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.allow_inf_nan> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.allow_inf_nan)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.allow_inf_nan))
 
 Whether to allow infinity and NaN values for float fields. Default is `True`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### ser_json_timedelta 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_timedelta> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_timedelta)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_timedelta> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_timedelta)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_timedelta))
 
 The serialization option for `timedelta` values. Default is ‘iso8601’. Note that if ser_json_temporal is set, then this param will be ignored.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘iso8601’, ‘float’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘iso8601’, ‘float’]
 
 #### ser_json_temporal 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_temporal> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_temporal)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_temporal> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_temporal)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_temporal))
 
 The serialization option for datetime like values. Default is ‘iso8601’. The types this covers are datetime, date, time and timedelta. If this is set, it will take precedence over ser_json_timedelta
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘iso8601’, ‘seconds’, ‘milliseconds’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘iso8601’, ‘seconds’, ‘milliseconds’]
 
 #### ser_json_bytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_bytes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_bytes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_bytes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_bytes)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_bytes))
 
 The serialization option for `bytes` values. Default is ‘utf8’.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘utf8’, ‘base64’, ‘hex’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘utf8’, ‘base64’, ‘hex’]
 
 #### ser_json_inf_nan 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_inf_nan> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_inf_nan)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.ser_json_inf_nan> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_inf_nan)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.ser_json_inf_nan))
 
 The serialization option for infinity and NaN values in float fields. Default is ‘null’.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘null’, ‘constants’, ‘strings’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘null’, ‘constants’, ‘strings’]
 
 #### val_json_bytes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.val_json_bytes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.val_json_bytes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.val_json_bytes> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.val_json_bytes)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.val_json_bytes))
 
 The validation option for `bytes` values, complementing ser_json_bytes. Default is ‘utf8’.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘utf8’, ‘base64’, ‘hex’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘utf8’, ‘base64’, ‘hex’]
 
 #### hide_input_in_errors 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.hide_input_in_errors> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.hide_input_in_errors)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.hide_input_in_errors> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.hide_input_in_errors)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.hide_input_in_errors))
 
 Whether to hide input data from `ValidationError` representation.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### validation_error_cause 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validation_error_cause> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validation_error_cause)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validation_error_cause> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validation_error_cause)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validation_error_cause))
 
 Whether to add user-python excs to the **cause** of a ValidationError. Requires exceptiongroup backport pre Python 3.11.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### coerce_numbers_to_str 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.coerce_numbers_to_str> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.coerce_numbers_to_str)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.coerce_numbers_to_str> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.coerce_numbers_to_str)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.coerce_numbers_to_str))
 
 Whether to enable coercion of any `Number` type to `str` (not applicable in `strict` mode).
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### regex_engine 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.regex_engine> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.regex_engine)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.regex_engine> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.regex_engine)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.regex_engine))
 
 The regex engine to use for regex pattern validation. Default is ‘rust-regex’. See `StringSchema`.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘rust-regex’, ‘python-re’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘rust-regex’, ‘python-re’]
 
 #### cache_strings 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.cache_strings> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.cache_strings)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.cache_strings> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.cache_strings)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.cache_strings))
 
 Whether to cache strings. Default is `True`, `True` or `'all'` is required to cache strings during general validation since validators don’t know if they’re in a key or a value.
 
-**Type:** [`Union`](<https://docs.python.org/3/library/typing.html#typing.Union>)[[`bool`](<https://docs.python.org/3/library/functions.html#bool>), [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘all’, ‘keys’, ‘none’]]
+**Type:** [`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`bool`](https://docs.python.org/3/library/functions.html#bool), [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘all’, ‘keys’, ‘none’]]
 
 #### validate_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_alias)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_alias)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_alias))
 
 Whether to use the field’s alias when validating against the provided input data. Default is `True`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### validate_by_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_by_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_name)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.validate_by_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_name)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.validate_by_name))
 
 Whether to use the field’s name when validating against the provided input data. Default is `False`. Replacement for `populate_by_name`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### serialize_by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.serialize_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.serialize_by_alias)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.serialize_by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.serialize_by_alias)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.serialize_by_alias))
 
 Whether to serialize by alias. Default is `False`, expected to change to `True` in V3.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### polymorphic_serialization 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.polymorphic_serialization> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.polymorphic_serialization)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.polymorphic_serialization> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.polymorphic_serialization)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.polymorphic_serialization))
 
 Whether to enable polymorphic serialization for models and dataclasses. Default is `False`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### url_preserve_empty_path 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.url_preserve_empty_path> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.url_preserve_empty_path)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.CoreConfig.url_preserve_empty_path> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.url_preserve_empty_path)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.CoreConfig.url_preserve_empty_path))
 
 Whether to preserve empty URL paths when validating values for a URL type. Defaults to `False`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 ## SerializationInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo))
 
 **Bases:** `Protocol[ContextT]`
 
@@ -259,11 +259,11 @@ Extra data used during serialization.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-1> ([local](./pydantic_core_schema.md#attributes-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-1> ([local](./pydantic_core_schema.md#attributes-1)) ([local](./pydantic_core_schema.md#attributes-1))
 
 #### include 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.include> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.include)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.include> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.include)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.include))
 
 The `include` argument set during serialization.
 
@@ -271,7 +271,7 @@ The `include` argument set during serialization.
 
 #### exclude 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude))
 
 The `exclude` argument set during serialization.
 
@@ -279,7 +279,7 @@ The `exclude` argument set during serialization.
 
 #### context 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.context> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.context)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.context> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.context)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.context))
 
 The current serialization context.
 
@@ -287,99 +287,99 @@ The current serialization context.
 
 #### mode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.mode> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.mode)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.mode> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.mode)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.mode))
 
 The serialization mode set during serialization.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘python’, ‘json’] | [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘python’, ‘json’] | [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 #### by_alias 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.by_alias)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.by_alias> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.by_alias)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.by_alias))
 
 The `by_alias` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### exclude_unset 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_unset> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_unset)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_unset> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_unset)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_unset))
 
 The `exclude_unset` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### exclude_defaults 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_defaults> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_defaults)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_defaults> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_defaults)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_defaults))
 
 The `exclude_defaults` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### exclude_none 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_none> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_none)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_none> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_none)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_none))
 
 The `exclude_none` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### exclude_computed_fields 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_computed_fields> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_computed_fields)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_computed_fields> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_computed_fields)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_computed_fields))
 
 The `exclude_computed_fields` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### serialize_as_any 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.serialize_as_any> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.serialize_as_any)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.serialize_as_any> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.serialize_as_any)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.serialize_as_any))
 
 The `serialize_as_any` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 #### polymorphic_serialization 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.polymorphic_serialization> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.polymorphic_serialization)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.polymorphic_serialization> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.polymorphic_serialization)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.polymorphic_serialization))
 
 The `polymorphic_serialization` argument set during serialization, if any.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### round_trip 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.round_trip> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.round_trip)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.round_trip> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.round_trip)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.round_trip))
 
 The `round_trip` argument set during serialization.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 ## FieldSerializationInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo))
 
-**Bases:** `SerializationInfo[ContextT]`, [`Protocol`](<https://docs.python.org/3/library/typing.html#typing.Protocol>)
+**Bases:** `SerializationInfo[ContextT]`, [`Protocol`](https://docs.python.org/3/library/typing.html#typing.Protocol)
 
 Extra data used during field serialization.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-2> ([local](./pydantic_core_schema.md#attributes-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-2> ([local](./pydantic_core_schema.md#attributes-2)) ([local](./pydantic_core_schema.md#attributes-2))
 
 #### field_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo.field_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo.field_name)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo.field_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo.field_name)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo.field_name))
 
 The name of the current field being serialized.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ## ValidationInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo))
 
 **Bases:** `Protocol[ContextT]`
 
@@ -387,11 +387,11 @@ Extra data used during validation.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-3> ([local](./pydantic_core_schema.md#attributes-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#attributes-3> ([local](./pydantic_core_schema.md#attributes-3)) ([local](./pydantic_core_schema.md#attributes-3))
 
 #### context 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.context> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.context)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.context> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.context)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.context))
 
 The current validation context.
 
@@ -399,39 +399,39 @@ The current validation context.
 
 #### config 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.config> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.config)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.config> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.config)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.config))
 
 The CoreConfig that applies to this validation.
 
-**Type:** `CoreConfig` | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** `CoreConfig` | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### mode 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.mode> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.mode)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.mode> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.mode)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.mode))
 
 The type of input data we are currently validating.
 
-**Type:** [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘python’, ‘json’]
+**Type:** [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘python’, ‘json’]
 
 #### data 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data))
 
 The data being validated for this model.
 
-**Type:** [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)]
+**Type:** [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)]
 
 #### field_name 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.field_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.field_name)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.field_name> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.field_name)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.field_name))
 
 The name of the current field being validated if this validator is attached to a model field.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 ## simple_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.simple_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.simple_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema))
 
 ```
  
@@ -444,23 +444,23 @@ Returns a schema for serialization with a custom type.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns> ([local](./pydantic_core_schema.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns> ([local](./pydantic_core_schema.md#returns)) ([local](./pydantic_core_schema.md#returns))
 
 `SimpleSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters> ([local](./pydantic_core_schema.md#parameters)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters> ([local](./pydantic_core_schema.md#parameters)) ([local](./pydantic_core_schema.md#parameters))
 
 **`type`** : `ExpectedSerializationTypes`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.simple_ser_schema\(type\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema\(type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.simple_ser_schema\(type\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema\(type\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.simple_ser_schema\(type\)))
 
 The type to use for serialization
 
 ## plain_serializer_function_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema))
 
 ```
  
@@ -479,47 +479,47 @@ Returns a schema for serialization with a function, can be either a “general�
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-1> ([local](./pydantic_core_schema.md#returns-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-1> ([local](./pydantic_core_schema.md#returns-1)) ([local](./pydantic_core_schema.md#returns-1))
 
 `PlainSerializerFunctionSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-1> ([local](./pydantic_core_schema.md#parameters-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-1> ([local](./pydantic_core_schema.md#parameters-1)) ([local](./pydantic_core_schema.md#parameters-1))
 
 **`function`** : `SerializerFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(function\)))
 
 The function to use for serialization
 
-**`is_field_serializer`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`is_field_serializer`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(is_field_serializer\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(is_field_serializer\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(is_field_serializer\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(is_field_serializer\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(is_field_serializer\)))
 
 Whether the serializer is for a field, e.g. takes `model` as the first argument, and `info` includes `field_name`
 
-**`info_arg`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`info_arg`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(info_arg\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(info_arg\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(info_arg\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(info_arg\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(info_arg\)))
 
 Whether the function takes an `info` argument
 
-**`return_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`return_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(return_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(return_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(return_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(return_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(return_schema\)))
 
 Schema to use for serializing return value
 
 **`when_used`** : `WhenUsed` _Default:_ `'always'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(when_used\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.plain_serializer_function_ser_schema\(when_used\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(when_used\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.plain_serializer_function_ser_schema\(when_used\)))
 
 When the function should be called
 
 ## wrap_serializer_function_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema))
 
 ```
  
@@ -539,53 +539,53 @@ Returns a schema for serialization with a wrap function, can be either a “gene
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-2> ([local](./pydantic_core_schema.md#returns-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-2> ([local](./pydantic_core_schema.md#returns-2)) ([local](./pydantic_core_schema.md#returns-2))
 
 `WrapSerializerFunctionSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-2> ([local](./pydantic_core_schema.md#parameters-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-2> ([local](./pydantic_core_schema.md#parameters-2)) ([local](./pydantic_core_schema.md#parameters-2))
 
 **`function`** : `WrapSerializerFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(function\)))
 
 The function to use for serialization
 
-**`is_field_serializer`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`is_field_serializer`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(is_field_serializer\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(is_field_serializer\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(is_field_serializer\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(is_field_serializer\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(is_field_serializer\)))
 
 Whether the serializer is for a field, e.g. takes `model` as the first argument, and `info` includes `field_name`
 
-**`info_arg`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`info_arg`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(info_arg\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(info_arg\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(info_arg\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(info_arg\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(info_arg\)))
 
 Whether the function takes an `info` argument
 
-**`schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(schema\)))
 
 The schema to use for the inner serialization
 
-**`return_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`return_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(return_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(return_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(return_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(return_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(return_schema\)))
 
 Schema to use for serializing return value
 
 **`when_used`** : `WhenUsed` _Default:_ `'always'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(when_used\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(when_used\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(when_used\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.wrap_serializer_function_ser_schema\(when_used\)))
 
 When the function should be called
 
 ## format_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema))
 
 ```
  
@@ -601,29 +601,29 @@ Returns a schema for serialization using python’s `format` method.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-3> ([local](./pydantic_core_schema.md#returns-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-3> ([local](./pydantic_core_schema.md#returns-3)) ([local](./pydantic_core_schema.md#returns-3))
 
 `FormatSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-3> ([local](./pydantic_core_schema.md#parameters-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-3> ([local](./pydantic_core_schema.md#parameters-3)) ([local](./pydantic_core_schema.md#parameters-3))
 
-**`formatting_string`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`formatting_string`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema\(formatting_string\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(formatting_string\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema\(formatting_string\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(formatting_string\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(formatting_string\)))
 
 String defining the format to use
 
 **`when_used`** : `WhenUsed` _Default:_ `'json-unless-none'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema\(when_used\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.format_ser_schema\(when_used\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(when_used\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.format_ser_schema\(when_used\)))
 
 Same meaning as for [general_function_plain_ser_schema], but with a different default
 
 ## to_string_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.to_string_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.to_string_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema))
 
 ```
  
@@ -636,23 +636,23 @@ Returns a schema for serialization using python’s `str()` / `__str__` method.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-4> ([local](./pydantic_core_schema.md#returns-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-4> ([local](./pydantic_core_schema.md#returns-4)) ([local](./pydantic_core_schema.md#returns-4))
 
 `ToStringSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-4> ([local](./pydantic_core_schema.md#parameters-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-4> ([local](./pydantic_core_schema.md#parameters-4)) ([local](./pydantic_core_schema.md#parameters-4))
 
 **`when_used`** : `WhenUsed` _Default:_ `'json-unless-none'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.to_string_ser_schema\(when_used\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.to_string_ser_schema\(when_used\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema\(when_used\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.to_string_ser_schema\(when_used\)))
 
 Same meaning as for [general_function_plain_ser_schema], but with a different default
 
 ## model_ser_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema))
 
 ```
  
@@ -665,29 +665,29 @@ Returns a schema for serialization using a model.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-5> ([local](./pydantic_core_schema.md#returns-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-5> ([local](./pydantic_core_schema.md#returns-5)) ([local](./pydantic_core_schema.md#returns-5))
 
 `ModelSerSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-5> ([local](./pydantic_core_schema.md#parameters-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-5> ([local](./pydantic_core_schema.md#parameters-5)) ([local](./pydantic_core_schema.md#parameters-5))
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`cls`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(cls\)))
 
 The expected class type, used to generate warnings if the wrong type is passed
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_ser_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_ser_schema\(schema\)))
 
 Internal schema to use to serialize the model dict
 
 ## invalid_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema))
 
 ```
  
@@ -703,29 +703,29 @@ Returns an invalid schema, used to indicate that a schema is invalid.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-6> ([local](./pydantic_core_schema.md#returns-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-6> ([local](./pydantic_core_schema.md#returns-6)) ([local](./pydantic_core_schema.md#returns-6))
 
 `InvalidSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-6> ([local](./pydantic_core_schema.md#parameters-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-6> ([local](./pydantic_core_schema.md#parameters-6)) ([local](./pydantic_core_schema.md#parameters-6))
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.invalid_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.invalid_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
 ## computed_field 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field))
 
 ```
  
@@ -744,41 +744,41 @@ ComputedFields are properties of a model or dataclass that are included in seria
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-7> ([local](./pydantic_core_schema.md#returns-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-7> ([local](./pydantic_core_schema.md#returns-7)) ([local](./pydantic_core_schema.md#returns-7))
 
 `ComputedField`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-7> ([local](./pydantic_core_schema.md#parameters-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-7> ([local](./pydantic_core_schema.md#parameters-7)) ([local](./pydantic_core_schema.md#parameters-7))
 
-**`property_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`property_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(property_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(property_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(property_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(property_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(property_name\)))
 
 The name of the property on the model or dataclass
 
 **`return_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(return_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(return_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(return_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(return_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(return_schema\)))
 
 The schema used for the type returned by the computed field
 
-**`alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(alias\)))
 
 The name to use in the serialized output
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.computed_field\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.computed_field\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
 ## any_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema))
 
 ```
  
@@ -806,35 +806,35 @@ Returns a schema that matches any value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-8> ([local](./pydantic_core_schema.md#returns-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-8> ([local](./pydantic_core_schema.md#returns-8)) ([local](./pydantic_core_schema.md#returns-8))
 
 `AnySchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-8> ([local](./pydantic_core_schema.md#parameters-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-8> ([local](./pydantic_core_schema.md#parameters-8)) ([local](./pydantic_core_schema.md#parameters-8))
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.any_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.any_schema\(serialization\)))
 
 Custom serialization schema
 
 ## none_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema))
 
 ```
  
@@ -862,35 +862,35 @@ Returns a schema that matches a None value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-9> ([local](./pydantic_core_schema.md#returns-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-9> ([local](./pydantic_core_schema.md#returns-9)) ([local](./pydantic_core_schema.md#returns-9))
 
 `NoneSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-9> ([local](./pydantic_core_schema.md#parameters-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-9> ([local](./pydantic_core_schema.md#parameters-9)) ([local](./pydantic_core_schema.md#parameters-9))
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.none_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.none_schema\(serialization\)))
 
 Custom serialization schema
 
 ## bool_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema))
 
 ```
  
@@ -919,41 +919,41 @@ Returns a schema that matches a bool value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-10> ([local](./pydantic_core_schema.md#returns-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-10> ([local](./pydantic_core_schema.md#returns-10)) ([local](./pydantic_core_schema.md#returns-10))
 
 `BoolSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-10> ([local](./pydantic_core_schema.md#parameters-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-10> ([local](./pydantic_core_schema.md#parameters-10)) ([local](./pydantic_core_schema.md#parameters-10))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(strict\)))
 
 Whether the value should be a bool or a value that can be converted to a bool
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bool_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bool_schema\(serialization\)))
 
 Custom serialization schema
 
 ## int_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema))
 
 ```
  
@@ -987,71 +987,71 @@ Returns a schema that matches a int value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-11> ([local](./pydantic_core_schema.md#returns-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-11> ([local](./pydantic_core_schema.md#returns-11)) ([local](./pydantic_core_schema.md#returns-11))
 
 `IntSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-11> ([local](./pydantic_core_schema.md#parameters-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-11> ([local](./pydantic_core_schema.md#parameters-11)) ([local](./pydantic_core_schema.md#parameters-11))
 
-**`multiple_of`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`multiple_of`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(multiple_of\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(multiple_of\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(multiple_of\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(multiple_of\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(multiple_of\)))
 
 The value must be a multiple of this number
 
-**`le`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(le\)))
 
 The value must be less than or equal to this number
 
-**`ge`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ge\)))
 
 The value must be greater than or equal to this number
 
-**`lt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(lt\)))
 
 The value must be strictly less than this number
 
-**`gt`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(gt\)))
 
 The value must be strictly greater than this number
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(strict\)))
 
 Whether the value should be a int or a value that can be converted to a int
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.int_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.int_schema\(serialization\)))
 
 Custom serialization schema
 
 ## float_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema))
 
 ```
  
@@ -1086,77 +1086,77 @@ Returns a schema that matches a float value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-12> ([local](./pydantic_core_schema.md#returns-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-12> ([local](./pydantic_core_schema.md#returns-12)) ([local](./pydantic_core_schema.md#returns-12))
 
 `FloatSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-12> ([local](./pydantic_core_schema.md#parameters-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-12> ([local](./pydantic_core_schema.md#parameters-12)) ([local](./pydantic_core_schema.md#parameters-12))
 
-**`allow_inf_nan`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`allow_inf_nan`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(allow_inf_nan\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(allow_inf_nan\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(allow_inf_nan\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(allow_inf_nan\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(allow_inf_nan\)))
 
 Whether to allow inf and nan values
 
-**`multiple_of`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`multiple_of`** : [`float`](https://docs.python.org/3/library/functions.html#float) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(multiple_of\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(multiple_of\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(multiple_of\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(multiple_of\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(multiple_of\)))
 
 The value must be a multiple of this number
 
-**`le`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : [`float`](https://docs.python.org/3/library/functions.html#float) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(le\)))
 
 The value must be less than or equal to this number
 
-**`ge`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : [`float`](https://docs.python.org/3/library/functions.html#float) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ge\)))
 
 The value must be greater than or equal to this number
 
-**`lt`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : [`float`](https://docs.python.org/3/library/functions.html#float) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(lt\)))
 
 The value must be strictly less than this number
 
-**`gt`** : [`float`](<https://docs.python.org/3/library/functions.html#float>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : [`float`](https://docs.python.org/3/library/functions.html#float) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(gt\)))
 
 The value must be strictly greater than this number
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(strict\)))
 
 Whether the value should be a float or a value that can be converted to a float
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.float_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.float_schema\(serialization\)))
 
 Custom serialization schema
 
 ## decimal_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema))
 
 ```
  
@@ -1194,89 +1194,89 @@ Returns a schema that matches a decimal value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-13> ([local](./pydantic_core_schema.md#returns-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-13> ([local](./pydantic_core_schema.md#returns-13)) ([local](./pydantic_core_schema.md#returns-13))
 
 `DecimalSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-13> ([local](./pydantic_core_schema.md#parameters-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-13> ([local](./pydantic_core_schema.md#parameters-13)) ([local](./pydantic_core_schema.md#parameters-13))
 
-**`allow_inf_nan`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`allow_inf_nan`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(allow_inf_nan\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(allow_inf_nan\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(allow_inf_nan\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(allow_inf_nan\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(allow_inf_nan\)))
 
 Whether to allow inf and nan values
 
-**`multiple_of`** : `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`multiple_of`** : `Decimal` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(multiple_of\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(multiple_of\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(multiple_of\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(multiple_of\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(multiple_of\)))
 
 The value must be a multiple of this number
 
-**`le`** : `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : `Decimal` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(le\)))
 
 The value must be less than or equal to this number
 
-**`ge`** : `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : `Decimal` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ge\)))
 
 The value must be greater than or equal to this number
 
-**`lt`** : `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : `Decimal` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(lt\)))
 
 The value must be strictly less than this number
 
-**`gt`** : `Decimal` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : `Decimal` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(gt\)))
 
 The value must be strictly greater than this number
 
-**`max_digits`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_digits`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(max_digits\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(max_digits\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(max_digits\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(max_digits\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(max_digits\)))
 
 The maximum number of decimal digits allowed
 
-**`decimal_places`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`decimal_places`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(decimal_places\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(decimal_places\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(decimal_places\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(decimal_places\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(decimal_places\)))
 
 The maximum number of decimal places allowed
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(strict\)))
 
 Whether the value should be a float or a value that can be converted to a float
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.decimal_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.decimal_schema\(serialization\)))
 
 Custom serialization schema
 
 ## complex_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema))
 
 ```
  
@@ -1306,41 +1306,41 @@ Returns a schema that matches a complex value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-14> ([local](./pydantic_core_schema.md#returns-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-14> ([local](./pydantic_core_schema.md#returns-14)) ([local](./pydantic_core_schema.md#returns-14))
 
 `ComplexSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-14> ([local](./pydantic_core_schema.md#parameters-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-14> ([local](./pydantic_core_schema.md#parameters-14)) ([local](./pydantic_core_schema.md#parameters-14))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(strict\)))
 
 Whether the value should be a complex object instance or a value that can be converted to a complex object
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.complex_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.complex_schema\(serialization\)))
 
 Custom serialization schema
 
 ## str_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema))
 
 ```
  
@@ -1377,92 +1377,92 @@ Returns a schema that matches a string value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-15> ([local](./pydantic_core_schema.md#returns-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-15> ([local](./pydantic_core_schema.md#returns-15)) ([local](./pydantic_core_schema.md#returns-15))
 
 `StringSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-15> ([local](./pydantic_core_schema.md#parameters-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-15> ([local](./pydantic_core_schema.md#parameters-15)) ([local](./pydantic_core_schema.md#parameters-15))
 
-**`pattern`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`Pattern`](<https://docs.python.org/3/library/typing.html#typing.Pattern>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`pattern`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`Pattern`](https://docs.python.org/3/library/typing.html#typing.Pattern)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(pattern\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(pattern\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(pattern\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(pattern\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(pattern\)))
 
 A regex pattern that the value must match
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(max_length\)))
 
 The value must be at most this length
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(min_length\)))
 
 The value must be at least this length
 
-**`strip_whitespace`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strip_whitespace`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(strip_whitespace\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strip_whitespace\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(strip_whitespace\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strip_whitespace\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strip_whitespace\)))
 
 Whether to strip whitespace from the value
 
-**`to_lower`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`to_lower`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(to_lower\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_lower\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(to_lower\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_lower\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_lower\)))
 
 Whether to convert the value to lowercase
 
-**`to_upper`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`to_upper`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(to_upper\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_upper\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(to_upper\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_upper\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(to_upper\)))
 
 Whether to convert the value to uppercase
 
-**`regex_engine`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘rust-regex’, ‘python-re’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`regex_engine`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘rust-regex’, ‘python-re’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(regex_engine\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(regex_engine\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(regex_engine\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(regex_engine\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(regex_engine\)))
 
 The regex engine to use for pattern validation. Default is ‘rust-regex’.
 
-  * `rust-regex` uses the [`regex`](<https://docs.rs/regex>) Rust crate, which is non-backtracking and therefore more DDoS resistant, but does not support all regex features.
-  * `python-re` use the [`re`](<https://docs.python.org/3/library/re.html>) module, which supports all regex features, but may be slower.
+  * `rust-regex` uses the [`regex`](https://docs.rs/regex) Rust crate, which is non-backtracking and therefore more DDoS resistant, but does not support all regex features.
+  * `python-re` use the [`re`](https://docs.python.org/3/library/re.html) module, which supports all regex features, but may be slower.
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(strict\)))
 
 Whether the value should be a string or a value that can be converted to a string
 
-**`coerce_numbers_to_str`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`coerce_numbers_to_str`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(coerce_numbers_to_str\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(coerce_numbers_to_str\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(coerce_numbers_to_str\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(coerce_numbers_to_str\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(coerce_numbers_to_str\)))
 
 Whether to enable coercion of any `Number` type to `str` (not applicable in `strict` mode).
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.str_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.str_schema\(serialization\)))
 
 Custom serialization schema
 
 ## bytes_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema))
 
 ```
  
@@ -1493,53 +1493,53 @@ Returns a schema that matches a bytes value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-16> ([local](./pydantic_core_schema.md#returns-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-16> ([local](./pydantic_core_schema.md#returns-16)) ([local](./pydantic_core_schema.md#returns-16))
 
 `BytesSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-16> ([local](./pydantic_core_schema.md#parameters-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-16> ([local](./pydantic_core_schema.md#parameters-16)) ([local](./pydantic_core_schema.md#parameters-16))
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(max_length\)))
 
 The value must be at most this length
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(min_length\)))
 
 The value must be at least this length
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(strict\)))
 
 Whether the value should be a bytes or a value that can be converted to a bytes
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.bytes_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.bytes_schema\(serialization\)))
 
 Custom serialization schema
 
 ## date_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema))
 
 ```
  
@@ -1575,77 +1575,77 @@ Returns a schema that matches a date value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-17> ([local](./pydantic_core_schema.md#returns-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-17> ([local](./pydantic_core_schema.md#returns-17)) ([local](./pydantic_core_schema.md#returns-17))
 
 `DateSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-17> ([local](./pydantic_core_schema.md#parameters-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-17> ([local](./pydantic_core_schema.md#parameters-17)) ([local](./pydantic_core_schema.md#parameters-17))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(strict\)))
 
 Whether the value should be a date or a value that can be converted to a date
 
-**`le`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : `date` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(le\)))
 
 The value must be less than or equal to this date
 
-**`ge`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : `date` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ge\)))
 
 The value must be greater than or equal to this date
 
-**`lt`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : `date` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(lt\)))
 
 The value must be strictly less than this date
 
-**`gt`** : `date` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : `date` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(gt\)))
 
 The value must be strictly greater than this date
 
-**`now_op`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘past’, ‘future’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`now_op`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘past’, ‘future’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(now_op\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_op\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(now_op\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_op\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_op\)))
 
 The value must be in the past or future relative to the current date
 
-**`now_utc_offset`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`now_utc_offset`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(now_utc_offset\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_utc_offset\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(now_utc_offset\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_utc_offset\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(now_utc_offset\)))
 
 The value must be in the past or future relative to the current date with this utc offset
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.date_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.date_schema\(serialization\)))
 
 Custom serialization schema
 
 ## time_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema))
 
 ```
  
@@ -1681,77 +1681,77 @@ Returns a schema that matches a time value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-18> ([local](./pydantic_core_schema.md#returns-18)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-18> ([local](./pydantic_core_schema.md#returns-18)) ([local](./pydantic_core_schema.md#returns-18))
 
 `TimeSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-18> ([local](./pydantic_core_schema.md#parameters-18)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-18> ([local](./pydantic_core_schema.md#parameters-18)) ([local](./pydantic_core_schema.md#parameters-18))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(strict\)))
 
 Whether the value should be a time or a value that can be converted to a time
 
-**`le`** : [`time`](<https://docs.python.org/3/library/time.html#module-time>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : [`time`](https://docs.python.org/3/library/time.html#module-time) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(le\)))
 
 The value must be less than or equal to this time
 
-**`ge`** : [`time`](<https://docs.python.org/3/library/time.html#module-time>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : [`time`](https://docs.python.org/3/library/time.html#module-time) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ge\)))
 
 The value must be greater than or equal to this time
 
-**`lt`** : [`time`](<https://docs.python.org/3/library/time.html#module-time>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : [`time`](https://docs.python.org/3/library/time.html#module-time) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(lt\)))
 
 The value must be strictly less than this time
 
-**`gt`** : [`time`](<https://docs.python.org/3/library/time.html#module-time>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : [`time`](https://docs.python.org/3/library/time.html#module-time) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(gt\)))
 
 The value must be strictly greater than this time
 
-**`tz_constraint`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘aware’, ‘naive’] | [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`tz_constraint`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘aware’, ‘naive’] | [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(tz_constraint\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(tz_constraint\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(tz_constraint\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(tz_constraint\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(tz_constraint\)))
 
 The value must be timezone aware or naive, or an int to indicate required tz offset
 
-**`microseconds_precision`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘truncate’, ‘error’] _Default:_ `'truncate'`
+**`microseconds_precision`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘truncate’, ‘error’] _Default:_ `'truncate'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(microseconds_precision\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(microseconds_precision\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(microseconds_precision\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(microseconds_precision\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(microseconds_precision\)))
 
 The behavior when seconds have more than 6 digits or microseconds is too large
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.time_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.time_schema\(serialization\)))
 
 Custom serialization schema
 
 ## datetime_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema))
 
 ```
  
@@ -1790,89 +1790,89 @@ Returns a schema that matches a datetime value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-19> ([local](./pydantic_core_schema.md#returns-19)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-19> ([local](./pydantic_core_schema.md#returns-19)) ([local](./pydantic_core_schema.md#returns-19))
 
 `DatetimeSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-19> ([local](./pydantic_core_schema.md#parameters-19)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-19> ([local](./pydantic_core_schema.md#parameters-19)) ([local](./pydantic_core_schema.md#parameters-19))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(strict\)))
 
 Whether the value should be a datetime or a value that can be converted to a datetime
 
-**`le`** : [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(le\)))
 
 The value must be less than or equal to this datetime
 
-**`ge`** : [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ge\)))
 
 The value must be greater than or equal to this datetime
 
-**`lt`** : [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(lt\)))
 
 The value must be strictly less than this datetime
 
-**`gt`** : [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(gt\)))
 
 The value must be strictly greater than this datetime
 
-**`now_op`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘past’, ‘future’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`now_op`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘past’, ‘future’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(now_op\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_op\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(now_op\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_op\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_op\)))
 
 The value must be in the past or future relative to the current datetime
 
-**`tz_constraint`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘aware’, ‘naive’] | [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`tz_constraint`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘aware’, ‘naive’] | [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(tz_constraint\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(tz_constraint\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(tz_constraint\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(tz_constraint\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(tz_constraint\)))
 
 The value must be timezone aware or naive, or an int to indicate required tz offset TODO: use of a tzinfo where offset changes based on the datetime is not yet supported
 
-**`now_utc_offset`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`now_utc_offset`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(now_utc_offset\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_utc_offset\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(now_utc_offset\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_utc_offset\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(now_utc_offset\)))
 
 The value must be in the past or future relative to the current datetime with this utc offset
 
-**`microseconds_precision`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘truncate’, ‘error’] _Default:_ `'truncate'`
+**`microseconds_precision`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘truncate’, ‘error’] _Default:_ `'truncate'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(microseconds_precision\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(microseconds_precision\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(microseconds_precision\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(microseconds_precision\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(microseconds_precision\)))
 
 The behavior when seconds have more than 6 digits or microseconds is too large
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.datetime_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.datetime_schema\(serialization\)))
 
 Custom serialization schema
 
 ## timedelta_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema))
 
 ```
  
@@ -1907,71 +1907,71 @@ Returns a schema that matches a timedelta value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-20> ([local](./pydantic_core_schema.md#returns-20)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-20> ([local](./pydantic_core_schema.md#returns-20)) ([local](./pydantic_core_schema.md#returns-20))
 
 `TimedeltaSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-20> ([local](./pydantic_core_schema.md#parameters-20)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-20> ([local](./pydantic_core_schema.md#parameters-20)) ([local](./pydantic_core_schema.md#parameters-20))
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(strict\)))
 
 Whether the value should be a timedelta or a value that can be converted to a timedelta
 
-**`le`** : `timedelta` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`le`** : `timedelta` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(le\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(le\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(le\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(le\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(le\)))
 
 The value must be less than or equal to this timedelta
 
-**`ge`** : `timedelta` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ge`** : `timedelta` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(ge\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ge\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(ge\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ge\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ge\)))
 
 The value must be greater than or equal to this timedelta
 
-**`lt`** : `timedelta` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`lt`** : `timedelta` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(lt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(lt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(lt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(lt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(lt\)))
 
 The value must be strictly less than this timedelta
 
-**`gt`** : `timedelta` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`gt`** : `timedelta` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(gt\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(gt\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(gt\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(gt\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(gt\)))
 
 The value must be strictly greater than this timedelta
 
-**`microseconds_precision`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘truncate’, ‘error’] _Default:_ `'truncate'`
+**`microseconds_precision`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘truncate’, ‘error’] _Default:_ `'truncate'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(microseconds_precision\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(microseconds_precision\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(microseconds_precision\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(microseconds_precision\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(microseconds_precision\)))
 
 The behavior when seconds have more than 6 digits or microseconds is too large
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.timedelta_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.timedelta_schema\(serialization\)))
 
 Custom serialization schema
 
 ## literal_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema))
 
 ```
  
@@ -2000,41 +2000,41 @@ Returns a schema that matches a literal value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-21> ([local](./pydantic_core_schema.md#returns-21)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-21> ([local](./pydantic_core_schema.md#returns-21)) ([local](./pydantic_core_schema.md#returns-21))
 
 `LiteralSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-21> ([local](./pydantic_core_schema.md#parameters-21)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-21> ([local](./pydantic_core_schema.md#parameters-21)) ([local](./pydantic_core_schema.md#parameters-21))
 
-**`expected`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`expected`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(expected\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(expected\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(expected\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(expected\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(expected\)))
 
 The value must be one of these values
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.literal_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.literal_schema\(serialization\)))
 
 Custom serialization schema
 
 ## enum_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema))
 
 ```
  
@@ -2073,65 +2073,65 @@ Returns a schema that matches an enum value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-22> ([local](./pydantic_core_schema.md#returns-22)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-22> ([local](./pydantic_core_schema.md#returns-22)) ([local](./pydantic_core_schema.md#returns-22))
 
 `EnumSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-22> ([local](./pydantic_core_schema.md#parameters-22)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-22> ([local](./pydantic_core_schema.md#parameters-22)) ([local](./pydantic_core_schema.md#parameters-22))
 
-**`cls`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
+**`cls`** : [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(cls\)))
 
 The enum class
 
-**`members`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`members`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(members\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(members\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(members\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(members\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(members\)))
 
 The members of the enum, generally `list(MyEnum.__members__.values())`
 
-**`sub_type`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘str’, ‘int’, ‘float’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`sub_type`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘str’, ‘int’, ‘float’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(sub_type\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(sub_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(sub_type\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(sub_type\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(sub_type\)))
 
 The type of the enum, either ‘str’ or ‘int’ or None for plain enums
 
-**`missing`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`missing`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(missing\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(missing\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(missing\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(missing\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(missing\)))
 
 A function to use when the value is not found in the enum, from `_missing_`
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(strict\)))
 
 Whether to use strict mode, defaults to False
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.enum_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.enum_schema\(serialization\)))
 
 Custom serialization schema
 
 ## missing_sentinel_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.missing_sentinel_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.missing_sentinel_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.missing_sentinel_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.missing_sentinel_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.missing_sentinel_schema))
 
 ```
  
@@ -2147,13 +2147,13 @@ Returns a schema for the `MISSING` sentinel.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-23> ([local](./pydantic_core_schema.md#returns-23)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-23> ([local](./pydantic_core_schema.md#returns-23)) ([local](./pydantic_core_schema.md#returns-23))
 
 `MissingSentinelSchema`
 
 ## is_instance_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema))
 
 ```
  
@@ -2186,47 +2186,47 @@ Returns a schema that checks if a value is an instance of a class, equivalent to
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-24> ([local](./pydantic_core_schema.md#returns-24)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-24> ([local](./pydantic_core_schema.md#returns-24)) ([local](./pydantic_core_schema.md#returns-24))
 
 `IsInstanceSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-23> ([local](./pydantic_core_schema.md#parameters-23)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-23> ([local](./pydantic_core_schema.md#parameters-23)) ([local](./pydantic_core_schema.md#parameters-23))
 
-**`cls`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
+**`cls`** : [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls\)))
 
 The value must be an instance of this class
 
-**`cls_repr`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`cls_repr`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(cls_repr\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls_repr\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(cls_repr\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls_repr\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(cls_repr\)))
 
 If provided this string is used in the validator name instead of `repr(cls)`
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_instance_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_instance_schema\(serialization\)))
 
 Custom serialization schema
 
 ## is_subclass_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema))
 
 ```
  
@@ -2262,47 +2262,47 @@ Returns a schema that checks if a value is a subtype of a class, equivalent to p
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-25> ([local](./pydantic_core_schema.md#returns-25)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-25> ([local](./pydantic_core_schema.md#returns-25)) ([local](./pydantic_core_schema.md#returns-25))
 
 `IsInstanceSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-24> ([local](./pydantic_core_schema.md#parameters-24)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-24> ([local](./pydantic_core_schema.md#parameters-24)) ([local](./pydantic_core_schema.md#parameters-24))
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`cls`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls\)))
 
 The value must be a subclass of this class
 
-**`cls_repr`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`cls_repr`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(cls_repr\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls_repr\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(cls_repr\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls_repr\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(cls_repr\)))
 
 If provided this string is used in the validator name instead of `repr(cls)`
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.is_subclass_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.is_subclass_schema\(serialization\)))
 
 Custom serialization schema
 
 ## callable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema))
 
 ```
  
@@ -2330,35 +2330,35 @@ Returns a schema that checks if a value is callable, equivalent to python’s `c
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-26> ([local](./pydantic_core_schema.md#returns-26)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-26> ([local](./pydantic_core_schema.md#returns-26)) ([local](./pydantic_core_schema.md#returns-26))
 
 `CallableSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-25> ([local](./pydantic_core_schema.md#parameters-25)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-25> ([local](./pydantic_core_schema.md#parameters-25)) ([local](./pydantic_core_schema.md#parameters-25))
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.callable_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.callable_schema\(serialization\)))
 
 Custom serialization schema
 
 ## list_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema))
 
 ```
  
@@ -2391,65 +2391,65 @@ Returns a schema that matches a list value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-27> ([local](./pydantic_core_schema.md#returns-27)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-27> ([local](./pydantic_core_schema.md#returns-27)) ([local](./pydantic_core_schema.md#returns-27))
 
 `ListSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-26> ([local](./pydantic_core_schema.md#parameters-26)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-26> ([local](./pydantic_core_schema.md#parameters-26)) ([local](./pydantic_core_schema.md#parameters-26))
 
-**`items_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`items_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(items_schema\)))
 
 The value must be a list of items that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(min_length\)))
 
 The value must be a list with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(max_length\)))
 
 The value must be a list with at most this many items
 
-**`fail_fast`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`fail_fast`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(fail_fast\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(fail_fast\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(fail_fast\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(fail_fast\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(fail_fast\)))
 
 Stop validation on the first error
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(strict\)))
 
 The value must be a list with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.list_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.list_schema\(serialization\)))
 
 Custom serialization schema
 
 ## tuple_positional_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema))
 
 ```
  
@@ -2482,53 +2482,53 @@ Returns a schema that matches a tuple of schemas, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-28> ([local](./pydantic_core_schema.md#returns-28)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-28> ([local](./pydantic_core_schema.md#returns-28)) ([local](./pydantic_core_schema.md#returns-28))
 
 `TupleSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-27> ([local](./pydantic_core_schema.md#parameters-27)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-27> ([local](./pydantic_core_schema.md#parameters-27)) ([local](./pydantic_core_schema.md#parameters-27))
 
-**`items_schema`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`CoreSchema`] 
+**`items_schema`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`CoreSchema`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(items_schema\)))
 
 The value must be a tuple with items that match these schemas
 
-**`extras_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extras_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(extras_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(extras_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(extras_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(extras_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(extras_schema\)))
 
 The value must be a tuple with items that match this schema This was inspired by JSON schema’s `prefixItems` and `items` fields. In python’s `typing.Tuple`, you can’t specify a type for “extra” items — they must all be the same type if the length is variable. So this field won’t be set from a `typing.Tuple` annotation on a pydantic model.
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(strict\)))
 
 The value must be a tuple with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_positional_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_positional_schema\(serialization\)))
 
 Custom serialization schema
 
 ## tuple_variable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema))
 
 ```
  
@@ -2562,59 +2562,59 @@ Returns a schema that matches a tuple of a given schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-29> ([local](./pydantic_core_schema.md#returns-29)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-29> ([local](./pydantic_core_schema.md#returns-29)) ([local](./pydantic_core_schema.md#returns-29))
 
 `TupleSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-28> ([local](./pydantic_core_schema.md#parameters-28)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-28> ([local](./pydantic_core_schema.md#parameters-28)) ([local](./pydantic_core_schema.md#parameters-28))
 
-**`items_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`items_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(items_schema\)))
 
 The value must be a tuple with items that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(min_length\)))
 
 The value must be a tuple with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(max_length\)))
 
 The value must be a tuple with at most this many items
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(strict\)))
 
 The value must be a tuple with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(ref\)))
 
 Optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_variable_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_variable_schema\(serialization\)))
 
 Custom serialization schema
 
 ## tuple_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema))
 
 ```
  
@@ -2651,71 +2651,71 @@ Returns a schema that matches a tuple of schemas, with an optional variadic item
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-30> ([local](./pydantic_core_schema.md#returns-30)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-30> ([local](./pydantic_core_schema.md#returns-30)) ([local](./pydantic_core_schema.md#returns-30))
 
 `TupleSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-29> ([local](./pydantic_core_schema.md#parameters-29)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-29> ([local](./pydantic_core_schema.md#parameters-29)) ([local](./pydantic_core_schema.md#parameters-29))
 
-**`items_schema`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`CoreSchema`] 
+**`items_schema`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`CoreSchema`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(items_schema\)))
 
 The value must be a tuple with items that match these schemas
 
-**`variadic_item_index`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`variadic_item_index`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(variadic_item_index\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(variadic_item_index\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(variadic_item_index\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(variadic_item_index\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(variadic_item_index\)))
 
 The index of the schema in `items_schema` to be treated as variadic (following PEP 646)
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(min_length\)))
 
 The value must be a tuple with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(max_length\)))
 
 The value must be a tuple with at most this many items
 
-**`fail_fast`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`fail_fast`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(fail_fast\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(fail_fast\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(fail_fast\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(fail_fast\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(fail_fast\)))
 
 Stop validation on the first error
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(strict\)))
 
 The value must be a tuple with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(ref\)))
 
 Optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tuple_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tuple_schema\(serialization\)))
 
 Custom serialization schema
 
 ## set_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema))
 
 ```
  
@@ -2750,65 +2750,65 @@ Returns a schema that matches a set of a given schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-31> ([local](./pydantic_core_schema.md#returns-31)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-31> ([local](./pydantic_core_schema.md#returns-31)) ([local](./pydantic_core_schema.md#returns-31))
 
 `SetSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-30> ([local](./pydantic_core_schema.md#parameters-30)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-30> ([local](./pydantic_core_schema.md#parameters-30)) ([local](./pydantic_core_schema.md#parameters-30))
 
-**`items_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`items_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(items_schema\)))
 
 The value must be a set with items that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(min_length\)))
 
 The value must be a set with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(max_length\)))
 
 The value must be a set with at most this many items
 
-**`fail_fast`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`fail_fast`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(fail_fast\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(fail_fast\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(fail_fast\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(fail_fast\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(fail_fast\)))
 
 Stop validation on the first error
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(strict\)))
 
 The value must be a set with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.set_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.set_schema\(serialization\)))
 
 Custom serialization schema
 
 ## frozenset_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema))
 
 ```
  
@@ -2843,65 +2843,65 @@ Returns a schema that matches a frozenset of a given schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-32> ([local](./pydantic_core_schema.md#returns-32)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-32> ([local](./pydantic_core_schema.md#returns-32)) ([local](./pydantic_core_schema.md#returns-32))
 
 `FrozenSetSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-31> ([local](./pydantic_core_schema.md#parameters-31)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-31> ([local](./pydantic_core_schema.md#parameters-31)) ([local](./pydantic_core_schema.md#parameters-31))
 
-**`items_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`items_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(items_schema\)))
 
 The value must be a frozenset with items that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(min_length\)))
 
 The value must be a frozenset with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(max_length\)))
 
 The value must be a frozenset with at most this many items
 
-**`fail_fast`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`fail_fast`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(fail_fast\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(fail_fast\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(fail_fast\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(fail_fast\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(fail_fast\)))
 
 Stop validation on the first error
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(strict\)))
 
 The value must be a frozenset with exactly this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.frozenset_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.frozenset_schema\(serialization\)))
 
 Custom serialization schema
 
 ## generator_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema))
 
 ```
  
@@ -2938,53 +2938,53 @@ Unlike other types, validated generators do not raise ValidationErrors eagerly, 
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-33> ([local](./pydantic_core_schema.md#returns-33)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-33> ([local](./pydantic_core_schema.md#returns-33)) ([local](./pydantic_core_schema.md#returns-33))
 
 `GeneratorSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-32> ([local](./pydantic_core_schema.md#parameters-32)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-32> ([local](./pydantic_core_schema.md#parameters-32)) ([local](./pydantic_core_schema.md#parameters-32))
 
-**`items_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`items_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(items_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(items_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(items_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(items_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(items_schema\)))
 
 The value must be a generator with items that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(min_length\)))
 
 The value must be a generator that yields at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(max_length\)))
 
 The value must be a generator that yields at most this many items
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `IncExSeqOrElseSerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.generator_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.generator_schema\(serialization\)))
 
 Custom serialization schema
 
 ## dict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema))
 
 ```
  
@@ -3020,71 +3020,71 @@ Returns a schema that matches a dict value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-34> ([local](./pydantic_core_schema.md#returns-34)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-34> ([local](./pydantic_core_schema.md#returns-34)) ([local](./pydantic_core_schema.md#returns-34))
 
 `DictSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-33> ([local](./pydantic_core_schema.md#parameters-33)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-33> ([local](./pydantic_core_schema.md#parameters-33)) ([local](./pydantic_core_schema.md#parameters-33))
 
-**`keys_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`keys_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(keys_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(keys_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(keys_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(keys_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(keys_schema\)))
 
 The value must be a dict with keys that match this schema
 
-**`values_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`values_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(values_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(values_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(values_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(values_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(values_schema\)))
 
 The value must be a dict with values that match this schema
 
-**`min_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`min_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(min_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(min_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(min_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(min_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(min_length\)))
 
 The value must be a dict with at least this many items
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(max_length\)))
 
 The value must be a dict with at most this many items
 
-**`fail_fast`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`fail_fast`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(fail_fast\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(fail_fast\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(fail_fast\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(fail_fast\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(fail_fast\)))
 
 Stop validation on the first error
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(strict\)))
 
 Whether the keys and values should be validated with strict mode
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dict_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dict_schema\(serialization\)))
 
 Custom serialization schema
 
 ## no_info_before_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function))
 
 ```
  
@@ -3122,53 +3122,53 @@ Returns a schema that calls a validator function before validating, no `info` ar
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-35> ([local](./pydantic_core_schema.md#returns-35)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-35> ([local](./pydantic_core_schema.md#returns-35)) ([local](./pydantic_core_schema.md#returns-35))
 
 `BeforeValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-34> ([local](./pydantic_core_schema.md#parameters-34)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-34> ([local](./pydantic_core_schema.md#parameters-34)) ([local](./pydantic_core_schema.md#parameters-34))
 
 **`function`** : `NoInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(function\)))
 
 The validator function to call
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(schema\)))
 
 The schema to validate the output of the validator function
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_before_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_before_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## with_info_before_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function))
 
 ```
  
@@ -3209,59 +3209,59 @@ Returns a schema that calls a validator function before validation, the function
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-36> ([local](./pydantic_core_schema.md#returns-36)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-36> ([local](./pydantic_core_schema.md#returns-36)) ([local](./pydantic_core_schema.md#returns-36))
 
 `BeforeValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-35> ([local](./pydantic_core_schema.md#parameters-35)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-35> ([local](./pydantic_core_schema.md#parameters-35)) ([local](./pydantic_core_schema.md#parameters-35))
 
 **`function`** : `WithInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(function\)))
 
 The validator function to call
 
-**`field_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`field_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(field_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(field_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(field_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(field_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(field_name\)))
 
 The name of the field this validator is applied to, if any (deprecated)
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(schema\)))
 
 The schema to validate the output of the validator function
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_before_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_before_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## no_info_after_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function))
 
 ```
  
@@ -3297,53 +3297,53 @@ Returns a schema that calls a validator function after validating, no `info` arg
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-37> ([local](./pydantic_core_schema.md#returns-37)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-37> ([local](./pydantic_core_schema.md#returns-37)) ([local](./pydantic_core_schema.md#returns-37))
 
 `AfterValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-36> ([local](./pydantic_core_schema.md#parameters-36)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-36> ([local](./pydantic_core_schema.md#parameters-36)) ([local](./pydantic_core_schema.md#parameters-36))
 
 **`function`** : `NoInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(function\)))
 
 The validator function to call after the schema is validated
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(schema\)))
 
 The schema to validate before the validator function
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_after_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_after_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## with_info_after_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function))
 
 ```
  
@@ -3383,53 +3383,53 @@ Returns a schema that calls a validator function after validation, the function 
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-38> ([local](./pydantic_core_schema.md#returns-38)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-38> ([local](./pydantic_core_schema.md#returns-38)) ([local](./pydantic_core_schema.md#returns-38))
 
 `AfterValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-37> ([local](./pydantic_core_schema.md#parameters-37)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-37> ([local](./pydantic_core_schema.md#parameters-37)) ([local](./pydantic_core_schema.md#parameters-37))
 
 **`function`** : `WithInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(function\)))
 
 The validator function to call after the schema is validated
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(schema\)))
 
 The schema to validate before the validator function
 
-**`field_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`field_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(field_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(field_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(field_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(field_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(field_name\)))
 
 The name of the field this validator is applied to, if any (deprecated)
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_after_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_after_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## no_info_wrap_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function))
 
 ```
  
@@ -3468,53 +3468,53 @@ Returns a schema which calls a function with a `validator` callable argument whi
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-39> ([local](./pydantic_core_schema.md#returns-39)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-39> ([local](./pydantic_core_schema.md#returns-39)) ([local](./pydantic_core_schema.md#returns-39))
 
 `WrapValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-38> ([local](./pydantic_core_schema.md#parameters-38)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-38> ([local](./pydantic_core_schema.md#parameters-38)) ([local](./pydantic_core_schema.md#parameters-38))
 
 **`function`** : `NoInfoWrapValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(function\)))
 
 The validator function to call
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(schema\)))
 
 The schema to validate the output of the validator function
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_wrap_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_wrap_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## with_info_wrap_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function))
 
 ```
  
@@ -3555,59 +3555,59 @@ Returns a schema which calls a function with a `validator` callable argument whi
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-40> ([local](./pydantic_core_schema.md#returns-40)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-40> ([local](./pydantic_core_schema.md#returns-40)) ([local](./pydantic_core_schema.md#returns-40))
 
 `WrapValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-39> ([local](./pydantic_core_schema.md#parameters-39)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-39> ([local](./pydantic_core_schema.md#parameters-39)) ([local](./pydantic_core_schema.md#parameters-39))
 
 **`function`** : `WithInfoWrapValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(function\)))
 
 The validator function to call
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(schema\)))
 
 The schema to validate the output of the validator function
 
-**`field_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`field_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(field_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(field_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(field_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(field_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(field_name\)))
 
 The name of the field this validator is applied to, if any (deprecated)
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_wrap_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_wrap_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## no_info_plain_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function))
 
 ```
  
@@ -3641,47 +3641,47 @@ Returns a schema that uses the provided function for validation, no `info` argum
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-41> ([local](./pydantic_core_schema.md#returns-41)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-41> ([local](./pydantic_core_schema.md#returns-41)) ([local](./pydantic_core_schema.md#returns-41))
 
 `PlainValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-40> ([local](./pydantic_core_schema.md#parameters-40)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-40> ([local](./pydantic_core_schema.md#parameters-40)) ([local](./pydantic_core_schema.md#parameters-40))
 
 **`function`** : `NoInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(function\)))
 
 The validator function to call
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.no_info_plain_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.no_info_plain_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## with_info_plain_validator_function 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function))
 
 ```
  
@@ -3716,53 +3716,53 @@ Returns a schema that uses the provided function for validation, an `info` argum
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-42> ([local](./pydantic_core_schema.md#returns-42)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-42> ([local](./pydantic_core_schema.md#returns-42)) ([local](./pydantic_core_schema.md#returns-42))
 
 `PlainValidatorFunctionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-41> ([local](./pydantic_core_schema.md#parameters-41)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-41> ([local](./pydantic_core_schema.md#parameters-41)) ([local](./pydantic_core_schema.md#parameters-41))
 
 **`function`** : `WithInfoValidatorFunction`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(function\)))
 
 The validator function to call
 
-**`field_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`field_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(field_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(field_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(field_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(field_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(field_name\)))
 
 The name of the field this validator is applied to, if any (deprecated)
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`json_schema_input_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`json_schema_input_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(json_schema_input_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(json_schema_input_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(json_schema_input_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(json_schema_input_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(json_schema_input_schema\)))
 
 The core schema to be used to generate the corresponding JSON Schema input type
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_info_plain_validator_function\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_info_plain_validator_function\(serialization\)))
 
 Custom serialization schema
 
 ## with_default_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema))
 
 ```
  
@@ -3800,77 +3800,77 @@ Returns a schema that adds a default value to the given schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-43> ([local](./pydantic_core_schema.md#returns-43)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-43> ([local](./pydantic_core_schema.md#returns-43)) ([local](./pydantic_core_schema.md#returns-43))
 
 `WithDefaultSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-42> ([local](./pydantic_core_schema.md#parameters-42)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-42> ([local](./pydantic_core_schema.md#parameters-42)) ([local](./pydantic_core_schema.md#parameters-42))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(schema\)))
 
 The schema to add a default value to
 
-**`default`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) _Default:_ `PydanticUndefined`
+**`default`** : [`Any`](https://docs.python.org/3/library/typing.html#typing.Any) _Default:_ `PydanticUndefined`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default\)))
 
 The default value to use
 
-**`default_factory`** : [`Union`](<https://docs.python.org/3/library/typing.html#typing.Union>)[[`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[], [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)]], [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`None`](<https://docs.python.org/3/library/constants.html#None>)] _Default:_ `None`
+**`default_factory`** : [`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[], [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)]], [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`None`](https://docs.python.org/3/library/constants.html#None)] _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default_factory\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default_factory\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory\)))
 
 A callable that returns the default value to use
 
-**`default_factory_takes_data`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_factory_takes_data`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default_factory_takes_data\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory_takes_data\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(default_factory_takes_data\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory_takes_data\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(default_factory_takes_data\)))
 
 Whether the default factory takes a validated data argument
 
-**`on_error`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘raise’, ‘omit’, ‘default’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`on_error`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘raise’, ‘omit’, ‘default’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(on_error\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(on_error\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(on_error\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(on_error\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(on_error\)))
 
 What to do if the schema validation fails. One of ‘raise’, ‘omit’, ‘default’
 
-**`validate_default`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validate_default`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(validate_default\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(validate_default\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(validate_default\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(validate_default\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(validate_default\)))
 
 Whether the default value should be validated
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(strict\)))
 
 Whether the underlying schema should be validated with strict mode
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.with_default_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.with_default_schema\(serialization\)))
 
 Custom serialization schema
 
 ## nullable_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema))
 
 ```
  
@@ -3900,47 +3900,47 @@ Returns a schema that matches a nullable value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-44> ([local](./pydantic_core_schema.md#returns-44)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-44> ([local](./pydantic_core_schema.md#returns-44)) ([local](./pydantic_core_schema.md#returns-44))
 
 `NullableSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-43> ([local](./pydantic_core_schema.md#parameters-43)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-43> ([local](./pydantic_core_schema.md#parameters-43)) ([local](./pydantic_core_schema.md#parameters-43))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(schema\)))
 
 The schema to wrap
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(strict\)))
 
 Whether the underlying schema should be validated with strict mode
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.nullable_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.nullable_schema\(serialization\)))
 
 Custom serialization schema
 
 ## union_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema))
 
 ```
  
@@ -3975,74 +3975,74 @@ Returns a schema that matches a union value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-45> ([local](./pydantic_core_schema.md#returns-45)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-45> ([local](./pydantic_core_schema.md#returns-45)) ([local](./pydantic_core_schema.md#returns-45))
 
 `UnionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-44> ([local](./pydantic_core_schema.md#parameters-44)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-44> ([local](./pydantic_core_schema.md#parameters-44)) ([local](./pydantic_core_schema.md#parameters-44))
 
-**`choices`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`CoreSchema` | [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[`CoreSchema`, [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)]] 
+**`choices`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`CoreSchema` | [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple)[`CoreSchema`, [`str`](https://docs.python.org/3/library/stdtypes.html#str)]] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(choices\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(choices\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(choices\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(choices\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(choices\)))
 
 The schemas to match. If a tuple, the second item is used as the label for the case.
 
-**`auto_collapse`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`auto_collapse`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(auto_collapse\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(auto_collapse\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(auto_collapse\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(auto_collapse\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(auto_collapse\)))
 
 whether to automatically collapse unions with one element to the inner validator, default true
 
-**`custom_error_type`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_type`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_type\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_type\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_type\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_type\)))
 
 The custom error type to use if the validation fails
 
-**`custom_error_message`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_message`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_message\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_message\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_message\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_message\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_message\)))
 
 The custom error message to use if the validation fails
 
-**`custom_error_context`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_context`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_context\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_context\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(custom_error_context\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_context\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(custom_error_context\)))
 
 The custom error context to use if the validation fails
 
-**`mode`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘smart’, ‘left_to_right’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`mode`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘smart’, ‘left_to_right’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(mode\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(mode\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(mode\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(mode\)))
 
 How to select which choice to return
 
   * `smart` (default) will try to return the choice which is the closest match to the input value
   * `left_to_right` will return the first choice in `choices` which succeeds validation
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.union_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.union_schema\(serialization\)))
 
 Custom serialization schema
 
 ## tagged_union_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema))
 
 ```
  
@@ -4101,23 +4101,23 @@ Returns a schema that matches a tagged union value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-46> ([local](./pydantic_core_schema.md#returns-46)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-46> ([local](./pydantic_core_schema.md#returns-46)) ([local](./pydantic_core_schema.md#returns-46))
 
 `TaggedUnionSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-45> ([local](./pydantic_core_schema.md#parameters-45)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-45> ([local](./pydantic_core_schema.md#parameters-45)) ([local](./pydantic_core_schema.md#parameters-45))
 
-**`choices`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>), `CoreSchema`] 
+**`choices`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any), `CoreSchema`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(choices\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(choices\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(choices\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(choices\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(choices\)))
 
 The schemas to match When retrieving a schema from `choices` using the discriminator value, if the value is a str, it should be fed back into the `choices` map until a schema is obtained (This approach is to prevent multiple ownership of a single schema in Rust)
 
-**`discriminator`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`discriminator`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(discriminator\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(discriminator\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(discriminator\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(discriminator\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(discriminator\)))
 
 The discriminator to use to determine the schema to use
 
@@ -4126,57 +4126,57 @@ The discriminator to use to determine the schema to use
   * If `discriminator` is a list of lists, each inner list is a path, and the first path that exists is used
   * If `discriminator` is a callable, it should return the discriminator when called on the value to validate; the callable can return `None` to indicate that there is no matching discriminator present on the input
 
-**`custom_error_type`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_type`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_type\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_type\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_type\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_type\)))
 
 The custom error type to use if the validation fails
 
-**`custom_error_message`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_message`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_message\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_message\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_message\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_message\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_message\)))
 
 The custom error message to use if the validation fails
 
-**`custom_error_context`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`float`](<https://docs.python.org/3/library/functions.html#float>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_context`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`int`](https://docs.python.org/3/library/functions.html#int) | [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`float`](https://docs.python.org/3/library/functions.html#float)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_context\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_context\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(custom_error_context\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_context\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(custom_error_context\)))
 
 The custom error context to use if the validation fails
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(strict\)))
 
 Whether the underlying schemas should be validated with strict mode
 
-**`from_attributes`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`from_attributes`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(from_attributes\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(from_attributes\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(from_attributes\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(from_attributes\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(from_attributes\)))
 
 Whether to use the attributes of the object to retrieve the discriminator value
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.tagged_union_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.tagged_union_schema\(serialization\)))
 
 Custom serialization schema
 
 ## chain_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema))
 
 ```
  
@@ -4212,41 +4212,41 @@ Returns a schema that chains the provided validation schemas, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-47> ([local](./pydantic_core_schema.md#returns-47)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-47> ([local](./pydantic_core_schema.md#returns-47)) ([local](./pydantic_core_schema.md#returns-47))
 
 `ChainSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-46> ([local](./pydantic_core_schema.md#parameters-46)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-46> ([local](./pydantic_core_schema.md#parameters-46)) ([local](./pydantic_core_schema.md#parameters-46))
 
-**`steps`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`CoreSchema`] 
+**`steps`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`CoreSchema`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(steps\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(steps\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(steps\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(steps\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(steps\)))
 
 The schemas to chain
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.chain_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.chain_schema\(serialization\)))
 
 Custom serialization schema
 
 ## lax_or_strict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema))
 
 ```
  
@@ -4292,53 +4292,53 @@ Returns a schema that uses the lax or strict schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-48> ([local](./pydantic_core_schema.md#returns-48)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-48> ([local](./pydantic_core_schema.md#returns-48)) ([local](./pydantic_core_schema.md#returns-48))
 
 `LaxOrStrictSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-47> ([local](./pydantic_core_schema.md#parameters-47)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-47> ([local](./pydantic_core_schema.md#parameters-47)) ([local](./pydantic_core_schema.md#parameters-47))
 
 **`lax_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(lax_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(lax_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(lax_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(lax_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(lax_schema\)))
 
 The lax schema to use
 
 **`strict_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(strict_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(strict_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict_schema\)))
 
 The strict schema to use
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(strict\)))
 
 Whether the strict schema should be used
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.lax_or_strict_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.lax_or_strict_schema\(serialization\)))
 
 Custom serialization schema
 
 ## json_or_python_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema))
 
 ```
  
@@ -4380,47 +4380,47 @@ Returns a schema that uses the Json or Python schema depending on the input:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-49> ([local](./pydantic_core_schema.md#returns-49)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-49> ([local](./pydantic_core_schema.md#returns-49)) ([local](./pydantic_core_schema.md#returns-49))
 
 `JsonOrPythonSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-48> ([local](./pydantic_core_schema.md#parameters-48)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-48> ([local](./pydantic_core_schema.md#parameters-48)) ([local](./pydantic_core_schema.md#parameters-48))
 
 **`json_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(json_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(json_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(json_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(json_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(json_schema\)))
 
 The schema to use for Json inputs
 
 **`python_schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(python_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(python_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(python_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(python_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(python_schema\)))
 
 The schema to use for Python inputs
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_or_python_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_or_python_schema\(serialization\)))
 
 Custom serialization schema
 
 ## typed_dict_field 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field))
 
 ```
  
@@ -4450,59 +4450,59 @@ Returns a schema that matches a typed dict field, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-50> ([local](./pydantic_core_schema.md#returns-50)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-50> ([local](./pydantic_core_schema.md#returns-50)) ([local](./pydantic_core_schema.md#returns-50))
 
 `TypedDictField`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-49> ([local](./pydantic_core_schema.md#parameters-49)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-49> ([local](./pydantic_core_schema.md#parameters-49)) ([local](./pydantic_core_schema.md#parameters-49))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(schema\)))
 
 The schema to use for the field
 
-**`required`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`required`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(required\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(required\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(required\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(required\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(required\)))
 
 Whether the field is required, otherwise uses the value from `total` on the typed dict
 
-**`validation_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validation_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(validation_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(validation_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(validation_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(validation_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(validation_alias\)))
 
 The alias(es) to use to find the field in the validation data
 
-**`serialization_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_alias\)))
 
 The alias to use as a key when serializing
 
-**`serialization_exclude`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_exclude\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_exclude\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude\)))
 
 Whether to exclude the field when serializing
 
-**`serialization_exclude_if`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`bool`](<https://docs.python.org/3/library/functions.html#bool>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude_if`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`bool`](https://docs.python.org/3/library/functions.html#bool)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_exclude_if\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude_if\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(serialization_exclude_if\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude_if\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(serialization_exclude_if\)))
 
 A callable that determines whether to exclude the field when serializing based on its value.
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_field\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_field\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
 ## typed_dict_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema))
 
 ```
  
@@ -4546,83 +4546,83 @@ Returns a schema that matches a typed dict, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-51> ([local](./pydantic_core_schema.md#returns-51)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-51> ([local](./pydantic_core_schema.md#returns-51)) ([local](./pydantic_core_schema.md#returns-51))
 
 `TypedDictSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-50> ([local](./pydantic_core_schema.md#parameters-50)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-50> ([local](./pydantic_core_schema.md#parameters-50)) ([local](./pydantic_core_schema.md#parameters-50))
 
-**`fields`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), `TypedDictField`] 
+**`fields`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), `TypedDictField`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(fields\)))
 
 The fields to use for the typed dict
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`cls`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls\)))
 
 The class to use for the typed dict
 
-**`cls_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`cls_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(cls_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(cls_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(cls_name\)))
 
 The name to use in error locations. Falls back to `cls.__name__`, or the validator name if no class is provided.
 
-**`computed_fields`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`ComputedField`] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`computed_fields`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`ComputedField`] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(computed_fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(computed_fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(computed_fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(computed_fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(computed_fields\)))
 
 Computed fields to use when serializing the model, only applies when directly inside a model
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(strict\)))
 
 Whether the typed dict is strict
 
-**`extras_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extras_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(extras_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extras_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(extras_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extras_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extras_schema\)))
 
 The extra validator to use for the typed dict
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`extra_behavior`** : `ExtraBehavior` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extra_behavior`** : `ExtraBehavior` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(extra_behavior\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extra_behavior\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(extra_behavior\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extra_behavior\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(extra_behavior\)))
 
 The extra behavior to use for the typed dict
 
-**`total`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`total`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(total\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(total\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(total\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(total\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(total\)))
 
 Whether the typed dict is total, otherwise uses `typed_dict_total` from config
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema\(serialization\)))
 
 Custom serialization schema
 
 ## model_field 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field))
 
 ```
  
@@ -4652,59 +4652,59 @@ Returns a schema for a model field, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-52> ([local](./pydantic_core_schema.md#returns-52)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-52> ([local](./pydantic_core_schema.md#returns-52)) ([local](./pydantic_core_schema.md#returns-52))
 
 `ModelField`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-51> ([local](./pydantic_core_schema.md#parameters-51)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-51> ([local](./pydantic_core_schema.md#parameters-51)) ([local](./pydantic_core_schema.md#parameters-51))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(schema\)))
 
 The schema to use for the field
 
-**`validation_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validation_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(validation_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(validation_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(validation_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(validation_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(validation_alias\)))
 
 The alias(es) to use to find the field in the validation data
 
-**`serialization_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_alias\)))
 
 The alias to use as a key when serializing
 
-**`serialization_exclude`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_exclude\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_exclude\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude\)))
 
 Whether to exclude the field when serializing
 
-**`serialization_exclude_if`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`bool`](<https://docs.python.org/3/library/functions.html#bool>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude_if`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`bool`](https://docs.python.org/3/library/functions.html#bool)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_exclude_if\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude_if\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(serialization_exclude_if\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude_if\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(serialization_exclude_if\)))
 
 A Callable that determines whether to exclude a field during serialization based on its value.
 
-**`frozen`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`frozen`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(frozen\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(frozen\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(frozen\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(frozen\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(frozen\)))
 
 Whether the field is frozen
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_field\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_field\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
 ## model_fields_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema))
 
 ```
  
@@ -4743,83 +4743,83 @@ Returns a schema that matches the fields of a Pydantic model, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-53> ([local](./pydantic_core_schema.md#returns-53)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-53> ([local](./pydantic_core_schema.md#returns-53)) ([local](./pydantic_core_schema.md#returns-53))
 
 `ModelFieldsSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-52> ([local](./pydantic_core_schema.md#parameters-52)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-52> ([local](./pydantic_core_schema.md#parameters-52)) ([local](./pydantic_core_schema.md#parameters-52))
 
-**`fields`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), `ModelField`] 
+**`fields`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), `ModelField`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(fields\)))
 
 The fields of the model
 
-**`model_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`model_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(model_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(model_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(model_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(model_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(model_name\)))
 
 The name of the model, used for error messages, defaults to “Model”
 
-**`computed_fields`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`ComputedField`] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`computed_fields`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`ComputedField`] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(computed_fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(computed_fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(computed_fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(computed_fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(computed_fields\)))
 
 Computed fields to use when serializing the model, only applies when directly inside a model
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(strict\)))
 
 Whether the model is strict
 
-**`extras_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extras_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extras_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extras_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_schema\)))
 
 The schema to use when validating extra input data
 
-**`extras_keys_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extras_keys_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extras_keys_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_keys_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extras_keys_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_keys_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extras_keys_schema\)))
 
 The schema to use when validating the keys of extra input data
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`extra_behavior`** : `ExtraBehavior` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extra_behavior`** : `ExtraBehavior` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extra_behavior\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extra_behavior\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(extra_behavior\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extra_behavior\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(extra_behavior\)))
 
 The extra behavior to use for the model fields
 
-**`from_attributes`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`from_attributes`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(from_attributes\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(from_attributes\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(from_attributes\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(from_attributes\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(from_attributes\)))
 
 Whether the model fields should be populated from attributes
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_fields_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_fields_schema\(serialization\)))
 
 Custom serialization schema
 
 ## model_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema))
 
 ```
  
@@ -4875,101 +4875,101 @@ Example:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-54> ([local](./pydantic_core_schema.md#returns-54)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-54> ([local](./pydantic_core_schema.md#returns-54)) ([local](./pydantic_core_schema.md#returns-54))
 
 `ModelSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-53> ([local](./pydantic_core_schema.md#parameters-53)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-53> ([local](./pydantic_core_schema.md#parameters-53)) ([local](./pydantic_core_schema.md#parameters-53))
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`cls`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(cls\)))
 
 The class to use for the model
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(schema\)))
 
 The schema to use for the model
 
-**`generic_origin`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`generic_origin`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(generic_origin\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(generic_origin\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(generic_origin\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(generic_origin\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(generic_origin\)))
 
 The origin type used for this model, if it’s a parametrized generic. Ex, if this model schema represents `SomeModel[int]`, generic_origin is `SomeModel`
 
-**`custom_init`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_init`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(custom_init\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(custom_init\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(custom_init\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(custom_init\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(custom_init\)))
 
 Whether the model has a custom init method
 
-**`root_model`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`root_model`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(root_model\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(root_model\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(root_model\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(root_model\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(root_model\)))
 
 Whether the model is a `RootModel`
 
-**`post_init`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`post_init`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(post_init\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(post_init\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(post_init\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(post_init\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(post_init\)))
 
 The call after init to use for the model
 
-**`revalidate_instances`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘always’, ‘never’, ‘subclass-instances’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`revalidate_instances`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘always’, ‘never’, ‘subclass-instances’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(revalidate_instances\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(revalidate_instances\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(revalidate_instances\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(revalidate_instances\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(revalidate_instances\)))
 
 whether instances of models and dataclasses (including subclass instances) should re-validate defaults to config.revalidate_instances, else ‘never’
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(strict\)))
 
 Whether the model is strict
 
-**`frozen`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`frozen`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(frozen\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(frozen\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(frozen\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(frozen\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(frozen\)))
 
 Whether the model is frozen
 
-**`extra_behavior`** : `ExtraBehavior` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extra_behavior`** : `ExtraBehavior` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(extra_behavior\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(extra_behavior\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(extra_behavior\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(extra_behavior\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(extra_behavior\)))
 
 The extra behavior to use for the model, used in serialization
 
-**`config`** : `CoreConfig` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`config`** : `CoreConfig` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(config\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(config\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(config\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(config\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(config\)))
 
 The config to use for the model
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.model_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.model_schema\(serialization\)))
 
 Custom serialization schema
 
 ## dataclass_field 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field))
 
 ```
  
@@ -5008,83 +5008,83 @@ Returns a schema for a dataclass field, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-55> ([local](./pydantic_core_schema.md#returns-55)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-55> ([local](./pydantic_core_schema.md#returns-55)) ([local](./pydantic_core_schema.md#returns-55))
 
 `DataclassField`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-54> ([local](./pydantic_core_schema.md#parameters-54)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-54> ([local](./pydantic_core_schema.md#parameters-54)) ([local](./pydantic_core_schema.md#parameters-54))
 
-**`name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(name\)))
 
 The name to use for the argument parameter
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(schema\)))
 
 The schema to use for the argument parameter
 
-**`kw_only`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`kw_only`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(kw_only\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(kw_only\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(kw_only\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(kw_only\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(kw_only\)))
 
 Whether the field can be set with a positional argument as well as a keyword argument
 
-**`init`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`init`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(init\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(init\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init\)))
 
 Whether the field should be validated during initialization
 
-**`init_only`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`init_only`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(init_only\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init_only\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(init_only\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init_only\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(init_only\)))
 
 Whether the field should be omitted from `__dict__` and passed to `__post_init__`
 
-**`validation_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validation_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(validation_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(validation_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(validation_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(validation_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(validation_alias\)))
 
 The alias(es) to use to find the field in the validation data
 
-**`serialization_alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_alias\)))
 
 The alias to use as a key when serializing
 
-**`serialization_exclude`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_exclude\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_exclude\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude\)))
 
 Whether to exclude the field when serializing
 
-**`serialization_exclude_if`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`bool`](<https://docs.python.org/3/library/functions.html#bool>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization_exclude_if`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`bool`](https://docs.python.org/3/library/functions.html#bool)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_exclude_if\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude_if\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(serialization_exclude_if\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude_if\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(serialization_exclude_if\)))
 
 A callable that determines whether to exclude the field when serializing based on its value.
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`frozen`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`frozen`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(frozen\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(frozen\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_field\(frozen\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(frozen\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_field\(frozen\)))
 
 Whether the field is frozen
 
 ## dataclass_args_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema))
 
 ```
  
@@ -5123,65 +5123,65 @@ Returns a schema for validating dataclass arguments, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-56> ([local](./pydantic_core_schema.md#returns-56)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-56> ([local](./pydantic_core_schema.md#returns-56)) ([local](./pydantic_core_schema.md#returns-56))
 
 `DataclassArgsSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-55> ([local](./pydantic_core_schema.md#parameters-55)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-55> ([local](./pydantic_core_schema.md#parameters-55)) ([local](./pydantic_core_schema.md#parameters-55))
 
-**`dataclass_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`dataclass_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(dataclass_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(dataclass_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(dataclass_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(dataclass_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(dataclass_name\)))
 
 The name of the dataclass being validated
 
-**`fields`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`DataclassField`] 
+**`fields`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`DataclassField`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(fields\)))
 
 The fields to use for the dataclass
 
-**`computed_fields`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`ComputedField`] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`computed_fields`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`ComputedField`] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(computed_fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(computed_fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(computed_fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(computed_fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(computed_fields\)))
 
 Computed fields to use when serializing the dataclass
 
-**`collect_init_only`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`collect_init_only`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(collect_init_only\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(collect_init_only\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(collect_init_only\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(collect_init_only\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(collect_init_only\)))
 
 Whether to collect init only fields into a dict to pass to `__post_init__`
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(serialization\)))
 
 Custom serialization schema
 
-**`extra_behavior`** : `ExtraBehavior` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extra_behavior`** : `ExtraBehavior` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(extra_behavior\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(extra_behavior\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_args_schema\(extra_behavior\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(extra_behavior\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_args_schema\(extra_behavior\)))
 
 How to handle extra fields
 
 ## dataclass_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema))
 
 ```
  
@@ -5209,95 +5209,95 @@ Returns a schema for a dataclass. As with `ModelSchema`, this schema can only be
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-57> ([local](./pydantic_core_schema.md#returns-57)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-57> ([local](./pydantic_core_schema.md#returns-57)) ([local](./pydantic_core_schema.md#returns-57))
 
 `DataclassSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-56> ([local](./pydantic_core_schema.md#parameters-56)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-56> ([local](./pydantic_core_schema.md#parameters-56)) ([local](./pydantic_core_schema.md#parameters-56))
 
-**`cls`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`cls`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(cls\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(cls\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls\)))
 
 The dataclass type, used to perform subclass checks
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(schema\)))
 
 The schema to use for the dataclass fields
 
-**`fields`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] 
+**`fields`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(fields\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(fields\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(fields\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(fields\)))
 
 Fields of the dataclass, this is used in serialization and in validation during re-validation and while validating assignment
 
-**`generic_origin`** : [`type`](<https://docs.python.org/3/glossary.html#term-type>)[[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`generic_origin`** : [`type`](https://docs.python.org/3/glossary.html#term-type)[[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(generic_origin\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(generic_origin\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(generic_origin\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(generic_origin\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(generic_origin\)))
 
 The origin type used for this dataclass, if it’s a parametrized generic. Ex, if this model schema represents `SomeDataclass[int]`, generic_origin is `SomeDataclass`
 
-**`cls_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`cls_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(cls_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(cls_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(cls_name\)))
 
 The name to use in error locs, etc; this is useful for generics (default: `cls.__name__`)
 
-**`post_init`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`post_init`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(post_init\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(post_init\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(post_init\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(post_init\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(post_init\)))
 
 Whether to call `__post_init__` after validation
 
-**`revalidate_instances`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘always’, ‘never’, ‘subclass-instances’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`revalidate_instances`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘always’, ‘never’, ‘subclass-instances’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(revalidate_instances\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(revalidate_instances\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(revalidate_instances\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(revalidate_instances\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(revalidate_instances\)))
 
 whether instances of models and dataclasses (including subclass instances) should re-validate defaults to config.revalidate_instances, else ‘never’
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(strict\)))
 
 Whether to require an exact instance of `cls`
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(serialization\)))
 
 Custom serialization schema
 
-**`frozen`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`frozen`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(frozen\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(frozen\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(frozen\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(frozen\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(frozen\)))
 
 Whether the dataclass is frozen
 
-**`slots`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`slots`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(slots\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(slots\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.dataclass_schema\(slots\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(slots\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.dataclass_schema\(slots\)))
 
 Whether `slots=True` on the dataclass, means each field is assigned independently, rather than simply setting `__dict__`, default false
 
 ## arguments_parameter 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter))
 
 ```
  
@@ -5329,41 +5329,41 @@ Returns a schema that matches an argument parameter, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-58> ([local](./pydantic_core_schema.md#returns-58)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-58> ([local](./pydantic_core_schema.md#returns-58)) ([local](./pydantic_core_schema.md#returns-58))
 
 `ArgumentsParameter`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-57> ([local](./pydantic_core_schema.md#parameters-57)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-57> ([local](./pydantic_core_schema.md#parameters-57)) ([local](./pydantic_core_schema.md#parameters-57))
 
-**`name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(name\)))
 
 The name to use for the argument parameter
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(schema\)))
 
 The schema to use for the argument parameter
 
-**`mode`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘positional_only’, ‘positional_or_keyword’, ‘keyword_only’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`mode`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘positional_only’, ‘positional_or_keyword’, ‘keyword_only’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(mode\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(mode\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(mode\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(mode\)))
 
 The mode to use for the argument parameter
 
-**`alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_parameter\(alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_parameter\(alias\)))
 
 The alias to use for the argument parameter
 
 ## arguments_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema))
 
 ```
  
@@ -5403,71 +5403,71 @@ Returns a schema that matches an arguments schema, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-59> ([local](./pydantic_core_schema.md#returns-59)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-59> ([local](./pydantic_core_schema.md#returns-59)) ([local](./pydantic_core_schema.md#returns-59))
 
 `ArgumentsSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-58> ([local](./pydantic_core_schema.md#parameters-58)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-58> ([local](./pydantic_core_schema.md#parameters-58)) ([local](./pydantic_core_schema.md#parameters-58))
 
-**`arguments`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`ArgumentsParameter`] 
+**`arguments`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`ArgumentsParameter`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(arguments\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(arguments\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(arguments\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(arguments\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(arguments\)))
 
 The arguments to use for the arguments schema
 
-**`validate_by_name`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validate_by_name`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(validate_by_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(validate_by_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_name\)))
 
 Whether to populate by the parameter names, defaults to `False`.
 
-**`validate_by_alias`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validate_by_alias`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(validate_by_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(validate_by_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(validate_by_alias\)))
 
 Whether to populate by the parameter aliases, defaults to `True`.
 
-**`var_args_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`var_args_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_args_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_args_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_args_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_args_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_args_schema\)))
 
 The variable args schema to use for the arguments schema
 
-**`var_kwargs_mode`** : `VarKwargsMode` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`var_kwargs_mode`** : `VarKwargsMode` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_kwargs_mode\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_kwargs_mode\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_mode\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_mode\)))
 
-The validation mode to use for variadic keyword arguments. If `'uniform'`, every value of the keyword arguments will be validated against the `var_kwargs_schema` schema. If `'unpacked-typed-dict'`, the `var_kwargs_schema` argument must be a [`typed_dict_schema`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema)))
+The validation mode to use for variadic keyword arguments. If `'uniform'`, every value of the keyword arguments will be validated against the `var_kwargs_schema` schema. If `'unpacked-typed-dict'`, the `var_kwargs_schema` argument must be a [`typed_dict_schema`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.typed_dict_schema) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.typed_dict_schema))
 
-**`var_kwargs_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`var_kwargs_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_kwargs_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(var_kwargs_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(var_kwargs_schema\)))
 
 The variable kwargs schema to use for the arguments schema
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_schema\(serialization\)))
 
 Custom serialization schema
 
 ## arguments_v3_parameter 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter))
 
 ```
  
@@ -5499,41 +5499,41 @@ Returns a schema that matches an argument parameter, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-60> ([local](./pydantic_core_schema.md#returns-60)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-60> ([local](./pydantic_core_schema.md#returns-60)) ([local](./pydantic_core_schema.md#returns-60))
 
 `ArgumentsV3Parameter`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-59> ([local](./pydantic_core_schema.md#parameters-59)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-59> ([local](./pydantic_core_schema.md#parameters-59)) ([local](./pydantic_core_schema.md#parameters-59))
 
-**`name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(name\)))
 
 The name to use for the argument parameter
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(schema\)))
 
 The schema to use for the argument parameter
 
-**`mode`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘positional_only’, ‘positional_or_keyword’, ‘keyword_only’, ‘var_args’, ‘var_kwargs_uniform’, ‘var_kwargs_unpacked_typed_dict’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`mode`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘positional_only’, ‘positional_or_keyword’, ‘keyword_only’, ‘var_args’, ‘var_kwargs_uniform’, ‘var_kwargs_unpacked_typed_dict’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(mode\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(mode\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(mode\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(mode\)))
 
 The mode to use for the argument parameter
 
-**`alias`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)] | [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`int`](<https://docs.python.org/3/library/functions.html#int>)]] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`alias`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)] | [`list`](https://docs.python.org/3/glossary.html#term-list)[[`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`int`](https://docs.python.org/3/library/functions.html#int)]] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_parameter\(alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_parameter\(alias\)))
 
 The alias to use for the argument parameter
 
 ## arguments_v3_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema))
 
 ```
  
@@ -5573,59 +5573,59 @@ This schema is currently not used by other Pydantic components. In V3, it will m
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-61> ([local](./pydantic_core_schema.md#returns-61)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-61> ([local](./pydantic_core_schema.md#returns-61)) ([local](./pydantic_core_schema.md#returns-61))
 
 `ArgumentsV3Schema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-60> ([local](./pydantic_core_schema.md#parameters-60)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-60> ([local](./pydantic_core_schema.md#parameters-60)) ([local](./pydantic_core_schema.md#parameters-60))
 
-**`arguments`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`ArgumentsV3Parameter`] 
+**`arguments`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`ArgumentsV3Parameter`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(arguments\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(arguments\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(arguments\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(arguments\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(arguments\)))
 
 The arguments to use for the arguments schema.
 
-**`validate_by_name`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validate_by_name`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(validate_by_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(validate_by_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_name\)))
 
 Whether to populate by the parameter names, defaults to `False`.
 
-**`validate_by_alias`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`validate_by_alias`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(validate_by_alias\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_alias\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(validate_by_alias\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_alias\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(validate_by_alias\)))
 
 Whether to populate by the parameter aliases, defaults to `True`.
 
-**`extra_behavior`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘forbid’, ‘ignore’] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`extra_behavior`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘forbid’, ‘ignore’] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(extra_behavior\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(extra_behavior\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(extra_behavior\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(extra_behavior\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(extra_behavior\)))
 
 The extra behavior to use.
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places.
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core.
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.arguments_v3_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.arguments_v3_schema\(serialization\)))
 
 Custom serialization schema.
 
 ## call_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema))
 
 ```
  
@@ -5669,59 +5669,59 @@ Returns a schema that matches an arguments schema, then calls a function, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-62> ([local](./pydantic_core_schema.md#returns-62)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-62> ([local](./pydantic_core_schema.md#returns-62)) ([local](./pydantic_core_schema.md#returns-62))
 
 `CallSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-61> ([local](./pydantic_core_schema.md#parameters-61)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-61> ([local](./pydantic_core_schema.md#parameters-61)) ([local](./pydantic_core_schema.md#parameters-61))
 
 **`arguments`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(arguments\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(arguments\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(arguments\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(arguments\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(arguments\)))
 
 The arguments to use for the arguments schema
 
-**`function`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[…, [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`function`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[…, [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(function\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(function\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function\)))
 
 The function to use for the call schema
 
-**`function_name`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`function_name`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(function_name\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function_name\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(function_name\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function_name\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(function_name\)))
 
 The function name to use for the call schema, if not provided `function.__name__` is used
 
-**`return_schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`return_schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(return_schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(return_schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(return_schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(return_schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(return_schema\)))
 
 The return schema to use for the call schema
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.call_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.call_schema\(serialization\)))
 
 Custom serialization schema
 
 ## custom_error_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema))
 
 ```
  
@@ -5757,59 +5757,59 @@ Returns a schema that matches a custom error value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-63> ([local](./pydantic_core_schema.md#returns-63)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-63> ([local](./pydantic_core_schema.md#returns-63)) ([local](./pydantic_core_schema.md#returns-63))
 
 `CustomErrorSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-62> ([local](./pydantic_core_schema.md#parameters-62)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-62> ([local](./pydantic_core_schema.md#parameters-62)) ([local](./pydantic_core_schema.md#parameters-62))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(schema\)))
 
 The schema to use for the custom error schema
 
-**`custom_error_type`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`custom_error_type`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_type\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_type\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_type\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_type\)))
 
 The custom error type to use for the custom error schema
 
-**`custom_error_message`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_message`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_message\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_message\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_message\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_message\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_message\)))
 
 The custom error message to use for the custom error schema
 
-**`custom_error_context`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`custom_error_context`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_context\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_context\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(custom_error_context\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_context\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(custom_error_context\)))
 
 The custom error context to use for the custom error schema
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.custom_error_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.custom_error_schema\(serialization\)))
 
 Custom serialization schema
 
 ## json_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema))
 
 ```
  
@@ -5857,41 +5857,41 @@ Returns a schema that matches a JSON value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-64> ([local](./pydantic_core_schema.md#returns-64)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-64> ([local](./pydantic_core_schema.md#returns-64)) ([local](./pydantic_core_schema.md#returns-64))
 
 `JsonSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-63> ([local](./pydantic_core_schema.md#parameters-63)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-63> ([local](./pydantic_core_schema.md#parameters-63)) ([local](./pydantic_core_schema.md#parameters-63))
 
-**`schema`** : `CoreSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`schema`** : `CoreSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(schema\)))
 
 The schema to use for the JSON schema
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.json_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.json_schema\(serialization\)))
 
 Custom serialization schema
 
 ## url_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema))
 
 ```
  
@@ -5928,83 +5928,83 @@ Returns a schema that matches a URL value, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-65> ([local](./pydantic_core_schema.md#returns-65)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-65> ([local](./pydantic_core_schema.md#returns-65)) ([local](./pydantic_core_schema.md#returns-65))
 
 `UrlSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-64> ([local](./pydantic_core_schema.md#parameters-64)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-64> ([local](./pydantic_core_schema.md#parameters-64)) ([local](./pydantic_core_schema.md#parameters-64))
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(max_length\)))
 
 The maximum length of the URL
 
-**`allowed_schemes`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`allowed_schemes`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(allowed_schemes\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(allowed_schemes\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(allowed_schemes\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(allowed_schemes\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(allowed_schemes\)))
 
 The allowed URL schemes
 
-**`host_required`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`host_required`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(host_required\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(host_required\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(host_required\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(host_required\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(host_required\)))
 
 Whether the URL must have a host
 
-**`default_host`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_host`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_host\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_host\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_host\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_host\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_host\)))
 
 The default host to use if the URL does not have a host
 
-**`default_port`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_port`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_port\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_port\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_port\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_port\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_port\)))
 
 The default port to use if the URL does not have a port
 
-**`default_path`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_path`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_path\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_path\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(default_path\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_path\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(default_path\)))
 
 The default path to use if the URL does not have a path
 
-**`preserve_empty_path`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`preserve_empty_path`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(preserve_empty_path\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(preserve_empty_path\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(preserve_empty_path\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(preserve_empty_path\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(preserve_empty_path\)))
 
 Whether to preserve an empty path or convert it to ’/’, default False
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(strict\)))
 
 Whether to use strict URL parsing
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.url_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.url_schema\(serialization\)))
 
 Custom serialization schema
 
 ## multi_host_url_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema))
 
 ```
  
@@ -6041,83 +6041,83 @@ Returns a schema that matches a URL value with possibly multiple hosts, e.g.:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-66> ([local](./pydantic_core_schema.md#returns-66)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-66> ([local](./pydantic_core_schema.md#returns-66)) ([local](./pydantic_core_schema.md#returns-66))
 
 `MultiHostUrlSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-65> ([local](./pydantic_core_schema.md#parameters-65)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-65> ([local](./pydantic_core_schema.md#parameters-65)) ([local](./pydantic_core_schema.md#parameters-65))
 
-**`max_length`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`max_length`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(max_length\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(max_length\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(max_length\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(max_length\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(max_length\)))
 
 The maximum length of the URL
 
-**`allowed_schemes`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`allowed_schemes`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(allowed_schemes\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(allowed_schemes\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(allowed_schemes\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(allowed_schemes\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(allowed_schemes\)))
 
 The allowed URL schemes
 
-**`host_required`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`host_required`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(host_required\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(host_required\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(host_required\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(host_required\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(host_required\)))
 
 Whether the URL must have a host
 
-**`default_host`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_host`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_host\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_host\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_host\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_host\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_host\)))
 
 The default host to use if the URL does not have a host
 
-**`default_port`** : [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_port`** : [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_port\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_port\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_port\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_port\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_port\)))
 
 The default port to use if the URL does not have a port
 
-**`default_path`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`default_path`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_path\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_path\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(default_path\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_path\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(default_path\)))
 
 The default path to use if the URL does not have a path
 
-**`preserve_empty_path`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`preserve_empty_path`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(preserve_empty_path\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(preserve_empty_path\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(preserve_empty_path\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(preserve_empty_path\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(preserve_empty_path\)))
 
 Whether to preserve an empty path or convert it to ’/’, default False
 
-**`strict`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`strict`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(strict\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(strict\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(strict\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(strict\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(strict\)))
 
 Whether to use strict URL parsing
 
-**`ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(ref\)))
 
 optional unique identifier of the schema, used to reference the schema in other places
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.multi_host_url_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.multi_host_url_schema\(serialization\)))
 
 Custom serialization schema
 
 ## definitions_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema))
 
 ```
  
@@ -6147,29 +6147,29 @@ Build a schema that contains both an inner schema and a list of definitions whic
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-67> ([local](./pydantic_core_schema.md#returns-67)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-67> ([local](./pydantic_core_schema.md#returns-67)) ([local](./pydantic_core_schema.md#returns-67))
 
 `DefinitionsSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-66> ([local](./pydantic_core_schema.md#parameters-66)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-66> ([local](./pydantic_core_schema.md#parameters-66)) ([local](./pydantic_core_schema.md#parameters-66))
 
 **`schema`** : `CoreSchema`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema\(schema\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(schema\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema\(schema\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(schema\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(schema\)))
 
 The inner schema
 
-**`definitions`** : [`list`](<https://docs.python.org/3/glossary.html#term-list>)[`CoreSchema`] 
+**`definitions`** : [`list`](https://docs.python.org/3/glossary.html#term-list)[`CoreSchema`] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema\(definitions\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(definitions\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definitions_schema\(definitions\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(definitions\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definitions_schema\(definitions\)))
 
 List of definitions which can be referenced within inner schema
 
 ## definition_reference_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema))
 
 ```
  
@@ -6204,35 +6204,35 @@ Returns a schema that points to a schema stored in “definitions”, this is us
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-68> ([local](./pydantic_core_schema.md#returns-68)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-68> ([local](./pydantic_core_schema.md#returns-68)) ([local](./pydantic_core_schema.md#returns-68))
 
 `DefinitionReferenceSchema`
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-67> ([local](./pydantic_core_schema.md#parameters-67)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#parameters-67> ([local](./pydantic_core_schema.md#parameters-67)) ([local](./pydantic_core_schema.md#parameters-67))
 
-**`schema_ref`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**`schema_ref`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(schema_ref\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(schema_ref\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(schema_ref\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(schema_ref\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(schema_ref\)))
 
 The schema ref to use for the definition reference schema
 
-**`metadata`** : [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`metadata`** : [`dict`](https://docs.python.org/3/reference/expressions.html#dict)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(metadata\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(metadata\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(metadata\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(metadata\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(metadata\)))
 
 Any other information you want to include with the schema, not used by pydantic-core
 
-**`serialization`** : `SerSchema` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`serialization`** : `SerSchema` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(serialization\)> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(serialization\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.definition_reference_schema\(serialization\> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(serialization\)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.definition_reference_schema\(serialization\)))
 
 Custom serialization schema
 
 ## iter_union_choices 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.iter_union_choices> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.iter_union_choices)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.iter_union_choices> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.iter_union_choices)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.iter_union_choices))
 
 ```
  
@@ -6245,13 +6245,13 @@ Iterate over the choices of a `'union'` schema.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-69> ([local](./pydantic_core_schema.md#returns-69)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#returns-69> ([local](./pydantic_core_schema.md#returns-69)) ([local](./pydantic_core_schema.md#returns-69))
 
-[`Generator`](<https://docs.python.org/3/library/typing.html#typing.Generator>)[`CoreSchema`]
+[`Generator`](https://docs.python.org/3/library/typing.html#typing.Generator)[`CoreSchema`]
 
 ## WhenUsed 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.WhenUsed> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.WhenUsed)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.WhenUsed> ([local](./pydantic_core_schema.md#pydantic_core.core_schema.WhenUsed)) ([local](./pydantic_core_schema.md#pydantic_core.core_schema.WhenUsed))
 
 Values have the following meanings:
 

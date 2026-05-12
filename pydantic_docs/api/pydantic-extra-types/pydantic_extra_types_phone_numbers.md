@@ -3,15 +3,15 @@ title: Phone Numbers
 source: https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/
 ---
 
-The `pydantic_extra_types.phone_numbers` module provides the [`PhoneNumber`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber))) data type.
+The `pydantic_extra_types.phone_numbers` module provides the [`PhoneNumber`](https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber)) data type.
 
-This class depends on the [phonenumbers](<https://pypi.org/project/phonenumbers/>) package, which is a Python port of Google’s [libphonenumber](<https://github.com/google/libphonenumber/>).
+This class depends on the [phonenumbers](https://pypi.org/project/phonenumbers/) package, which is a Python port of Google’s [libphonenumber](https://github.com/google/libphonenumber/).
 
 ## PhoneNumber 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber))
 
-**Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Bases:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 A wrapper around the `phonenumbers.PhoneNumber` object.
 
@@ -19,11 +19,11 @@ It provides class-level configuration points you can change by subclassing:
 
 ## Examples
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#examples> ([local](./pydantic_extra_types_phone_numbers.md#examples)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#examples> ([local](./pydantic_extra_types_phone_numbers.md#examples)) ([local](./pydantic_extra_types_phone_numbers.md#examples))
 
 ### Normal usage:
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#normal-usage> ([local](./pydantic_extra_types_phone_numbers.md#normal-usage)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#normal-usage> ([local](./pydantic_extra_types_phone_numbers.md#normal-usage)) ([local](./pydantic_extra_types_phone_numbers.md#normal-usage))
 
 ```
  
@@ -45,7 +45,7 @@ It provides class-level configuration points you can change by subclassing:
 
 ### Changing defaults by subclassing:
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#changing-defaults-by-subclassing> ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-subclassing)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#changing-defaults-by-subclassing> ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-subclassing)) ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-subclassing))
 
 ```
  
@@ -68,7 +68,7 @@ It provides class-level configuration points you can change by subclassing:
 
 ### Changing defaults by using the provided validator annotation:
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#changing-defaults-by-using-the-provided-validator-annotation> ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-using-the-provided-validator-annotation)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#changing-defaults-by-using-the-provided-validator-annotation> ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-using-the-provided-validator-annotation)) ([local](./pydantic_extra_types_phone_numbers.md#changing-defaults-by-using-the-provided-validator-annotation))
 
 ```
  
@@ -93,64 +93,64 @@ It provides class-level configuration points you can change by subclassing:
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#attributes> ([local](./pydantic_extra_types_phone_numbers.md#attributes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#attributes> ([local](./pydantic_extra_types_phone_numbers.md#attributes)) ([local](./pydantic_extra_types_phone_numbers.md#attributes))
 
 #### default_region_code 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.default_region_code> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.default_region_code)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.default_region_code> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.default_region_code)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.default_region_code))
 
 The default region code to use when parsing phone numbers without an international prefix.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) **Default:** `None`
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) **Default:** `None`
 
 #### supported_regions 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.supported_regions> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.supported_regions)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.supported_regions> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.supported_regions)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.supported_regions))
 
 The supported regions. If empty, all regions are supported.
 
-**Type:** [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] **Default:** `[]`
+**Type:** [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] **Default:** `[]`
 
 #### phone_format 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.phone_format> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.phone_format)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumber.phone_format> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.phone_format)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumber.phone_format))
 
 The format of the phone number.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) **Default:** `'RFC3966'`
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) **Default:** `'RFC3966'`
 
 ## PhoneNumberValidator 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator))
 
 An annotation to validate `phonenumbers.PhoneNumber` objects.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#attributes-1> ([local](./pydantic_extra_types_phone_numbers.md#attributes-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#attributes-1> ([local](./pydantic_extra_types_phone_numbers.md#attributes-1)) ([local](./pydantic_extra_types_phone_numbers.md#attributes-1))
 
 #### default_region 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.default_region> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.default_region)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.default_region> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.default_region)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.default_region))
 
 The default region code to use when parsing phone numbers without an international prefix.
 
 If `None` (the default), the region must be supplied in the phone number as an international prefix.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) **Default:** `None`
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None) **Default:** `None`
 
 #### number_format 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.number_format> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.number_format)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.number_format> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.number_format)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.number_format))
 
 The format of the phone number to return. See `phonenumbers.PhoneNumberFormat` for valid values.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) **Default:** `'RFC3966'`
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) **Default:** `'RFC3966'`
 
 #### supported_regions 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.supported_regions> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.supported_regions)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_phone_numbers/#pydantic_extra_types.phone_numbers.PhoneNumberValidator.supported_regions> ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.supported_regions)) ([local](./pydantic_extra_types_phone_numbers.md#pydantic_extra_types.phone_numbers.PhoneNumberValidator.supported_regions))
 
 The supported regions. If empty (the default), all regions are supported.
 
-**Type:** [`Sequence`](<https://docs.python.org/3/library/typing.html#typing.Sequence>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) **Default:** `None`
+**Type:** [`Sequence`](https://docs.python.org/3/library/typing.html#typing.Sequence)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] | [`None`](https://docs.python.org/3/library/constants.html#None) **Default:** `None`

@@ -5,13 +5,13 @@ source: https://pydantic.dev/docs/validation/latest/concepts/conversion_table
 
 The following table provides details on how Pydantic converts data during validation in both strict and lax modes.
 
-The “Strict” column contains checkmarks for type conversions that are allowed when validating in [Strict Mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))).
+The “Strict” column contains checkmarks for type conversions that are allowed when validating in [Strict Mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./strict_mode.md)).
 
-  * [ All ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-540> ([local](./conversion_table.md#tab-panel-540)))
-  * [ JSON ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-541> ([local](./conversion_table.md#tab-panel-541)))
-  * [ JSON - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-542> ([local](./conversion_table.md#tab-panel-542)))
-  * [ Python ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-543> ([local](./conversion_table.md#tab-panel-543)))
-  * [ Python - Strict ](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-544> ([local](./conversion_table.md#tab-panel-544)))
+  * [ All ](https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-540) ([local](./conversion_table.md#tab-panel-540))
+  * [ JSON ](https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-541) ([local](./conversion_table.md#tab-panel-541))
+  * [ JSON - Strict ](https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-542) ([local](./conversion_table.md#tab-panel-542))
+  * [ Python ](https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-543) ([local](./conversion_table.md#tab-panel-543))
+  * [ Python - Strict ](https://pydantic.dev/docs/validation/latest/concepts/conversion_table#tab-panel-544) ([local](./conversion_table.md#tab-panel-544))
 
 Field Type| Input| Strict| Input Source| Conditions  
 ---|---|---|---|---  
@@ -29,17 +29,17 @@ Field Type| Input| Strict| Input Source| Conditions
 `date`| `bytes`| | Python| Format: `YYYY-MM-DD` (UTF-8).  
 `date`| `date`| ✓| Python|   
 `date`| `datetime`| | Python| Must be exact date, eg. no `H`, `M`, `S`, `f`.  
-`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
-`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
+`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
+`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
 `date`| `str`| | Python & JSON| Format: `YYYY-MM-DD`.  
-`date`| `Decimal`| | Python| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
-`datetime`| `bytes`| | Python| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](<https://docs.rs/speedate/latest/speedate/>), (UTF-8).  
+`date`| `Decimal`| | Python| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
+`datetime`| `bytes`| | Python| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](https://docs.rs/speedate/latest/speedate/), (UTF-8).  
 `datetime`| `date`| | Python|   
 `datetime`| `datetime`| ✓| Python|   
-`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `Decimal`| | Python| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `Decimal`| | Python| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
 `deque`| `deque`| ✓| Python|   
 `deque`| `frozenset`| | Python|   
 `deque`| `list`| | Python|   
@@ -95,16 +95,16 @@ Field Type| Input| Strict| Input Source| Conditions
 `str`| `bytearray`| | Python| Assumes UTF-8, error on unicode decoding error.  
 `str`| `bytes`| | Python| Assumes UTF-8, error on unicode decoding error.  
 `str`| `str`| ✓| Python & JSON|   
-`time`| `bytes`| | Python| Format: `HH:MM:SS.FFFFFF`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`time`| `bytes`| | Python| Format: `HH:MM:SS.FFFFFF`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `time`| `float`| | Python & JSON| Interpreted as seconds, range `0 - 86399.9*`.  
 `time`| `int`| | Python & JSON| Interpreted as seconds, range `0 - 86399`.  
-`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `time`| `time`| ✓| Python|   
 `time`| `Decimal`| | Python| Interpreted as seconds, range `0 - 86399.9*`.  
-`timedelta`| `bytes`| | Python| Format: `ISO8601`. See [speedate](<https://docs.rs/speedate/latest/speedate/>), (UTF-8).  
+`timedelta`| `bytes`| | Python| Format: `ISO8601`. See [speedate](https://docs.rs/speedate/latest/speedate/), (UTF-8).  
 `timedelta`| `float`| | Python & JSON| Interpreted as seconds.  
 `timedelta`| `int`| | Python & JSON| Interpreted as seconds.  
-`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `timedelta`| `timedelta`| ✓| Python|   
 `timedelta`| `Decimal`| | Python| Interpreted as seconds.  
 `tuple`| `deque`| | Python|   
@@ -214,12 +214,12 @@ Field Type| Input| Strict| Input Source| Conditions
 `bool`| `str`| | Python & JSON| Allowed values: `'f'`, `'n'`, `'no'`, `'off'`, `'false'`, `'False'`, `'t'`, `'y'`, `'on'`, `'yes'`, `'true'`, `'True'`.  
 `bytes`| `str`| ✓| JSON|   
 `callable`| `-`| | JSON| Never valid.  
-`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
-`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
+`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
+`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
 `date`| `str`| | Python & JSON| Format: `YYYY-MM-DD`.  
-`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `deque`| `Array`| ✓| JSON|   
 `dict`| `Object`| ✓| JSON|   
 `float`| `bool`| | Python & JSON|   
@@ -238,10 +238,10 @@ Field Type| Input| Strict| Input Source| Conditions
 `str`| `str`| ✓| Python & JSON|   
 `time`| `float`| | Python & JSON| Interpreted as seconds, range `0 - 86399.9*`.  
 `time`| `int`| | Python & JSON| Interpreted as seconds, range `0 - 86399`.  
-`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `timedelta`| `float`| | Python & JSON| Interpreted as seconds.  
 `timedelta`| `int`| | Python & JSON| Interpreted as seconds.  
-`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `tuple`| `Array`| ✓| JSON|   
 `Any`| `Any`| ✓| Python & JSON|   
 `ByteSize`| `float`| ✓| Python & JSON|   
@@ -330,17 +330,17 @@ Field Type| Input| Strict| Input Source| Conditions
 `date`| `bytes`| | Python| Format: `YYYY-MM-DD` (UTF-8).  
 `date`| `date`| ✓| Python|   
 `date`| `datetime`| | Python| Must be exact date, eg. no `H`, `M`, `S`, `f`.  
-`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
-`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
+`date`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
+`date`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
 `date`| `str`| | Python & JSON| Format: `YYYY-MM-DD`.  
-`date`| `Decimal`| | Python| Interpreted as seconds or ms from epoch. See [speedate](<https://docs.rs/speedate/latest/speedate/>). Must be exact date.  
-`datetime`| `bytes`| | Python| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](<https://docs.rs/speedate/latest/speedate/>), (UTF-8).  
+`date`| `Decimal`| | Python| Interpreted as seconds or ms from epoch. See [speedate](https://docs.rs/speedate/latest/speedate/). Must be exact date.  
+`datetime`| `bytes`| | Python| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](https://docs.rs/speedate/latest/speedate/), (UTF-8).  
 `datetime`| `date`| | Python|   
 `datetime`| `datetime`| ✓| Python|   
-`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
-`datetime`| `Decimal`| | Python| Interpreted as seconds or ms from epoch, see [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`datetime`| `float`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `int`| | Python & JSON| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `str`| | Python & JSON| Format: `YYYY-MM-DDTHH:MM:SS.f` or `YYYY-MM-DD`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
+`datetime`| `Decimal`| | Python| Interpreted as seconds or ms from epoch, see [speedate](https://docs.rs/speedate/latest/speedate/).  
 `deque`| `deque`| ✓| Python|   
 `deque`| `frozenset`| | Python|   
 `deque`| `list`| | Python|   
@@ -390,16 +390,16 @@ Field Type| Input| Strict| Input Source| Conditions
 `str`| `bytearray`| | Python| Assumes UTF-8, error on unicode decoding error.  
 `str`| `bytes`| | Python| Assumes UTF-8, error on unicode decoding error.  
 `str`| `str`| ✓| Python & JSON|   
-`time`| `bytes`| | Python| Format: `HH:MM:SS.FFFFFF`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`time`| `bytes`| | Python| Format: `HH:MM:SS.FFFFFF`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `time`| `float`| | Python & JSON| Interpreted as seconds, range `0 - 86399.9*`.  
 `time`| `int`| | Python & JSON| Interpreted as seconds, range `0 - 86399`.  
-`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`time`| `str`| | Python & JSON| Format: `HH:MM:SS.FFFFFF`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `time`| `time`| ✓| Python|   
 `time`| `Decimal`| | Python| Interpreted as seconds, range `0 - 86399.9*`.  
-`timedelta`| `bytes`| | Python| Format: `ISO8601`. See [speedate](<https://docs.rs/speedate/latest/speedate/>), (UTF-8).  
+`timedelta`| `bytes`| | Python| Format: `ISO8601`. See [speedate](https://docs.rs/speedate/latest/speedate/), (UTF-8).  
 `timedelta`| `float`| | Python & JSON| Interpreted as seconds.  
 `timedelta`| `int`| | Python & JSON| Interpreted as seconds.  
-`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](<https://docs.rs/speedate/latest/speedate/>).  
+`timedelta`| `str`| | Python & JSON| Format: `ISO8601`. See [speedate](https://docs.rs/speedate/latest/speedate/).  
 `timedelta`| `timedelta`| ✓| Python|   
 `timedelta`| `Decimal`| | Python| Interpreted as seconds.  
 `tuple`| `deque`| | Python|   

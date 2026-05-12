@@ -21,26 +21,26 @@ Want to quickly jump to the relevant serializer section?
 
 * * *
 
-    * [field _plain_ serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-plain-serializer> ([local](./serialization.md#field-plain-serializer)))
-    * [field _wrap_ serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-wrap-serializer> ([local](./serialization.md#field-wrap-serializer)))
+    * [field _plain_ serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#field-plain-serializer) ([local](./serialization.md#field-plain-serializer))
+    * [field _wrap_ serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#field-wrap-serializer) ([local](./serialization.md#field-wrap-serializer))
   * Model serializer
 
 * * *
 
-    * [model _plain_ serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#model-plain-serializer> ([local](./serialization.md#model-plain-serializer)))
-    * [model _wrap_ serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#model-wrap-serializer> ([local](./serialization.md#model-wrap-serializer)))
+    * [model _plain_ serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#model-plain-serializer) ([local](./serialization.md#model-plain-serializer))
+    * [model _wrap_ serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#model-wrap-serializer) ([local](./serialization.md#model-wrap-serializer))
 
 ## Serializing data
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data)) ([local](./serialization.md#serializing-data))
 
-Pydantic allows models (and any other type using [type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./type_adapter.md)))) to be serialized in _two_ modes: [Python](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./serialization.md#python-mode))) and [JSON](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./serialization.md#json-mode))). The Python output may contain non-JSON serializable data (although this can be emulated).
+Pydantic allows models (and any other type using [type adapters](https://pydantic.dev/docs/validation/latest/concepts/type_adapter) ([local](./type_adapter.md))) to be serialized in _two_ modes: [Python](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./serialization.md#python-mode)) and [JSON](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./serialization.md#json-mode)). The Python output may contain non-JSON serializable data (although this can be emulated).
 
 ### Python mode
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./serialization.md#python-mode)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./serialization.md#python-mode)) ([local](./serialization.md#python-mode))
 
-When using the Python mode, Pydantic models (and model-like types such as [dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>))  will be (recursively) converted to dictionaries. This is achievable by using the [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))) method:
+When using the Python mode, Pydantic models (and model-like types such as [dataclasses](https://docs.python.org/3/library/dataclasses.html#module-dataclasses))  will be (recursively) converted to dictionaries. This is achievable by using the [`model_dump()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump)) method:
 
 ```
  
@@ -83,13 +83,13 @@ Notice that the value of `whatever` was dumped as tuple, which isn’t a known J
 
 See also
 
-The [`TypeAdapter.dump_python()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_python> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_python))) method, useful when _not_ dealing with Pydantic models.
+The [`TypeAdapter.dump_python()`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_python) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_python)) method, useful when _not_ dealing with Pydantic models.
 
 ### JSON mode
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./serialization.md#json-mode)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./serialization.md#json-mode)) ([local](./serialization.md#json-mode))
 
-Pydantic allows data to be serialized directly to a JSON-encoded string, by trying its best to convert Python values to valid JSON data. This is achievable by using the [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))) method:
+Pydantic allows data to be serialized directly to a JSON-encoded string, by trying its best to convert Python values to valid JSON data. This is achievable by using the [`model_dump_json()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json)) method:
 
 ```
  
@@ -131,15 +131,15 @@ Pydantic allows data to be serialized directly to a JSON-encoded string, by tryi
 
 ```
 
-In addition to the [supported types](<https://docs.python.org/3/library/json.html#json.JSONEncoder>) by the standard library [`json`](<https://docs.python.org/3/library/json.html#module-json>) module, Pydantic supports a wide variety of types ([date and time types](<https://docs.python.org/3/library/datetime.html#module-datetime>), [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) objects, [sets](<https://docs.python.org/3/reference/expressions.html#set>), etc). If an unsupported type is used and can’t be serialized to JSON, a [`PydanticSerializationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError))) exception is raised.
+In addition to the [supported types](https://docs.python.org/3/library/json.html#json.JSONEncoder) by the standard library [`json`](https://docs.python.org/3/library/json.html#module-json) module, Pydantic supports a wide variety of types ([date and time types](https://docs.python.org/3/library/datetime.html#module-datetime), [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) objects, [sets](https://docs.python.org/3/reference/expressions.html#set), etc). If an unsupported type is used and can’t be serialized to JSON, a [`PydanticSerializationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError)) exception is raised.
 
 See also
 
-The [`TypeAdapter.dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_json))) method, useful when _not_ dealing with Pydantic models.
+The [`TypeAdapter.dump_json()`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_json)) method, useful when _not_ dealing with Pydantic models.
 
 ## Iterating over models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#iterating-over-models> ([local](./serialization.md#iterating-over-models)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#iterating-over-models> ([local](./serialization.md#iterating-over-models)) ([local](./serialization.md#iterating-over-models))
 
 Pydantic models can also be iterated over, yielding `(field_name, field_value)` pairs. Note that field values are left as is, so sub-models will _not_ be converted to dictionaries:
 
@@ -169,7 +169,7 @@ Pydantic models can also be iterated over, yielding `(field_name, field_value)` 
 
 ```
 
-This means that calling [`dict()`](<https://docs.python.org/3/reference/expressions.html#dict>) on a model can be used to construct a dictionary of the model:
+This means that calling [`dict()`](https://docs.python.org/3/reference/expressions.html#dict) on a model can be used to construct a dictionary of the model:
 
 ```
  
@@ -181,11 +181,11 @@ This means that calling [`dict()`](<https://docs.python.org/3/reference/expressi
 
 Note
 
-[Root models](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./models.md#rootmodel-and-custom-root-types))) _does_ get converted to a dictionary with the key `'root'`.
+[Root models](https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types) ([local](./models.md#rootmodel-and-custom-root-types)) _does_ get converted to a dictionary with the key `'root'`.
 
 ## Pickling support
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#pickling-support> ([local](./serialization.md#pickling-support)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#pickling-support> ([local](./serialization.md#pickling-support)) ([local](./serialization.md#pickling-support))
 
 Pydantic models support efficient pickling and unpickling.
 
@@ -216,9 +216,9 @@ Pydantic models support efficient pickling and unpickling.
 
 ## Serializers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./serialization.md#serializers)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./serialization.md#serializers)) ([local](./serialization.md#serializers))
 
-Similar to [custom validators](<https://pydantic.dev/docs/validation/latest/concepts/validators> ([local](./validators.md))), you can leverage custom serializers at the field and model levels to further control the serialization behavior.
+Similar to [custom validators](https://pydantic.dev/docs/validation/latest/concepts/validators) ([local](./validators.md)), you can leverage custom serializers at the field and model levels to further control the serialization behavior.
 
 Caution
 
@@ -226,24 +226,24 @@ Only _one_ serializer can be defined per field/model. It is not possible to comb
 
 ### Field serializers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers> ([local](./serialization.md#field-serializers)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers> ([local](./serialization.md#field-serializers)) ([local](./serialization.md#field-serializers))
 
 API Documentation
 
-[`pydantic.functional_serializers.PlainSerializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.PlainSerializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.PlainSerializer)))  
-[`pydantic.functional_serializers.WrapSerializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.WrapSerializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.WrapSerializer)))  
-[`pydantic.functional_serializers.field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer)))  
+[`pydantic.functional_serializers.PlainSerializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.PlainSerializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.PlainSerializer))  
+[`pydantic.functional_serializers.WrapSerializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.WrapSerializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.WrapSerializer))  
+[`pydantic.functional_serializers.field_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer))  
 
 In its simplest form, a field serializer is a callable taking the value to be serialized as an argument and **returning the serialized value**.
 
 If the `return_type` argument is provided to the serializer (or if a return type annotation is available on the serializer function), it will be used to build an extra serializer, to ensure that the serialized field value complies with this return type.
 
-**Two** different types of serializers can be used. They can all be defined using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) or using the [`@field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer))) decorator, applied on instance or [static methods](<https://docs.python.org/3/library/functions.html#staticmethod>).
+**Two** different types of serializers can be used. They can all be defined using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) or using the [`@field_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer)) decorator, applied on instance or [static methods](https://docs.python.org/3/library/functions.html#staticmethod).
 
   * **_Plain_ serializers**: are called unconditionally to serialize a field. The serialization logic for types supported by Pydantic will _not_ be called. Using such serializers is also useful to specify the logic for arbitrary types.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-524> ([local](./serialization.md#tab-panel-524)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-525> ([local](./serialization.md#tab-panel-525)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-524) ([local](./serialization.md#tab-panel-524))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-525) ([local](./serialization.md#tab-panel-525))
 
 ```
  
@@ -303,8 +303,8 @@ If the `return_type` argument is provided to the serializer (or if a return type
 
 Such serializers must be defined with a **mandatory** extra _handler_ parameter: a callable taking the value to be serialized as an argument. Internally, this handler will delegate serialization of the value to Pydantic. You are free to _not_ call the handler at all.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-522> ([local](./serialization.md#tab-panel-522)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-523> ([local](./serialization.md#tab-panel-523)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-522) ([local](./serialization.md#tab-panel-522))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/serialization#tab-panel-523) ([local](./serialization.md#tab-panel-523))
 
 ```
  
@@ -352,15 +352,15 @@ Such serializers must be defined with a **mandatory** extra _handler_ parameter:
 
 #### Which serializer pattern to use
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#which-serializer-pattern-to-use> ([local](./serialization.md#which-serializer-pattern-to-use)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#which-serializer-pattern-to-use> ([local](./serialization.md#which-serializer-pattern-to-use)) ([local](./serialization.md#which-serializer-pattern-to-use))
 
 While both approaches can achieve the same thing, each pattern provides different benefits.
 
 ##### Using the annotated pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#using-the-annotated-pattern> ([local](./serialization.md#using-the-annotated-pattern)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#using-the-annotated-pattern> ([local](./serialization.md#using-the-annotated-pattern)) ([local](./serialization.md#using-the-annotated-pattern))
 
-One of the key benefits of using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) is to make serializers reusable:
+One of the key benefits of using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) is to make serializers reusable:
 
 ```
  
@@ -388,9 +388,9 @@ It is also easier to understand which serializers are applied to a type, by just
 
 ##### Using the decorator pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#using-the-decorator-pattern> ([local](./serialization.md#using-the-decorator-pattern)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#using-the-decorator-pattern> ([local](./serialization.md#using-the-decorator-pattern)) ([local](./serialization.md#using-the-decorator-pattern))
 
-One of the key benefits of using the [`@field_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer))) decorator is to apply the function to multiple fields:
+One of the key benefits of using the [`@field_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.field_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.field_serializer)) decorator is to apply the function to multiple fields:
 
 ```
  
@@ -415,17 +415,17 @@ Here are a couple additional notes about the decorator usage:
 
 ### Model serializers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#model-serializers> ([local](./serialization.md#model-serializers)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#model-serializers> ([local](./serialization.md#model-serializers)) ([local](./serialization.md#model-serializers))
 
 API Documentation
 
-[`pydantic.functional_serializers.model_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer)))  
+[`pydantic.functional_serializers.model_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer))  
 
-Serialization can also be customized on the entire model using the [`@model_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer))) decorator.
+Serialization can also be customized on the entire model using the [`@model_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer)) decorator.
 
-If the `return_type` argument is provided to the [`@model_serializer`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer))) decorator (or if a return type annotation is available on the serializer function), it will be used to build an extra serializer, to ensure that the serialized model value complies with this return type.
+If the `return_type` argument is provided to the [`@model_serializer`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.model_serializer) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.model_serializer)) decorator (or if a return type annotation is available on the serializer function), it will be used to build an extra serializer, to ensure that the serialized model value complies with this return type.
 
-As with [field serializers](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers> ([local](./serialization.md#field-serializers))), **two** different types of model serializers can be used:
+As with [field serializers](https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers) ([local](./serialization.md#field-serializers)), **two** different types of model serializers can be used:
 
   * **_Plain_ serializers**: are called unconditionally to serialize the model.
 
@@ -477,20 +477,20 @@ Such serializers must be defined with a **mandatory** extra _handler_ parameter:
 
 ## Serialization info
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-info> ([local](./serialization.md#serialization-info)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-info> ([local](./serialization.md#serialization-info)) ([local](./serialization.md#serialization-info))
 
 Both the field and model serializers callables (in all modes) can optionally take an extra `info` argument, providing useful extra information, such as:
 
-  * [user defined context](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context> ([local](./serialization.md#serialization-context)))
-  * the current serialization mode: either `'python'` or `'json'` (see the [`mode`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.mode> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.mode))) property)
-  * the various parameters set during serialization using the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))) (e.g. [`exclude_unset`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_unset> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_unset))), [`serialize_as_any`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.serialize_as_any> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.serialize_as_any))))
-  * the current field name, if using a [field serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers> ([local](./serialization.md#field-serializers))) (see the [`field_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo.field_name> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo.field_name))) property).
+  * [user defined context](https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context) ([local](./serialization.md#serialization-context))
+  * the current serialization mode: either `'python'` or `'json'` (see the [`mode`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.mode) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.mode)) property)
+  * the various parameters set during serialization using the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)) (e.g. [`exclude_unset`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.exclude_unset) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.exclude_unset)), [`serialize_as_any`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.serialize_as_any) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.serialize_as_any)))
+  * the current field name, if using a [field serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#field-serializers) ([local](./serialization.md#field-serializers)) (see the [`field_name`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.FieldSerializationInfo.field_name) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.FieldSerializationInfo.field_name)) property).
 
 ### Serialization context
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context> ([local](./serialization.md#serialization-context)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context> ([local](./serialization.md#serialization-context)) ([local](./serialization.md#serialization-context))
 
-You can pass a context object to the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))), which can be accessed inside the serializer functions using the [`context`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.context> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.context))) property:
+You can pass a context object to the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)), which can be accessed inside the serializer functions using the [`context`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.SerializationInfo.context) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.SerializationInfo.context)) property:
 
 ```
  
@@ -518,15 +518,15 @@ You can pass a context object to the [serialization methods](<https://pydantic.d
 
 ```
 
-Similarly, you can [use a context for validation](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context))).
+Similarly, you can [use a context for validation](https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context) ([local](./validators.md#validation-context)).
 
 ## Serializing subclasses
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-subclasses> ([local](./serialization.md#serializing-subclasses)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-subclasses> ([local](./serialization.md#serializing-subclasses)) ([local](./serialization.md#serializing-subclasses))
 
 ### Subclasses of supported types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-supported-types> ([local](./serialization.md#subclasses-of-supported-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-supported-types> ([local](./serialization.md#subclasses-of-supported-types)) ([local](./serialization.md#subclasses-of-supported-types))
 
 Subclasses of supported types are serialized according to their super class:
 
@@ -556,9 +556,9 @@ Subclasses of supported types are serialized according to their super class:
 
 ### Subclasses of model-like types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-model-like-types> ([local](./serialization.md#subclasses-of-model-like-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#subclasses-of-model-like-types> ([local](./serialization.md#subclasses-of-model-like-types)) ([local](./serialization.md#subclasses-of-model-like-types))
 
-When using model-like classes (Pydantic models, [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md))), etc.) as field annotations, the default behavior is to serialize the field value as though it was an instance of the class used as the annotation, even if it is a subclass. More specifically, only the fields declared on the type annotation will be included in the serialization result:
+When using model-like classes (Pydantic models, [dataclasses](https://pydantic.dev/docs/validation/latest/concepts/dataclasses) ([local](./dataclasses.md)), etc.) as field annotations, the default behavior is to serialize the field value as though it was an instance of the class used as the annotation, even if it is a subclass. More specifically, only the fields declared on the type annotation will be included in the serialization result:
 
 ```
  
@@ -593,26 +593,26 @@ This behavior is different from how things worked in Pydantic V1, where we would
 
 ### Polymorphic serialization
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization> ([local](./serialization.md#polymorphic-serialization)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization> ([local](./serialization.md#polymorphic-serialization)) ([local](./serialization.md#polymorphic-serialization))
 
 ✦ New in v2.13
 
-Polymorphic serialization was added as an better alternative to the [serialize as any](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any> ([local](./serialization.md#serializing-as-any))) behavior, and only applies to Pydantic models and Pydantic dataclasses.
+Polymorphic serialization was added as an better alternative to the [serialize as any](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any) ([local](./serialization.md#serializing-as-any)) behavior, and only applies to Pydantic models and Pydantic dataclasses.
 
-Polymorphic serialization is the behavior of serializing a model (or [Pydantic dataclass](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md)))) instance according to the serialization schema of such instance, rather that the schema of the class used as the type. This will expose all the data defined on the subclass in the serialized payload.
+Polymorphic serialization is the behavior of serializing a model (or [Pydantic dataclass](https://pydantic.dev/docs/validation/latest/concepts/dataclasses) ([local](./dataclasses.md))) instance according to the serialization schema of such instance, rather that the schema of the class used as the type. This will expose all the data defined on the subclass in the serialized payload.
 
 This behavior can be configured in the following ways:
 
-  * Configuration level: use the [`polymorphic_serialization`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.polymorphic_serialization> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.polymorphic_serialization))) setting in the model/dataclass [configuration](<https://pydantic.dev/docs/validation/latest/concepts/config> ([local](./config.md))).
-  * Runtime level: use the `polymorphic_serialization` argument when calling the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))). This will apply to all (nested) types, overriding any configuration.
+  * Configuration level: use the [`polymorphic_serialization`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.polymorphic_serialization) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.polymorphic_serialization)) setting in the model/dataclass [configuration](https://pydantic.dev/docs/validation/latest/concepts/config) ([local](./config.md)).
+  * Runtime level: use the `polymorphic_serialization` argument when calling the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)). This will apply to all (nested) types, overriding any configuration.
 
 Duck-typed serialization
 
-This behavior (and the [“any” serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any> ([local](./serialization.md#serializing-as-any))) discussed below) was previously referred to as duck-typed serialization. This was a misnomer; it did not function like [duck typing](<https://en.wikipedia.org/wiki/Duck_typing>) in the conventional programming language sense.
+This behavior (and the [“any” serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any) ([local](./serialization.md#serializing-as-any)) discussed below) was previously referred to as duck-typed serialization. This was a misnomer; it did not function like [duck typing](https://en.wikipedia.org/wiki/Duck_typing) in the conventional programming language sense.
 
 Polymorphic serialization of standard library dataclasses
 
-Polymorphic serialization is only supported for Pydantic models and [Pydantic dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md))). When using [standard library dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>), polymorphic serialization is _not_ supported, even if the dataclass is a subclass of a Pydantic dataclass. This may be fixed in a future Pydantic release.
+Polymorphic serialization is only supported for Pydantic models and [Pydantic dataclasses](https://pydantic.dev/docs/validation/latest/concepts/dataclasses) ([local](./dataclasses.md)). When using [standard library dataclasses](https://docs.python.org/3/library/dataclasses.html#module-dataclasses), polymorphic serialization is _not_ supported, even if the dataclass is a subclass of a Pydantic dataclass. This may be fixed in a future Pydantic release.
 
 The example below defines a type `User` and a subclass of it, `UserLogin`. A second pair of types, `PolymorphicUser` and `PolymorphicUserLogin` are defined as equivalents with `polymorphic_serialization` enabled.
 
@@ -651,30 +651,30 @@ As seen in the example, by having polymorphic serialization enabled, the `User.m
 
 ## Serializing “as Any”
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any> ([local](./serialization.md#serializing-as-any)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-as-any> ([local](./serialization.md#serializing-as-any)) ([local](./serialization.md#serializing-as-any))
 
-A more extreme form of [polymorphic serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization> ([local](./serialization.md#polymorphic-serialization))) is “any” serialization. In this mode, Pydantic does _not_ make use of any type annotation (more precisely, the serialization schema derived from the type) to infer how the value should be serialized, but instead inspects the actual type of the value at runtime to do so (and this applies to _all_ types, not only Pydantic models and dataclasses).
+A more extreme form of [polymorphic serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization) ([local](./serialization.md#polymorphic-serialization)) is “any” serialization. In this mode, Pydantic does _not_ make use of any type annotation (more precisely, the serialization schema derived from the type) to infer how the value should be serialized, but instead inspects the actual type of the value at runtime to do so (and this applies to _all_ types, not only Pydantic models and dataclasses).
 
 This means that every value will be serialized exactly based on its runtime type and any knowledge Pydantic has of how to serialize the type. Pydantic can infer how to serialize the following types:
 
   * Many Python standard library types (exact set may be expanded depending on Pydantic version).
   * Types with a `__pydantic_serializer__` attribute.
-  * Any type serializable with the `fallback` function passed as an argument to [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))).
+  * Any type serializable with the `fallback` function passed as an argument to [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)).
 
-In most cases, you will want to use the [polymorphic serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization> ([local](./serialization.md#polymorphic-serialization))) behavior instead.
+In most cases, you will want to use the [polymorphic serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization#polymorphic-serialization) ([local](./serialization.md#polymorphic-serialization)) behavior instead.
 
 This behavior can be configured at the field level and at runtime, for a specific serialization call:
 
-  * Field level: use the [`SerializeAsAny`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.SerializeAsAny> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.SerializeAsAny))) annotation.
-  * Runtime level: use the `serialize_as_any` argument when calling the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))).
+  * Field level: use the [`SerializeAsAny`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.SerializeAsAny) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.SerializeAsAny)) annotation.
+  * Runtime level: use the `serialize_as_any` argument when calling the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)).
 
 These options are discussed below in more detail.
 
 ### `SerializeAsAny` annotation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializeasany-annotation> ([local](./serialization.md#serializeasany-annotation)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializeasany-annotation> ([local](./serialization.md#serializeasany-annotation)) ([local](./serialization.md#serializeasany-annotation))
 
-If you want duck typing serialization behavior, this can be done using the [`SerializeAsAny`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.SerializeAsAny> ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.SerializeAsAny))) annotation on a type:
+If you want duck typing serialization behavior, this can be done using the [`SerializeAsAny`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers/#pydantic.functional_serializers.SerializeAsAny) ([local](./../api/pydantic/functional_serializers.md#pydantic.functional_serializers.SerializeAsAny)) annotation on a type:
 
 ```
  
@@ -707,13 +707,13 @@ If you want duck typing serialization behavior, this can be done using the [`Ser
 
 ```
 
-When a type is annotated as `SerializeAsAny[<type>]`, the validation behavior will be the same as if it was annotated as `<type>`, and static type checkers will treat the annotation as if it was simply `<type>`. When serializing, the field will be serialized as though the type hint for the field was [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>), which is where the name comes from.
+When a type is annotated as `SerializeAsAny[<type>]`, the validation behavior will be the same as if it was annotated as `<type>`, and static type checkers will treat the annotation as if it was simply `<type>`. When serializing, the field will be serialized as though the type hint for the field was [`Any`](https://docs.python.org/3/library/typing.html#typing.Any), which is where the name comes from.
 
 ### `serialize_as_any` runtime setting
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialize_as_any-runtime-setting> ([local](./serialization.md#serialize_as_any-runtime-setting)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialize_as_any-runtime-setting> ([local](./serialization.md#serialize_as_any-runtime-setting)) ([local](./serialization.md#serialize_as_any-runtime-setting))
 
-The `serialize_as_any` runtime setting can be used to serialize model data with or without duck typed serialization behavior. `serialize_as_any` can be passed as a keyword argument to the various [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))) (such as [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))) and [`model_dump_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))) on Pydantic models).
+The `serialize_as_any` runtime setting can be used to serialize model data with or without duck typed serialization behavior. `serialize_as_any` can be passed as a keyword argument to the various [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)) (such as [`model_dump()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump)) and [`model_dump_json()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json)) on Pydantic models).
 
 ```
  
@@ -753,16 +753,16 @@ However, do note that the _serialize as any_ behavior will apply to _all_ values
 
 ## Field inclusion and exclusion
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-inclusion-and-exclusion> ([local](./serialization.md#field-inclusion-and-exclusion)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-inclusion-and-exclusion> ([local](./serialization.md#field-inclusion-and-exclusion)) ([local](./serialization.md#field-inclusion-and-exclusion))
 
 For serialization, field inclusion and exclusion can be configured in two ways:
 
-  * at the field level, using the `exclude` and `exclude_if` parameters on [the `Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))).
-  * using the various serialization parameters on the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))).
+  * at the field level, using the `exclude` and `exclude_if` parameters on [the `Field()` function](https://pydantic.dev/docs/validation/latest/concepts/fields) ([local](./fields.md)).
+  * using the various serialization parameters on the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)).
 
 ### At the field level
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#at-the-field-level> ([local](./serialization.md#at-the-field-level)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#at-the-field-level> ([local](./serialization.md#at-the-field-level)) ([local](./serialization.md#at-the-field-level))
 
 At the field level, the `exclude` and `exclude_if` parameters can be used:
 
@@ -787,13 +787,13 @@ Exclusion at the field level takes priority over the `include` serialization par
 
 ### As parameters to the serialization methods
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#as-parameters-to-the-serialization-methods> ([local](./serialization.md#as-parameters-to-the-serialization-methods)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#as-parameters-to-the-serialization-methods> ([local](./serialization.md#as-parameters-to-the-serialization-methods)) ([local](./serialization.md#as-parameters-to-the-serialization-methods))
 
-When using the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))) (such as [`model_dump()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump)))), several parameters can be used to exclude or include fields.
+When using the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)) (such as [`model_dump()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump))), several parameters can be used to exclude or include fields.
 
 #### Excluding and including specific fields
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#excluding-and-including-specific-fields> ([local](./serialization.md#excluding-and-including-specific-fields)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#excluding-and-including-specific-fields> ([local](./serialization.md#excluding-and-including-specific-fields)) ([local](./serialization.md#excluding-and-including-specific-fields))
 
 Consider the following models:
 
@@ -902,15 +902,15 @@ The special key `'__all__'` can be used to apply an exclusion/inclusion pattern 
 
 #### Excluding and including fields based on their value
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/serialization#excluding-and-including-fields-based-on-their-value> ([local](./serialization.md#excluding-and-including-fields-based-on-their-value)))
+<https://pydantic.dev/docs/validation/latest/concepts/serialization#excluding-and-including-fields-based-on-their-value> ([local](./serialization.md#excluding-and-including-fields-based-on-their-value)) ([local](./serialization.md#excluding-and-including-fields-based-on-their-value))
 
-When using the [serialization methods](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))), it is possible to exclude fields based on their value, using the following parameters:
+When using the [serialization methods](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)), it is possible to exclude fields based on their value, using the following parameters:
 
   * `exclude_defaults`: Exclude all fields whose value compares equal to the default value (using the equality (`==`) comparison operator).
 
   * `exclude_none`: Exclude all fields whose value is `None`.
 
-  * `exclude_unset`: Pydantic keeps track of fields that were _explicitly_ set during instantiation (using the [`model_fields_set`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields_set> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields_set))) property). Using `exclude_unset`, any field that was not explicitly provided will be excluded:
+  * `exclude_unset`: Pydantic keeps track of fields that were _explicitly_ set during instantiation (using the [`model_fields_set`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_fields_set) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_fields_set)) property). Using `exclude_unset`, any field that was not explicitly provided will be excluded:
 
 ```
  from pydantic import BaseModel
@@ -944,4 +944,4 @@ Note that altering a field _after_ the instance has been created will remove it 
 
 Tip
 
-The experimental [`MISSING` sentinel](<https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel> ([local](./experimental.md#missing-sentinel))) can be used as an alternative to `exclude_unset`. Any field with `MISSING` as a value is automatically excluded from the serialization output.
+The experimental [`MISSING` sentinel](https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel) ([local](./experimental.md#missing-sentinel)) can be used as an alternative to `exclude_unset`. Any field with `MISSING` as a value is automatically excluded from the serialization output.

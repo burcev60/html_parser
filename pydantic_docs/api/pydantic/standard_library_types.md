@@ -5,7 +5,7 @@ source: https://pydantic.dev/docs/validation/latest/api/pydantic/standard_librar
 
 This section enumerates the supported built-in and standard library types: the allowed values, the possible constraints, and whether strictness can be configured.
 
-See also the [conversion table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table> ([local](./../../concepts/conversion_table.md))) for a summary of the allowed values for each type.
+See also the [conversion table](https://pydantic.dev/docs/validation/latest/concepts/conversion_table) ([local](./../../concepts/conversion_table.md)) for a summary of the allowed values for each type.
 
 Note
 
@@ -13,28 +13,28 @@ Unless specified otherwise, values are serialized as-is, in both Python and JSON
 
 ## Booleans
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#booleans> ([local](./standard_library_types.md#booleans)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#booleans> ([local](./standard_library_types.md#booleans)) ([local](./standard_library_types.md#booleans))
 
-Built-in type: [`bool`](<https://docs.python.org/3/library/functions.html#bool>)
+Built-in type: [`bool`](https://docs.python.org/3/library/functions.html#bool)
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation> ([local](./standard_library_types.md#validation)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation> ([local](./standard_library_types.md#validation)) ([local](./standard_library_types.md#validation))
 
-  * A valid [`bool`](<https://docs.python.org/3/library/functions.html#bool>) instance, i.e. `True` or `False`.
+  * A valid [`bool`](https://docs.python.org/3/library/functions.html#bool) instance, i.e. `True` or `False`.
   * The integers `0` or `1`.
   * A string, which when converted to lowercase is one of `'0'`, `'off'`, `'f'`, `'false'`, `'n'`, `'no'`, `'1'`, `'on'` `'t'`, `'true'`, `'y'`, `'yes'`.
-  * [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) objects that are valid per the previous rule when decoded to a string.
+  * [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) objects that are valid per the previous rule when decoded to a string.
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness> ([local](./standard_library_types.md#strictness)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness> ([local](./standard_library_types.md#strictness)) ([local](./standard_library_types.md#strictness))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only boolean values are valid. Pydantic provides the [`StrictBool`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBool> ([local](./types.md#pydantic.types.StrictBool))) type as a convenience to [using the `Strict()` metadata class](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class))).
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only boolean values are valid. Pydantic provides the [`StrictBool`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBool) ([local](./types.md#pydantic.types.StrictBool)) type as a convenience to [using the `Strict()` metadata class](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class) ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class)).
 
 ### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example> ([local](./standard_library_types.md#example)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example> ([local](./standard_library_types.md#example)) ([local](./standard_library_types.md#example))
 
 ```
  
@@ -66,54 +66,54 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ## Strings
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strings> ([local](./standard_library_types.md#strings)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strings> ([local](./standard_library_types.md#strings)) ([local](./standard_library_types.md#strings))
 
-Built-in type: [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+Built-in type: [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-1> ([local](./standard_library_types.md#validation-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-1> ([local](./standard_library_types.md#validation-1)) ([local](./standard_library_types.md#validation-1))
 
   * Strings are accepted as-is.
-  * [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) and [`bytearray`](<https://docs.python.org/3/library/stdtypes.html#bytearray>) are decoded to UTF-8 strings.
-  * [Enums](<https://docs.python.org/3/library/enum.html#module-enum>) are converted using the [`value`](<https://docs.python.org/3/library/enum.html#enum.Enum.value>) attribute, by calling [`str()`](<https://docs.python.org/3/library/stdtypes.html#str>) on it.
-  * If [`coerce_numbers_to_str`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.coerce_numbers_to_str> ([local](./config.md#pydantic.config.ConfigDict.coerce_numbers_to_str))) is set, any number type ([`int`](<https://docs.python.org/3/library/functions.html#int>), [`float`](<https://docs.python.org/3/library/functions.html#float>) and [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>)) will be coerced to a string and accepted as-is.
+  * [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) and [`bytearray`](https://docs.python.org/3/library/stdtypes.html#bytearray) are decoded to UTF-8 strings.
+  * [Enums](https://docs.python.org/3/library/enum.html#module-enum) are converted using the [`value`](https://docs.python.org/3/library/enum.html#enum.Enum.value) attribute, by calling [`str()`](https://docs.python.org/3/library/stdtypes.html#str) on it.
+  * If [`coerce_numbers_to_str`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.coerce_numbers_to_str) ([local](./config.md#pydantic.config.ConfigDict.coerce_numbers_to_str)) is set, any number type ([`int`](https://docs.python.org/3/library/functions.html#int), [`float`](https://docs.python.org/3/library/functions.html#float) and [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal)) will be coerced to a string and accepted as-is.
 
 ### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints> ([local](./standard_library_types.md#constraints)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints> ([local](./standard_library_types.md#constraints)) ([local](./standard_library_types.md#constraints))
 
 Strings support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`pattern`| A regex pattern that the string must match| [`pattern`](<https://json-schema.org/understanding-json-schema/reference/string#regexp>) keyword (see [note](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#pattern-constraint-note> ([local](./standard_library_types.md#pattern-constraint-note))) below).  
-`min_length`| The minimum length of the string| [`minLength`](<https://json-schema.org/understanding-json-schema/reference/string#length>) keyword  
-`max_length`| The maximum length of the string| [`maxLength`](<https://json-schema.org/understanding-json-schema/reference/string#length>) keyword  
+`pattern`| A regex pattern that the string must match| [`pattern`](https://json-schema.org/understanding-json-schema/reference/string#regexp) keyword (see [note](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#pattern-constraint-note) ([local](./standard_library_types.md#pattern-constraint-note)) below).  
+`min_length`| The minimum length of the string| [`minLength`](https://json-schema.org/understanding-json-schema/reference/string#length) keyword  
+`max_length`| The maximum length of the string| [`maxLength`](https://json-schema.org/understanding-json-schema/reference/string#length) keyword  
 `strip_whitespace`| Whether to remove leading and trailing whitespace| N/A  
 `to_upper`| Whether to convert the string to uppercase| N/A  
 `to_lower`| Whether to convert the string to lowercase| N/A  
 `ascii_only`| Whether to allow only ASCII characters| N/A  
   
-These constraints can be provided using the [`StringConstraints`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints> ([local](./types.md#pydantic.types.StringConstraints))) metadata type, or using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function (except for `strip_whitespace`, `to_upper`, `to_lower` and `ascii_only`).
+These constraints can be provided using the [`StringConstraints`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StringConstraints) ([local](./types.md#pydantic.types.StringConstraints)) metadata type, or using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function (except for `strip_whitespace`, `to_upper`, `to_lower` and `ascii_only`).
 
-The [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library also provides the `MinLen`, `MaxLen` and `Len` metadata types, as well as the `LowerCase`, `UpperCase`, `IsDigit` and `IsAscii` predicates (must be parameterized with `str`, e.g. `LowerCase[str]`).
+The [`annotated-types`](https://github.com/annotated-types/annotated-types) library also provides the `MinLen`, `MaxLen` and `Len` metadata types, as well as the `LowerCase`, `UpperCase`, `IsDigit` and `IsAscii` predicates (must be parameterized with `str`, e.g. `LowerCase[str]`).
 
 `pattern` constraint
 
-By default, Pydantic will use the [`regex`](<https://docs.rs/regex>) Rust crate to enforce the `pattern` constraint. The regex engine can be controlled using the [`regex_engine`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.regex_engine> ([local](./config.md#pydantic.config.ConfigDict.regex_engine))) configuration value. If a compiled [regular expression object](<https://docs.python.org/3/library/re.html#re.Pattern>) is used for `pattern`, the Python engine will automatically be used.
+By default, Pydantic will use the [`regex`](https://docs.rs/regex) Rust crate to enforce the `pattern` constraint. The regex engine can be controlled using the [`regex_engine`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.regex_engine) ([local](./config.md#pydantic.config.ConfigDict.regex_engine)) configuration value. If a compiled [regular expression object](https://docs.python.org/3/library/re.html#re.Pattern) is used for `pattern`, the Python engine will automatically be used.
 
-While the JSON Schema specification [recommends](<https://json-schema.org/draft/2020-12/json-schema-core#name-regular-expressions>) using patterns valid according to dialect described in [ECMA-262](<https://262.ecma-international.org/11.0/index.html#sec-patterns>), Pydantic will _not_ enforce it.
+While the JSON Schema specification [recommends](https://json-schema.org/draft/2020-12/json-schema-core#name-regular-expressions) using patterns valid according to dialect described in [ECMA-262](https://262.ecma-international.org/11.0/index.html#sec-patterns), Pydantic will _not_ enforce it.
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-1> ([local](./standard_library_types.md#strictness-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-1> ([local](./standard_library_types.md#strictness-1)) ([local](./standard_library_types.md#strictness-1))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only string values are valid. Pydantic provides the [`StrictStr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictStr> ([local](./types.md#pydantic.types.StrictStr))) type as a convenience to [using the `Strict()` metadata class](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class))).
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only string values are valid. Pydantic provides the [`StrictStr`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictStr) ([local](./types.md#pydantic.types.StrictStr)) type as a convenience to [using the `Strict()` metadata class](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class) ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class)).
 
 ### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-1> ([local](./standard_library_types.md#example-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-1> ([local](./standard_library_types.md#example-1)) ([local](./standard_library_types.md#example-1))
 
 ```
  
@@ -137,201 +137,201 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ## Bytes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#bytes> ([local](./standard_library_types.md#bytes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#bytes> ([local](./standard_library_types.md#bytes)) ([local](./standard_library_types.md#bytes))
 
-Built-in type: [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>).
+Built-in type: [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes).
 
-See also: [`ByteSize`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ByteSize> ([local](./types.md#pydantic.types.ByteSize))).
+See also: [`ByteSize`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ByteSize) ([local](./types.md#pydantic.types.ByteSize)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-2> ([local](./standard_library_types.md#validation-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-2> ([local](./standard_library_types.md#validation-2)) ([local](./standard_library_types.md#validation-2))
 
-  * [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) instances are validated as is.
-  * Strings and [`bytearray`](<https://docs.python.org/3/library/stdtypes.html#bytearray>) instances are converted as bytes, following the [`val_json_bytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_json_bytes> ([local](./config.md#pydantic.config.ConfigDict.val_json_bytes))) configuration value (despite its name, it applies to both Python and JSON modes).
+  * [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) instances are validated as is.
+  * Strings and [`bytearray`](https://docs.python.org/3/library/stdtypes.html#bytearray) instances are converted as bytes, following the [`val_json_bytes`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_json_bytes) ([local](./config.md#pydantic.config.ConfigDict.val_json_bytes)) configuration value (despite its name, it applies to both Python and JSON modes).
 
 ### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-1> ([local](./standard_library_types.md#constraints-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-1> ([local](./standard_library_types.md#constraints-1)) ([local](./standard_library_types.md#constraints-1))
 
 Strings support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The minimum length of the bytes| [`minLength`](<https://json-schema.org/understanding-json-schema/reference/string#length>) keyword  
-`max_length`| The maximum length of the bytes| [`maxLength`](<https://json-schema.org/understanding-json-schema/reference/string#length>) keyword  
+`min_length`| The minimum length of the bytes| [`minLength`](https://json-schema.org/understanding-json-schema/reference/string#length) keyword  
+`max_length`| The maximum length of the bytes| [`maxLength`](https://json-schema.org/understanding-json-schema/reference/string#length) keyword  
   
-The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-2> ([local](./standard_library_types.md#strictness-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-2> ([local](./standard_library_types.md#strictness-2)) ([local](./standard_library_types.md#strictness-2))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) instances are valid. Pydantic provides the [`StrictBytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBytes> ([local](./types.md#pydantic.types.StrictBytes))) type as a convenience to [using the `Strict()` metadata class](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class))).
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) instances are valid. Pydantic provides the [`StrictBytes`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBytes) ([local](./types.md#pydantic.types.StrictBytes)) type as a convenience to [using the `Strict()` metadata class](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class) ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class)).
 
 In JSON mode, strict mode has no effect.
 
 ## Numbers
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#numbers> ([local](./standard_library_types.md#numbers)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#numbers> ([local](./standard_library_types.md#numbers)) ([local](./standard_library_types.md#numbers))
 
 Pydantic supports the following numeric types from the Python standard library:
 
 ### Integers
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integers> ([local](./standard_library_types.md#integers)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integers> ([local](./standard_library_types.md#integers)) ([local](./standard_library_types.md#integers))
 
-Built-in type: [`int`](<https://docs.python.org/3/library/functions.html#int>).
+Built-in type: [`int`](https://docs.python.org/3/library/functions.html#int).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-3> ([local](./standard_library_types.md#validation-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-3> ([local](./standard_library_types.md#validation-3)) ([local](./standard_library_types.md#validation-3))
 
   * Integers are validated as-is.
-  * Strings and bytes are attempted to be converted to integers and validated as-is (see the [jiter implementation](<https://docs.rs/jiter/latest/jiter/enum.NumberInt.html#impl-TryFrom%3C%26%5Bu8%5D%3E-for-NumberInt>) for details).
+  * Strings and bytes are attempted to be converted to integers and validated as-is (see the [jiter implementation](https://docs.rs/jiter/latest/jiter/enum.NumberInt.html#impl-TryFrom%3C%26%5Bu8%5D%3E-for-NumberInt) for details).
   * Floats are validated as integers, provided the float input is not infinite or a NaN (not-a-number) and the fractional part is 0.
-  * [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) instances, provided they are [finite](<https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_finite>) and the denominator is 1.
-  * [`Fraction`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>) instances, provided they are [integers](<https://docs.python.org/3/library/fractions.html#fractions.Fraction.is_integer>).
-  * [Enums](<https://docs.python.org/3/library/enum.html#module-enum>) are converted using the [`value`](<https://docs.python.org/3/library/enum.html#enum.Enum.value>) attribute.
+  * [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) instances, provided they are [finite](https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_finite) and the denominator is 1.
+  * [`Fraction`](https://docs.python.org/3/library/fractions.html#fractions.Fraction) instances, provided they are [integers](https://docs.python.org/3/library/fractions.html#fractions.Fraction.is_integer).
+  * [Enums](https://docs.python.org/3/library/enum.html#module-enum) are converted using the [`value`](https://docs.python.org/3/library/enum.html#enum.Enum.value) attribute.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-2> ([local](./standard_library_types.md#constraints-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-2> ([local](./standard_library_types.md#constraints-2)) ([local](./standard_library_types.md#constraints-2))
 
 Integers support the following constraints (numbers must be coercible to integers):
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`le`| The value must be less than or equal to this number| [`maximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`ge`| The value must be greater than or equal to this number| [`minimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`multiple_of`| The value must be a multiple of this number| [`multipleOf`](<https://json-schema.org/understanding-json-schema/reference/numeric#multiples>) keyword  
+`le`| The value must be less than or equal to this number| [`maximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`ge`| The value must be greater than or equal to this number| [`minimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`multiple_of`| The value must be a multiple of this number| [`multipleOf`](https://json-schema.org/understanding-json-schema/reference/numeric#multiples) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 Pydantic also provides the following types to further constrain the allowed integer values:
 
-  * [`PositiveInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PositiveInt> ([local](./types.md#pydantic.types.PositiveInt))): Requires the input to be greater than zero.
-  * [`NegativeInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NegativeInt> ([local](./types.md#pydantic.types.NegativeInt))): Requires the input to be less than zero.
-  * [`NonPositiveInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonPositiveInt> ([local](./types.md#pydantic.types.NonPositiveInt))): Requires the input to be less than or equal to zero.
-  * [`NonNegativeInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonNegativeInt> ([local](./types.md#pydantic.types.NonNegativeInt))): Requires the input to be greater than or equal to zero.
+  * [`PositiveInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PositiveInt) ([local](./types.md#pydantic.types.PositiveInt)): Requires the input to be greater than zero.
+  * [`NegativeInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NegativeInt) ([local](./types.md#pydantic.types.NegativeInt)): Requires the input to be less than zero.
+  * [`NonPositiveInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonPositiveInt) ([local](./types.md#pydantic.types.NonPositiveInt)): Requires the input to be less than or equal to zero.
+  * [`NonNegativeInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonNegativeInt) ([local](./types.md#pydantic.types.NonNegativeInt)): Requires the input to be greater than or equal to zero.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-3> ([local](./standard_library_types.md#strictness-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-3> ([local](./standard_library_types.md#strictness-3)) ([local](./standard_library_types.md#strictness-3))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only integer values are valid. Pydantic provides the [`StrictInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictInt> ([local](./types.md#pydantic.types.StrictInt))) type as a convenience to [using the `Strict()` metadata class](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class))).
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only integer values are valid. Pydantic provides the [`StrictInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictInt) ([local](./types.md#pydantic.types.StrictInt)) type as a convenience to [using the `Strict()` metadata class](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class) ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class)).
 
 ### Floats
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#floats> ([local](./standard_library_types.md#floats)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#floats> ([local](./standard_library_types.md#floats)) ([local](./standard_library_types.md#floats))
 
-Built-in type: [`float`](<https://docs.python.org/3/library/functions.html#float>).
+Built-in type: [`float`](https://docs.python.org/3/library/functions.html#float).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-4> ([local](./standard_library_types.md#validation-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-4> ([local](./standard_library_types.md#validation-4)) ([local](./standard_library_types.md#validation-4))
 
   * Floats are validated as-is.
-  * String and bytes are attempted to be converted to floats and validated as-is. (see the [Rust implementation](<https://doc.rust-lang.org/src/core/num/dec2flt/mod.rs.html>) for details).
-  * If the input has a [`__float__()`](<https://docs.python.org/3/reference/datamodel.html#object.__float__>) method, it will be called to convert the input into a float. If `__float__()` is not defined, it falls back to [`__index__()`](<https://docs.python.org/3/reference/datamodel.html#object.__index__>). This includes (but not limited to) the [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) and [`Fraction`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>) types.
+  * String and bytes are attempted to be converted to floats and validated as-is. (see the [Rust implementation](https://doc.rust-lang.org/src/core/num/dec2flt/mod.rs.html) for details).
+  * If the input has a [`__float__()`](https://docs.python.org/3/reference/datamodel.html#object.__float__) method, it will be called to convert the input into a float. If `__float__()` is not defined, it falls back to [`__index__()`](https://docs.python.org/3/reference/datamodel.html#object.__index__). This includes (but not limited to) the [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) and [`Fraction`](https://docs.python.org/3/library/fractions.html#fractions.Fraction) types.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-3> ([local](./standard_library_types.md#constraints-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-3> ([local](./standard_library_types.md#constraints-3)) ([local](./standard_library_types.md#constraints-3))
 
 Floats support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`le`| The value must be less than or equal to this number| [`maximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`ge`| The value must be greater than or equal to this number| [`minimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`multiple_of`| The value must be a multiple of this number| [`multipleOf`](<https://json-schema.org/understanding-json-schema/reference/numeric#multiples>) keyword  
+`le`| The value must be less than or equal to this number| [`maximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`ge`| The value must be greater than or equal to this number| [`minimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`multiple_of`| The value must be a multiple of this number| [`multipleOf`](https://json-schema.org/understanding-json-schema/reference/numeric#multiples) keyword  
 `allow_inf_nan`| Whether to allow NaN (not-a-number) and infinite values| N/A  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function.
 
-The [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library also provides the `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types, as well as the `IsFinite`, `IsNotFinite`, `IsNan`, `IsNotNan`, `IsAscii`, `IsInfinite` and `IsNotInfinite` predicates (must be parameterized with `float`, e.g. `IsFinite[float]`). The [`AllowInfNan`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AllowInfNan> ([local](./types.md#pydantic.types.AllowInfNan))) type can also be used.
+The [`annotated-types`](https://github.com/annotated-types/annotated-types) library also provides the `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types, as well as the `IsFinite`, `IsNotFinite`, `IsNan`, `IsNotNan`, `IsAscii`, `IsInfinite` and `IsNotInfinite` predicates (must be parameterized with `float`, e.g. `IsFinite[float]`). The [`AllowInfNan`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AllowInfNan) ([local](./types.md#pydantic.types.AllowInfNan)) type can also be used.
 
 Pydantic also provides the following types as convenience aliases:
 
-  * [`PositiveFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PositiveFloat> ([local](./types.md#pydantic.types.PositiveFloat))): Requires the input to be greater than zero.
-  * [`NegativeFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NegativeFloat> ([local](./types.md#pydantic.types.NegativeFloat))): Requires the input to be less than zero.
-  * [`NonPositiveFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonPositiveFloat> ([local](./types.md#pydantic.types.NonPositiveFloat))): Requires the input to be less than or equal to zero.
-  * [`NonNegativeFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonNegativeFloat> ([local](./types.md#pydantic.types.NonNegativeFloat))): Requires the input to be greater than or equal to zero.
-  * [`FiniteFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FiniteFloat> ([local](./types.md#pydantic.types.FiniteFloat))): Prevents NaN (not-a-number) and infinite values.
+  * [`PositiveFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PositiveFloat) ([local](./types.md#pydantic.types.PositiveFloat)): Requires the input to be greater than zero.
+  * [`NegativeFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NegativeFloat) ([local](./types.md#pydantic.types.NegativeFloat)): Requires the input to be less than zero.
+  * [`NonPositiveFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonPositiveFloat) ([local](./types.md#pydantic.types.NonPositiveFloat)): Requires the input to be less than or equal to zero.
+  * [`NonNegativeFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NonNegativeFloat) ([local](./types.md#pydantic.types.NonNegativeFloat)): Requires the input to be greater than or equal to zero.
+  * [`FiniteFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FiniteFloat) ([local](./types.md#pydantic.types.FiniteFloat)): Prevents NaN (not-a-number) and infinite values.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-4> ([local](./standard_library_types.md#strictness-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-4> ([local](./standard_library_types.md#strictness-4)) ([local](./standard_library_types.md#strictness-4))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only float values and inputs having a [`__float__()`](<https://docs.python.org/3/reference/datamodel.html#object.__float__>) or [`__index__()`](<https://docs.python.org/3/reference/datamodel.html#object.__index__>) method are valid. Pydantic provides the [`StrictFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictFloat> ([local](./types.md#pydantic.types.StrictFloat))) type as a convenience to [using the `Strict()` metadata class](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class))).
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only float values and inputs having a [`__float__()`](https://docs.python.org/3/reference/datamodel.html#object.__float__) or [`__index__()`](https://docs.python.org/3/reference/datamodel.html#object.__index__) method are valid. Pydantic provides the [`StrictFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictFloat) ([local](./types.md#pydantic.types.StrictFloat)) type as a convenience to [using the `Strict()` metadata class](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class) ([local](./../../concepts/strict_mode.md#using-the-strict-metadata-class)).
 
 ### Integer enums
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integer-enums> ([local](./standard_library_types.md#integer-enums)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integer-enums> ([local](./standard_library_types.md#integer-enums)) ([local](./standard_library_types.md#integer-enums))
 
-Standard library type: [`enum.IntEnum`](<https://docs.python.org/3/library/enum.html#enum.IntEnum>).
+Standard library type: [`enum.IntEnum`](https://docs.python.org/3/library/enum.html#enum.IntEnum).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-5> ([local](./standard_library_types.md#validation-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-5> ([local](./standard_library_types.md#validation-5)) ([local](./standard_library_types.md#validation-5))
 
-  * If the [`enum.IntEnum`](<https://docs.python.org/3/library/enum.html#enum.IntEnum>) type is used directly, any [`enum.IntEnum`](<https://docs.python.org/3/library/enum.html#enum.IntEnum>) instance is validated as-is
-  * If an [`enum.IntEnum`](<https://docs.python.org/3/library/enum.html#enum.IntEnum>) subclass is used as a type, any enum member or value that correspond to the enum members values is validated as-is.
+  * If the [`enum.IntEnum`](https://docs.python.org/3/library/enum.html#enum.IntEnum) type is used directly, any [`enum.IntEnum`](https://docs.python.org/3/library/enum.html#enum.IntEnum) instance is validated as-is
+  * If an [`enum.IntEnum`](https://docs.python.org/3/library/enum.html#enum.IntEnum) subclass is used as a type, any enum member or value that correspond to the enum members values is validated as-is.
 
-See [Enums](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#enums> ([local](./standard_library_types.md#enums))) for more details.
+See [Enums](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#enums) ([local](./standard_library_types.md#enums)) for more details.
 
 ### Decimals
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#decimals> ([local](./standard_library_types.md#decimals)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#decimals> ([local](./standard_library_types.md#decimals)) ([local](./standard_library_types.md#decimals))
 
-Standard library type: [`decimal.Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>).
+Standard library type: [`decimal.Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-6> ([local](./standard_library_types.md#validation-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-6> ([local](./standard_library_types.md#validation-6)) ([local](./standard_library_types.md#validation-6))
 
-  * [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) instances are validated as is.
-  * Any value accepted by the [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) constructor.
+  * [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) instances are validated as is.
+  * Any value accepted by the [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) constructor.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-4> ([local](./standard_library_types.md#constraints-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-4> ([local](./standard_library_types.md#constraints-4)) ([local](./standard_library_types.md#constraints-4))
 
 Decimals support the following constraints (numbers must be coercible to decimals):
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`le`| The value must be less than or equal to this number| [`maximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`ge`| The value must be greater than or equal to this number| [`minimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](<https://json-schema.org/understanding-json-schema/reference/numeric#range>) keyword  
-`multiple_of`| The value must be a multiple of this number| [`multipleOf`](<https://json-schema.org/understanding-json-schema/reference/numeric#multiples>) keyword  
+`le`| The value must be less than or equal to this number| [`maximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`ge`| The value must be greater than or equal to this number| [`minimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`lt`| The value must be strictly less than this number| [`exclusiveMaximum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`gt`| The value must be strictly greater than this number| [`exclusiveMinimum`](https://json-schema.org/understanding-json-schema/reference/numeric#range) keyword  
+`multiple_of`| The value must be a multiple of this number| [`multipleOf`](https://json-schema.org/understanding-json-schema/reference/numeric#multiples) keyword  
 `allow_inf_nan`| Whether to allow NaN (not-a-number) and infinite values| N/A  
-`max_digits`| The maximum number of decimal digits allowed. The zero before the decimal point and trailing zeros are not counted.| [`pattern`](<https://json-schema.org/understanding-json-schema/reference/string#regexp>) keyword, to describe the string pattern  
-`decimal_places`| The maximum number of decimal places allowed. Trailing zeros are not counted.| [`pattern`](<https://json-schema.org/understanding-json-schema/reference/string#regexp>) keyword, to describe the string pattern  
+`max_digits`| The maximum number of decimal digits allowed. The zero before the decimal point and trailing zeros are not counted.| [`pattern`](https://json-schema.org/understanding-json-schema/reference/string#regexp) keyword, to describe the string pattern  
+`decimal_places`| The maximum number of decimal places allowed. Trailing zeros are not counted.| [`pattern`](https://json-schema.org/understanding-json-schema/reference/string#regexp) keyword, to describe the string pattern  
   
-Note that the JSON Schema [`pattern`](<https://json-schema.org/understanding-json-schema/reference/string#regexp>) keyword will be specified in the JSON Schema to describe the string pattern in all cases (and can vary if `max_digits` and/or `decimal_places` is specified).
+Note that the JSON Schema [`pattern`](https://json-schema.org/understanding-json-schema/reference/string#regexp) keyword will be specified in the JSON Schema to describe the string pattern in all cases (and can vary if `max_digits` and/or `decimal_places` is specified).
 
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library and the [`AllowInfNan`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AllowInfNan> ([local](./types.md#pydantic.types.AllowInfNan))) type can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt`, `Gt` and `MultipleOf` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library and the [`AllowInfNan`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AllowInfNan) ([local](./types.md#pydantic.types.AllowInfNan)) type can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-5> ([local](./standard_library_types.md#strictness-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-5> ([local](./standard_library_types.md#strictness-5)) ([local](./standard_library_types.md#strictness-5))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`decimal.Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) instances are accepted. In JSON mode, strict mode has no effect.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`decimal.Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) instances are accepted. In JSON mode, strict mode has no effect.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization> ([local](./standard_library_types.md#serialization)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization> ([local](./standard_library_types.md#serialization)) ([local](./standard_library_types.md#serialization))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings. A [serializer](<https://pydantic.dev/docs/validation/latest/concepts/serialization#field-plain-serializer> ([local](./../../concepts/serialization.md#field-plain-serializer))) can be used to override this behavior:
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings. A [serializer](https://pydantic.dev/docs/validation/latest/concepts/serialization#field-plain-serializer) ([local](./../../concepts/serialization.md#field-plain-serializer)) can be used to override this behavior:
 
 ```
  
@@ -356,101 +356,101 @@ In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serializati
 
 ### Complex numbers
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#complex-numbers> ([local](./standard_library_types.md#complex-numbers)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#complex-numbers> ([local](./standard_library_types.md#complex-numbers)) ([local](./standard_library_types.md#complex-numbers))
 
 ✦ New in v2.9
 
-Built-in type: [`complex`](<https://docs.python.org/3/library/functions.html#complex>).
+Built-in type: [`complex`](https://docs.python.org/3/library/functions.html#complex).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-7> ([local](./standard_library_types.md#validation-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-7> ([local](./standard_library_types.md#validation-7)) ([local](./standard_library_types.md#validation-7))
 
-  * [`complex`](<https://docs.python.org/3/library/functions.html#complex>) instances are validated as-is.
-  * In Python mode, data is validated using the [`complex()`](<https://docs.python.org/3/library/functions.html#complex>) constructor.
-  * In JSON mode, string are validated using the [`complex()`](<https://docs.python.org/3/library/functions.html#complex>) constructor, numbers (integers and floats) are used as the real part.
+  * [`complex`](https://docs.python.org/3/library/functions.html#complex) instances are validated as-is.
+  * In Python mode, data is validated using the [`complex()`](https://docs.python.org/3/library/functions.html#complex) constructor.
+  * In JSON mode, string are validated using the [`complex()`](https://docs.python.org/3/library/functions.html#complex) constructor, numbers (integers and floats) are used as the real part.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-6> ([local](./standard_library_types.md#strictness-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-6> ([local](./standard_library_types.md#strictness-6)) ([local](./standard_library_types.md#strictness-6))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`complex`](<https://docs.python.org/3/library/functions.html#complex>) instances are accepted. In JSON mode, only strings that are accepted by the [`complex()`](<https://docs.python.org/3/library/functions.html#complex>) constructor are allowed.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`complex`](https://docs.python.org/3/library/functions.html#complex) instances are accepted. In JSON mode, only strings that are accepted by the [`complex()`](https://docs.python.org/3/library/functions.html#complex) constructor are allowed.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-1> ([local](./standard_library_types.md#serialization-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-1> ([local](./standard_library_types.md#serialization-1)) ([local](./standard_library_types.md#serialization-1))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`complex`](<https://docs.python.org/3/library/functions.html#complex>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`complex`](https://docs.python.org/3/library/functions.html#complex) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 ### Fractions
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#fractions> ([local](./standard_library_types.md#fractions)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#fractions> ([local](./standard_library_types.md#fractions)) ([local](./standard_library_types.md#fractions))
 
 ✦ New in v2.10
 
-Standard library type: [`fractions.Fraction`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>).
+Standard library type: [`fractions.Fraction`](https://docs.python.org/3/library/fractions.html#fractions.Fraction).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-8> ([local](./standard_library_types.md#validation-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-8> ([local](./standard_library_types.md#validation-8)) ([local](./standard_library_types.md#validation-8))
 
-  * [`Fraction`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>) instances are validated as is.
-  * Floats, strings and [`decimal.Decimal`](<https://docs.python.org/3/library/decimal.html#decimal.Decimal>) instances are validated using the [`Fraction()`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>) constructor.
+  * [`Fraction`](https://docs.python.org/3/library/fractions.html#fractions.Fraction) instances are validated as is.
+  * Floats, strings and [`decimal.Decimal`](https://docs.python.org/3/library/decimal.html#decimal.Decimal) instances are validated using the [`Fraction()`](https://docs.python.org/3/library/fractions.html#fractions.Fraction) constructor.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-7> ([local](./standard_library_types.md#strictness-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-7> ([local](./standard_library_types.md#strictness-7)) ([local](./standard_library_types.md#strictness-7))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`Fraction`](<https://docs.python.org/3/library/fractions.html#fractions.Fraction>) instances are accepted. In JSON mode, strict mode has no effect.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`Fraction`](https://docs.python.org/3/library/fractions.html#fractions.Fraction) instances are accepted. In JSON mode, strict mode has no effect.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-2> ([local](./standard_library_types.md#serialization-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-2> ([local](./standard_library_types.md#serialization-2)) ([local](./standard_library_types.md#serialization-2))
 
-Fractions are serialized as strings, both in [Python](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))) and [JSON](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))) modes.
+Fractions are serialized as strings, both in [Python](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)) and [JSON](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)) modes.
 
 ## Date and time types
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#date-and-time-types> ([local](./standard_library_types.md#date-and-time-types)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#date-and-time-types> ([local](./standard_library_types.md#date-and-time-types)) ([local](./standard_library_types.md#date-and-time-types))
 
-Pydantic supports the following [date and time](<https://docs.python.org/library/datetime.html#available-types>) types from the [`datetime`](<https://docs.python.org/3/library/datetime.html#module-datetime>) standard library:
+Pydantic supports the following [date and time](https://docs.python.org/library/datetime.html#available-types) types from the [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime) standard library:
 
 ### Datetimes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#datetimes> ([local](./standard_library_types.md#datetimes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#datetimes> ([local](./standard_library_types.md#datetimes)) ([local](./standard_library_types.md#datetimes))
 
-Standard library type: [`datetime.datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>).
+Standard library type: [`datetime.datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-9> ([local](./standard_library_types.md#validation-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-9> ([local](./standard_library_types.md#validation-9)) ([local](./standard_library_types.md#validation-9))
 
-  * [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) instances are validated as is.
+  * [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instances are validated as is.
   * Strings and bytes are validated in two ways: 
-    * Strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) format (both datetime and date). See the [speedate](<https://docs.rs/speedate/>) documentation for more details.
-    * Unix timestamps, both as seconds or milliseconds sinch the [epoch](<https://en.wikipedia.org/wiki/Unix_time>). See the [`val_temporal_unit`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_temporal_unit> ([local](./config.md#pydantic.config.ConfigDict.val_temporal_unit))) configuration value for more details.
+    * Strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format (both datetime and date). See the [speedate](https://docs.rs/speedate/) documentation for more details.
+    * Unix timestamps, both as seconds or milliseconds sinch the [epoch](https://en.wikipedia.org/wiki/Unix_time). See the [`val_temporal_unit`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_temporal_unit) ([local](./config.md#pydantic.config.ConfigDict.val_temporal_unit)) configuration value for more details.
   * Integers and floats (or types that can be coerced as integers or floats) are validated as unix timestamps, following the same semantics as strings.
-  * [`datetime.date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) instances are accepted, and converted to a [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) instance by setting the [`hour`](<https://docs.python.org/3/library/datetime.html#datetime.datetime.hour>), [`minute`](<https://docs.python.org/3/library/datetime.html#datetime.datetime.minute>), [`second`](<https://docs.python.org/3/library/datetime.html#datetime.datetime.second>) and [`microsecond`](<https://docs.python.org/3/library/datetime.html#datetime.datetime.microsecond>) attributes to `0`, and the [`tzinfo`](<https://docs.python.org/3/library/datetime.html#datetime.datetime.tzinfo>) attribute to `None`.
+  * [`datetime.date`](https://docs.python.org/3/library/datetime.html#datetime.date) instances are accepted, and converted to a [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instance by setting the [`hour`](https://docs.python.org/3/library/datetime.html#datetime.datetime.hour), [`minute`](https://docs.python.org/3/library/datetime.html#datetime.datetime.minute), [`second`](https://docs.python.org/3/library/datetime.html#datetime.datetime.second) and [`microsecond`](https://docs.python.org/3/library/datetime.html#datetime.datetime.microsecond) attributes to `0`, and the [`tzinfo`](https://docs.python.org/3/library/datetime.html#datetime.datetime.tzinfo) attribute to `None`.
 
 Note
 
-Named timezone support (as specified in [RFC 9557](<https://datatracker.ietf.org/doc/html/rfc9557.html>)) can be tracked in [this issue](<https://github.com/pydantic/pydantic/issues/12252>).
+Named timezone support (as specified in [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557.html)) can be tracked in [this issue](https://github.com/pydantic/pydantic/issues/12252).
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-3> ([local](./standard_library_types.md#serialization-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-3> ([local](./standard_library_types.md#serialization-3)) ([local](./standard_library_types.md#serialization-3))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-5> ([local](./standard_library_types.md#constraints-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-5> ([local](./standard_library_types.md#constraints-5)) ([local](./standard_library_types.md#constraints-5))
 
-Datetimes support the following constraints (constraint values must be coercible to a [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) instance):
+Datetimes support the following constraints (constraint values must be coercible to a [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instance):
 
 Constraint| Description| JSON Schema  
 ---|---|---  
@@ -459,24 +459,24 @@ Constraint| Description| JSON Schema
 `lt`| The value must be strictly less than this datetime| N/A  
 `gt`| The value must be strictly greater than this datetime| N/A  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 Pydantic also provides the following types to further constrain the allowed datetime values:
 
-  * [`AwareDatetime`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AwareDatetime> ([local](./types.md#pydantic.types.AwareDatetime))): Requires the input to have a timezone.
-  * [`NaiveDatetime`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NaiveDatetime> ([local](./types.md#pydantic.types.NaiveDatetime))): Requires the input to _not_ have a timezone.
-  * [`PastDatetime`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PastDatetime> ([local](./types.md#pydantic.types.PastDatetime))): Requires the input to be in the past when validated.
-  * [`FutureDatetime`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FutureDatetime> ([local](./types.md#pydantic.types.FutureDatetime))): Requires the input to be in the future when validated.
+  * [`AwareDatetime`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.AwareDatetime) ([local](./types.md#pydantic.types.AwareDatetime)): Requires the input to have a timezone.
+  * [`NaiveDatetime`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.NaiveDatetime) ([local](./types.md#pydantic.types.NaiveDatetime)): Requires the input to _not_ have a timezone.
+  * [`PastDatetime`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PastDatetime) ([local](./types.md#pydantic.types.PastDatetime)): Requires the input to be in the past when validated.
+  * [`FutureDatetime`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FutureDatetime) ([local](./types.md#pydantic.types.FutureDatetime)): Requires the input to be in the future when validated.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-8> ([local](./standard_library_types.md#strictness-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-8> ([local](./standard_library_types.md#strictness-8)) ([local](./standard_library_types.md#strictness-8))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) format (_only_ datetime) or as unix timestamps are accepted.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format (_only_ datetime) or as unix timestamps are accepted.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-2> ([local](./standard_library_types.md#example-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-2> ([local](./standard_library_types.md#example-2)) ([local](./standard_library_types.md#example-2))
 
 ```
  
@@ -504,33 +504,33 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Dates
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#dates> ([local](./standard_library_types.md#dates)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#dates> ([local](./standard_library_types.md#dates)) ([local](./standard_library_types.md#dates))
 
-Standard library type: [`datetime.date`](<https://docs.python.org/3/library/datetime.html#datetime.date>).
+Standard library type: [`datetime.date`](https://docs.python.org/3/library/datetime.html#datetime.date).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-10> ([local](./standard_library_types.md#validation-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-10> ([local](./standard_library_types.md#validation-10)) ([local](./standard_library_types.md#validation-10))
 
-  * [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) instances are validated as is.
+  * [`date`](https://docs.python.org/3/library/datetime.html#datetime.date) instances are validated as is.
   * Strings and bytes are validated in two ways: 
-    * Strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) date format. See the [speedate](<https://docs.rs/speedate/>) documentation for more details.
-    * Unix timestamps, both as seconds or milliseconds sinch the [epoch](<https://en.wikipedia.org/wiki/Unix_time>). See the [`val_temporal_unit`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_temporal_unit> ([local](./config.md#pydantic.config.ConfigDict.val_temporal_unit))) configuration value for more details.
-  * If the validation fails, the input can be [validated as a datetime](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#datetimes> ([local](./standard_library_types.md#datetimes))) (including as numbers), provided that the time component is 0 and that it is naive.
+    * Strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) date format. See the [speedate](https://docs.rs/speedate/) documentation for more details.
+    * Unix timestamps, both as seconds or milliseconds sinch the [epoch](https://en.wikipedia.org/wiki/Unix_time). See the [`val_temporal_unit`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.val_temporal_unit) ([local](./config.md#pydantic.config.ConfigDict.val_temporal_unit)) configuration value for more details.
+  * If the validation fails, the input can be [validated as a datetime](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#datetimes) ([local](./standard_library_types.md#datetimes)) (including as numbers), provided that the time component is 0 and that it is naive.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-4> ([local](./standard_library_types.md#serialization-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-4> ([local](./standard_library_types.md#serialization-4)) ([local](./standard_library_types.md#serialization-4))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`date`](https://docs.python.org/3/library/datetime.html#datetime.date) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-6> ([local](./standard_library_types.md#constraints-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-6> ([local](./standard_library_types.md#constraints-6)) ([local](./standard_library_types.md#constraints-6))
 
-Dates support the following constraints (constraint values must be coercible to a [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) instance):
+Dates support the following constraints (constraint values must be coercible to a [`date`](https://docs.python.org/3/library/datetime.html#datetime.date) instance):
 
 Constraint| Description| JSON Schema  
 ---|---|---  
@@ -539,22 +539,22 @@ Constraint| Description| JSON Schema
 `lt`| The value must be strictly less than this date| N/A  
 `gt`| The value must be strictly greater than this date| N/A  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 Pydantic also provides the following types to further constrain the allowed date values:
 
-  * [`PastDate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PastDate> ([local](./types.md#pydantic.types.PastDate))): Requires the input to be in the past when validated.
-  * [`FutureDate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FutureDate> ([local](./types.md#pydantic.types.FutureDate))): Requires the input to be in the future when validated.
+  * [`PastDate`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.PastDate) ([local](./types.md#pydantic.types.PastDate)): Requires the input to be in the past when validated.
+  * [`FutureDate`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FutureDate) ([local](./types.md#pydantic.types.FutureDate)): Requires the input to be in the future when validated.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-9> ([local](./standard_library_types.md#strictness-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-9> ([local](./standard_library_types.md#strictness-9)) ([local](./standard_library_types.md#strictness-9))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) format (_only_ date) or as unix timestamps are accepted.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`date`](https://docs.python.org/3/library/datetime.html#datetime.date) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format (_only_ date) or as unix timestamps are accepted.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-3> ([local](./standard_library_types.md#example-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-3> ([local](./standard_library_types.md#example-3)) ([local](./standard_library_types.md#example-3))
 
 ```
  
@@ -579,35 +579,35 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Time
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#time> ([local](./standard_library_types.md#time)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#time> ([local](./standard_library_types.md#time)) ([local](./standard_library_types.md#time))
 
-Standard library type: [`datetime.time`](<https://docs.python.org/3/library/datetime.html#datetime.time>).
+Standard library type: [`datetime.time`](https://docs.python.org/3/library/datetime.html#datetime.time).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-11> ([local](./standard_library_types.md#validation-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-11> ([local](./standard_library_types.md#validation-11)) ([local](./standard_library_types.md#validation-11))
 
-  * [`time`](<https://docs.python.org/3/library/datetime.html#datetime.time>) instances are validated as is.
-  * Strings and bytes are validated according to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) time format.
+  * [`time`](https://docs.python.org/3/library/datetime.html#datetime.time) instances are validated as is.
+  * Strings and bytes are validated according to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) time format.
   * Integers and floats (or values that can be coerced to such numbers) are validated as seconds. The value should not exceed 86 399.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-5> ([local](./standard_library_types.md#serialization-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-5> ([local](./standard_library_types.md#serialization-5)) ([local](./standard_library_types.md#serialization-5))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`time`](<https://docs.python.org/3/library/datetime.html#datetime.time>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`time`](https://docs.python.org/3/library/datetime.html#datetime.time) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 Note
 
-Named timezones from the [IANA time zone database](<https://www.iana.org/time-zones>) (see the [`zoneinfo`](<https://docs.python.org/3/library/zoneinfo.html#module-zoneinfo>) module) are _not_ serialized with time objects. This is consistent with the [`time.isoformat()`](<https://docs.python.org/3/library/datetime.html#datetime.time.isoformat>) method.
+Named timezones from the [IANA time zone database](https://www.iana.org/time-zones) (see the [`zoneinfo`](https://docs.python.org/3/library/zoneinfo.html#module-zoneinfo) module) are _not_ serialized with time objects. This is consistent with the [`time.isoformat()`](https://docs.python.org/3/library/datetime.html#datetime.time.isoformat) method.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-7> ([local](./standard_library_types.md#constraints-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-7> ([local](./standard_library_types.md#constraints-7)) ([local](./standard_library_types.md#constraints-7))
 
-Time support the following constraints (constraint values must be coercible to a [`time`](<https://docs.python.org/3/library/datetime.html#datetime.time>) instance):
+Time support the following constraints (constraint values must be coercible to a [`time`](https://docs.python.org/3/library/datetime.html#datetime.time) instance):
 
 Constraint| Description| JSON Schema  
 ---|---|---  
@@ -616,17 +616,17 @@ Constraint| Description| JSON Schema
 `lt`| The value must be strictly less than this time| N/A  
 `gt`| The value must be strictly greater than this time| N/A  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-10> ([local](./standard_library_types.md#strictness-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-10> ([local](./standard_library_types.md#strictness-10)) ([local](./standard_library_types.md#strictness-10))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`time`](<https://docs.python.org/3/library/datetime.html#datetime.time>) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) format are accepted.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`time`](https://docs.python.org/3/library/datetime.html#datetime.time) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format are accepted.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-4> ([local](./standard_library_types.md#example-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-4> ([local](./standard_library_types.md#example-4)) ([local](./standard_library_types.md#example-4))
 
 ```
  
@@ -651,45 +651,45 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Timedeltas
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#timedeltas> ([local](./standard_library_types.md#timedeltas)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#timedeltas> ([local](./standard_library_types.md#timedeltas)) ([local](./standard_library_types.md#timedeltas))
 
-Standard library type: [`datetime.timedelta`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>).
+Standard library type: [`datetime.timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-12> ([local](./standard_library_types.md#validation-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-12> ([local](./standard_library_types.md#validation-12)) ([local](./standard_library_types.md#validation-12))
 
-  * [`timedelta`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>) instances are validated as is.
-  * Strings and bytes are validated according to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) time format.
+  * [`timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta) instances are validated as is.
+  * Strings and bytes are validated according to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) time format.
   * Integers and floats (or values that can be coerced to such numbers) are validated as seconds.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-8> ([local](./standard_library_types.md#constraints-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-8> ([local](./standard_library_types.md#constraints-8)) ([local](./standard_library_types.md#constraints-8))
 
-Timedeltas support the following constraints (constraint values must be coercible to a [`timedata`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>) instance):
+Timedeltas support the following constraints (constraint values must be coercible to a [`timedata`](https://docs.python.org/3/library/datetime.html#datetime.timedelta) instance):
 
 | Constraint | Description | JSON Schema | | ---------- | ---------------------------------------------------- -----| ----------- | | `le` | The value must be less than or equal to this timedelta | N/A | | `ge` | The value must be greater than or equal to this timedelta | N/A | | `lt` | The value must be strictly less than this timedelta | N/A | | `gt` | The value must be strictly greater than this timedelta | N/A |
 
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `Le`, `Ge`, `Lt` and `Gt` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-6> ([local](./standard_library_types.md#serialization-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-6> ([local](./standard_library_types.md#serialization-6)) ([local](./standard_library_types.md#serialization-6))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`timedelta`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-11> ([local](./standard_library_types.md#strictness-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-11> ([local](./standard_library_types.md#strictness-11)) ([local](./standard_library_types.md#strictness-11))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`timedelta`](<https://docs.python.org/3/library/datetime.html#datetime.timedelta>) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](<https://datatracker.ietf.org/doc/html/rfc3339>) format are accepted.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`timedelta`](https://docs.python.org/3/library/datetime.html#datetime.timedelta) instances are accepted. In JSON mode, only strings complying to the [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format are accepted.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-5> ([local](./standard_library_types.md#example-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-5> ([local](./standard_library_types.md#example-5)) ([local](./standard_library_types.md#example-5))
 
 ```
  
@@ -714,28 +714,28 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ## Enums
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#enums> ([local](./standard_library_types.md#enums)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#enums> ([local](./standard_library_types.md#enums)) ([local](./standard_library_types.md#enums))
 
-Standard library type: [`enum.Enum`](<https://docs.python.org/3/library/enum.html#enum.Enum>).
+Standard library type: [`enum.Enum`](https://docs.python.org/3/library/enum.html#enum.Enum).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-13> ([local](./standard_library_types.md#validation-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-13> ([local](./standard_library_types.md#validation-13)) ([local](./standard_library_types.md#validation-13))
 
-  * If the [`enum.Enum`](<https://docs.python.org/3/library/enum.html#enum.Enum>) type is used directly, any [`enum.Enum`](<https://docs.python.org/3/library/enum.html#enum.Enum>) instance is validated as-is.
-  * If an [`enum.Enum`](<https://docs.python.org/3/library/enum.html#enum.Enum>) subclass is used as a type, any enum member or value that correspond to the enum members [values](<https://docs.python.org/3/library/enum.html#enum.Enum.value>) is validated as-is.
+  * If the [`enum.Enum`](https://docs.python.org/3/library/enum.html#enum.Enum) type is used directly, any [`enum.Enum`](https://docs.python.org/3/library/enum.html#enum.Enum) instance is validated as-is.
+  * If an [`enum.Enum`](https://docs.python.org/3/library/enum.html#enum.Enum) subclass is used as a type, any enum member or value that correspond to the enum members [values](https://docs.python.org/3/library/enum.html#enum.Enum.value) is validated as-is.
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-7> ([local](./standard_library_types.md#serialization-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-7> ([local](./standard_library_types.md#serialization-7)) ([local](./standard_library_types.md#serialization-7))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), enum instances are serialized as is. The [`use_enum_values`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.use_enum_values> ([local](./config.md#pydantic.config.ConfigDict.use_enum_values))) configuration value can be set to use the enum [value](<https://docs.python.org/3/library/enum.html#enum.Enum.value>) during validation (so that it is also used during serialization).
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), enum instances are serialized as is. The [`use_enum_values`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.use_enum_values) ([local](./config.md#pydantic.config.ConfigDict.use_enum_values)) configuration value can be set to use the enum [value](https://docs.python.org/3/library/enum.html#enum.Enum.value) during validation (so that it is also used during serialization).
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), enum instances are serialized using their [value](<https://docs.python.org/3/library/enum.html#enum.Enum.value>).
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), enum instances are serialized using their [value](https://docs.python.org/3/library/enum.html#enum.Enum.value).
 
 ### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-6> ([local](./standard_library_types.md#example-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-6> ([local](./standard_library_types.md#example-6)) ([local](./standard_library_types.md#example-6))
 
 ```
  
@@ -778,59 +778,59 @@ In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serializati
 
 ## None types
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#none-types> ([local](./standard_library_types.md#none-types)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#none-types> ([local](./standard_library_types.md#none-types)) ([local](./standard_library_types.md#none-types))
 
-Supported types: [`None`](<https://docs.python.org/3/library/constants.html#None>), [`NoneType`](<https://docs.python.org/3/library/types.html#types.NoneType>) or `Literal[None]` (they are [equivalent](<https://typing.readthedocs.io/en/latest/spec/special-types.html#none>)).
+Supported types: [`None`](https://docs.python.org/3/library/constants.html#None), [`NoneType`](https://docs.python.org/3/library/types.html#types.NoneType) or `Literal[None]` (they are [equivalent](https://typing.readthedocs.io/en/latest/spec/special-types.html#none)).
 
 Allows only `None` as a value.
 
 ## Generic collection types
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#generic-collection-types> ([local](./standard_library_types.md#generic-collection-types)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#generic-collection-types> ([local](./standard_library_types.md#generic-collection-types)) ([local](./standard_library_types.md#generic-collection-types))
 
-Pydantic supports a wide variety of generic collection types, both built-ins (such as [`list`](<https://docs.python.org/3/glossary.html#term-list>)) and abstract base classes from the [`collections.abc`](<https://docs.python.org/3/library/collections.abc.html#module-collections.abc>) module (such as [`Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>)).
+Pydantic supports a wide variety of generic collection types, both built-ins (such as [`list`](https://docs.python.org/3/glossary.html#term-list)) and abstract base classes from the [`collections.abc`](https://docs.python.org/3/library/collections.abc.html#module-collections.abc) module (such as [`Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence)).
 
-In most cases, it is recommended to make use of the built-in types over the abstract ones. Due to [data coercion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion> ([local](./../../concepts/models.md#data-conversion))), using [`list`](<https://docs.python.org/3/glossary.html#term-list>) or [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) will allow most other iterables as input, with better performance.
+In most cases, it is recommended to make use of the built-in types over the abstract ones. Due to [data coercion](https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion) ([local](./../../concepts/models.md#data-conversion)), using [`list`](https://docs.python.org/3/glossary.html#term-list) or [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) will allow most other iterables as input, with better performance.
 
 Strictness on collection types
 
-When applying [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))) on collection types, strictness will _not_ apply to the inner types. This may change in the future, see [this issue](<https://github.com/pydantic/pydantic/issues/12319>).
+When applying [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)) on collection types, strictness will _not_ apply to the inner types. This may change in the future, see [this issue](https://github.com/pydantic/pydantic/issues/12319).
 
 ### Lists
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists> ([local](./standard_library_types.md#lists)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists> ([local](./standard_library_types.md#lists)) ([local](./standard_library_types.md#lists))
 
-Built-in type: [`list`](<https://docs.python.org/3/glossary.html#term-list>) (deprecated alias: [`typing.List`](<https://docs.python.org/3/library/typing.html#typing.List>)).
+Built-in type: [`list`](https://docs.python.org/3/glossary.html#term-list) (deprecated alias: [`typing.List`](https://docs.python.org/3/library/typing.html#typing.List)).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-14> ([local](./standard_library_types.md#validation-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-14> ([local](./standard_library_types.md#validation-14)) ([local](./standard_library_types.md#validation-14))
 
-  * Allows [`list`](<https://docs.python.org/3/glossary.html#term-list>), [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>), [`set`](<https://docs.python.org/3/reference/expressions.html#set>) and [`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>) instances, or any iterable that is _not_ a [string](<https://docs.python.org/3/library/stdtypes.html#str>), [bytes](<https://docs.python.org/3/library/stdtypes.html#bytes>), [bytearray](<https://docs.python.org/3/library/stdtypes.html#bytearray>), [dict](<https://docs.python.org/3/reference/expressions.html#dict>) or [mapping](<https://docs.python.org/3/glossary.html#term-mapping>). Produces a [`list`](<https://docs.python.org/3/glossary.html#term-list>) instance.
+  * Allows [`list`](https://docs.python.org/3/glossary.html#term-list), [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple), [`set`](https://docs.python.org/3/reference/expressions.html#set) and [`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset) instances, or any iterable that is _not_ a [string](https://docs.python.org/3/library/stdtypes.html#str), [bytes](https://docs.python.org/3/library/stdtypes.html#bytes), [bytearray](https://docs.python.org/3/library/stdtypes.html#bytearray), [dict](https://docs.python.org/3/reference/expressions.html#dict) or [mapping](https://docs.python.org/3/glossary.html#term-mapping). Produces a [`list`](https://docs.python.org/3/glossary.html#term-list) instance.
   * If a generic parameter is provided, the appropriate validation is applied to all items of the list.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-9> ([local](./standard_library_types.md#constraints-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-9> ([local](./standard_library_types.md#constraints-9)) ([local](./standard_library_types.md#constraints-9))
 
 Lists support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The list must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The list must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The list must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The list must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-12> ([local](./standard_library_types.md#strictness-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-12> ([local](./standard_library_types.md#strictness-12)) ([local](./standard_library_types.md#strictness-12))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`list`](<https://docs.python.org/3/glossary.html#term-list>) instances are valid. Strict mode does _not_ apply to the items of the list. The strict constraint must be applied to the parameter type for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`list`](https://docs.python.org/3/glossary.html#term-list) instances are valid. Strict mode does _not_ apply to the items of the list. The strict constraint must be applied to the parameter type for this to work.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-7> ([local](./standard_library_types.md#example-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-7> ([local](./standard_library_types.md#example-7)) ([local](./standard_library_types.md#example-7))
 
 ```
  
@@ -854,45 +854,45 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Tuples
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#tuples> ([local](./standard_library_types.md#tuples)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#tuples> ([local](./standard_library_types.md#tuples)) ([local](./standard_library_types.md#tuples))
 
-Built-in type: [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) (deprecated alias: [`typing.Tuple`](<https://docs.python.org/3/library/typing.html#typing.Tuple>)).
+Built-in type: [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) (deprecated alias: [`typing.Tuple`](https://docs.python.org/3/library/typing.html#typing.Tuple)).
 
 Note
 
-[Unpacked tuple types](<https://typing.python.org/en/latest/spec/generics.html#unpacking-tuple-types>) (as specified by [PEP 646](<https://peps.python.org/pep-0646/>)) are _not_ yet supported, and can be tracked in [this issue](<https://github.com/pydantic/pydantic/issues/5952>).
+[Unpacked tuple types](https://typing.python.org/en/latest/spec/generics.html#unpacking-tuple-types) (as specified by [PEP 646](https://peps.python.org/pep-0646/)) are _not_ yet supported, and can be tracked in [this issue](https://github.com/pydantic/pydantic/issues/5952).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-15> ([local](./standard_library_types.md#validation-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-15> ([local](./standard_library_types.md#validation-15)) ([local](./standard_library_types.md#validation-15))
 
-  * Allows [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>), [`list`](<https://docs.python.org/3/glossary.html#term-list>), [`set`](<https://docs.python.org/3/reference/expressions.html#set>) and [`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>) instances, or any iterable that is _not_ a [string](<https://docs.python.org/3/library/stdtypes.html#str>), [bytes](<https://docs.python.org/3/library/stdtypes.html#bytes>), [bytearray](<https://docs.python.org/3/library/stdtypes.html#bytearray>), [dict](<https://docs.python.org/3/reference/expressions.html#dict>) or [mapping](<https://docs.python.org/3/glossary.html#term-mapping>). Produces a [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) instance.
-  * Appropriate validation is applied to items of the tuple, if [element types](<https://typing.python.org/en/latest/spec/tuples.html#tuple-type-form>) are specified.
+  * Allows [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple), [`list`](https://docs.python.org/3/glossary.html#term-list), [`set`](https://docs.python.org/3/reference/expressions.html#set) and [`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset) instances, or any iterable that is _not_ a [string](https://docs.python.org/3/library/stdtypes.html#str), [bytes](https://docs.python.org/3/library/stdtypes.html#bytes), [bytearray](https://docs.python.org/3/library/stdtypes.html#bytearray), [dict](https://docs.python.org/3/reference/expressions.html#dict) or [mapping](https://docs.python.org/3/glossary.html#term-mapping). Produces a [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) instance.
+  * Appropriate validation is applied to items of the tuple, if [element types](https://typing.python.org/en/latest/spec/tuples.html#tuple-type-form) are specified.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-10> ([local](./standard_library_types.md#constraints-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-10> ([local](./standard_library_types.md#constraints-10)) ([local](./standard_library_types.md#constraints-10))
 
 Lists support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The tuple must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The tuple must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The tuple must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The tuple must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
-Additionally, the [`prefixItems`](<https://json-schema.org/understanding-json-schema/reference/array#tupleValidation>) JSON Schema keyword may be used depending on the tuple shape.
+Additionally, the [`prefixItems`](https://json-schema.org/understanding-json-schema/reference/array#tupleValidation) JSON Schema keyword may be used depending on the tuple shape.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-13> ([local](./standard_library_types.md#strictness-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-13> ([local](./standard_library_types.md#strictness-13)) ([local](./standard_library_types.md#strictness-13))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) instances are valid. Strict mode does _not_ apply to the items of the tuple. The strict constraint must be applied to the parameter types for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) instances are valid. Strict mode does _not_ apply to the items of the tuple. The strict constraint must be applied to the parameter types for this to work.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-8> ([local](./standard_library_types.md#example-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-8> ([local](./standard_library_types.md#example-8)) ([local](./standard_library_types.md#example-8))
 
 ```
  
@@ -916,26 +916,26 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Named tuples
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#named-tuples> ([local](./standard_library_types.md#named-tuples)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#named-tuples> ([local](./standard_library_types.md#named-tuples)) ([local](./standard_library_types.md#named-tuples))
 
-Standard library type: [`typing.NamedTuple`](<https://docs.python.org/3/library/typing.html#typing.NamedTuple>) (and types created by the [`collections.namedtuple()`](<https://docs.python.org/3/library/collections.html#collections.namedtuple>) factory function – each field will implicitly have the type [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)).
+Standard library type: [`typing.NamedTuple`](https://docs.python.org/3/library/typing.html#typing.NamedTuple) (and types created by the [`collections.namedtuple()`](https://docs.python.org/3/library/collections.html#collections.namedtuple) factory function – each field will implicitly have the type [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-16> ([local](./standard_library_types.md#validation-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-16> ([local](./standard_library_types.md#validation-16)) ([local](./standard_library_types.md#validation-16))
 
-  * Allows [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) and [`list`](<https://docs.python.org/3/glossary.html#term-list>) instances. Validate each item according to the field definition.
-  * Allows [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>) instances. Keys must match the named tuple field names, and values are validated according to the field definition.
+  * Allows [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) and [`list`](https://docs.python.org/3/glossary.html#term-list) instances. Validate each item according to the field definition.
+  * Allows [`dict`](https://docs.python.org/3/reference/expressions.html#dict) instances. Keys must match the named tuple field names, and values are validated according to the field definition.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-8> ([local](./standard_library_types.md#serialization-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-8> ([local](./standard_library_types.md#serialization-8)) ([local](./standard_library_types.md#serialization-8))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), named tuples are serialized as tuples. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as arrays.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), named tuples are serialized as tuples. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as arrays.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-9> ([local](./standard_library_types.md#example-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-9> ([local](./standard_library_types.md#example-9)) ([local](./standard_library_types.md#example-9))
 
 ```
  
@@ -963,45 +963,45 @@ In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serializa
 
 ### Sets
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#sets> ([local](./standard_library_types.md#sets)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#sets> ([local](./standard_library_types.md#sets)) ([local](./standard_library_types.md#sets))
 
-Types: [`set`](<https://docs.python.org/3/reference/expressions.html#set>) (or [`collections.abc.MutableSet`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSet>)) and [`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>) (or [`collections.abc.Set`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Set>)) (deprecated aliases: [`typing.Set`](<https://docs.python.org/3/library/typing.html#typing.Set>) and [`typing.FrozenSet`](<https://docs.python.org/3/library/typing.html#typing.FrozenSet>)).
+Types: [`set`](https://docs.python.org/3/reference/expressions.html#set) (or [`collections.abc.MutableSet`](https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSet)) and [`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset) (or [`collections.abc.Set`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Set)) (deprecated aliases: [`typing.Set`](https://docs.python.org/3/library/typing.html#typing.Set) and [`typing.FrozenSet`](https://docs.python.org/3/library/typing.html#typing.FrozenSet)).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-17> ([local](./standard_library_types.md#validation-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-17> ([local](./standard_library_types.md#validation-17)) ([local](./standard_library_types.md#validation-17))
 
-  * Allows [`set`](<https://docs.python.org/3/reference/expressions.html#set>), [`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>), [`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>) and [`list`](<https://docs.python.org/3/glossary.html#term-list>) instances, or any iterable that is _not_ a [string](<https://docs.python.org/3/library/stdtypes.html#str>), [bytes](<https://docs.python.org/3/library/stdtypes.html#bytes>), [bytearray](<https://docs.python.org/3/library/stdtypes.html#bytearray>), [dict](<https://docs.python.org/3/reference/expressions.html#dict>) or [mapping](<https://docs.python.org/3/glossary.html#term-mapping>). Produces a [`set`](<https://docs.python.org/3/reference/expressions.html#set>) or [`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>) instance.
+  * Allows [`set`](https://docs.python.org/3/reference/expressions.html#set), [`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset), [`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple) and [`list`](https://docs.python.org/3/glossary.html#term-list) instances, or any iterable that is _not_ a [string](https://docs.python.org/3/library/stdtypes.html#str), [bytes](https://docs.python.org/3/library/stdtypes.html#bytes), [bytearray](https://docs.python.org/3/library/stdtypes.html#bytearray), [dict](https://docs.python.org/3/reference/expressions.html#dict) or [mapping](https://docs.python.org/3/glossary.html#term-mapping). Produces a [`set`](https://docs.python.org/3/reference/expressions.html#set) or [`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset) instance.
   * If a generic parameter is provided, the appropriate validation is applied to all items of the set/frozenset.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-11> ([local](./standard_library_types.md#constraints-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-11> ([local](./standard_library_types.md#constraints-11)) ([local](./standard_library_types.md#constraints-11))
 
 Sets support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The set must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The set must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The set must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The set must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-14> ([local](./standard_library_types.md#strictness-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-14> ([local](./standard_library_types.md#strictness-14)) ([local](./standard_library_types.md#strictness-14))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`set`](<https://docs.python.org/3/reference/expressions.html#set>)/[`frozenset`](<https://docs.python.org/3/library/stdtypes.html#frozenset>) instances are valid. Strict mode does _not_ apply to the items of the set. The strict constraint must be applied to the parameter type for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`set`](https://docs.python.org/3/reference/expressions.html#set)/[`frozenset`](https://docs.python.org/3/library/stdtypes.html#frozenset) instances are valid. Strict mode does _not_ apply to the items of the set. The strict constraint must be applied to the parameter type for this to work.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-9> ([local](./standard_library_types.md#serialization-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-9> ([local](./standard_library_types.md#serialization-9)) ([local](./standard_library_types.md#serialization-9))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), sets are serialized as is. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as arrays.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), sets are serialized as is. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as arrays.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-10> ([local](./standard_library_types.md#example-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-10> ([local](./standard_library_types.md#example-10)) ([local](./standard_library_types.md#example-10))
 
 ```
  
@@ -1025,50 +1025,50 @@ In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serializa
 
 #### JSON Schema
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#json-schema> ([local](./standard_library_types.md#json-schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#json-schema> ([local](./standard_library_types.md#json-schema)) ([local](./standard_library_types.md#json-schema))
 
-Pydantic does best effort to sort default values that are [`collections.abc.Set`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Set>) instances.
+Pydantic does best effort to sort default values that are [`collections.abc.Set`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Set) instances.
 
 ### Deque
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#deque> ([local](./standard_library_types.md#deque)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#deque> ([local](./standard_library_types.md#deque)) ([local](./standard_library_types.md#deque))
 
-Standard library type: [`collections.deque`](<https://docs.python.org/3/library/collections.html#collections.deque>) (deprecated alias: [`typing.Deque`](<https://docs.python.org/3/library/typing.html#typing.Deque>)).
+Standard library type: [`collections.deque`](https://docs.python.org/3/library/collections.html#collections.deque) (deprecated alias: [`typing.Deque`](https://docs.python.org/3/library/typing.html#typing.Deque)).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-18> ([local](./standard_library_types.md#validation-18)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-18> ([local](./standard_library_types.md#validation-18)) ([local](./standard_library_types.md#validation-18))
 
-Values are first validated as a [list](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists> ([local](./standard_library_types.md#lists))), and then passed to the [`deque`](<https://docs.python.org/3/library/collections.html#collections.deque>) constructor.
+Values are first validated as a [list](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists) ([local](./standard_library_types.md#lists)), and then passed to the [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) constructor.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-12> ([local](./standard_library_types.md#constraints-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-12> ([local](./standard_library_types.md#constraints-12)) ([local](./standard_library_types.md#constraints-12))
 
 Deques support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The deque must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The deque must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The deque must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The deque must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-15> ([local](./standard_library_types.md#strictness-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-15> ([local](./standard_library_types.md#strictness-15)) ([local](./standard_library_types.md#strictness-15))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`deque`](<https://docs.python.org/3/library/collections.html#collections.deque>) instances are valid. Strict mode does _not_ apply to the items of the deque. The strict constraint must be applied to the parameter type for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) instances are valid. Strict mode does _not_ apply to the items of the deque. The strict constraint must be applied to the parameter type for this to work.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-10> ([local](./standard_library_types.md#serialization-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-10> ([local](./standard_library_types.md#serialization-10)) ([local](./standard_library_types.md#serialization-10))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), deques are serialized as is. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as arrays.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), deques are serialized as is. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as arrays.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-11> ([local](./standard_library_types.md#example-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-11> ([local](./standard_library_types.md#example-11)) ([local](./standard_library_types.md#example-11))
 
 ```
  
@@ -1089,46 +1089,46 @@ In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serializa
 
 ### Sequences
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#sequences> ([local](./standard_library_types.md#sequences)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#sequences> ([local](./standard_library_types.md#sequences)) ([local](./standard_library_types.md#sequences))
 
-Standard library type: [`collections.abc.Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>) (deprecated alias: [`typing.Sequence`](<https://docs.python.org/3/library/typing.html#typing.Sequence>)).
+Standard library type: [`collections.abc.Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence) (deprecated alias: [`typing.Sequence`](https://docs.python.org/3/library/typing.html#typing.Sequence)).
 
-In most cases, you will want to use the built-in types (such as [list](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists> ([local](./standard_library_types.md#lists))) or [tuple](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#tuples> ([local](./standard_library_types.md#tuples)))) as [type coercion](<https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion> ([local](./../../concepts/models.md#data-conversion))) will apply. The [`Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>) type can be used when you want to preserve the input type during serialization.
+In most cases, you will want to use the built-in types (such as [list](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists) ([local](./standard_library_types.md#lists)) or [tuple](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#tuples) ([local](./standard_library_types.md#tuples))) as [type coercion](https://pydantic.dev/docs/validation/latest/concepts/models#data-conversion) ([local](./../../concepts/models.md#data-conversion)) will apply. The [`Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence) type can be used when you want to preserve the input type during serialization.
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-19> ([local](./standard_library_types.md#validation-19)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-19> ([local](./standard_library_types.md#validation-19)) ([local](./standard_library_types.md#validation-19))
 
-Any [`collections.abc.Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>) instance (expect strings and bytes) is accepted. It is converted to a list using the [`list()`](<https://docs.python.org/3/glossary.html#term-list>) constructor, and then converted back to the original input type.
+Any [`collections.abc.Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence) instance (expect strings and bytes) is accepted. It is converted to a list using the [`list()`](https://docs.python.org/3/glossary.html#term-list) constructor, and then converted back to the original input type.
 
 Strings aren’t treated as sequences
 
 While strings are technically valid sequence instances, this is frequently not intended as is a common source of bugs.
 
-As a result, Pydantic will _not_ accept strings and bytes for the [`Sequence`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence>) type (see example below).
+As a result, Pydantic will _not_ accept strings and bytes for the [`Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence) type (see example below).
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-13> ([local](./standard_library_types.md#constraints-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-13> ([local](./standard_library_types.md#constraints-13)) ([local](./standard_library_types.md#constraints-13))
 
 Sequences support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The sequence must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The sequence must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The sequence must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The sequence must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-11> ([local](./standard_library_types.md#serialization-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-11> ([local](./standard_library_types.md#serialization-11)) ([local](./standard_library_types.md#serialization-11))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), sequences are serialized as is. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as arrays.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), sequences are serialized as is. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as arrays.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-12> ([local](./standard_library_types.md#example-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-12> ([local](./standard_library_types.md#example-12)) ([local](./standard_library_types.md#example-12))
 
 ```
  
@@ -1161,40 +1161,40 @@ In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serializa
 
 ### Dictionaries
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#dictionaries> ([local](./standard_library_types.md#dictionaries)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#dictionaries> ([local](./standard_library_types.md#dictionaries)) ([local](./standard_library_types.md#dictionaries))
 
-Built-in type: [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>).
+Built-in type: [`dict`](https://docs.python.org/3/reference/expressions.html#dict).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-20> ([local](./standard_library_types.md#validation-20)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-20> ([local](./standard_library_types.md#validation-20)) ([local](./standard_library_types.md#validation-20))
 
-  * [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>) instances are accepted as is.
-  * [mappings](<https://docs.python.org/3/glossary.html#term-mapping>) instances are accepted and coerced to a [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>).
+  * [`dict`](https://docs.python.org/3/reference/expressions.html#dict) instances are accepted as is.
+  * [mappings](https://docs.python.org/3/glossary.html#term-mapping) instances are accepted and coerced to a [`dict`](https://docs.python.org/3/reference/expressions.html#dict).
   * If generic parameters for keys and values are provided, the appropriate validation is applied.
 
 #### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-14> ([local](./standard_library_types.md#constraints-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-14> ([local](./standard_library_types.md#constraints-14)) ([local](./standard_library_types.md#constraints-14))
 
 Dictionaries support the following constraints:
 
 Constraint| Description| JSON Schema  
 ---|---|---  
-`min_length`| The dictionary must have at least this many items| [`minItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
-`max_length`| The dictionary must have at most this many items| [`maxItems`](<https://json-schema.org/understanding-json-schema/reference/array#length>) keyword  
+`min_length`| The dictionary must have at least this many items| [`minItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
+`max_length`| The dictionary must have at most this many items| [`maxItems`](https://json-schema.org/understanding-json-schema/reference/array#length) keyword  
   
-These constraints can be provided using the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./fields.md#pydantic.fields.Field))) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](<https://github.com/annotated-types/annotated-types>) library can also be used.
+These constraints can be provided using the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./fields.md#pydantic.fields.Field)) function. The `MinLen` and `MaxLen` metadata types from the [`annotated-types`](https://github.com/annotated-types/annotated-types) library can also be used.
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-16> ([local](./standard_library_types.md#strictness-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-16> ([local](./standard_library_types.md#strictness-16)) ([local](./standard_library_types.md#strictness-16))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>) instances are valid. Strict mode does _not_ apply to the keys and values of the dictionaries. The strict constraint must be applied to the parameter types for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`dict`](https://docs.python.org/3/reference/expressions.html#dict) instances are valid. Strict mode does _not_ apply to the keys and values of the dictionaries. The strict constraint must be applied to the parameter types for this to work.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-13> ([local](./standard_library_types.md#example-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-13> ([local](./standard_library_types.md#example-13)) ([local](./standard_library_types.md#example-13))
 
 ```
  
@@ -1224,27 +1224,27 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Typed dictionaries
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#typed-dictionaries> ([local](./standard_library_types.md#typed-dictionaries)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#typed-dictionaries> ([local](./standard_library_types.md#typed-dictionaries)) ([local](./standard_library_types.md#typed-dictionaries))
 
-Standard library type: [`typing.TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>) (see also: the [typing specification](<https://typing.python.org/en/latest/spec/typeddict.html>)).
+Standard library type: [`typing.TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict) (see also: the [typing specification](https://typing.python.org/en/latest/spec/typeddict.html)).
 
 Note
 
-Because of runtime limitations, Pydantic will require using the [`TypedDict`](<https://typing-extensions.readthedocs.io/en/latest/index.html#typing_extensions.TypedDict>) type from [`typing_extensions`](<https://typing-extensions.readthedocs.io/en/latest/index.html#module-typing_extensions>) when using Python 3.12 and lower.
+Because of runtime limitations, Pydantic will require using the [`TypedDict`](https://typing-extensions.readthedocs.io/en/latest/index.html#typing_extensions.TypedDict) type from [`typing_extensions`](https://typing-extensions.readthedocs.io/en/latest/index.html#module-typing_extensions) when using Python 3.12 and lower.
 
-[`TypedDict`](<https://docs.python.org/3/library/typing.html#typing.TypedDict>) declares a dictionary type that expects all of its instances to have a certain set of keys where each key is associated with a value of a consistent type.
+[`TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict) declares a dictionary type that expects all of its instances to have a certain set of keys where each key is associated with a value of a consistent type.
 
-This type [supports configuration](<https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types> ([local](./../../concepts/config.md#configuration-on-other-supported-types))).
+This type [supports configuration](https://pydantic.dev/docs/validation/latest/concepts/config#configuration-on-other-supported-types) ([local](./../../concepts/config.md#configuration-on-other-supported-types)).
 
 #### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-17> ([local](./standard_library_types.md#strictness-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-17> ([local](./standard_library_types.md#strictness-17)) ([local](./standard_library_types.md#strictness-17))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`dict`](<https://docs.python.org/3/reference/expressions.html#dict>) instances are valid (unlike mappings in lax mode). Strict mode does _not_ apply to the values of the typed dictionary. The strict constraint must be applied to the value types for this to work.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`dict`](https://docs.python.org/3/reference/expressions.html#dict) instances are valid (unlike mappings in lax mode). Strict mode does _not_ apply to the values of the typed dictionary. The strict constraint must be applied to the value types for this to work.
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-14> ([local](./standard_library_types.md#example-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-14> ([local](./standard_library_types.md#example-14)) ([local](./standard_library_types.md#example-14))
 
 ```
  
@@ -1278,21 +1278,21 @@ In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mo
 
 ### Iterables
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#iterables> ([local](./standard_library_types.md#iterables)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#iterables> ([local](./standard_library_types.md#iterables)) ([local](./standard_library_types.md#iterables))
 
-Standard library type: [`collections.abc.Iterable`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable>) (deprecated alias: [`typing.Iterable`](<https://docs.python.org/3/library/typing.html#typing.Iterable>)).
+Standard library type: [`collections.abc.Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable) (deprecated alias: [`typing.Iterable`](https://docs.python.org/3/library/typing.html#typing.Iterable)).
 
 #### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-21> ([local](./standard_library_types.md#validation-21)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-21> ([local](./standard_library_types.md#validation-21)) ([local](./standard_library_types.md#validation-21))
 
-Iterables are lazily validated, and wrapped in an internal datastructure that can be iterated over (and will validate the items type while doing so). This means that even if you provide a concrete container such as a list, the validated type will _not_ be of type [`list`](<https://docs.python.org/3/glossary.html#term-list>). However, Pydantic will ensure that the input value is iterable by getting an [iterator](<https://docs.python.org/3/glossary.html#term-iterator>) from it (by calling [`iter()`](<https://docs.python.org/3/library/functions.html#iter>) on the value).
+Iterables are lazily validated, and wrapped in an internal datastructure that can be iterated over (and will validate the items type while doing so). This means that even if you provide a concrete container such as a list, the validated type will _not_ be of type [`list`](https://docs.python.org/3/glossary.html#term-list). However, Pydantic will ensure that the input value is iterable by getting an [iterator](https://docs.python.org/3/glossary.html#term-iterator) from it (by calling [`iter()`](https://docs.python.org/3/library/functions.html#iter) on the value).
 
-It is recommended to use concrete collection types (such as [lists](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists> ([local](./standard_library_types.md#lists)))) instead, unless you are using an infinite iterator (in which case eagerly validating the input would result in an infinite loop).
+It is recommended to use concrete collection types (such as [lists](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#lists) ([local](./standard_library_types.md#lists))) instead, unless you are using an infinite iterator (in which case eagerly validating the input would result in an infinite loop).
 
 #### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-15> ([local](./standard_library_types.md#example-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-15> ([local](./standard_library_types.md#example-15)) ([local](./standard_library_types.md#example-15))
 
 ```
  
@@ -1322,15 +1322,15 @@ It is recommended to use concrete collection types (such as [lists](<https://pyd
 
 ## Callable
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#callable> ([local](./standard_library_types.md#callable)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#callable> ([local](./standard_library_types.md#callable)) ([local](./standard_library_types.md#callable))
 
-Standard library type: [`collections.abc.Callable`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable>) (deprecated alias: [`typing.Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)).
+Standard library type: [`collections.abc.Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable) (deprecated alias: [`typing.Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-22> ([local](./standard_library_types.md#validation-22)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-22> ([local](./standard_library_types.md#validation-22)) ([local](./standard_library_types.md#validation-22))
 
-Pydantic only validates that the input is a [callable](<https://docs.python.org/3/glossary.html#term-callable>) (using the [`callable()`](<https://docs.python.org/3/library/functions.html#callable>) function). It does _not_ validate the number of parameters or their type, nor the type of the return value.
+Pydantic only validates that the input is a [callable](https://docs.python.org/3/glossary.html#term-callable) (using the [`callable()`](https://docs.python.org/3/library/functions.html#callable) function). It does _not_ validate the number of parameters or their type, nor the type of the return value.
 
 ```
  
@@ -1352,80 +1352,80 @@ Pydantic only validates that the input is a [callable](<https://docs.python.org/
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-12> ([local](./standard_library_types.md#serialization-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-12> ([local](./standard_library_types.md#serialization-12)) ([local](./standard_library_types.md#serialization-12))
 
-Callables are serialized as is. Callables can’t be serialized in [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))) (a [`PydanticSerializationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError> ([local](./../pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError))) is raised).
+Callables are serialized as is. Callables can’t be serialized in [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)) (a [`PydanticSerializationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError) ([local](./../pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError)) is raised).
 
 ## IP Addresses
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#ip-addresses> ([local](./standard_library_types.md#ip-addresses)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#ip-addresses> ([local](./standard_library_types.md#ip-addresses)) ([local](./standard_library_types.md#ip-addresses))
 
 Standard library types:
 
-  * [`ipaddress.IPv4Address`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address>)
-  * [`ipaddress.IPv4Interface`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Interface>)
-  * [`ipaddress.IPv4Network`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Network>)
-  * [`ipaddress.IPv6Address`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Address>)
-  * [`ipaddress.IPv6Interface`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Interface>)
-  * [`ipaddress.IPv6Network`](<https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Network>)
+  * [`ipaddress.IPv4Address`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address)
+  * [`ipaddress.IPv4Interface`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Interface)
+  * [`ipaddress.IPv4Network`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Network)
+  * [`ipaddress.IPv6Address`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Address)
+  * [`ipaddress.IPv6Interface`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Interface)
+  * [`ipaddress.IPv6Network`](https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Network)
 
-See also: the [`IPvAnyAddress`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyAddress> ([local](./networks.md#pydantic.networks.IPvAnyAddress))), [`IPvAnyInterface`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyInterface> ([local](./networks.md#pydantic.networks.IPvAnyInterface))) and [`IPvAnyNetwork`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyNetwork> ([local](./networks.md#pydantic.networks.IPvAnyNetwork))) Pydantic types.
+See also: the [`IPvAnyAddress`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyAddress) ([local](./networks.md#pydantic.networks.IPvAnyAddress)), [`IPvAnyInterface`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyInterface) ([local](./networks.md#pydantic.networks.IPvAnyInterface)) and [`IPvAnyNetwork`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyNetwork) ([local](./networks.md#pydantic.networks.IPvAnyNetwork)) Pydantic types.
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-23> ([local](./standard_library_types.md#validation-23)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-23> ([local](./standard_library_types.md#validation-23)) ([local](./standard_library_types.md#validation-23))
 
   * Instances are validated as is.
   * Other input values are passed to the constructor of the relevant address type.
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-18> ([local](./standard_library_types.md#strictness-18)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-18> ([local](./standard_library_types.md#strictness-18)) ([local](./standard_library_types.md#strictness-18))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only the address types are accepted. In JSON mode, strict mode has no effect.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only the address types are accepted. In JSON mode, strict mode has no effect.
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-13> ([local](./standard_library_types.md#serialization-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-13> ([local](./standard_library_types.md#serialization-13)) ([local](./standard_library_types.md#serialization-13))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), IP addresses are serialized as is. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), IP addresses are serialized as is. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 ## UUID
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#uuid> ([local](./standard_library_types.md#uuid)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#uuid> ([local](./standard_library_types.md#uuid)) ([local](./standard_library_types.md#uuid))
 
-Standard library type: [`uuid.UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>).
+Standard library type: [`uuid.UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-24> ([local](./standard_library_types.md#validation-24)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-24> ([local](./standard_library_types.md#validation-24)) ([local](./standard_library_types.md#validation-24))
 
-  * [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) instances are validated as is.
-  * Strings and bytes are validated as UUIDs, and casted to a [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) instance.
+  * [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) instances are validated as is.
+  * Strings and bytes are validated as UUIDs, and casted to a [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) instance.
 
 ### Constraints
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-15> ([local](./standard_library_types.md#constraints-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#constraints-15> ([local](./standard_library_types.md#constraints-15)) ([local](./standard_library_types.md#constraints-15))
 
-The [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) type supports a `version` constraint. The [`UuidVersion`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UuidVersion> ([local](./types.md#pydantic.types.UuidVersion))) metadata type can be used.
+The [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) type supports a `version` constraint. The [`UuidVersion`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UuidVersion) ([local](./types.md#pydantic.types.UuidVersion)) metadata type can be used.
 
-Pydantic also provides the following types as convenience aliases: [`UUID1`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID1> ([local](./types.md#pydantic.types.UUID1))), [`UUID3`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID3> ([local](./types.md#pydantic.types.UUID3))), [`UUID4`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID4> ([local](./types.md#pydantic.types.UUID4))), [`UUID5`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID5> ([local](./types.md#pydantic.types.UUID5))), [`UUID6`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID6> ([local](./types.md#pydantic.types.UUID6))), [`UUID7`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID7> ([local](./types.md#pydantic.types.UUID7))), [`UUID8`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID8> ([local](./types.md#pydantic.types.UUID8))).
+Pydantic also provides the following types as convenience aliases: [`UUID1`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID1) ([local](./types.md#pydantic.types.UUID1)), [`UUID3`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID3) ([local](./types.md#pydantic.types.UUID3)), [`UUID4`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID4) ([local](./types.md#pydantic.types.UUID4)), [`UUID5`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID5) ([local](./types.md#pydantic.types.UUID5)), [`UUID6`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID6) ([local](./types.md#pydantic.types.UUID6)), [`UUID7`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID7) ([local](./types.md#pydantic.types.UUID7)), [`UUID8`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.UUID8) ([local](./types.md#pydantic.types.UUID8)).
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-19> ([local](./standard_library_types.md#strictness-19)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-19> ([local](./standard_library_types.md#strictness-19)) ([local](./standard_library_types.md#strictness-19))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only [`UUID`](<https://docs.python.org/3/library/uuid.html#uuid.UUID>) instances are accepted. In JSON mode, strict mode has no effect.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only [`UUID`](https://docs.python.org/3/library/uuid.html#uuid.UUID) instances are accepted. In JSON mode, strict mode has no effect.
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-14> ([local](./standard_library_types.md#serialization-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-14> ([local](./standard_library_types.md#serialization-14)) ([local](./standard_library_types.md#serialization-14))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), UUIDs are serialized as is. In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), UUIDs are serialized as is. In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 ### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-16> ([local](./standard_library_types.md#example-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-16> ([local](./standard_library_types.md#example-16)) ([local](./standard_library_types.md#example-16))
 
 ```
  
@@ -1456,21 +1456,21 @@ In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serializa
 
 ## Type
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#type> ([local](./standard_library_types.md#type)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#type> ([local](./standard_library_types.md#type)) ([local](./standard_library_types.md#type))
 
-Built-in type: [`type`](<https://docs.python.org/3/glossary.html#term-type>) (deprecated alias: [`typing.Type`](<https://docs.python.org/3/library/typing.html#typing.Type>)).
+Built-in type: [`type`](https://docs.python.org/3/glossary.html#term-type) (deprecated alias: [`typing.Type`](https://docs.python.org/3/library/typing.html#typing.Type)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-25> ([local](./standard_library_types.md#validation-25)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-25> ([local](./standard_library_types.md#validation-25)) ([local](./standard_library_types.md#validation-25))
 
-Allows any type that is a subclass of the type argument. For instance, with `type[str]`, allows the [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) class or any [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) subclass as an input. If no type argument is provided (i.e. `type` is used as an annotation), allow any class.
+Allows any type that is a subclass of the type argument. For instance, with `type[str]`, allows the [`str`](https://docs.python.org/3/library/stdtypes.html#str) class or any [`str`](https://docs.python.org/3/library/stdtypes.html#str) subclass as an input. If no type argument is provided (i.e. `type` is used as an annotation), allow any class.
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-15> ([local](./standard_library_types.md#serialization-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-15> ([local](./standard_library_types.md#serialization-15)) ([local](./standard_library_types.md#serialization-15))
 
-Types are serialized as is. Types can’t be serialized in [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))) (a [`PydanticSerializationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError> ([local](./../pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError))) is raised).
+Types are serialized as is. Types can’t be serialized in [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)) (a [`PydanticSerializationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticSerializationError) ([local](./../pydantic-core/pydantic_core.md#pydantic_core.PydanticSerializationError)) is raised).
 
 ```
  
@@ -1510,17 +1510,17 @@ Types are serialized as is. Types can’t be serialized in [JSON mode](<https://
 
 ## Literals
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#literals> ([local](./standard_library_types.md#literals)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#literals> ([local](./standard_library_types.md#literals)) ([local](./standard_library_types.md#literals))
 
-Typing construct: [`typing.Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>) (see also: the [typing specification](<https://typing.python.org/en/latest/spec/literal.html#literal>)).
+Typing construct: [`typing.Literal`](https://docs.python.org/3/library/typing.html#typing.Literal) (see also: the [typing specification](https://typing.python.org/en/latest/spec/literal.html#literal)).
 
 Literals can be used to only allow specific literal values.
 
-Note that Pydantic applies [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))) behavior when validating literal values (see [this issue](<https://github.com/pydantic/pydantic/issues/9991>)).
+Note that Pydantic applies [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)) behavior when validating literal values (see [this issue](https://github.com/pydantic/pydantic/issues/9991)).
 
 ### Example
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-17> ([local](./standard_library_types.md#example-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#example-17> ([local](./standard_library_types.md#example-17)) ([local](./standard_library_types.md#example-17))
 
 ```
  
@@ -1561,75 +1561,75 @@ Note that Pydantic applies [strict mode](<https://pydantic.dev/docs/validation/l
 
 ## Any
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#any> ([local](./standard_library_types.md#any)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#any> ([local](./standard_library_types.md#any)) ([local](./standard_library_types.md#any))
 
-Types: [`typing.Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) or [`object`](<https://docs.python.org/3/glossary.html#term-object>).
+Types: [`typing.Any`](https://docs.python.org/3/library/typing.html#typing.Any) or [`object`](https://docs.python.org/3/glossary.html#term-object).
 
 Allows any value, including `None`.
 
 ## Hashables
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#hashables> ([local](./standard_library_types.md#hashables)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#hashables> ([local](./standard_library_types.md#hashables)) ([local](./standard_library_types.md#hashables))
 
-Standard library type: [`collections.abc.Hashable`](<https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable>) (deprecated alias: [`typing.Hashable`](<https://docs.python.org/3/library/typing.html#typing.Hashable>)).
+Standard library type: [`collections.abc.Hashable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Hashable) (deprecated alias: [`typing.Hashable`](https://docs.python.org/3/library/typing.html#typing.Hashable)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-26> ([local](./standard_library_types.md#validation-26)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-26> ([local](./standard_library_types.md#validation-26)) ([local](./standard_library_types.md#validation-26))
 
 Any value that is hashable (using `isinstance(value, Hashable)`).
 
 ## Regex patterns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#regex-patterns> ([local](./standard_library_types.md#regex-patterns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#regex-patterns> ([local](./standard_library_types.md#regex-patterns)) ([local](./standard_library_types.md#regex-patterns))
 
-Standard library type: [`re.Pattern`](<https://docs.python.org/3/library/re.html#re.Pattern>) (deprecated alias: [`typing.Pattern`](<https://docs.python.org/3/library/typing.html#typing.Pattern>)).
+Standard library type: [`re.Pattern`](https://docs.python.org/3/library/re.html#re.Pattern) (deprecated alias: [`typing.Pattern`](https://docs.python.org/3/library/typing.html#typing.Pattern)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-27> ([local](./standard_library_types.md#validation-27)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-27> ([local](./standard_library_types.md#validation-27)) ([local](./standard_library_types.md#validation-27))
 
-  * For [`Pattern`](<https://docs.python.org/3/library/re.html#re.Pattern>) instances, check that the [`pattern`](<https://docs.python.org/3/library/re.html#re.Pattern.pattern>) attribute is of the right type ([`str`](<https://docs.python.org/3/library/stdtypes.html#str>) or [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) depending on the [`Pattern`](<https://docs.python.org/3/library/re.html#re.Pattern>) type parameter).
-  * If the type parameter is [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) or [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>), input values of type [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) (or [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) respectively) are attempted to be compiled using [`re.compile()`](<https://docs.python.org/3/library/re.html#re.compile>).
+  * For [`Pattern`](https://docs.python.org/3/library/re.html#re.Pattern) instances, check that the [`pattern`](https://docs.python.org/3/library/re.html#re.Pattern.pattern) attribute is of the right type ([`str`](https://docs.python.org/3/library/stdtypes.html#str) or [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) depending on the [`Pattern`](https://docs.python.org/3/library/re.html#re.Pattern) type parameter).
+  * If the type parameter is [`str`](https://docs.python.org/3/library/stdtypes.html#str) or [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes), input values of type [`str`](https://docs.python.org/3/library/stdtypes.html#str) (or [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) respectively) are attempted to be compiled using [`re.compile()`](https://docs.python.org/3/library/re.html#re.compile).
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-16> ([local](./standard_library_types.md#serialization-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-16> ([local](./standard_library_types.md#serialization-16)) ([local](./standard_library_types.md#serialization-16))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), [`Pattern`](<https://docs.python.org/3/library/re.html#re.Pattern>) instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), [`Pattern`](https://docs.python.org/3/library/re.html#re.Pattern) instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.
 
 ## Paths
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#paths> ([local](./standard_library_types.md#paths)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#paths> ([local](./standard_library_types.md#paths)) ([local](./standard_library_types.md#paths))
 
 Standard library types:
 
-  * [`pathlib.Path`](<https://docs.python.org/3/library/pathlib.html#pathlib.Path>).
-  * [`pathlib.PurePath`](<https://docs.python.org/3/library/pathlib.html#pathlib.PurePath>).
-  * [`pathlib.PosixPath`](<https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath>).
-  * [`pathlib.PurePosixPath`](<https://docs.python.org/3/library/pathlib.html#pathlib.PurePosixPath>).
-  * [`pathlib.PureWindowsPath`](<https://docs.python.org/3/library/pathlib.html#pathlib.PureWindowsPath>).
-  * [`os.PathLike`](<https://docs.python.org/3/library/os.html#os.PathLike>) (must be parameterized with [`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) or [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)).
+  * [`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path).
+  * [`pathlib.PurePath`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath).
+  * [`pathlib.PosixPath`](https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath).
+  * [`pathlib.PurePosixPath`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePosixPath).
+  * [`pathlib.PureWindowsPath`](https://docs.python.org/3/library/pathlib.html#pathlib.PureWindowsPath).
+  * [`os.PathLike`](https://docs.python.org/3/library/os.html#os.PathLike) (must be parameterized with [`str`](https://docs.python.org/3/library/stdtypes.html#str), [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) or [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)).
 
 ### Validation
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-28> ([local](./standard_library_types.md#validation-28)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#validation-28> ([local](./standard_library_types.md#validation-28)) ([local](./standard_library_types.md#validation-28))
 
   * Path instances are validated as is.
-  * Strings are accepted and passed to the type constructor. If [`os.PathLike`](<https://docs.python.org/3/library/os.html#os.PathLike>) was used, bytes are accepted if it was parameterized with the [`bytes`](<https://docs.python.org/3/library/stdtypes.html#bytes>) type.
+  * Strings are accepted and passed to the type constructor. If [`os.PathLike`](https://docs.python.org/3/library/os.html#os.PathLike) was used, bytes are accepted if it was parameterized with the [`bytes`](https://docs.python.org/3/library/stdtypes.html#bytes) type.
 
 ### Strictness
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-20> ([local](./standard_library_types.md#strictness-20)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#strictness-20> ([local](./standard_library_types.md#strictness-20)) ([local](./standard_library_types.md#strictness-20))
 
-In [strict mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./../../concepts/strict_mode.md))), only Path instances are accepted. In JSON mode, strict mode has no effect.
+In [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./../../concepts/strict_mode.md)), only Path instances are accepted. In JSON mode, strict mode has no effect.
 
 ### Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-17> ([local](./standard_library_types.md#serialization-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#serialization-17> ([local](./standard_library_types.md#serialization-17)) ([local](./standard_library_types.md#serialization-17))
 
-In [Python mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode> ([local](./../../concepts/serialization.md#python-mode))), Path instances are serialized as is.
+In [Python mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#python-mode) ([local](./../../concepts/serialization.md#python-mode)), Path instances are serialized as is.
 
-In [JSON mode](<https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode> ([local](./../../concepts/serialization.md#json-mode))), they are serialized as strings.
+In [JSON mode](https://pydantic.dev/docs/validation/latest/concepts/serialization#json-mode) ([local](./../../concepts/serialization.md#json-mode)), they are serialized as strings.

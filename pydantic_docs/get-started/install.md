@@ -5,8 +5,8 @@ source: https://pydantic.dev/docs/validation/latest/get-started/install
 
 Installation is as simple as:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-560> ([local](./install.md#tab-panel-560)))
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-561> ([local](./install.md#tab-panel-561)))
+  * [ pip ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-560) ([local](./install.md#tab-panel-560))
+  * [ uv ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-561) ([local](./install.md#tab-panel-561))
 
 Terminal
 
@@ -28,13 +28,13 @@ Terminal
 
 Pydantic has a few dependencies:
 
-  * [`pydantic-core`](<https://pypi.org/project/pydantic-core/>): Core validation logic for Pydantic written in Rust.
-  * [`typing-extensions`](<https://pypi.org/project/typing-extensions/>): Backport of the standard library [typing](<https://docs.python.org/3/library/typing.html#module-typing>) module.
-  * [`annotated-types`](<https://pypi.org/project/annotated-types/>): Reusable constraint types to use with [`typing.Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>).
+  * [`pydantic-core`](https://pypi.org/project/pydantic-core/): Core validation logic for Pydantic written in Rust.
+  * [`typing-extensions`](https://pypi.org/project/typing-extensions/): Backport of the standard library [typing](https://docs.python.org/3/library/typing.html#module-typing) module.
+  * [`annotated-types`](https://pypi.org/project/annotated-types/): Reusable constraint types to use with [`typing.Annotated`](https://docs.python.org/3/library/typing.html#typing.Annotated).
 
 If you’ve got Python 3.9+ and `pip` installed, you’re good to go.
 
-Pydantic is also available on [conda](<https://www.anaconda.com>) under the [conda-forge](<https://conda-forge.org>) channel:
+Pydantic is also available on [conda](https://www.anaconda.com) under the [conda-forge](https://conda-forge.org) channel:
 
 Terminal
 
@@ -47,17 +47,17 @@ Terminal
 
 ## Optional dependencies
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/install#optional-dependencies> ([local](./install.md#optional-dependencies)))
+<https://pydantic.dev/docs/validation/latest/get-started/install#optional-dependencies> ([local](./install.md#optional-dependencies)) ([local](./install.md#optional-dependencies))
 
 Pydantic has the following optional dependencies:
 
-  * `email`: Email validation provided by the [email-validator](<https://pypi.org/project/email-validator/>) package.
-  * `timezone`: Fallback IANA time zone database provided by the [tzdata](<https://pypi.org/project/tzdata/>) package.
+  * `email`: Email validation provided by the [email-validator](https://pypi.org/project/email-validator/) package.
+  * `timezone`: Fallback IANA time zone database provided by the [tzdata](https://pypi.org/project/tzdata/) package.
 
 To install optional dependencies along with Pydantic:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-562> ([local](./install.md#tab-panel-562)))
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-563> ([local](./install.md#tab-panel-563)))
+  * [ pip ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-562) ([local](./install.md#tab-panel-562))
+  * [ uv ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-563) ([local](./install.md#tab-panel-563))
 
 Terminal
 
@@ -87,12 +87,12 @@ Of course, you can also install requirements manually with `pip install email-va
 
 ## Install from repository
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/install#install-from-repository> ([local](./install.md#install-from-repository)))
+<https://pydantic.dev/docs/validation/latest/get-started/install#install-from-repository> ([local](./install.md#install-from-repository)) ([local](./install.md#install-from-repository))
 
 And if you prefer to install Pydantic directly from the repository:
 
-  * [ pip ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-564> ([local](./install.md#tab-panel-564)))
-  * [ uv ](<https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-565> ([local](./install.md#tab-panel-565)))
+  * [ pip ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-564) ([local](./install.md#tab-panel-564))
+  * [ uv ](https://pydantic.dev/docs/validation/latest/get-started/install#tab-panel-565) ([local](./install.md#tab-panel-565))
 
 Terminal
 

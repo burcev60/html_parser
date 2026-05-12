@@ -7,7 +7,7 @@ Native Pendulum DateTime object implementation. This is a copy of the Pendulum D
 
 ## DateTime 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.DateTime> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.DateTime)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.DateTime> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.DateTime)) ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.DateTime))
 
 **Bases:** `_DateTime`
 
@@ -32,7 +32,7 @@ A `pendulum.DateTime` object. At runtime, this type decomposes into pendulum.Dat
 
 ## Time 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Time> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Time)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Time> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Time)) ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Time))
 
 **Bases:** `_Time`
 
@@ -57,7 +57,7 @@ A `pendulum.Time` object. At runtime, this type decomposes into pendulum.Time au
 
 ## Date 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Date> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Date)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Date> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Date)) ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Date))
 
 **Bases:** `_Date`
 
@@ -82,7 +82,7 @@ A `pendulum.Date` object. At runtime, this type decomposes into pendulum.Date au
 
 ## Duration 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Duration> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Duration> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration)) ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration))
 
 **Bases:** `_Duration`
 
@@ -107,11 +107,11 @@ A `pendulum.Duration` object. At runtime, this type decomposes into pendulum.Dur
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#methods> ([local](./pydantic_extra_types_pendulum_dt.md#methods)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#methods> ([local](./pydantic_extra_types_pendulum_dt.md#methods)) ([local](./pydantic_extra_types_pendulum_dt.md#methods))
 
 #### to_iso8601_string 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Duration.to_iso8601_string> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration.to_iso8601_string)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#pydantic_extra_types.pendulum_dt.Duration.to_iso8601_string> ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration.to_iso8601_string)) ([local](./pydantic_extra_types_pendulum_dt.md#pydantic_extra_types.pendulum_dt.Duration.to_iso8601_string))
 
 ```
  
@@ -126,6 +126,6 @@ In addition to the standard ISO 8601 format, this method also supports the repre
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#returns> ([local](./pydantic_extra_types_pendulum_dt.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_pendulum_dt/#returns> ([local](./pydantic_extra_types_pendulum_dt.md#returns)) ([local](./pydantic_extra_types_pendulum_dt.md#returns))
 
-[`str`](<https://docs.python.org/3/library/stdtypes.html#str>) — The ISO 8601 string representation of the duration.
+[`str`](https://docs.python.org/3/library/stdtypes.html#str) — The ISO 8601 string representation of the duration.

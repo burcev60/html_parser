@@ -7,13 +7,13 @@ Pydantic serves as a great tool for defining models for ORM (object relational m
 
 ## SQLAlchemy
 
-[](<https://pydantic.dev/docs/validation/latest/examples/orms/#sqlalchemy> ([local](./orms.md#sqlalchemy)))
+<https://pydantic.dev/docs/validation/latest/examples/orms/#sqlalchemy> ([local](./orms.md#sqlalchemy)) ([local](./orms.md#sqlalchemy))
 
 Pydantic can pair with SQLAlchemy, as it can be used to define the schema of the database models.
 
 Code Duplication
 
-If you use Pydantic with SQLAlchemy, you might experience some frustration with code duplication. If you find yourself experiencing this difficulty, you might also consider [`SQLModel`](<https://sqlmodel.tiangolo.com/>) which integrates Pydantic with SQLAlchemy such that much of the code duplication is eliminated.
+If you use Pydantic with SQLAlchemy, you might experience some frustration with code duplication. If you find yourself experiencing this difficulty, you might also consider [`SQLModel`](https://sqlmodel.tiangolo.com/) which integrates Pydantic with SQLAlchemy such that much of the code duplication is eliminated.
 
 If you’d prefer to use pure Pydantic with SQLAlchemy, we recommend using Pydantic models alongside of SQLAlchemy models as shown in the example below. In this case, we take advantage of Pydantic’s aliases feature to name a `Column` after a reserved SQLAlchemy field, thus avoiding conflicts.
 

@@ -3,13 +3,13 @@ title: Coordinate
 source: https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/
 ---
 
-The `pydantic_extra_types.coordinate` module provides the [`Latitude`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Latitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Latitude))), [`Longitude`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Longitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Longitude))), and [`Coordinate`](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Coordinate> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Coordinate))) data types.
+The `pydantic_extra_types.coordinate` module provides the [`Latitude`](https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Latitude) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Latitude)), [`Longitude`](https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Longitude) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Longitude)), and [`Coordinate`](https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Coordinate) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Coordinate)) data types.
 
 ## Latitude 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Latitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Latitude)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Latitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Latitude)) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Latitude))
 
-**Bases:** [`float`](<https://docs.python.org/3/library/functions.html#float>)
+**Bases:** [`float`](https://docs.python.org/3/library/functions.html#float)
 
 Latitude value should be between -90 and 90, inclusive.
 
@@ -36,9 +36,9 @@ Supports both float and Decimal types.
 
 ## Longitude 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Longitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Longitude)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Longitude> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Longitude)) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Longitude))
 
-**Bases:** [`float`](<https://docs.python.org/3/library/functions.html#float>)
+**Bases:** [`float`](https://docs.python.org/3/library/functions.html#float)
 
 Longitude value should be between -180 and 180, inclusive.
 
@@ -66,7 +66,7 @@ Supports both float and Decimal types.
 
 ## Coordinate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Coordinate> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Coordinate)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_coordinate/#pydantic_extra_types.coordinate.Coordinate> ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Coordinate)) ([local](./pydantic_extra_types_coordinate.md#pydantic_extra_types.coordinate.Coordinate))
 
 **Bases:** `Representation`
 

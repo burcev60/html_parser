@@ -7,11 +7,11 @@ Pydantic is quite helpful for validating data that goes into and comes out of qu
 
 ## Redis queue
 
-[](<https://pydantic.dev/docs/validation/latest/examples/queues/#redis-queue> ([local](./queues.md#redis-queue)))
+<https://pydantic.dev/docs/validation/latest/examples/queues/#redis-queue> ([local](./queues.md#redis-queue)) ([local](./queues.md#redis-queue))
 
 Redis is a popular in-memory data structure store.
 
-In order to run this example locally, you’ll first need to [install Redis](<https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/>) and start your server up locally.
+In order to run this example locally, you’ll first need to [install Redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/) and start your server up locally.
 
 Here’s a simple example of how you can use Pydantic to:
 
@@ -41,14 +41,14 @@ Here’s a simple example of how you can use Pydantic to:
         print(f'Added to queue: {serialized_data}')
     
     
-    user1 = User(id=1, name='John Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
-    user2 = User(id=2, name='Jane Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    user1 = User(id=1, name='John Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
+    user2 = User(id=2, name='Jane Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
     push_to_queue(user1)
-    #> Added to queue: {"id":1,"name":"John Doe","email":"[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
+    #> Added to queue: {"id":1,"name":"John Doe","email":"[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
     
     push_to_queue(user2)
-    #> Added to queue: {"id":2,"name":"Jane Doe","email":"[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
+    #> Added to queue: {"id":2,"name":"Jane Doe","email":"[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
     
     
     def pop_from_queue() -> None:
@@ -62,10 +62,10 @@ Here’s a simple example of how you can use Pydantic to:
     
     
     pop_from_queue()
-    #> Validated user: User(id=1, name='John Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    #> Validated user: User(id=1, name='John Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
     pop_from_queue()
-    #> Validated user: User(id=2, name='Jane Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    #> Validated user: User(id=2, name='Jane Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
     pop_from_queue()
     #> Queue is empty
@@ -75,11 +75,11 @@ Here’s a simple example of how you can use Pydantic to:
 
 ## RabbitMQ
 
-[](<https://pydantic.dev/docs/validation/latest/examples/queues/#rabbitmq> ([local](./queues.md#rabbitmq)))
+<https://pydantic.dev/docs/validation/latest/examples/queues/#rabbitmq> ([local](./queues.md#rabbitmq)) ([local](./queues.md#rabbitmq))
 
 RabbitMQ is a popular message broker that implements the AMQP protocol.
 
-In order to run this example locally, you’ll first need to [install RabbitMQ](<https://www.rabbitmq.com/download.html>) and start your server.
+In order to run this example locally, you’ll first need to [install RabbitMQ](https://www.rabbitmq.com/download.html) and start your server.
 
 Here’s a simple example of how you can use Pydantic to:
 
@@ -117,14 +117,14 @@ First, let’s create a sender script.
         print(f'Added to queue: {serialized_data}')
     
     
-    user1 = User(id=1, name='John Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
-    user2 = User(id=2, name='Jane Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    user1 = User(id=1, name='John Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
+    user2 = User(id=2, name='Jane Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
     push_to_queue(user1)
-    #> Added to queue: {"id":1,"name":"John Doe","email":"[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
+    #> Added to queue: {"id":1,"name":"John Doe","email":"[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
     
     push_to_queue(user2)
-    #> Added to queue: {"id":2,"name":"Jane Doe","email":"[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
+    #> Added to queue: {"id":2,"name":"Jane Doe","email":"[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
     
     connection.close()
     
@@ -182,11 +182,11 @@ To test this example:
 
 ## ARQ
 
-[](<https://pydantic.dev/docs/validation/latest/examples/queues/#arq> ([local](./queues.md#arq)))
+<https://pydantic.dev/docs/validation/latest/examples/queues/#arq> ([local](./queues.md#arq)) ([local](./queues.md#arq))
 
 ARQ is a fast Redis-based job queue for Python. It’s built on top of Redis and provides a simple way to handle background tasks.
 
-In order to run this example locally, you’ll need to [Install Redis](<https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/>) and start your server.
+In order to run this example locally, you’ll need to [Install Redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/) and start your server.
 
 Here’s a simple example of how you can use Pydantic with ARQ to:
 
@@ -220,8 +220,8 @@ Here’s a simple example of how you can use Pydantic with ARQ to:
     
     
     async def enqueue_jobs(redis):
-        user1 = User(id=1, name='John Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
-        user2 = User(id=2, name='Jane Doe', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+        user1 = User(id=1, name='John Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
+        user2 = User(id=2, name='Jane Doe', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
         await redis.enqueue_job('process_user', user1.model_dump())
         print(f'Enqueued user: {repr(user1)}')

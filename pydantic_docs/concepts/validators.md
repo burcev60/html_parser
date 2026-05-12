@@ -3,7 +3,7 @@ title: Validators
 source: https://pydantic.dev/docs/validation/latest/concepts/validators
 ---
 
-In addition to Pydantic’s [built-in validation capabilities](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints))), you can leverage custom validators at the field and model levels to enforce more complex constraints and ensure the integrity of your data.
+In addition to Pydantic’s [built-in validation capabilities](https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints) ([local](./fields.md#field-constraints)), you can leverage custom validators at the field and model levels to enforce more complex constraints and ensure the integrity of your data.
 
 Tip
 
@@ -13,38 +13,38 @@ Want to quickly jump to the relevant validator section?
 
 * * *
 
-    * [field _after_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator> ([local](./validators.md#field-after-validator)))
-    * [field _before_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator> ([local](./validators.md#field-before-validator)))
-    * [field _plain_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator> ([local](./validators.md#field-plain-validator)))
-    * [field _wrap_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator> ([local](./validators.md#field-wrap-validator)))
+    * [field _after_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator) ([local](./validators.md#field-after-validator))
+    * [field _before_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator) ([local](./validators.md#field-before-validator))
+    * [field _plain_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator) ([local](./validators.md#field-plain-validator))
+    * [field _wrap_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator) ([local](./validators.md#field-wrap-validator))
   * Model validators
 
 * * *
 
-    * [model _before_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-before-validator> ([local](./validators.md#model-before-validator)))
-    * [model _after_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator> ([local](./validators.md#model-after-validator)))
-    * [model _wrap_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-wrap-validator> ([local](./validators.md#model-wrap-validator)))
+    * [model _before_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#model-before-validator) ([local](./validators.md#model-before-validator))
+    * [model _after_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator) ([local](./validators.md#model-after-validator))
+    * [model _wrap_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#model-wrap-validator) ([local](./validators.md#model-wrap-validator))
 
 ## Field validators
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators> ([local](./validators.md#field-validators)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators> ([local](./validators.md#field-validators)) ([local](./validators.md#field-validators))
 
 API Documentation
 
-[`pydantic.functional_validators.WrapValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.WrapValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.WrapValidator)))  
-[`pydantic.functional_validators.PlainValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.PlainValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.PlainValidator)))  
-[`pydantic.functional_validators.BeforeValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.BeforeValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.BeforeValidator)))  
-[`pydantic.functional_validators.AfterValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator)))  
-[`pydantic.functional_validators.field_validator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator)))  
+[`pydantic.functional_validators.WrapValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.WrapValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.WrapValidator))  
+[`pydantic.functional_validators.PlainValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.PlainValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.PlainValidator))  
+[`pydantic.functional_validators.BeforeValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.BeforeValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.BeforeValidator))  
+[`pydantic.functional_validators.AfterValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator))  
+[`pydantic.functional_validators.field_validator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator))  
 
-In its simplest form, a field validator is a callable taking the value to be validated as an argument and **returning the validated value**. The callable can perform checks for specific conditions (see [raising validation errors](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./validators.md#raising-validation-errors)))) and make changes to the validated value (coercion or mutation).
+In its simplest form, a field validator is a callable taking the value to be validated as an argument and **returning the validated value**. The callable can perform checks for specific conditions (see [raising validation errors](https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors) ([local](./validators.md#raising-validation-errors))) and make changes to the validated value (coercion or mutation).
 
-**Four** different types of validators can be used. They can all be defined using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) or using the [`@field_validator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator))) decorator, applied on a [class method](<https://docs.python.org/3/library/functions.html#classmethod>):
+**Four** different types of validators can be used. They can all be defined using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) or using the [`@field_validator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator)) decorator, applied on a [class method](https://docs.python.org/3/library/functions.html#classmethod):
 
   * **_After_ validators**: run after Pydantic’s internal validation. They are generally more type safe and thus easier to implement.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-538> ([local](./validators.md#tab-panel-538)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-539> ([local](./validators.md#tab-panel-539)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-538) ([local](./validators.md#tab-panel-538))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-539) ([local](./validators.md#tab-panel-539))
 
 Here is an example of a validator performing a validation check, and returning the value unchanged.
 
@@ -77,7 +77,7 @@ Here is an example of a validator performing a validation check, and returning t
 
 ```
 
-Here is an example of a validator performing a validation check, and returning the value unchanged, this time using the [`field_validator()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator))) decorator.
+Here is an example of a validator performing a validation check, and returning the value unchanged, this time using the [`field_validator()`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator)) decorator.
 
 ```
  
@@ -111,8 +111,8 @@ Example mutating the value
 
 Here is an example of a validator making changes to the validated value (no exception is raised).
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-532> ([local](./validators.md#tab-panel-532)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-533> ([local](./validators.md#tab-panel-533)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-532) ([local](./validators.md#tab-panel-532))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-533) ([local](./validators.md#tab-panel-533))
 
 ```
  
@@ -154,12 +154,12 @@ Here is an example of a validator making changes to the validated value (no exce
 
 ```
 
-  * **_Before_ validators**: run before Pydantic’s internal parsing and validation (e.g. coercion of a `str` to an `int`). These are more flexible than [_after_ validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator> ([local](./validators.md#field-after-validator))), but they also have to deal with the raw input, which in theory could be any arbitrary object. You should also avoid mutating the value directly if you are raising a [validation error](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./validators.md#raising-validation-errors))) later in your validator function, as the mutated value may be passed to other validators if using [unions](<https://pydantic.dev/docs/validation/latest/concepts/unions> ([local](./unions.md))).
+  * **_Before_ validators**: run before Pydantic’s internal parsing and validation (e.g. coercion of a `str` to an `int`). These are more flexible than [_after_ validators](https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator) ([local](./validators.md#field-after-validator)), but they also have to deal with the raw input, which in theory could be any arbitrary object. You should also avoid mutating the value directly if you are raising a [validation error](https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors) ([local](./validators.md#raising-validation-errors)) later in your validator function, as the mutated value may be passed to other validators if using [unions](https://pydantic.dev/docs/validation/latest/concepts/unions) ([local](./unions.md)).
 
 The value returned from this callable is then validated against the provided type annotation by Pydantic.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-534> ([local](./validators.md#tab-panel-534)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-535> ([local](./validators.md#tab-panel-535)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-534) ([local](./validators.md#tab-panel-534))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-535) ([local](./validators.md#tab-panel-535))
 
 ```
  
@@ -228,8 +228,8 @@ The value returned from this callable is then validated against the provided typ
 
   * **_Plain_ validators**: act similarly to _before_ validators but they **terminate validation immediately** after returning, so no further validators are called and Pydantic does not do any of its internal validation against the field type.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-536> ([local](./validators.md#tab-panel-536)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-537> ([local](./validators.md#tab-panel-537)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-536) ([local](./validators.md#tab-panel-536))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-537) ([local](./validators.md#tab-panel-537))
 
 ```
  
@@ -286,8 +286,8 @@ The value returned from this callable is then validated against the provided typ
 
 Such validators must be defined with a **mandatory** extra _handler_ parameter: a callable taking the value to be validated as an argument. Internally, this handler will delegate validation of the value to Pydantic. You are free to wrap the call to the handler in a `try..except` block, or not call it at all.
 
-  * [ Annotated pattern ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-530> ([local](./validators.md#tab-panel-530)))
-  * [ Decorator ](<https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-531> ([local](./validators.md#tab-panel-531)))
+  * [ Annotated pattern ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-530) ([local](./validators.md#tab-panel-530))
+  * [ Decorator ](https://pydantic.dev/docs/validation/latest/concepts/validators#tab-panel-531) ([local](./validators.md#tab-panel-531))
 
 ```
  
@@ -354,19 +354,19 @@ Such validators must be defined with a **mandatory** extra _handler_ parameter: 
 
 Validation of default values
 
-As mentioned in the [fields documentation](<https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values> ([local](./fields.md#validate-default-values))), default values of fields are _not_ validated unless configured to do so, and thus custom validators will not be applied as well.
+As mentioned in the [fields documentation](https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values) ([local](./fields.md#validate-default-values)), default values of fields are _not_ validated unless configured to do so, and thus custom validators will not be applied as well.
 
 ### Which validator pattern to use
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#which-validator-pattern-to-use> ([local](./validators.md#which-validator-pattern-to-use)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#which-validator-pattern-to-use> ([local](./validators.md#which-validator-pattern-to-use)) ([local](./validators.md#which-validator-pattern-to-use))
 
 While both approaches can achieve the same thing, each pattern provides different benefits.
 
 #### Using the annotated pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-annotated-pattern> ([local](./validators.md#using-the-annotated-pattern)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-annotated-pattern> ([local](./validators.md#using-the-annotated-pattern)) ([local](./validators.md#using-the-annotated-pattern))
 
-One of the key benefits of using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) is to make validators reusable:
+One of the key benefits of using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) is to make validators reusable:
 
 ```
  
@@ -401,9 +401,9 @@ It is also easier to understand which validators are applied to a type, by just 
 
 #### Using the decorator pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-decorator-pattern> ([local](./validators.md#using-the-decorator-pattern)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-decorator-pattern> ([local](./validators.md#using-the-decorator-pattern)) ([local](./validators.md#using-the-decorator-pattern))
 
-One of the key benefits of using the [`field_validator()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator))) decorator is to apply the function to multiple fields:
+One of the key benefits of using the [`field_validator()`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.field_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.field_validator)) decorator is to apply the function to multiple fields:
 
 ```
  
@@ -429,13 +429,13 @@ Here are a couple additional notes about the decorator usage:
 
 ## Model validators
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators> ([local](./validators.md#model-validators)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators> ([local](./validators.md#model-validators)) ([local](./validators.md#model-validators))
 
 API Documentation
 
-[`pydantic.functional_validators.model_validator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.model_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.model_validator)))  
+[`pydantic.functional_validators.model_validator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.model_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.model_validator))  
 
-Validation can also be performed on the entire model’s data using the [`model_validator()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.model_validator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.model_validator))) decorator.
+Validation can also be performed on the entire model’s data using the [`model_validator()`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.model_validator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.model_validator)) decorator.
 
 **Three** different types of model validators can be used:
 
@@ -461,7 +461,7 @@ Validation can also be performed on the entire model’s data using the [`model_
 
 ```
 
-  * **_Before_ validators**: are run before the model is instantiated. These are more flexible than _after_ validators, but they also have to deal with the raw input, which in theory could be any arbitrary object. You should also avoid mutating the value directly if you are raising a [validation error](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./validators.md#raising-validation-errors))) later in your validator function, as the mutated value may be passed to other validators if using [unions](<https://pydantic.dev/docs/validation/latest/concepts/unions> ([local](./unions.md))).
+  * **_Before_ validators**: are run before the model is instantiated. These are more flexible than _after_ validators, but they also have to deal with the raw input, which in theory could be any arbitrary object. You should also avoid mutating the value directly if you are raising a [validation error](https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors) ([local](./validators.md#raising-validation-errors)) later in your validator function, as the mutated value may be passed to other validators if using [unions](https://pydantic.dev/docs/validation/latest/concepts/unions) ([local](./unions.md)).
 
 ```
  
@@ -517,15 +517,15 @@ Overriding a model validator in a subclass will override the base class’ valid
 
 ## Raising validation errors
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./validators.md#raising-validation-errors)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#raising-validation-errors> ([local](./validators.md#raising-validation-errors)) ([local](./validators.md#raising-validation-errors))
 
 To raise a validation error, three types of exceptions can be used:
 
-  * [`ValueError`](<https://docs.python.org/3/library/exceptions.html#ValueError>): this is the most common exception raised inside validators.
+  * [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError): this is the most common exception raised inside validators.
 
-  * [`AssertionError`](<https://docs.python.org/3/library/exceptions.html#AssertionError>): using the [assert](<https://docs.python.org/3/reference/simple_stmts.html#assert>) statement also works, but be aware that these statements are skipped when Python is run with the [-O](<https://docs.python.org/3/using/cmdline.html#cmdoption-O>) optimization flag.
+  * [`AssertionError`](https://docs.python.org/3/library/exceptions.html#AssertionError): using the [assert](https://docs.python.org/3/reference/simple_stmts.html#assert) statement also works, but be aware that these statements are skipped when Python is run with the [-O](https://docs.python.org/3/using/cmdline.html#cmdoption-O) optimization flag.
 
-  * [`PydanticCustomError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticCustomError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticCustomError))): a bit more verbose, but provides extra flexibility:
+  * [`PydanticCustomError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticCustomError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticCustomError)): a bit more verbose, but provides extra flexibility:
 
 ```
  from pydantic_core import PydanticCustomError
@@ -563,20 +563,20 @@ To raise a validation error, three types of exceptions can be used:
 
 ## Validation info
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-info> ([local](./validators.md#validation-info)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-info> ([local](./validators.md#validation-info)) ([local](./validators.md#validation-info))
 
-Both the field and model validators callables (in all modes) can optionally take an extra [`ValidationInfo`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo))) argument, providing useful extra information, such as:
+Both the field and model validators callables (in all modes) can optionally take an extra [`ValidationInfo`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo)) argument, providing useful extra information, such as:
 
-  * [already validated data](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-data> ([local](./validators.md#validation-data)))
-  * [user defined context](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context)))
-  * the current [validation mode](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))): either `'python'`, `'json'` or `'strings'` (see the [`mode`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.mode> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.mode))) property)
-  * the current field name, if using a [field validator](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators> ([local](./validators.md#field-validators))) (see the [`field_name`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.field_name> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.field_name))) property).
+  * [already validated data](https://pydantic.dev/docs/validation/latest/concepts/validators#validation-data) ([local](./validators.md#validation-data))
+  * [user defined context](https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context) ([local](./validators.md#validation-context))
+  * the current [validation mode](https://pydantic.dev/docs/validation/latest/concepts/models#validating-data) ([local](./models.md#validating-data)): either `'python'`, `'json'` or `'strings'` (see the [`mode`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.mode) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.mode)) property)
+  * the current field name, if using a [field validator](https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators) ([local](./validators.md#field-validators)) (see the [`field_name`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.field_name) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.field_name)) property).
 
 ### Validation data
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-data> ([local](./validators.md#validation-data)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-data> ([local](./validators.md#validation-data)) ([local](./validators.md#validation-data))
 
-For field validators, the already validated data can be accessed using the [`data`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data))) property. Here is an example than can be used as an alternative to the [_after_ model validator](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator> ([local](./validators.md#model-after-validator))) example:
+For field validators, the already validated data can be accessed using the [`data`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data)) property. Here is an example than can be used as an alternative to the [_after_ model validator](https://pydantic.dev/docs/validation/latest/concepts/validators#model-after-validator) ([local](./validators.md#model-after-validator)) example:
 
 ```
  
@@ -600,15 +600,15 @@ For field validators, the already validated data can be accessed using the [`dat
 
 Caution
 
-As validation is performed in the [order fields are defined](<https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering> ([local](./models.md#field-ordering))), you have to make sure you are not accessing a field that hasn’t been validated yet. In the code above, for example, the `username` validated value is not available yet, as it is defined _after_ `password_repeat`.
+As validation is performed in the [order fields are defined](https://pydantic.dev/docs/validation/latest/concepts/models#field-ordering) ([local](./models.md#field-ordering)), you have to make sure you are not accessing a field that hasn’t been validated yet. In the code above, for example, the `username` validated value is not available yet, as it is defined _after_ `password_repeat`.
 
-The [`data`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data))) property is `None` for [model validators](<https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators> ([local](./validators.md#model-validators))).
+The [`data`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.data) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.data)) property is `None` for [model validators](https://pydantic.dev/docs/validation/latest/concepts/validators#model-validators) ([local](./validators.md#model-validators)).
 
 ### Validation context
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./validators.md#validation-context)) ([local](./validators.md#validation-context))
 
-You can pass a context object to the [validation methods](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))), which can be accessed inside the validator functions using the [`context`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.context> ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.context))) property:
+You can pass a context object to the [validation methods](https://pydantic.dev/docs/validation/latest/concepts/models#validating-data) ([local](./models.md#validating-data)), which can be accessed inside the validator functions using the [`context`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core_schema/#pydantic_core.core_schema.ValidationInfo.context) ([local](./../api/pydantic-core/pydantic_core_schema.md#pydantic_core.core_schema.ValidationInfo.context)) property:
 
 ```
  
@@ -636,11 +636,11 @@ You can pass a context object to the [validation methods](<https://pydantic.dev/
 
 ```
 
-Similarly, you can [use a context for serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context> ([local](./serialization.md#serialization-context))).
+Similarly, you can [use a context for serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization#serialization-context) ([local](./serialization.md#serialization-context)).
 
 Providing context when directly instantiating a model
 
-It is currently not possible to provide a context when directly instantiating a model (i.e. when calling `Model(...)`). You can work around this through the use of a [`ContextVar`](<https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar>) and a custom `__init__` method:
+It is currently not possible to provide a context when directly instantiating a model (i.e. when calling `Model(...)`). You can work around this through the use of a [`ContextVar`](https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar) and a custom `__init__` method:
 
 ```
 
@@ -699,9 +699,9 @@ It is currently not possible to provide a context when directly instantiating a 
 
 ## Ordering of validators
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#ordering-of-validators> ([local](./validators.md#ordering-of-validators)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#ordering-of-validators> ([local](./validators.md#ordering-of-validators)) ([local](./validators.md#ordering-of-validators))
 
-When using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-annotated-pattern> ([local](./validators.md#using-the-annotated-pattern))), the order in which validators are applied is defined as follows: [_before_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator> ([local](./validators.md#field-before-validator))) and [_wrap_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator> ([local](./validators.md#field-wrap-validator))) validators are run from right to left, and [_after_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator> ([local](./validators.md#field-after-validator))) validators are then run from left to right:
+When using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-annotated-pattern) ([local](./validators.md#using-the-annotated-pattern)), the order in which validators are applied is defined as follows: [_before_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator) ([local](./validators.md#field-before-validator)) and [_wrap_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator) ([local](./validators.md#field-wrap-validator)) validators are run from right to left, and [_after_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-after-validator) ([local](./validators.md#field-after-validator)) validators are then run from left to right:
 
 ```
  
@@ -720,15 +720,15 @@ When using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/
 
 ```
 
-Internally, validators defined using [the decorator](<https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-decorator-pattern> ([local](./validators.md#using-the-decorator-pattern))) are converted to their annotated form counterpart and added last after the existing metadata for the field. This means that the same ordering logic applies.
+Internally, validators defined using [the decorator](https://pydantic.dev/docs/validation/latest/concepts/validators#using-the-decorator-pattern) ([local](./validators.md#using-the-decorator-pattern)) are converted to their annotated form counterpart and added last after the existing metadata for the field. This means that the same ordering logic applies.
 
 ## Special types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#special-types> ([local](./validators.md#special-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#special-types> ([local](./validators.md#special-types)) ([local](./validators.md#special-types))
 
 Pydantic provides a few special utilities that can be used to customize validation.
 
-  * [`InstanceOf`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.InstanceOf> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.InstanceOf))) can be used to validate that a value is an instance of a given class.
+  * [`InstanceOf`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.InstanceOf) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.InstanceOf)) can be used to validate that a value is an instance of a given class.
 
 ```
  from pydantic import BaseModel, InstanceOf, ValidationError
@@ -764,7 +764,7 @@ Pydantic provides a few special utilities that can be used to customize validati
 
 ```
 
-  * [`SkipValidation`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.SkipValidation> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.SkipValidation))) can be used to skip validation on a field.
+  * [`SkipValidation`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.SkipValidation) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.SkipValidation)) can be used to skip validation on a field.
 
 ```
  
@@ -785,7 +785,7 @@ Pydantic provides a few special utilities that can be used to customize validati
 
 ```
 
-  * [`ValidateAs`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.ValidateAs> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.ValidateAs))) can be used to validate an custom type from a type natively supported by Pydantic. This is particularly useful when using custom types with multiple fields.
+  * [`ValidateAs`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.ValidateAs) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.ValidateAs)) can be used to validate an custom type from a type natively supported by Pydantic. This is particularly useful when using custom types with multiple fields.
 
 ```
  from typing import Annotated
@@ -813,7 +813,7 @@ Pydantic provides a few special utilities that can be used to customize validati
 
 ```
 
-  * [`PydanticUseDefault`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticUseDefault> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticUseDefault))) can be used to notify Pydantic that the default value should be used.
+  * [`PydanticUseDefault`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.PydanticUseDefault) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.PydanticUseDefault)) can be used to notify Pydantic that the default value should be used.
 
 ```
  from typing import Annotated, Any
@@ -841,9 +841,9 @@ Pydantic provides a few special utilities that can be used to customize validati
 
 ## JSON Schema and field validators
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/validators#json-schema-and-field-validators> ([local](./validators.md#json-schema-and-field-validators)))
+<https://pydantic.dev/docs/validation/latest/concepts/validators#json-schema-and-field-validators> ([local](./validators.md#json-schema-and-field-validators)) ([local](./validators.md#json-schema-and-field-validators))
 
-When using [_before_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator> ([local](./validators.md#field-before-validator))), [_plain_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator> ([local](./validators.md#field-plain-validator))) or [_wrap_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator> ([local](./validators.md#field-wrap-validator))) field validators, the accepted input type may be different from the field annotation.
+When using [_before_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-before-validator) ([local](./validators.md#field-before-validator)), [_plain_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator) ([local](./validators.md#field-plain-validator)) or [_wrap_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-wrap-validator) ([local](./validators.md#field-wrap-validator)) field validators, the accepted input type may be different from the field annotation.
 
 Consider the following example:
 
@@ -903,4 +903,4 @@ While the type hint for `value` is `str`, the `cast_ints` validator also allows 
 
 ```
 
-As a convenience, Pydantic will use the field type if the argument is not provided (unless you are using a [_plain_](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator> ([local](./validators.md#field-plain-validator))) validator, in which case `json_schema_input_type` defaults to [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) as the field type is completely discarded).
+As a convenience, Pydantic will use the field type if the argument is not provided (unless you are using a [_plain_](https://pydantic.dev/docs/validation/latest/concepts/validators#field-plain-validator) ([local](./validators.md#field-plain-validator)) validator, in which case `json_schema_input_type` defaults to [`Any`](https://docs.python.org/3/library/typing.html#typing.Any) as the field type is completely discarded).

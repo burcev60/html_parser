@@ -3,7 +3,7 @@ title: datamodel-code-generator
 source: https://pydantic.dev/docs/validation/latest/integrations/dev-tools/datamodel_code_generator/
 ---
 
-The [datamodel-code-generator](<https://github.com/koxudaxi/datamodel-code-generator/>) project is a library and command-line utility to generate pydantic models from just about any data source, including:
+The [datamodel-code-generator](https://github.com/koxudaxi/datamodel-code-generator/) project is a library and command-line utility to generate pydantic models from just about any data source, including:
 
   * OpenAPI 3 (YAML/JSON)
   * JSON Schema
@@ -15,7 +15,7 @@ Whenever you find yourself with any data convertible JSON but without pydantic m
 
 ## Installation
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/datamodel_code_generator/#installation> ([local](./datamodel_code_generator.md#installation)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/datamodel_code_generator/#installation> ([local](./datamodel_code_generator.md#installation)) ([local](./datamodel_code_generator.md#installation))
 
 Terminal
 
@@ -28,7 +28,7 @@ Terminal
 
 ## Example
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/datamodel_code_generator/#example> ([local](./datamodel_code_generator.md#example)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/datamodel_code_generator/#example> ([local](./datamodel_code_generator.md#example)) ([local](./datamodel_code_generator.md#example))
 
 In this case, datamodel-code-generator creates pydantic models from a JSON Schema file.
 
@@ -126,4 +126,4 @@ model.py:
 
 ```
 
-More information can be found on the [official documentation](<https://koxudaxi.github.io/datamodel-code-generator/>)
+More information can be found on the [official documentation](https://koxudaxi.github.io/datamodel-code-generator/)

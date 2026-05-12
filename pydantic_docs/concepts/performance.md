@@ -7,22 +7,22 @@ In most cases Pydantic won’t be your bottleneck, only follow this if you’re 
 
 ## In general, use `model_validate_json()` not `model_validate(json.loads(...))`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#in-general-use-model_validate_json-not-model_validatejsonloads> ([local](./performance.md#in-general-use-model_validate_json-not-model_validatejsonloads)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#in-general-use-model_validate_json-not-model_validatejsonloads> ([local](./performance.md#in-general-use-model_validate_json-not-model_validatejsonloads)) ([local](./performance.md#in-general-use-model_validate_json-not-model_validatejsonloads))
 
 On `model_validate(json.loads(...))`, the JSON is parsed in Python, then converted to a dict, then it’s validated internally. On the other hand, `model_validate_json()` already performs the validation internally.
 
-There are a few cases where `model_validate(json.loads(...))` may be faster. Specifically, when using a `'before'` or `'wrap'` validator on a model, validation may be faster with the two step method. You can read more about these special cases in [this discussion](<https://github.com/pydantic/pydantic/discussions/6388#discussioncomment-8193105>).
+There are a few cases where `model_validate(json.loads(...))` may be faster. Specifically, when using a `'before'` or `'wrap'` validator on a model, validation may be faster with the two step method. You can read more about these special cases in [this discussion](https://github.com/pydantic/pydantic/discussions/6388#discussioncomment-8193105).
 
-Many performance improvements are currently in the works for `pydantic-core`, see [this discussion](<https://github.com/pydantic/pydantic/discussions/6388#discussioncomment-8194048>). Once these changes are merged, we should be at the point where `model_validate_json()` is always faster than `model_validate(json.loads(...))`.
+Many performance improvements are currently in the works for `pydantic-core`, see [this discussion](https://github.com/pydantic/pydantic/discussions/6388#discussioncomment-8194048). Once these changes are merged, we should be at the point where `model_validate_json()` is always faster than `model_validate(json.loads(...))`.
 
 ## `TypeAdapter` instantiated once
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#typeadapter-instantiated-once> ([local](./performance.md#typeadapter-instantiated-once)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#typeadapter-instantiated-once> ([local](./performance.md#typeadapter-instantiated-once)) ([local](./performance.md#typeadapter-instantiated-once))
 
 The idea here is to avoid constructing validators and serializers more than necessary. Each time a `TypeAdapter` is instantiated, it will construct a new validator and serializer. If you’re using a `TypeAdapter` in a function, it will be instantiated each time the function is called. Instead, instantiate it once, and reuse it.
 
-  * [ :x: Bad ](<https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-545> ([local](./performance.md#tab-panel-545)))
-  * [ :white_check_mark: Good ](<https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-546> ([local](./performance.md#tab-panel-546)))
+  * [ :x: Bad ](https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-545) ([local](./performance.md#tab-panel-545))
+  * [ :white_check_mark: Good ](https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-546) ([local](./performance.md#tab-panel-546))
 
 ```
  
@@ -51,7 +51,7 @@ The idea here is to avoid constructing validators and serializers more than nece
 
 ## `Sequence` vs `list` or `tuple` with `Mapping` vs `dict`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#sequence-vs-list-or-tuple-with-mapping-vs-dict> ([local](./performance.md#sequence-vs-list-or-tuple-with-mapping-vs-dict)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#sequence-vs-list-or-tuple-with-mapping-vs-dict> ([local](./performance.md#sequence-vs-list-or-tuple-with-mapping-vs-dict)) ([local](./performance.md#sequence-vs-list-or-tuple-with-mapping-vs-dict))
 
 When using `Sequence`, Pydantic calls `isinstance(value, Sequence)` to check if the value is a sequence. Also, Pydantic will try to validate against different types of sequences, like `list` and `tuple`. If you know the value is a `list` or `tuple`, use `list` or `tuple` instead of `Sequence`.
 
@@ -59,7 +59,7 @@ The same applies to `Mapping` and `dict`. If you know the value is a `dict`, use
 
 ## Don’t do validation when you don’t have to, use `Any` to keep the value unchanged
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#dont-do-validation-when-you-dont-have-to-use-any-to-keep-the-value-unchanged> ([local](./performance.md#dont-do-validation-when-you-dont-have-to-use-any-to-keep-the-value-unchanged)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#dont-do-validation-when-you-dont-have-to-use-any-to-keep-the-value-unchanged> ([local](./performance.md#dont-do-validation-when-you-dont-have-to-use-any-to-keep-the-value-unchanged)) ([local](./performance.md#dont-do-validation-when-you-dont-have-to-use-any-to-keep-the-value-unchanged))
 
 If you don’t need to validate a value, use `Any` to keep the value unchanged.
 
@@ -81,10 +81,10 @@ If you don’t need to validate a value, use `Any` to keep the value unchanged.
 
 ## Avoid extra information via subclasses of primitives
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#avoid-extra-information-via-subclasses-of-primitives> ([local](./performance.md#avoid-extra-information-via-subclasses-of-primitives)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#avoid-extra-information-via-subclasses-of-primitives> ([local](./performance.md#avoid-extra-information-via-subclasses-of-primitives)) ([local](./performance.md#avoid-extra-information-via-subclasses-of-primitives))
 
-  * [ Don't do this ](<https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-547> ([local](./performance.md#tab-panel-547)))
-  * [ Do this ](<https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-548> ([local](./performance.md#tab-panel-548)))
+  * [ Don't do this ](https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-547) ([local](./performance.md#tab-panel-547))
+  * [ Do this ](https://pydantic.dev/docs/validation/latest/concepts/performance#tab-panel-548) ([local](./performance.md#tab-panel-548))
 
 ```
  
@@ -110,7 +110,7 @@ If you don’t need to validate a value, use `Any` to keep the value unchanged.
 
 ## Use tagged union, not union
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#use-tagged-union-not-union> ([local](./performance.md#use-tagged-union-not-union)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#use-tagged-union-not-union> ([local](./performance.md#use-tagged-union-not-union)) ([local](./performance.md#use-tagged-union-not-union))
 
 Tagged union (or discriminated union) is a union with a field that indicates which type it is.
 
@@ -153,11 +153,11 @@ Tagged union (or discriminated union) is a union with a field that indicates whi
 
 ```
 
-See [Discriminated Unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions))) for more details.
+See [Discriminated Unions](https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions) ([local](./unions.md#discriminated-unions)) for more details.
 
 ## Use `TypedDict` over nested models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#use-typeddict-over-nested-models> ([local](./performance.md#use-typeddict-over-nested-models)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#use-typeddict-over-nested-models> ([local](./performance.md#use-typeddict-over-nested-models)) ([local](./performance.md#use-typeddict-over-nested-models))
 
 Instead of using nested models, use `TypedDict` to define the structure of the data.
 
@@ -206,13 +206,13 @@ With a simple benchmark, `TypedDict` is about ~2.5x faster than nested models:
 
 ## Avoid wrap validators if you really care about performance
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#avoid-wrap-validators-if-you-really-care-about-performance> ([local](./performance.md#avoid-wrap-validators-if-you-really-care-about-performance)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#avoid-wrap-validators-if-you-really-care-about-performance> ([local](./performance.md#avoid-wrap-validators-if-you-really-care-about-performance)) ([local](./performance.md#avoid-wrap-validators-if-you-really-care-about-performance))
 
 Wrap validators are generally slower than other validators. This is because they require that data is materialized in Python during validation. Wrap validators can be incredibly useful for complex validation logic, but if you’re looking for the best performance, you should avoid them.
 
 ## Failing early with `FailFast`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/performance#failing-early-with-failfast> ([local](./performance.md#failing-early-with-failfast)))
+<https://pydantic.dev/docs/validation/latest/concepts/performance#failing-early-with-failfast> ([local](./performance.md#failing-early-with-failfast)) ([local](./performance.md#failing-early-with-failfast))
 
 Starting in v2.8+, you can apply the `FailFast` annotation to sequence types to fail early if any item in the sequence fails validation. If you use this annotation, you won’t get validation errors for the rest of the items in the sequence if one fails, so you’re effectively trading off visibility for performance.
 
@@ -236,4 +236,4 @@ Starting in v2.8+, you can apply the `FailFast` annotation to sequence types to 
 
 ```
 
-Read more about `FailFast` [here](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FailFast> ([local](./../api/pydantic/types.md#pydantic.types.FailFast))).
+Read more about `FailFast` [here](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.FailFast) ([local](./../api/pydantic/types.md#pydantic.types.FailFast)).

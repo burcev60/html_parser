@@ -5,7 +5,7 @@ source: https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visua
 
 Pydantic works well with any editor or IDE out of the box because it’s made on top of standard Python type annotations.
 
-When using [Visual Studio Code (VS Code)](<https://code.visualstudio.com/>), there are some **additional editor features** supported, comparable to the ones provided by the [PyCharm plugin](<https://pydantic.dev/docs/validation/latest/integrations/pycharm>).
+When using [Visual Studio Code (VS Code)](https://code.visualstudio.com/), there are some **additional editor features** supported, comparable to the ones provided by the [PyCharm plugin](https://pydantic.dev/docs/validation/latest/integrations/pycharm).
 
 This means that you will have **autocompletion** (or “IntelliSense”) and **error checks** for types and required arguments even while creating new Pydantic model instances.
 
@@ -13,7 +13,7 @@ This means that you will have **autocompletion** (or “IntelliSense”) and **e
 
 ## Configure VS Code
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-vs-code> ([local](./visual_studio_code.md#configure-vs-code)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-vs-code> ([local](./visual_studio_code.md#configure-vs-code)) ([local](./visual_studio_code.md#configure-vs-code))
 
 To take advantage of these features, you need to make sure you configure VS Code correctly, using the recommended settings.
 
@@ -21,23 +21,23 @@ In case you have a different configuration, here’s a short overview of the ste
 
 ### Install Pylance
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#install-pylance> ([local](./visual_studio_code.md#install-pylance)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#install-pylance> ([local](./visual_studio_code.md#install-pylance)) ([local](./visual_studio_code.md#install-pylance))
 
-You should use the [Pylance](<https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance>) extension for VS Code. It is the recommended, next-generation, official VS Code plug-in for Python.
+You should use the [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) extension for VS Code. It is the recommended, next-generation, official VS Code plug-in for Python.
 
-Pylance is installed as part of the [Python Extension for VS Code](<https://marketplace.visualstudio.com/items?itemName=ms-python.python>) by default, so it should probably just work. Otherwise, you can double check it’s installed and enabled in your editor.
+Pylance is installed as part of the [Python Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) by default, so it should probably just work. Otherwise, you can double check it’s installed and enabled in your editor.
 
 ### Configure your environment
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-your-environment> ([local](./visual_studio_code.md#configure-your-environment)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-your-environment> ([local](./visual_studio_code.md#configure-your-environment)) ([local](./visual_studio_code.md#configure-your-environment))
 
-Then you need to make sure your editor knows the [Python environment](<https://code.visualstudio.com/docs/python/python-tutorial#_install-and-use-packages>) (probably a virtual environment) for your Python project.
+Then you need to make sure your editor knows the [Python environment](https://code.visualstudio.com/docs/python/python-tutorial#_install-and-use-packages) (probably a virtual environment) for your Python project.
 
 This would be the environment in where you installed Pydantic.
 
 ### Configure Pylance
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-pylance> ([local](./visual_studio_code.md#configure-pylance)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-pylance> ([local](./visual_studio_code.md#configure-pylance)) ([local](./visual_studio_code.md#configure-pylance))
 
 With the default configurations, you will get support for autocompletion, but Pylance might not check for type errors.
 
@@ -60,17 +60,17 @@ And you will also get error checks for **invalid data types**.
 
 Technical Details
 
-Pylance is the VS Code extension, it’s closed source, but free to use. Underneath, Pylance uses an open source tool (also from Microsoft) called [Pyright](<https://github.com/microsoft/pyright>) that does all the heavy lifting.
+Pylance is the VS Code extension, it’s closed source, but free to use. Underneath, Pylance uses an open source tool (also from Microsoft) called [Pyright](https://github.com/microsoft/pyright) that does all the heavy lifting.
 
-You can read more about it in the [Pylance Frequently Asked Questions](<https://github.com/microsoft/pylance-release/blob/main/FAQ.md#what-is-the-relationship-between-pylance-pyright-and-the-python-extension>).
+You can read more about it in the [Pylance Frequently Asked Questions](https://github.com/microsoft/pylance-release/blob/main/FAQ.md#what-is-the-relationship-between-pylance-pyright-and-the-python-extension).
 
 ### Configure mypy
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-mypy> ([local](./visual_studio_code.md#configure-mypy)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#configure-mypy> ([local](./visual_studio_code.md#configure-mypy)) ([local](./visual_studio_code.md#configure-mypy))
 
 You might also want to configure mypy in VS Code to get mypy error checks inline in your editor (alternatively/additionally to Pylance).
 
-This would include the errors detected by the [Pydantic mypy plugin](<https://pydantic.dev/docs/validation/latest/integrations/mypy>), if you configured it.
+This would include the errors detected by the [Pydantic mypy plugin](https://pydantic.dev/docs/validation/latest/integrations/mypy), if you configured it.
 
 To enable mypy in VS Code, do the following:
 
@@ -83,13 +83,13 @@ To enable mypy in VS Code, do the following:
 
 ## Tips and tricks
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#tips-and-tricks> ([local](./visual_studio_code.md#tips-and-tricks)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#tips-and-tricks> ([local](./visual_studio_code.md#tips-and-tricks)) ([local](./visual_studio_code.md#tips-and-tricks))
 
 Here are some additional tips and tricks to improve your developer experience when using VS Code with Pydantic.
 
 ### Strict errors
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#strict-errors> ([local](./visual_studio_code.md#strict-errors)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#strict-errors> ([local](./visual_studio_code.md#strict-errors)) ([local](./visual_studio_code.md#strict-errors))
 
 The way this additional editor support works is that Pylance will treat your Pydantic models as if they were Python’s pure `dataclasses`.
 
@@ -150,7 +150,7 @@ Below are several techniques to achieve it.
 
 #### Disable type checks in a line
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#disable-type-checks-in-a-line> ([local](./visual_studio_code.md#disable-type-checks-in-a-line)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#disable-type-checks-in-a-line> ([local](./visual_studio_code.md#disable-type-checks-in-a-line)) ([local](./visual_studio_code.md#disable-type-checks-in-a-line))
 
 You can disable the errors for a specific line using a comment of:
 
@@ -170,7 +170,7 @@ or (to be specific to pylance/pyright):
 
 ```
 
-([pyright](<https://github.com/microsoft/pyright>) is the language server used by Pylance.).
+([pyright](https://github.com/microsoft/pyright) is the language server used by Pylance.).
 
 coming back to the example with `age='23'`, it would be:
 
@@ -198,7 +198,7 @@ that way Pylance and mypy will ignore errors in that line.
 
 #### Override the type of a variable
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#override-the-type-of-a-variable> ([local](./visual_studio_code.md#override-the-type-of-a-variable)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#override-the-type-of-a-variable> ([local](./visual_studio_code.md#override-the-type-of-a-variable)) ([local](./visual_studio_code.md#override-the-type-of-a-variable))
 
 You can also create a variable with the value you want to use and declare its type explicitly with `Any`.
 
@@ -229,7 +229,7 @@ that way Pylance and mypy will interpret the variable `age_str` as if they didn�
 
 #### Override the type of a value with `cast`
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#override-the-type-of-a-value-with-cast> ([local](./visual_studio_code.md#override-the-type-of-a-value-with-cast)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#override-the-type-of-a-value-with-cast> ([local](./visual_studio_code.md#override-the-type-of-a-value-with-cast)) ([local](./visual_studio_code.md#override-the-type-of-a-value-with-cast))
 
 The same idea from the previous example can be put on the same line with the help of `cast()`.
 
@@ -263,7 +263,7 @@ So, this is the equivalent of the previous example, without the additional varia
 
 ### Config in class arguments
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#config-in-class-arguments> ([local](./visual_studio_code.md#config-in-class-arguments)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#config-in-class-arguments> ([local](./visual_studio_code.md#config-in-class-arguments)) ([local](./visual_studio_code.md#config-in-class-arguments))
 
 Pydantic has a rich set of Model Configurations available.
 
@@ -308,7 +308,7 @@ When using the second version to declare `frozen=True` (with **keyword arguments
 
 ## Adding a default with `Field`
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#adding-a-default-with-field> ([local](./visual_studio_code.md#adding-a-default-with-field)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#adding-a-default-with-field> ([local](./visual_studio_code.md#adding-a-default-with-field)) ([local](./visual_studio_code.md#adding-a-default-with-field))
 
 Pylance/pyright requires `default` to be a keyword argument to `Field` in order to infer that the field is optional.
 
@@ -333,7 +333,7 @@ This is a limitation of dataclass transforms and cannot be fixed in pydantic.
 
 ## Technical Details
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#technical-details> ([local](./visual_studio_code.md#technical-details)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/visual_studio_code/#technical-details> ([local](./visual_studio_code.md#technical-details)) ([local](./visual_studio_code.md#technical-details))
 
 Caution
 
@@ -341,6 +341,6 @@ As a Pydantic user, you don’t need the details below. Feel free to skip the re
 
 These details are only useful for other library authors, etc.
 
-This additional editor support works by making use of the [`@dataclass_transform` decorator](<https://typing.python.org/en/latest/spec/dataclasses.html#the-dataclass-transform-decorator>) (introduced by [PEP 681](<https://peps.python.org/pep-0681/>)).
+This additional editor support works by making use of the [`@dataclass_transform` decorator](https://typing.python.org/en/latest/spec/dataclasses.html#the-dataclass-transform-decorator) (introduced by [PEP 681](https://peps.python.org/pep-0681/)).
 
 The standard provides a way for libraries like Pydantic and others to tell editors and tools that they (the editors) should treat these libraries (e.g. Pydantic) as if they were dataclasses, providing autocompletion, type checks, etc.

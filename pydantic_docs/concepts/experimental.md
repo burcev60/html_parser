@@ -5,25 +5,25 @@ source: https://pydantic.dev/docs/validation/latest/concepts/experimental
 
 In this section you will find documentation for new, experimental features in Pydantic. These features are subject to change or removal, and we are looking for feedback and suggestions before making them a permanent part of Pydantic.
 
-See our [Version Policy](<https://pydantic.dev/docs/validation/latest/get-started/version-policy#experimental-features> ([local](./../get-started/version-policy.md#experimental-features))) for more information on experimental features.
+See our [Version Policy](https://pydantic.dev/docs/validation/latest/get-started/version-policy#experimental-features) ([local](./../get-started/version-policy.md#experimental-features)) for more information on experimental features.
 
 ## Feedback
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#feedback> ([local](./experimental.md#feedback)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#feedback> ([local](./experimental.md#feedback)) ([local](./experimental.md#feedback))
 
-We welcome feedback on experimental features! Please open an issue on the [Pydantic GitHub repository](<https://github.com/pydantic/pydantic/issues/new/choose>) to share your thoughts, requests, or suggestions.
+We welcome feedback on experimental features! Please open an issue on the [Pydantic GitHub repository](https://github.com/pydantic/pydantic/issues/new/choose) to share your thoughts, requests, or suggestions.
 
 We also encourage you to read through existing feedback and add your thoughts to existing issues.
 
 ## Pipeline API
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#pipeline-api> ([local](./experimental.md#pipeline-api)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#pipeline-api> ([local](./experimental.md#pipeline-api)) ([local](./experimental.md#pipeline-api))
 
 Pydantic v2.8.0 introduced an experimental “pipeline” API that allows composing of parsing (validation), constraints and transformations in a more type-safe manner than existing APIs. This API is subject to change or removal, we are looking for feedback and suggestions before making it a permanent part of Pydantic.
 
 API Documentation
 
-[`pydantic.experimental.pipeline`](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental/#pydantic.experimental.pipeline> ([local](./../api/pydantic/experimental.md#pydantic.experimental.pipeline)))  
+[`pydantic.experimental.pipeline`](https://pydantic.dev/docs/validation/latest/api/pydantic/experimental/#pydantic.experimental.pipeline) ([local](./../api/pydantic/experimental.md#pydantic.experimental.pipeline))  
 
 Generally, the pipeline API is used to define a sequence of steps to apply to incoming data during validation. The pipeline API is designed to be more type-safe and composable than the existing Pydantic API.
 
@@ -75,7 +75,7 @@ Note that the following example attempts to be exhaustive at the cost of complex
 
 ### Mapping from `BeforeValidator`, `AfterValidator` and `WrapValidator`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#mapping-from-beforevalidator-aftervalidator-and-wrapvalidator> ([local](./experimental.md#mapping-from-beforevalidator-aftervalidator-and-wrapvalidator)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#mapping-from-beforevalidator-aftervalidator-and-wrapvalidator> ([local](./experimental.md#mapping-from-beforevalidator-aftervalidator-and-wrapvalidator)) ([local](./experimental.md#mapping-from-beforevalidator-aftervalidator-and-wrapvalidator))
 
 The `validate_as` method is a more type-safe way to define `BeforeValidator`, `AfterValidator` and `WrapValidator`:
 
@@ -102,7 +102,7 @@ The `validate_as` method is a more type-safe way to define `BeforeValidator`, `A
 
 ### Alternative patterns
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#alternative-patterns> ([local](./experimental.md#alternative-patterns)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#alternative-patterns> ([local](./experimental.md#alternative-patterns)) ([local](./experimental.md#alternative-patterns))
 
 There are many alternative patterns to use depending on the scenario. Just as an example, consider the `UserIn` and `UserOut` pattern mentioned above:
 
@@ -138,7 +138,7 @@ This example uses plain idiomatic Python code that may be easier to understand, 
 
 ## Partial Validation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#partial-validation> ([local](./experimental.md#partial-validation)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#partial-validation> ([local](./experimental.md#partial-validation)) ([local](./experimental.md#partial-validation))
 
 ✦ New in v2.10
 
@@ -148,9 +148,9 @@ Partial validation is particularly helpful when processing the output of an LLM,
 
 Caution
 
-Partial validation is an experimental feature and may change in future versions of Pydantic. The current implementation should be considered a proof of concept at this time and has a number of [limitations](<https://pydantic.dev/docs/validation/latest/concepts/experimental#limitations-of-partial-validation> ([local](./experimental.md#limitations-of-partial-validation))).
+Partial validation is an experimental feature and may change in future versions of Pydantic. The current implementation should be considered a proof of concept at this time and has a number of [limitations](https://pydantic.dev/docs/validation/latest/concepts/experimental#limitations-of-partial-validation) ([local](./experimental.md#limitations-of-partial-validation)).
 
-Partial validation can be enabled when using the three validation methods on `TypeAdapter`: [`TypeAdapter.validate_json()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json))), [`TypeAdapter.validate_python()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_python> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_python))), and [`TypeAdapter.validate_strings()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_strings> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_strings))). This allows you to parse and validation incomplete JSON, but also to validate Python objects created by parsing incomplete data of any format.
+Partial validation can be enabled when using the three validation methods on `TypeAdapter`: [`TypeAdapter.validate_json()`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json)), [`TypeAdapter.validate_python()`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_python) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_python)), and [`TypeAdapter.validate_strings()`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_strings) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_strings)). This allows you to parse and validation incomplete JSON, but also to validate Python objects created by parsing incomplete data of any format.
 
 The `experimental_allow_partial` flag can be passed to these methods to enable partial validation. It can take the following values (and is `False`, by default):
 
@@ -255,7 +255,7 @@ And would be validated as:
 
 ### How Partial Validation Works
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#how-partial-validation-works> ([local](./experimental.md#how-partial-validation-works)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#how-partial-validation-works> ([local](./experimental.md#how-partial-validation-works)) ([local](./experimental.md#how-partial-validation-works))
 
 Partial validation follows the zen of Pydantic — it makes no guarantees about what the input data might have been, but it does guarantee to return a valid instance of the type you required, or raise a validation error.
 
@@ -263,17 +263,17 @@ To do this, the `experimental_allow_partial` flag enables two pieces of behavior
 
 #### 1\. Partial JSON parsing
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#1-partial-json-parsing> ([local](./experimental.md#1-partial-json-parsing)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#1-partial-json-parsing> ([local](./experimental.md#1-partial-json-parsing)) ([local](./experimental.md#1-partial-json-parsing))
 
-The [jiter](<https://github.com/pydantic/jiter>) JSON parser used by Pydantic already supports parsing partial JSON, `experimental_allow_partial` is simply passed to jiter via the `allow_partial` argument.
+The [jiter](https://github.com/pydantic/jiter) JSON parser used by Pydantic already supports parsing partial JSON, `experimental_allow_partial` is simply passed to jiter via the `allow_partial` argument.
 
 Note
 
-If you just want pure JSON parsing with support for partial JSON, you can use the [`jiter`](<https://pypi.org/project/jiter/>) Python library directly, or pass the `allow_partial` argument when calling [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))).
+If you just want pure JSON parsing with support for partial JSON, you can use the [`jiter`](https://pypi.org/project/jiter/) Python library directly, or pass the `allow_partial` argument when calling [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)).
 
 #### 2\. Ignore errors in the last element of the input 
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last> ([local](./experimental.md#2-ignore-errors-in-last)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last> ([local](./experimental.md#2-ignore-errors-in-last)) ([local](./experimental.md#2-ignore-errors-in-last))
 
 Only having access to part of the input data means errors can commonly occur in the last element of the input data.
 
@@ -317,17 +317,17 @@ Errors in last element ignored
 
 ### Limitations of Partial Validation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#limitations-of-partial-validation> ([local](./experimental.md#limitations-of-partial-validation)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#limitations-of-partial-validation> ([local](./experimental.md#limitations-of-partial-validation)) ([local](./experimental.md#limitations-of-partial-validation))
 
 #### TypeAdapter only
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#typeadapter-only> ([local](./experimental.md#typeadapter-only)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#typeadapter-only> ([local](./experimental.md#typeadapter-only)) ([local](./experimental.md#typeadapter-only))
 
-You can only pass `experiment_allow_partial` to [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) methods, it’s not yet supported via other Pydantic entry points like [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))).
+You can only pass `experiment_allow_partial` to [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) methods, it’s not yet supported via other Pydantic entry points like [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)).
 
 #### Types supported
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#types-supported> ([local](./experimental.md#types-supported)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#types-supported> ([local](./experimental.md#types-supported)) ([local](./experimental.md#types-supported))
 
 Right now only a subset of collection validators know how to handle partial validation:
 
@@ -335,11 +335,11 @@ Right now only a subset of collection validators know how to handle partial vali
   * `set`
   * `frozenset`
   * `dict` (as in `dict[X, Y]`)
-  * `TypedDict` — only non-required fields may be missing, e.g. via [`NotRequired`](<https://docs.python.org/3/library/typing.html#typing.NotRequired>) or [`total=False`](<https://docs.python.org/3/library/typing.html#typing.TypedDict.__total__>))
+  * `TypedDict` — only non-required fields may be missing, e.g. via [`NotRequired`](https://docs.python.org/3/library/typing.html#typing.NotRequired) or [`total=False`](https://docs.python.org/3/library/typing.html#typing.TypedDict.__total__))
 
 While you can use `experimental_allow_partial` while validating against types that include other collection validators, those types will be validated “all or nothing”, and partial validation will not work on more nested types.
 
-E.g. in the [above](<https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last> ([local](./experimental.md#2-ignore-errors-in-last))) example partial validation works although the second item in the list is dropped completely since `BaseModel` doesn’t (yet) support partial validation.
+E.g. in the [above](https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last) ([local](./experimental.md#2-ignore-errors-in-last)) example partial validation works although the second item in the list is dropped completely since `BaseModel` doesn’t (yet) support partial validation.
 
 But partial validation won’t work at all in the follow example because `BaseModel` doesn’t support partial validation so it doesn’t forward the `allow_partial` instruction down to the list validator in `b`:
 
@@ -374,9 +374,9 @@ But partial validation won’t work at all in the follow example because `BaseMo
 
 #### Some invalid but complete JSON will be accepted
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#some-invalid-but-complete-json-will-be-accepted> ([local](./experimental.md#some-invalid-but-complete-json-will-be-accepted)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#some-invalid-but-complete-json-will-be-accepted> ([local](./experimental.md#some-invalid-but-complete-json-will-be-accepted)) ([local](./experimental.md#some-invalid-but-complete-json-will-be-accepted))
 
-The way [jiter](<https://github.com/pydantic/jiter>) (the JSON parser used by Pydantic) works means it’s currently not possible to differentiate between complete JSON like `{"a": 1, "b": "12"}` and incomplete JSON like `{"a": 1, "b": "12`.
+The way [jiter](https://github.com/pydantic/jiter) (the JSON parser used by Pydantic) works means it’s currently not possible to differentiate between complete JSON like `{"a": 1, "b": "12"}` and incomplete JSON like `{"a": 1, "b": "12`.
 
 This means that some invalid JSON will be accepted by Pydantic when using `experimental_allow_partial`, e.g.:
 
@@ -413,9 +413,9 @@ This means that some invalid JSON will be accepted by Pydantic when using `exper
 
 #### Any error in the last field of the input will be ignored
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#any-error-in-the-last-field-of-the-input-will-be-ignored> ([local](./experimental.md#any-error-in-the-last-field-of-the-input-will-be-ignored)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#any-error-in-the-last-field-of-the-input-will-be-ignored> ([local](./experimental.md#any-error-in-the-last-field-of-the-input-will-be-ignored)) ([local](./experimental.md#any-error-in-the-last-field-of-the-input-will-be-ignored))
 
-As described [above](<https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last> ([local](./experimental.md#2-ignore-errors-in-last))), many errors can result from truncating the input. Rather than trying to specifically ignore errors that could result from truncation, Pydantic ignores all errors in the last element of the input in partial validation mode.
+As described [above](https://pydantic.dev/docs/validation/latest/concepts/experimental#2-ignore-errors-in-last) ([local](./experimental.md#2-ignore-errors-in-last)), many errors can result from truncating the input. Rather than trying to specifically ignore errors that could result from truncation, Pydantic ignores all errors in the last element of the input in partial validation mode.
 
 This means clearly invalid data will pass validation if the error is in the last field of the input:
 
@@ -442,11 +442,11 @@ This means clearly invalid data will pass validation if the error is in the last
 
 ## Validation of a callable’s arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#validation-of-a-callables-arguments> ([local](./experimental.md#validation-of-a-callables-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#validation-of-a-callables-arguments> ([local](./experimental.md#validation-of-a-callables-arguments)) ([local](./experimental.md#validation-of-a-callables-arguments))
 
-Pydantic provides the [`@validate_call`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))) decorator to perform validation on the provided arguments (and additionally return type) of a callable. However, it only allows arguments to be provided by actually calling the decorated callable. In some situations, you may want to just _validate_ the arguments, such as when loading from other data sources such as JSON data.
+Pydantic provides the [`@validate_call`](https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call) ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call)) decorator to perform validation on the provided arguments (and additionally return type) of a callable. However, it only allows arguments to be provided by actually calling the decorated callable. In some situations, you may want to just _validate_ the arguments, such as when loading from other data sources such as JSON data.
 
-For this reason, the experimental [`generate_arguments_schema()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental/#pydantic.experimental.arguments_schema.generate_arguments_schema> ([local](./../api/pydantic/experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema))) function can be used to construct a core schema, which can later be used with a [`SchemaValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaValidator> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.SchemaValidator))).
+For this reason, the experimental [`generate_arguments_schema()`](https://pydantic.dev/docs/validation/latest/api/pydantic/experimental/#pydantic.experimental.arguments_schema.generate_arguments_schema) ([local](./../api/pydantic/experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema)) function can be used to construct a core schema, which can later be used with a [`SchemaValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.SchemaValidator) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.SchemaValidator)).
 
 ```
  
@@ -482,7 +482,7 @@ For this reason, the experimental [`generate_arguments_schema()`](<https://pydan
 
 Note
 
-Unlike [`@validate_call`](<https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call> ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call))), this core schema will only validate the provided arguments; the underlying callable will _not_ be called.
+Unlike [`@validate_call`](https://pydantic.dev/docs/validation/latest/api/pydantic/validate_call/#pydantic.validate_call_decorator.validate_call) ([local](./../api/pydantic/validate_call.md#pydantic.validate_call_decorator.validate_call)), this core schema will only validate the provided arguments; the underlying callable will _not_ be called.
 
 Additionally, you can ignore specific parameters by providing a callback, which is called for every parameter:
 
@@ -519,7 +519,7 @@ Additionally, you can ignore specific parameters by providing a callback, which 
 
 ## `MISSING` sentinel
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel> ([local](./experimental.md#missing-sentinel)))
+<https://pydantic.dev/docs/validation/latest/concepts/experimental#missing-sentinel> ([local](./experimental.md#missing-sentinel)) ([local](./experimental.md#missing-sentinel))
 
 The `MISSING` sentinel is a singleton indicating a field value was not provided during validation.
 
@@ -557,13 +557,13 @@ This singleton can be used as a default value, as an alternative to `None` when 
 
 ```
 
-This feature is marked as experimental because it relies on the draft [PEP 661](<https://peps.python.org/pep-0661/>), introducing sentinels in the standard library.
+This feature is marked as experimental because it relies on the draft [PEP 661](https://peps.python.org/pep-0661/), introducing sentinels in the standard library.
 
 As such, the following limitations currently apply:
 
-  * Static type checking of sentinels is only supported with Pyright [1.1.402](<https://github.com/microsoft/pyright/releases/tag/1.1.402>) or greater, and the `enableExperimentalFeatures` type evaluation setting should be enabled.
+  * Static type checking of sentinels is only supported with Pyright [1.1.402](https://github.com/microsoft/pyright/releases/tag/1.1.402) or greater, and the `enableExperimentalFeatures` type evaluation setting should be enabled.
   * Pickling of models containing `MISSING` as a value is not supported.
 
 Note
 
-When [applying constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints))) to a union containing the `MISSING` sentinel, such constraints are automatically applied to the remaining type(s) of the union.
+When [applying constraints](https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints) ([local](./fields.md#field-constraints)) to a union containing the `MISSING` sentinel, such constraints are automatically applied to the remaining type(s) of the union.

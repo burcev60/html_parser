@@ -7,7 +7,7 @@ Pydantic attempts to provide useful validation errors. Below are details on comm
 
 ## `arguments_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#arguments_type> ([local](./validation_errors.md#arguments_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#arguments_type> ([local](./validation_errors.md#arguments_type)) ([local](./validation_errors.md#arguments_type))
 
 This error is raised when an object that would be passed as arguments to a function during validation is not a `tuple`, `list`, or `dict`. Because `NamedTuple` uses function calls in its implementation, that is one way to produce this error:
 
@@ -37,7 +37,7 @@ This error is raised when an object that would be passed as arguments to a funct
 
 ## `assertion_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#assertion_error> ([local](./validation_errors.md#assertion_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#assertion_error> ([local](./validation_errors.md#assertion_error)) ([local](./validation_errors.md#assertion_error))
 
 This error is raised when a failing `assert` statement is encountered during validation:
 
@@ -67,7 +67,7 @@ This error is raised when a failing `assert` statement is encountered during val
 
 ## `bool_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bool_parsing> ([local](./validation_errors.md#bool_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bool_parsing> ([local](./validation_errors.md#bool_parsing)) ([local](./validation_errors.md#bool_parsing))
 
 This error is raised when the input value is a string that is not valid for coercion to a boolean:
 
@@ -93,7 +93,7 @@ This error is raised when the input value is a string that is not valid for coer
 
 ## `bool_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bool_type> ([local](./validation_errors.md#bool_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bool_type> ([local](./validation_errors.md#bool_type)) ([local](./validation_errors.md#bool_type))
 
 This error is raised when the input value’s type is not valid for a `bool` field:
 
@@ -119,7 +119,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `bytes_invalid_encoding`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_invalid_encoding> ([local](./validation_errors.md#bytes_invalid_encoding)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_invalid_encoding> ([local](./validation_errors.md#bytes_invalid_encoding)) ([local](./validation_errors.md#bytes_invalid_encoding))
 
 This error is raised when a `bytes` value is invalid under the configured encoding. In the following example, `'a'` is invalid hex (odd number of digits).
 
@@ -144,7 +144,7 @@ This error is raised when a `bytes` value is invalid under the configured encodi
 
 ## `bytes_too_long`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_too_long> ([local](./validation_errors.md#bytes_too_long)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_too_long> ([local](./validation_errors.md#bytes_too_long)) ([local](./validation_errors.md#bytes_too_long))
 
 This error is raised when the length of a `bytes` value is greater than the field’s `max_length` constraint:
 
@@ -168,7 +168,7 @@ This error is raised when the length of a `bytes` value is greater than the fiel
 
 ## `bytes_too_short`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_too_short> ([local](./validation_errors.md#bytes_too_short)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_too_short> ([local](./validation_errors.md#bytes_too_short)) ([local](./validation_errors.md#bytes_too_short))
 
 This error is raised when the length of a `bytes` value is less than the field’s `min_length` constraint:
 
@@ -192,7 +192,7 @@ This error is raised when the length of a `bytes` value is less than the field�
 
 ## `bytes_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_type> ([local](./validation_errors.md#bytes_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#bytes_type> ([local](./validation_errors.md#bytes_type)) ([local](./validation_errors.md#bytes_type))
 
 This error is raised when the input value’s type is not valid for a `bytes` field:
 
@@ -218,7 +218,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `callable_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#callable_type> ([local](./validation_errors.md#callable_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#callable_type> ([local](./validation_errors.md#callable_type)) ([local](./validation_errors.md#callable_type))
 
 This error is raised when the input value is not valid as a `Callable`:
 
@@ -246,9 +246,9 @@ This error is raised when the input value is not valid as a `Callable`:
 
 ## `complex_str_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#complex_str_parsing> ([local](./validation_errors.md#complex_str_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#complex_str_parsing> ([local](./validation_errors.md#complex_str_parsing)) ([local](./validation_errors.md#complex_str_parsing))
 
-This error is raised when the input value is a string but cannot be parsed as a complex number because it does not follow the [rule](<https://docs.python.org/3/library/functions.html#complex>) in Python:
+This error is raised when the input value is a string but cannot be parsed as a complex number because it does not follow the [rule](https://docs.python.org/3/library/functions.html#complex) in Python:
 
 ```
  
@@ -272,7 +272,7 @@ This error is raised when the input value is a string but cannot be parsed as a 
 
 ## `complex_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#complex_type> ([local](./validation_errors.md#complex_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#complex_type> ([local](./validation_errors.md#complex_type)) ([local](./validation_errors.md#complex_type))
 
 This error is raised when the input value cannot be interpreted as a complex number:
 
@@ -296,7 +296,7 @@ This error is raised when the input value cannot be interpreted as a complex num
 
 ## `dataclass_exact_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dataclass_exact_type> ([local](./validation_errors.md#dataclass_exact_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dataclass_exact_type> ([local](./validation_errors.md#dataclass_exact_type)) ([local](./validation_errors.md#dataclass_exact_type))
 
 This error is raised when validating a dataclass with `strict=True` and the input is not an instance of the dataclass:
 
@@ -329,7 +329,7 @@ This error is raised when validating a dataclass with `strict=True` and the inpu
 
 ## `dataclass_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dataclass_type> ([local](./validation_errors.md#dataclass_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dataclass_type> ([local](./validation_errors.md#dataclass_type)) ([local](./validation_errors.md#dataclass_type))
 
 This error is raised when the input value is not valid for a `dataclass` field:
 
@@ -361,7 +361,7 @@ This error is raised when the input value is not valid for a `dataclass` field:
 
 ## `date_from_datetime_inexact`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_from_datetime_inexact> ([local](./validation_errors.md#date_from_datetime_inexact)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_from_datetime_inexact> ([local](./validation_errors.md#date_from_datetime_inexact)) ([local](./validation_errors.md#date_from_datetime_inexact))
 
 This error is raised when the input `datetime` value provided for a `date` field has a nonzero time component. For a timestamp to parse into a field of type `date`, the time components must all be zero:
 
@@ -390,7 +390,7 @@ This error is raised when the input `datetime` value provided for a `date` field
 
 ## `date_from_datetime_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_from_datetime_parsing> ([local](./validation_errors.md#date_from_datetime_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_from_datetime_parsing> ([local](./validation_errors.md#date_from_datetime_parsing)) ([local](./validation_errors.md#date_from_datetime_parsing))
 
 This error is raised when the input value is a string that cannot be parsed for a `date` field:
 
@@ -416,7 +416,7 @@ This error is raised when the input value is a string that cannot be parsed for 
 
 ## `date_future`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_future> ([local](./validation_errors.md#date_future)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_future> ([local](./validation_errors.md#date_future)) ([local](./validation_errors.md#date_future))
 
 This error is raised when the input value provided for a `FutureDate` field is not in the future:
 
@@ -442,7 +442,7 @@ This error is raised when the input value provided for a `FutureDate` field is n
 
 ## `date_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_parsing> ([local](./validation_errors.md#date_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_parsing> ([local](./validation_errors.md#date_parsing)) ([local](./validation_errors.md#date_parsing))
 
 This error is raised when validating JSON where the input value is string that cannot be parsed for a `date` field:
 
@@ -469,7 +469,7 @@ This error is raised when validating JSON where the input value is string that c
 
 ## `date_past`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_past> ([local](./validation_errors.md#date_past)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_past> ([local](./validation_errors.md#date_past)) ([local](./validation_errors.md#date_past))
 
 This error is raised when the value provided for a `PastDate` field is not in the past:
 
@@ -495,7 +495,7 @@ This error is raised when the value provided for a `PastDate` field is not in th
 
 ## `date_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_type> ([local](./validation_errors.md#date_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#date_type> ([local](./validation_errors.md#date_type)) ([local](./validation_errors.md#date_type))
 
 This error is raised when the input value’s type is not valid for a `date` field:
 
@@ -523,7 +523,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `datetime_from_date_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_from_date_parsing> ([local](./validation_errors.md#datetime_from_date_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_from_date_parsing> ([local](./validation_errors.md#datetime_from_date_parsing)) ([local](./validation_errors.md#datetime_from_date_parsing))
 
 This error is raised when the input value is a string that cannot be parsed for a `datetime` field:
 
@@ -550,7 +550,7 @@ This error is raised when the input value is a string that cannot be parsed for 
 
 ## `datetime_future`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_future> ([local](./validation_errors.md#datetime_future)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_future> ([local](./validation_errors.md#datetime_future)) ([local](./validation_errors.md#datetime_future))
 
 This error is raised when the value provided for a `FutureDatetime` field is not in the future:
 
@@ -576,7 +576,7 @@ This error is raised when the value provided for a `FutureDatetime` field is not
 
 ## `datetime_object_invalid`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_object_invalid> ([local](./validation_errors.md#datetime_object_invalid)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_object_invalid> ([local](./validation_errors.md#datetime_object_invalid)) ([local](./validation_errors.md#datetime_object_invalid))
 
 This error is raised when something about the `datetime` object is not valid:
 
@@ -609,7 +609,7 @@ This error is raised when something about the `datetime` object is not valid:
 
 ## `datetime_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_parsing> ([local](./validation_errors.md#datetime_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_parsing> ([local](./validation_errors.md#datetime_parsing)) ([local](./validation_errors.md#datetime_parsing))
 
 This error is raised when the value is a string that cannot be parsed for a `datetime` field:
 
@@ -636,7 +636,7 @@ This error is raised when the value is a string that cannot be parsed for a `dat
 
 ## `datetime_past`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_past> ([local](./validation_errors.md#datetime_past)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_past> ([local](./validation_errors.md#datetime_past)) ([local](./validation_errors.md#datetime_past))
 
 This error is raised when the value provided for a `PastDatetime` field is not in the past:
 
@@ -662,7 +662,7 @@ This error is raised when the value provided for a `PastDatetime` field is not i
 
 ## `datetime_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_type> ([local](./validation_errors.md#datetime_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#datetime_type> ([local](./validation_errors.md#datetime_type)) ([local](./validation_errors.md#datetime_type))
 
 This error is raised when the input value’s type is not valid for a `datetime` field:
 
@@ -690,7 +690,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `decimal_max_digits`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_max_digits> ([local](./validation_errors.md#decimal_max_digits)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_max_digits> ([local](./validation_errors.md#decimal_max_digits)) ([local](./validation_errors.md#decimal_max_digits))
 
 This error is raised when the value provided for a `Decimal` has too many digits:
 
@@ -716,7 +716,7 @@ This error is raised when the value provided for a `Decimal` has too many digits
 
 ## `decimal_max_places`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_max_places> ([local](./validation_errors.md#decimal_max_places)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_max_places> ([local](./validation_errors.md#decimal_max_places)) ([local](./validation_errors.md#decimal_max_places))
 
 This error is raised when the value provided for a `Decimal` has too many digits after the decimal point:
 
@@ -742,7 +742,7 @@ This error is raised when the value provided for a `Decimal` has too many digits
 
 ## `decimal_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_parsing> ([local](./validation_errors.md#decimal_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_parsing> ([local](./validation_errors.md#decimal_parsing)) ([local](./validation_errors.md#decimal_parsing))
 
 This error is raised when the value provided for a `Decimal` could not be parsed as a decimal number:
 
@@ -768,7 +768,7 @@ This error is raised when the value provided for a `Decimal` could not be parsed
 
 ## `decimal_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_type> ([local](./validation_errors.md#decimal_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_type> ([local](./validation_errors.md#decimal_type)) ([local](./validation_errors.md#decimal_type))
 
 This error is raised when the value provided for a `Decimal` is of the wrong type:
 
@@ -796,7 +796,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `decimal_whole_digits`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_whole_digits> ([local](./validation_errors.md#decimal_whole_digits)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#decimal_whole_digits> ([local](./validation_errors.md#decimal_whole_digits)) ([local](./validation_errors.md#decimal_whole_digits))
 
 This error is raised when the value provided for a `Decimal` has more digits before the decimal point than `max_digits` \- `decimal_places` (as long as both are specified):
 
@@ -822,9 +822,9 @@ This error is raised when the value provided for a `Decimal` has more digits bef
 
 ## `default_factory_not_called`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#default_factory_not_called> ([local](./validation_errors.md#default_factory_not_called)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#default_factory_not_called> ([local](./validation_errors.md#default_factory_not_called)) ([local](./validation_errors.md#default_factory_not_called))
 
-This error is raised when a [default factory taking validated data](<https://pydantic.dev/docs/validation/latest/concepts/fields#default-factory-validated-data> ([local](./../concepts/fields.md#default-factory-validated-data))) can’t be called, because validation failed on previous fields:
+This error is raised when a [default factory taking validated data](https://pydantic.dev/docs/validation/latest/concepts/fields#default-factory-validated-data) ([local](./../concepts/fields.md#default-factory-validated-data)) can’t be called, because validation failed on previous fields:
 
 ```
  
@@ -855,7 +855,7 @@ This error is raised when a [default factory taking validated data](<https://pyd
 
 ## `dict_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dict_type> ([local](./validation_errors.md#dict_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#dict_type> ([local](./validation_errors.md#dict_type)) ([local](./validation_errors.md#dict_type))
 
 This error is raised when the input value’s type is not `dict` for a `dict` field:
 
@@ -879,7 +879,7 @@ This error is raised when the input value’s type is not `dict` for a `dict` fi
 
 ## `enum`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#enum> ([local](./validation_errors.md#enum)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#enum> ([local](./validation_errors.md#enum)) ([local](./validation_errors.md#enum))
 
 This error is raised when the input value does not exist in an `enum` field members:
 
@@ -909,7 +909,7 @@ This error is raised when the input value does not exist in an `enum` field memb
 
 ## `extra_forbidden`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#extra_forbidden> ([local](./validation_errors.md#extra_forbidden)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#extra_forbidden> ([local](./validation_errors.md#extra_forbidden)) ([local](./validation_errors.md#extra_forbidden))
 
 This error is raised when the input value contains extra fields, but `model_config['extra'] == 'forbid'`:
 
@@ -937,7 +937,7 @@ You can read more about the `extra` configuration in the Extra Attributes sectio
 
 ## `finite_number`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#finite_number> ([local](./validation_errors.md#finite_number)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#finite_number> ([local](./validation_errors.md#finite_number)) ([local](./validation_errors.md#finite_number))
 
 This error is raised when the value is infinite, or too large to be represented as a 64-bit floating point number during validation:
 
@@ -961,7 +961,7 @@ This error is raised when the value is infinite, or too large to be represented 
 
 ## `float_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#float_parsing> ([local](./validation_errors.md#float_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#float_parsing> ([local](./validation_errors.md#float_parsing)) ([local](./validation_errors.md#float_parsing))
 
 This error is raised when the value is a string that can’t be parsed as a `float`:
 
@@ -985,7 +985,7 @@ This error is raised when the value is a string that can’t be parsed as a `flo
 
 ## `float_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#float_type> ([local](./validation_errors.md#float_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#float_type> ([local](./validation_errors.md#float_type)) ([local](./validation_errors.md#float_type))
 
 This error is raised when the input value’s type is not valid for a `float` field:
 
@@ -1009,7 +1009,7 @@ This error is raised when the input value’s type is not valid for a `float` fi
 
 ## `frozen_field`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_field> ([local](./validation_errors.md#frozen_field)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_field> ([local](./validation_errors.md#frozen_field)) ([local](./validation_errors.md#frozen_field))
 
 This error is raised when you attempt to assign a value to a field with `frozen=True`, or to delete such a field:
 
@@ -1041,9 +1041,9 @@ This error is raised when you attempt to assign a value to a field with `frozen=
 
 ## `frozen_instance`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_instance> ([local](./validation_errors.md#frozen_instance)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_instance> ([local](./validation_errors.md#frozen_instance)) ([local](./validation_errors.md#frozen_instance))
 
-This error is raised when `frozen` is set in the [configuration](<https://pydantic.dev/docs/validation/latest/concepts/config> ([local](./../concepts/config.md))) and you attempt to delete or assign a new value to any of the fields:
+This error is raised when `frozen` is set in the [configuration](https://pydantic.dev/docs/validation/latest/concepts/config) ([local](./../concepts/config.md)) and you attempt to delete or assign a new value to any of the fields:
 
 ```
  
@@ -1075,7 +1075,7 @@ This error is raised when `frozen` is set in the [configuration](<https://pydant
 
 ## `frozen_set_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_set_type> ([local](./validation_errors.md#frozen_set_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#frozen_set_type> ([local](./validation_errors.md#frozen_set_type)) ([local](./validation_errors.md#frozen_set_type))
 
 This error is raised when the input value’s type is not valid for a `frozenset` field:
 
@@ -1099,7 +1099,7 @@ This error is raised when the input value’s type is not valid for a `frozenset
 
 ## `get_attribute_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#get_attribute_error> ([local](./validation_errors.md#get_attribute_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#get_attribute_error> ([local](./validation_errors.md#get_attribute_error)) ([local](./validation_errors.md#get_attribute_error))
 
 This error is raised when `model_config['from_attributes'] == True` and an error is raised while reading the attributes:
 
@@ -1135,7 +1135,7 @@ This error is raised when `model_config['from_attributes'] == True` and an error
 
 ## `greater_than`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#greater_than> ([local](./validation_errors.md#greater_than)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#greater_than> ([local](./validation_errors.md#greater_than)) ([local](./validation_errors.md#greater_than))
 
 This error is raised when the value is not greater than the field’s `gt` constraint:
 
@@ -1159,7 +1159,7 @@ This error is raised when the value is not greater than the field’s `gt` const
 
 ## `greater_than_equal`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#greater_than_equal> ([local](./validation_errors.md#greater_than_equal)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#greater_than_equal> ([local](./validation_errors.md#greater_than_equal)) ([local](./validation_errors.md#greater_than_equal))
 
 This error is raised when the value is not greater than or equal to the field’s `ge` constraint:
 
@@ -1183,7 +1183,7 @@ This error is raised when the value is not greater than or equal to the field’
 
 ## `int_from_float`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_from_float> ([local](./validation_errors.md#int_from_float)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_from_float> ([local](./validation_errors.md#int_from_float)) ([local](./validation_errors.md#int_from_float))
 
 This error is raised when you provide a `float` value for an `int` field:
 
@@ -1207,7 +1207,7 @@ This error is raised when you provide a `float` value for an `int` field:
 
 ## `int_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_parsing> ([local](./validation_errors.md#int_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_parsing> ([local](./validation_errors.md#int_parsing)) ([local](./validation_errors.md#int_parsing))
 
 This error is raised when the value can’t be parsed as `int`:
 
@@ -1231,7 +1231,7 @@ This error is raised when the value can’t be parsed as `int`:
 
 ## `int_parsing_size`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_parsing_size> ([local](./validation_errors.md#int_parsing_size)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_parsing_size> ([local](./validation_errors.md#int_parsing_size)) ([local](./validation_errors.md#int_parsing_size))
 
 This error is raised when attempting to parse a python or JSON value from a string outside the maximum range that Python `str` to `int` parsing permits:
 
@@ -1268,7 +1268,7 @@ This error is raised when attempting to parse a python or JSON value from a stri
 
 ## `int_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_type> ([local](./validation_errors.md#int_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#int_type> ([local](./validation_errors.md#int_type)) ([local](./validation_errors.md#int_type))
 
 This error is raised when the input value’s type is not valid for an `int` field:
 
@@ -1292,7 +1292,7 @@ This error is raised when the input value’s type is not valid for an `int` fie
 
 ## `invalid_key`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#invalid_key> ([local](./validation_errors.md#invalid_key)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#invalid_key> ([local](./validation_errors.md#invalid_key)) ([local](./validation_errors.md#invalid_key))
 
 This error is raised when attempting to validate a `dict` that has a key that is not an instance of `str`:
 
@@ -1318,7 +1318,7 @@ This error is raised when attempting to validate a `dict` that has a key that is
 
 ## `is_instance_of`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#is_instance_of> ([local](./validation_errors.md#is_instance_of)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#is_instance_of> ([local](./validation_errors.md#is_instance_of)) ([local](./validation_errors.md#is_instance_of))
 
 This error is raised when the input value is not an instance of the expected type:
 
@@ -1348,7 +1348,7 @@ This error is raised when the input value is not an instance of the expected typ
 
 ## `is_subclass_of`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#is_subclass_of> ([local](./validation_errors.md#is_subclass_of)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#is_subclass_of> ([local](./validation_errors.md#is_subclass_of)) ([local](./validation_errors.md#is_subclass_of))
 
 This error is raised when the input value is not a subclass of the expected type:
 
@@ -1376,7 +1376,7 @@ This error is raised when the input value is not a subclass of the expected type
 
 ## `iterable_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#iterable_type> ([local](./validation_errors.md#iterable_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#iterable_type> ([local](./validation_errors.md#iterable_type)) ([local](./validation_errors.md#iterable_type))
 
 This error is raised when the input value is not valid as an `Iterable`:
 
@@ -1402,7 +1402,7 @@ This error is raised when the input value is not valid as an `Iterable`:
 
 ## `iteration_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#iteration_error> ([local](./validation_errors.md#iteration_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#iteration_error> ([local](./validation_errors.md#iteration_error)) ([local](./validation_errors.md#iteration_error))
 
 This error is raised when an error occurs during iteration:
 
@@ -1431,7 +1431,7 @@ This error is raised when an error occurs during iteration:
 
 ## `json_invalid`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#json_invalid> ([local](./validation_errors.md#json_invalid)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#json_invalid> ([local](./validation_errors.md#json_invalid)) ([local](./validation_errors.md#json_invalid))
 
 This error is raised when the input value is not a valid JSON string:
 
@@ -1455,7 +1455,7 @@ This error is raised when the input value is not a valid JSON string:
 
 ## `json_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#json_type> ([local](./validation_errors.md#json_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#json_type> ([local](./validation_errors.md#json_type)) ([local](./validation_errors.md#json_type))
 
 This error is raised when the input value is of a type that cannot be parsed as JSON:
 
@@ -1479,7 +1479,7 @@ This error is raised when the input value is of a type that cannot be parsed as 
 
 ## `less_than`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#less_than> ([local](./validation_errors.md#less_than)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#less_than> ([local](./validation_errors.md#less_than)) ([local](./validation_errors.md#less_than))
 
 This error is raised when the input value is not less than the field’s `lt` constraint:
 
@@ -1503,7 +1503,7 @@ This error is raised when the input value is not less than the field’s `lt` co
 
 ## `less_than_equal`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#less_than_equal> ([local](./validation_errors.md#less_than_equal)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#less_than_equal> ([local](./validation_errors.md#less_than_equal)) ([local](./validation_errors.md#less_than_equal))
 
 This error is raised when the input value is not less than or equal to the field’s `le` constraint:
 
@@ -1527,7 +1527,7 @@ This error is raised when the input value is not less than or equal to the field
 
 ## `list_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#list_type> ([local](./validation_errors.md#list_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#list_type> ([local](./validation_errors.md#list_type)) ([local](./validation_errors.md#list_type))
 
 This error is raised when the input value’s type is not valid for a `list` field:
 
@@ -1551,7 +1551,7 @@ This error is raised when the input value’s type is not valid for a `list` fie
 
 ## `literal_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#literal_error> ([local](./validation_errors.md#literal_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#literal_error> ([local](./validation_errors.md#literal_error)) ([local](./validation_errors.md#literal_error))
 
 This error is raised when the input value is not one of the expected literal values:
 
@@ -1579,7 +1579,7 @@ This error is raised when the input value is not one of the expected literal val
 
 ## `mapping_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#mapping_type> ([local](./validation_errors.md#mapping_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#mapping_type> ([local](./validation_errors.md#mapping_type)) ([local](./validation_errors.md#mapping_type))
 
 This error is raised when a problem occurs during validation due to a failure in a call to the methods from the `Mapping` protocol, such as `.items()`:
 
@@ -1619,7 +1619,7 @@ This error is raised when a problem occurs during validation due to a failure in
 
 ## `missing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing> ([local](./validation_errors.md#missing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing> ([local](./validation_errors.md#missing)) ([local](./validation_errors.md#missing))
 
 This error is raised when there are required fields missing from the input value:
 
@@ -1643,7 +1643,7 @@ This error is raised when there are required fields missing from the input value
 
 ## `missing_argument`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_argument> ([local](./validation_errors.md#missing_argument)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_argument> ([local](./validation_errors.md#missing_argument)) ([local](./validation_errors.md#missing_argument))
 
 This error is raised when a required positional-or-keyword argument is not passed to a function decorated with `validate_call`:
 
@@ -1668,7 +1668,7 @@ This error is raised when a required positional-or-keyword argument is not passe
 
 ## `missing_keyword_only_argument`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_keyword_only_argument> ([local](./validation_errors.md#missing_keyword_only_argument)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_keyword_only_argument> ([local](./validation_errors.md#missing_keyword_only_argument)) ([local](./validation_errors.md#missing_keyword_only_argument))
 
 This error is raised when a required keyword-only argument is not passed to a function decorated with `validate_call`:
 
@@ -1693,7 +1693,7 @@ This error is raised when a required keyword-only argument is not passed to a fu
 
 ## `missing_positional_only_argument`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_positional_only_argument> ([local](./validation_errors.md#missing_positional_only_argument)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_positional_only_argument> ([local](./validation_errors.md#missing_positional_only_argument)) ([local](./validation_errors.md#missing_positional_only_argument))
 
 This error is raised when a required positional-only argument is not passed to a function decorated with `validate_call`:
 
@@ -1718,7 +1718,7 @@ This error is raised when a required positional-only argument is not passed to a
 
 ## `missing_sentinel_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_sentinel_error> ([local](./validation_errors.md#missing_sentinel_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#missing_sentinel_error> ([local](./validation_errors.md#missing_sentinel_error)) ([local](./validation_errors.md#missing_sentinel_error))
 
 This error is raised when the experimental `MISSING` sentinel is the only value allowed, and wasn’t provided during validation:
 
@@ -1743,7 +1743,7 @@ This error is raised when the experimental `MISSING` sentinel is the only value 
 
 ## `model_attributes_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#model_attributes_type> ([local](./validation_errors.md#model_attributes_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#model_attributes_type> ([local](./validation_errors.md#model_attributes_type)) ([local](./validation_errors.md#model_attributes_type))
 
 This error is raised when the input value is not a valid dictionary, model instance, or instance that fields can be extracted from:
 
@@ -1783,7 +1783,7 @@ This error is raised when the input value is not a valid dictionary, model insta
 
 ## `model_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#model_type> ([local](./validation_errors.md#model_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#model_type> ([local](./validation_errors.md#model_type)) ([local](./validation_errors.md#model_type))
 
 This error is raised when the input to a model is not an instance of the model or dict:
 
@@ -1817,7 +1817,7 @@ This error is raised when the input to a model is not an instance of the model o
 
 ## `multiple_argument_values`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#multiple_argument_values> ([local](./validation_errors.md#multiple_argument_values)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#multiple_argument_values> ([local](./validation_errors.md#multiple_argument_values)) ([local](./validation_errors.md#multiple_argument_values))
 
 This error is raised when you provide multiple values for a single argument while calling a function decorated with `validate_call`:
 
@@ -1842,7 +1842,7 @@ This error is raised when you provide multiple values for a single argument whil
 
 ## `multiple_of`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#multiple_of> ([local](./validation_errors.md#multiple_of)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#multiple_of> ([local](./validation_errors.md#multiple_of)) ([local](./validation_errors.md#multiple_of))
 
 This error is raised when the input is not a multiple of a field’s `multiple_of` constraint:
 
@@ -1866,7 +1866,7 @@ This error is raised when the input is not a multiple of a field’s `multiple_o
 
 ## `needs_python_object`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#needs_python_object> ([local](./validation_errors.md#needs_python_object)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#needs_python_object> ([local](./validation_errors.md#needs_python_object)) ([local](./validation_errors.md#needs_python_object))
 
 This type of error is raised when validation is attempted from a format that cannot be converted to a Python object. For example, we cannot check `isinstance` or `issubclass` from JSON:
 
@@ -1892,7 +1892,7 @@ This type of error is raised when validation is attempted from a format that can
 
 ## `no_such_attribute`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#no_such_attribute> ([local](./validation_errors.md#no_such_attribute)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#no_such_attribute> ([local](./validation_errors.md#no_such_attribute)) ([local](./validation_errors.md#no_such_attribute))
 
 This error is raised when `validate_assignment=True` in the config, and you attempt to assign a value to an attribute that is not an existing field:
 
@@ -1918,7 +1918,7 @@ This error is raised when `validate_assignment=True` in the config, and you atte
 
 ## `none_required`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#none_required> ([local](./validation_errors.md#none_required)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#none_required> ([local](./validation_errors.md#none_required)) ([local](./validation_errors.md#none_required))
 
 This error is raised when the input value is not `None` for a field that requires `None`:
 
@@ -1964,7 +1964,7 @@ For example, the following would yield the `none_required` validation error sinc
 
 ## `recursion_loop`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#recursion_loop> ([local](./validation_errors.md#recursion_loop)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#recursion_loop> ([local](./validation_errors.md#recursion_loop)) ([local](./validation_errors.md#recursion_loop))
 
 This error is raised when a cyclic reference is detected:
 
@@ -1990,7 +1990,7 @@ This error is raised when a cyclic reference is detected:
 
 ## `set_item_not_hashable`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#set_item_not_hashable> ([local](./validation_errors.md#set_item_not_hashable)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#set_item_not_hashable> ([local](./validation_errors.md#set_item_not_hashable)) ([local](./validation_errors.md#set_item_not_hashable))
 
 This error is raised when an unhashable value is validated against a `set` or a `frozenset`:
 
@@ -2020,7 +2020,7 @@ This error is raised when an unhashable value is validated against a `set` or a 
 
 ## `set_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#set_type> ([local](./validation_errors.md#set_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#set_type> ([local](./validation_errors.md#set_type)) ([local](./validation_errors.md#set_type))
 
 This error is raised when the value type is not valid for a `set` field:
 
@@ -2044,7 +2044,7 @@ This error is raised when the value type is not valid for a `set` field:
 
 ## `string_not_ascii`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_not_ascii> ([local](./validation_errors.md#string_not_ascii)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_not_ascii> ([local](./validation_errors.md#string_not_ascii)) ([local](./validation_errors.md#string_not_ascii))
 
 This error is raised when the input string contains non-ASCII characters:
 
@@ -2070,7 +2070,7 @@ This error is raised when the input string contains non-ASCII characters:
 
 ## `string_pattern_mismatch`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_pattern_mismatch> ([local](./validation_errors.md#string_pattern_mismatch)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_pattern_mismatch> ([local](./validation_errors.md#string_pattern_mismatch)) ([local](./validation_errors.md#string_pattern_mismatch))
 
 This error is raised when the input value doesn’t match the field’s `pattern` constraint:
 
@@ -2094,7 +2094,7 @@ This error is raised when the input value doesn’t match the field’s `pattern
 
 ## `string_sub_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_sub_type> ([local](./validation_errors.md#string_sub_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_sub_type> ([local](./validation_errors.md#string_sub_type)) ([local](./validation_errors.md#string_sub_type))
 
 This error is raised when the value is an instance of a strict subtype of `str` when the field is strict:
 
@@ -2124,7 +2124,7 @@ This error is raised when the value is an instance of a strict subtype of `str` 
 
 ## `string_too_long`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_too_long> ([local](./validation_errors.md#string_too_long)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_too_long> ([local](./validation_errors.md#string_too_long)) ([local](./validation_errors.md#string_too_long))
 
 This error is raised when the input value is a string whose length is greater than the field’s `max_length` constraint:
 
@@ -2148,7 +2148,7 @@ This error is raised when the input value is a string whose length is greater th
 
 ## `string_too_short`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_too_short> ([local](./validation_errors.md#string_too_short)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_too_short> ([local](./validation_errors.md#string_too_short)) ([local](./validation_errors.md#string_too_short))
 
 This error is raised when the input value is a string whose length is less than the field’s `min_length` constraint:
 
@@ -2172,7 +2172,7 @@ This error is raised when the input value is a string whose length is less than 
 
 ## `string_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_type> ([local](./validation_errors.md#string_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_type> ([local](./validation_errors.md#string_type)) ([local](./validation_errors.md#string_type))
 
 This error is raised when the input value’s type is not valid for a `str` field:
 
@@ -2198,7 +2198,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `string_unicode`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_unicode> ([local](./validation_errors.md#string_unicode)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#string_unicode> ([local](./validation_errors.md#string_unicode)) ([local](./validation_errors.md#string_unicode))
 
 This error is raised when the value cannot be parsed as a Unicode string:
 
@@ -2222,7 +2222,7 @@ This error is raised when the value cannot be parsed as a Unicode string:
 
 ## `time_delta_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_delta_parsing> ([local](./validation_errors.md#time_delta_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_delta_parsing> ([local](./validation_errors.md#time_delta_parsing)) ([local](./validation_errors.md#time_delta_parsing))
 
 This error is raised when the input value is a string that cannot be parsed for a `timedelta` field:
 
@@ -2248,7 +2248,7 @@ This error is raised when the input value is a string that cannot be parsed for 
 
 ## `time_delta_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_delta_type> ([local](./validation_errors.md#time_delta_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_delta_type> ([local](./validation_errors.md#time_delta_type)) ([local](./validation_errors.md#time_delta_type))
 
 This error is raised when the input value’s type is not valid for a `timedelta` field:
 
@@ -2276,7 +2276,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `time_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_parsing> ([local](./validation_errors.md#time_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_parsing> ([local](./validation_errors.md#time_parsing)) ([local](./validation_errors.md#time_parsing))
 
 This error is raised when the input value is a string that cannot be parsed for a `time` field:
 
@@ -2302,7 +2302,7 @@ This error is raised when the input value is a string that cannot be parsed for 
 
 ## `time_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_type> ([local](./validation_errors.md#time_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#time_type> ([local](./validation_errors.md#time_type)) ([local](./validation_errors.md#time_type))
 
 This error is raised when the value type is not valid for a `time` field:
 
@@ -2330,7 +2330,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `timezone_aware`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#timezone_aware> ([local](./validation_errors.md#timezone_aware)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#timezone_aware> ([local](./validation_errors.md#timezone_aware)) ([local](./validation_errors.md#timezone_aware))
 
 This error is raised when the `datetime` value provided for a timezone-aware `datetime` field doesn’t have timezone information:
 
@@ -2356,7 +2356,7 @@ This error is raised when the `datetime` value provided for a timezone-aware `da
 
 ## `timezone_naive`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#timezone_naive> ([local](./validation_errors.md#timezone_naive)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#timezone_naive> ([local](./validation_errors.md#timezone_naive)) ([local](./validation_errors.md#timezone_naive))
 
 This error is raised when the `datetime` value provided for a timezone-naive `datetime` field has timezone info:
 
@@ -2382,7 +2382,7 @@ This error is raised when the `datetime` value provided for a timezone-naive `da
 
 ## `too_long`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#too_long> ([local](./validation_errors.md#too_long)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#too_long> ([local](./validation_errors.md#too_long)) ([local](./validation_errors.md#too_long))
 
 This error is raised when the input value’s length is greater than the field’s `max_length` constraint:
 
@@ -2406,7 +2406,7 @@ This error is raised when the input value’s length is greater than the field�
 
 ## `too_short`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#too_short> ([local](./validation_errors.md#too_short)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#too_short> ([local](./validation_errors.md#too_short)) ([local](./validation_errors.md#too_short))
 
 This error is raised when the value length is less than the field’s `min_length` constraint:
 
@@ -2430,7 +2430,7 @@ This error is raised when the value length is less than the field’s `min_lengt
 
 ## `tuple_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#tuple_type> ([local](./validation_errors.md#tuple_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#tuple_type> ([local](./validation_errors.md#tuple_type)) ([local](./validation_errors.md#tuple_type))
 
 This error is raised when the input value’s type is not valid for a `tuple` field:
 
@@ -2456,7 +2456,7 @@ This error is also raised for strict fields when the input value is not an insta
 
 ## `unexpected_keyword_argument`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#unexpected_keyword_argument> ([local](./validation_errors.md#unexpected_keyword_argument)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#unexpected_keyword_argument> ([local](./validation_errors.md#unexpected_keyword_argument)) ([local](./validation_errors.md#unexpected_keyword_argument))
 
 This error is raised when you provide a value by keyword for a positional-only argument while calling a function decorated with `validate_call`:
 
@@ -2503,7 +2503,7 @@ It is also raised when using pydantic.dataclasses and `extra=forbid`:
 
 ## `unexpected_positional_argument`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#unexpected_positional_argument> ([local](./validation_errors.md#unexpected_positional_argument)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#unexpected_positional_argument> ([local](./validation_errors.md#unexpected_positional_argument)) ([local](./validation_errors.md#unexpected_positional_argument))
 
 This error is raised when you provide a positional value for a keyword-only argument while calling a function decorated with `validate_call`:
 
@@ -2528,7 +2528,7 @@ This error is raised when you provide a positional value for a keyword-only argu
 
 ## `union_tag_invalid`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#union_tag_invalid> ([local](./validation_errors.md#union_tag_invalid)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#union_tag_invalid> ([local](./validation_errors.md#union_tag_invalid)) ([local](./validation_errors.md#union_tag_invalid))
 
 This error is raised when the input’s discriminator is not one of the expected values:
 
@@ -2562,7 +2562,7 @@ This error is raised when the input’s discriminator is not one of the expected
 
 ## `union_tag_not_found`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#union_tag_not_found> ([local](./validation_errors.md#union_tag_not_found)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#union_tag_not_found> ([local](./validation_errors.md#union_tag_not_found)) ([local](./validation_errors.md#union_tag_not_found))
 
 This error is raised when it is not possible to extract a discriminator value from the input:
 
@@ -2596,7 +2596,7 @@ This error is raised when it is not possible to extract a discriminator value fr
 
 ## `url_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_parsing> ([local](./validation_errors.md#url_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_parsing> ([local](./validation_errors.md#url_parsing)) ([local](./validation_errors.md#url_parsing))
 
 This error is raised when the input value cannot be parsed as a URL:
 
@@ -2620,7 +2620,7 @@ This error is raised when the input value cannot be parsed as a URL:
 
 ## `url_scheme`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_scheme> ([local](./validation_errors.md#url_scheme)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_scheme> ([local](./validation_errors.md#url_scheme)) ([local](./validation_errors.md#url_scheme))
 
 This error is raised when the URL scheme is not valid for the URL type of the field:
 
@@ -2644,7 +2644,7 @@ This error is raised when the URL scheme is not valid for the URL type of the fi
 
 ## `url_syntax_violation`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_syntax_violation> ([local](./validation_errors.md#url_syntax_violation)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_syntax_violation> ([local](./validation_errors.md#url_syntax_violation)) ([local](./validation_errors.md#url_syntax_violation))
 
 This error is raised when the URL syntax is not valid:
 
@@ -2668,7 +2668,7 @@ This error is raised when the URL syntax is not valid:
 
 ## `url_too_long`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_too_long> ([local](./validation_errors.md#url_too_long)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_too_long> ([local](./validation_errors.md#url_too_long)) ([local](./validation_errors.md#url_too_long))
 
 This error is raised when the URL length is greater than 2083:
 
@@ -2692,7 +2692,7 @@ This error is raised when the URL length is greater than 2083:
 
 ## `url_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_type> ([local](./validation_errors.md#url_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#url_type> ([local](./validation_errors.md#url_type)) ([local](./validation_errors.md#url_type))
 
 This error is raised when the input value’s type is not valid for a URL field:
 
@@ -2716,7 +2716,7 @@ This error is raised when the input value’s type is not valid for a URL field:
 
 ## `uuid_parsing`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_parsing> ([local](./validation_errors.md#uuid_parsing)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_parsing> ([local](./validation_errors.md#uuid_parsing)) ([local](./validation_errors.md#uuid_parsing))
 
 This error is raised when the input value’s type is not valid for a UUID field:
 
@@ -2742,7 +2742,7 @@ This error is raised when the input value’s type is not valid for a UUID field
 
 ## `uuid_type`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_type> ([local](./validation_errors.md#uuid_type)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_type> ([local](./validation_errors.md#uuid_type)) ([local](./validation_errors.md#uuid_type))
 
 This error is raised when the input value’s type is not valid instance for a UUID field (str, bytes or UUID):
 
@@ -2768,7 +2768,7 @@ This error is raised when the input value’s type is not valid instance for a U
 
 ## `uuid_version`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_version> ([local](./validation_errors.md#uuid_version)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#uuid_version> ([local](./validation_errors.md#uuid_version)) ([local](./validation_errors.md#uuid_version))
 
 This error is raised when the input value’s type is not match UUID version:
 
@@ -2792,7 +2792,7 @@ This error is raised when the input value’s type is not match UUID version:
 
 ## `value_error`
 
-[](<https://pydantic.dev/docs/validation/latest/errors/validation_errors#value_error> ([local](./validation_errors.md#value_error)))
+<https://pydantic.dev/docs/validation/latest/errors/validation_errors#value_error> ([local](./validation_errors.md#value_error)) ([local](./validation_errors.md#value_error))
 
 This error is raised when a `ValueError` is raised during validation:
 

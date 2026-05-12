@@ -7,11 +7,11 @@ source: https://pydantic.dev/docs/validation/latest/examples/files/
 
 Note
 
-If you’re using any of the below file formats to parse configuration / settings, you might want to consider using the [`pydantic-settings`](<https://pydantic.dev/docs/validation/latest/api/pydantic_settings/#pydantic_settings> ([local](./../api/pydantic_settings.md#pydantic_settings))) library, which offers builtin support for parsing this type of data.
+If you’re using any of the below file formats to parse configuration / settings, you might want to consider using the [`pydantic-settings`](https://pydantic.dev/docs/validation/latest/api/pydantic_settings/#pydantic_settings) ([local](./../api/pydantic_settings.md#pydantic_settings)) library, which offers builtin support for parsing this type of data.
 
 ## JSON data
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#json-data> ([local](./files.md#json-data)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#json-data> ([local](./files.md#json-data)) ([local](./files.md#json-data))
 
 `.json` files are a common way to store key / value data in a human-readable format. Here is an example of a `.json` file:
 
@@ -20,7 +20,7 @@ If you’re using any of the below file formats to parse configuration / setting
     {
         "name": "John Doe",
         "age": 30,
-        "email": "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"
+        "email": "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"
     }
     
 
@@ -44,12 +44,12 @@ To validate this data, we can use a `pydantic` model:
     json_string = pathlib.Path('person.json').read_text()
     person = Person.model_validate_json(json_string)
     print(person)
-    #> name='John Doe' age=30 email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    #> name='John Doe' age=30 email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```
 
-If the data in the file is not valid, `pydantic` will raise a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))). Let’s say we have the following `.json` file:
+If the data in the file is not valid, `pydantic` will raise a [`ValidationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError)). Let’s say we have the following `.json` file:
 
 ```
  
@@ -67,7 +67,7 @@ This data is flawed for three reasons:
   2. The `age` field is negative.
   3. The `email` field is not a valid email address.
 
-When we try to validate this data, `pydantic` raises a [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) with all of the above issues:
+When we try to validate this data, `pydantic` raises a [`ValidationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError)) with all of the above issues:
 
 ```
  
@@ -110,12 +110,12 @@ Often, it’s the case that you have an abundance of a certain type of data with
         {
             "name": "John Doe",
             "age": 30,
-            "email": "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"
+            "email": "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"
         },
         {
             "name": "Jane Doe",
             "age": 25,
-            "email": "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"
+            "email": "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"
         }
     ]
     
@@ -142,15 +142,15 @@ In this case, you can validate the data against a `list[Person]` model:
     json_string = pathlib.Path('people.json').read_text()
     people = person_list_adapter.validate_json(json_string)
     print(people)
-    #> [Person(name='John Doe', age=30, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'), Person(name='Jane Doe', age=25, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')]
+    #> [Person(name='John Doe', age=30, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'), Person(name='Jane Doe', age=25, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')]
 
 ```
 
-[`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) is a Pydantic construct used to validate data against a single type.
+[`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) is a Pydantic construct used to validate data against a single type.
 
 ## JSON lines files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#json-lines-files> ([local](./files.md#json-lines-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#json-lines-files> ([local](./files.md#json-lines-files)) ([local](./files.md#json-lines-files))
 
 Similar to validating a list of objects from a `.json` file, you can validate a list of objects from a `.jsonl` file. `.jsonl` files are a sequence of JSON objects separated by newlines.
 
@@ -158,8 +158,8 @@ Consider the following `.jsonl` file:
 
 ```
  
-    {"name": "John Doe", "age": 30, "email": "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
-    {"name": "Jane Doe", "age": 25, "email": "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"}
+    {"name": "John Doe", "age": 30, "email": "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
+    {"name": "Jane Doe", "age": 25, "email": "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"}
     
 
 ```
@@ -182,14 +182,14 @@ We can validate this data with a similar approach to the one we used for `.json`
     json_lines = pathlib.Path('people.jsonl').read_text().splitlines()
     people = [Person.model_validate_json(line) for line in json_lines]
     print(people)
-    #> [Person(name='John Doe', age=30, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'), Person(name='Jane Doe', age=25, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')]
+    #> [Person(name='John Doe', age=30, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'), Person(name='Jane Doe', age=25, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')]
     
 
 ```
 
 ## CSV files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#csv-files> ([local](./files.md#csv-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#csv-files> ([local](./files.md#csv-files)) ([local](./files.md#csv-files))
 
 CSV is one of the most common file formats for storing tabular data. To validate data from a CSV file, you can use the `csv` module from the Python standard library to load the data and validate it against a Pydantic model.
 
@@ -198,8 +198,8 @@ Consider the following CSV file:
 ```
  
     name,age,email
-    John Doe,30,[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)
-    Jane Doe,25,[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)
+    John Doe,30,[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)
+    Jane Doe,25,[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)
     
 
 ```
@@ -224,14 +224,14 @@ Here’s how we validate that data:
         people = [Person.model_validate(row) for row in reader]
     
     print(people)
-    #> [Person(name='John Doe', age=30, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'), Person(name='Jane Doe', age=25, email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')]
+    #> [Person(name='John Doe', age=30, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'), Person(name='Jane Doe', age=25, email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')]
     
 
 ```
 
 ## TOML files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#toml-files> ([local](./files.md#toml-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#toml-files> ([local](./files.md#toml-files)) ([local](./files.md#toml-files))
 
 TOML files are often used for configuration due to their simplicity and readability.
 
@@ -241,7 +241,7 @@ Consider the following TOML file:
  
     name = "John Doe"
     age = 30
-    email = "[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)"
+    email = "[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)"
     
 
 ```
@@ -266,14 +266,14 @@ Here’s how we validate that data:
     
     person = Person.model_validate(data)
     print(person)
-    #> name='John Doe' age=30 email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    #> name='John Doe' age=30 email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```
 
 ## YAML files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#yaml-files> ([local](./files.md#yaml-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#yaml-files> ([local](./files.md#yaml-files)) ([local](./files.md#yaml-files))
 
 YAML (YAML Ain’t Markup Language) is a human-readable data serialization format that is often used for configuration files.
 
@@ -283,7 +283,7 @@ Consider the following YAML file:
  
     name: John Doe
     age: 30
-    email: [[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)
+    email: [[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)
     
 
 ```
@@ -308,14 +308,14 @@ Here’s how we validate that data:
     
     person = Person.model_validate(data)
     print(person)
-    #> name='John Doe' age=30 email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    #> name='John Doe' age=30 email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```
 
 ## XML files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#xml-files> ([local](./files.md#xml-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#xml-files> ([local](./files.md#xml-files)) ([local](./files.md#xml-files))
 
 XML (eXtensible Markup Language) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
 
@@ -327,7 +327,7 @@ Consider the following XML file:
     <person>
         <name>John Doe</name>
         <age>30</age>
-        <email>[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)</email>
+        <email>[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)</email>
     </person>
     
 
@@ -352,14 +352,14 @@ Here’s how we validate that data:
     data = {child.tag: child.text for child in tree}
     person = Person.model_validate(data)
     print(person)
-    #> name='John Doe' age=30 email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    #> name='John Doe' age=30 email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```
 
 ## INI files
 
-[](<https://pydantic.dev/docs/validation/latest/examples/files/#ini-files> ([local](./files.md#ini-files)))
+<https://pydantic.dev/docs/validation/latest/examples/files/#ini-files> ([local](./files.md#ini-files)) ([local](./files.md#ini-files))
 
 INI files are a simple configuration file format that uses sections and key-value pairs. They are commonly used in Windows applications and older software.
 
@@ -370,7 +370,7 @@ Consider the following INI file:
     [PERSON]
     name = John Doe
     age = 30
-    email = [[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)
+    email = [[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)
     
 
 ```
@@ -394,7 +394,7 @@ Here’s how we validate that data:
     config.read('person.ini')
     person = Person.model_validate(config['PERSON'])
     print(person)
-    #> name='John Doe' age=30 email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    #> name='John Doe' age=30 email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```

@@ -7,73 +7,73 @@ The networks module contains types for common network-related fields.
 
 ## UrlConstraints 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints> ([local](./networks.md#pydantic.networks.UrlConstraints)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints> ([local](./networks.md#pydantic.networks.UrlConstraints)) ([local](./networks.md#pydantic.networks.UrlConstraints))
 
 Url constraints.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes> ([local](./networks.md#attributes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes> ([local](./networks.md#attributes)) ([local](./networks.md#attributes))
 
 #### max_length 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.max_length> ([local](./networks.md#pydantic.networks.UrlConstraints.max_length)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.max_length> ([local](./networks.md#pydantic.networks.UrlConstraints.max_length)) ([local](./networks.md#pydantic.networks.UrlConstraints.max_length))
 
 The maximum length of the url. Defaults to `None`.
 
-**Type:** [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### allowed_schemes 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.allowed_schemes> ([local](./networks.md#pydantic.networks.UrlConstraints.allowed_schemes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.allowed_schemes> ([local](./networks.md#pydantic.networks.UrlConstraints.allowed_schemes)) ([local](./networks.md#pydantic.networks.UrlConstraints.allowed_schemes))
 
 The allowed schemes. Defaults to `None`.
 
-**Type:** [`list`](<https://docs.python.org/3/glossary.html#term-list>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`list`](https://docs.python.org/3/glossary.html#term-list)[[`str`](https://docs.python.org/3/library/stdtypes.html#str)] | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### host_required 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.host_required> ([local](./networks.md#pydantic.networks.UrlConstraints.host_required)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.host_required> ([local](./networks.md#pydantic.networks.UrlConstraints.host_required)) ([local](./networks.md#pydantic.networks.UrlConstraints.host_required))
 
 Whether the host is required. Defaults to `None`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### default_host 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_host> ([local](./networks.md#pydantic.networks.UrlConstraints.default_host)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_host> ([local](./networks.md#pydantic.networks.UrlConstraints.default_host)) ([local](./networks.md#pydantic.networks.UrlConstraints.default_host))
 
 The default host. Defaults to `None`.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### default_port 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_port> ([local](./networks.md#pydantic.networks.UrlConstraints.default_port)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_port> ([local](./networks.md#pydantic.networks.UrlConstraints.default_port)) ([local](./networks.md#pydantic.networks.UrlConstraints.default_port))
 
 The default port. Defaults to `None`.
 
-**Type:** [`int`](<https://docs.python.org/3/library/functions.html#int>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`int`](https://docs.python.org/3/library/functions.html#int) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### default_path 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_path> ([local](./networks.md#pydantic.networks.UrlConstraints.default_path)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.default_path> ([local](./networks.md#pydantic.networks.UrlConstraints.default_path)) ([local](./networks.md#pydantic.networks.UrlConstraints.default_path))
 
 The default path. Defaults to `None`.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 #### preserve_empty_path 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.preserve_empty_path> ([local](./networks.md#pydantic.networks.UrlConstraints.preserve_empty_path)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.UrlConstraints.preserve_empty_path> ([local](./networks.md#pydantic.networks.UrlConstraints.preserve_empty_path)) ([local](./networks.md#pydantic.networks.UrlConstraints.preserve_empty_path))
 
 Whether to preserve empty URL paths. Defaults to `None`.
 
-**Type:** [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>)
+**Type:** [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None)
 
 ## AnyUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 **Bases:** `_BaseUrl`
 
@@ -83,7 +83,7 @@ Base type for all URLs.
   * Top-level domain (TLD) not required
   * Host not required
 
-Assuming an input URL of `http://samuel:[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>):8000/the/path/?query=here#fragment=is;this=bit`, the types export the following properties:
+Assuming an input URL of `http://samuel:[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection):8000/the/path/?query=here#fragment=is;this=bit`, the types export the following properties:
 
   * `scheme`: the URL scheme (`http`), always set.
   * `host`: the URL host (`example.com`).
@@ -96,9 +96,9 @@ Assuming an input URL of `http://samuel:[[email protected]](<https://pydantic.de
 
 ## AnyHttpUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyHttpUrl> ([local](./networks.md#pydantic.networks.AnyHttpUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyHttpUrl> ([local](./networks.md#pydantic.networks.AnyHttpUrl)) ([local](./networks.md#pydantic.networks.AnyHttpUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any http or https URL.
 
@@ -107,9 +107,9 @@ A type that will accept any http or https URL.
 
 ## HttpUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.HttpUrl> ([local](./networks.md#pydantic.networks.HttpUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.HttpUrl> ([local](./networks.md#pydantic.networks.HttpUrl)) ([local](./networks.md#pydantic.networks.HttpUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any http or https URL.
 
@@ -150,7 +150,7 @@ A type that will accept any http or https URL.
 
 ```
 
-“International domains” (e.g. a URL where the host or TLD includes non-ascii characters) will be encoded via [punycode](<https://en.wikipedia.org/wiki/Punycode>) (see [this article](<https://www.xudongz.com/blog/2017/idn-phishing/>) for a good description of why this is important):
+“International domains” (e.g. a URL where the host or TLD includes non-ascii characters) will be encoded via [punycode](https://en.wikipedia.org/wiki/Punycode) (see [this article](https://www.xudongz.com/blog/2017/idn-phishing/) for a good description of why this is important):
 
 ```
  
@@ -187,9 +187,9 @@ Also, Chrome, Firefox, and Safari all currently accept `http://exam_ple.com` as 
 
 ## AnyWebsocketUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyWebsocketUrl> ([local](./networks.md#pydantic.networks.AnyWebsocketUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyWebsocketUrl> ([local](./networks.md#pydantic.networks.AnyWebsocketUrl)) ([local](./networks.md#pydantic.networks.AnyWebsocketUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any ws or wss URL.
 
@@ -198,9 +198,9 @@ A type that will accept any ws or wss URL.
 
 ## WebsocketUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.WebsocketUrl> ([local](./networks.md#pydantic.networks.WebsocketUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.WebsocketUrl> ([local](./networks.md#pydantic.networks.WebsocketUrl)) ([local](./networks.md#pydantic.networks.WebsocketUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any ws or wss URL.
 
@@ -210,9 +210,9 @@ A type that will accept any ws or wss URL.
 
 ## FileUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.FileUrl> ([local](./networks.md#pydantic.networks.FileUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.FileUrl> ([local](./networks.md#pydantic.networks.FileUrl)) ([local](./networks.md#pydantic.networks.FileUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any file URL.
 
@@ -220,9 +220,9 @@ A type that will accept any file URL.
 
 ## FtpUrl 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.FtpUrl> ([local](./networks.md#pydantic.networks.FtpUrl)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.FtpUrl> ([local](./networks.md#pydantic.networks.FtpUrl)) ([local](./networks.md#pydantic.networks.FtpUrl))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept ftp URL.
 
@@ -231,7 +231,7 @@ A type that will accept ftp URL.
 
 ## PostgresDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.PostgresDsn> ([local](./networks.md#pydantic.networks.PostgresDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.PostgresDsn> ([local](./networks.md#pydantic.networks.PostgresDsn)) ([local](./networks.md#pydantic.networks.PostgresDsn))
 
 **Bases:** `_BaseMultiHostUrl`
 
@@ -298,21 +298,21 @@ If further validation is required, these properties can be used by validators to
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-1> ([local](./networks.md#attributes-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-1> ([local](./networks.md#attributes-1)) ([local](./networks.md#attributes-1))
 
 #### host 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.PostgresDsn.host> ([local](./networks.md#pydantic.networks.PostgresDsn.host)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.PostgresDsn.host> ([local](./networks.md#pydantic.networks.PostgresDsn.host)) ([local](./networks.md#pydantic.networks.PostgresDsn.host))
 
 The required URL host.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ## CockroachDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.CockroachDsn> ([local](./networks.md#pydantic.networks.CockroachDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.CockroachDsn> ([local](./networks.md#pydantic.networks.CockroachDsn)) ([local](./networks.md#pydantic.networks.CockroachDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any Cockroach DSN.
 
@@ -322,21 +322,21 @@ A type that will accept any Cockroach DSN.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-2> ([local](./networks.md#attributes-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-2> ([local](./networks.md#attributes-2)) ([local](./networks.md#attributes-2))
 
 #### host 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.CockroachDsn.host> ([local](./networks.md#pydantic.networks.CockroachDsn.host)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.CockroachDsn.host> ([local](./networks.md#pydantic.networks.CockroachDsn.host)) ([local](./networks.md#pydantic.networks.CockroachDsn.host))
 
 The required URL host.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ## AmqpDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AmqpDsn> ([local](./networks.md#pydantic.networks.AmqpDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AmqpDsn> ([local](./networks.md#pydantic.networks.AmqpDsn)) ([local](./networks.md#pydantic.networks.AmqpDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any AMQP DSN.
 
@@ -346,9 +346,9 @@ A type that will accept any AMQP DSN.
 
 ## RedisDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.RedisDsn> ([local](./networks.md#pydantic.networks.RedisDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.RedisDsn> ([local](./networks.md#pydantic.networks.RedisDsn)) ([local](./networks.md#pydantic.networks.RedisDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any Redis DSN.
 
@@ -358,19 +358,19 @@ A type that will accept any Redis DSN.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-3> ([local](./networks.md#attributes-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-3> ([local](./networks.md#attributes-3)) ([local](./networks.md#attributes-3))
 
 #### host 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.RedisDsn.host> ([local](./networks.md#pydantic.networks.RedisDsn.host)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.RedisDsn.host> ([local](./networks.md#pydantic.networks.RedisDsn.host)) ([local](./networks.md#pydantic.networks.RedisDsn.host))
 
 The required URL host.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ## MongoDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MongoDsn> ([local](./networks.md#pydantic.networks.MongoDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MongoDsn> ([local](./networks.md#pydantic.networks.MongoDsn)) ([local](./networks.md#pydantic.networks.MongoDsn))
 
 **Bases:** `_BaseMultiHostUrl`
 
@@ -403,9 +403,9 @@ If a port isn’t specified, the default MongoDB port `27017` will be used. If t
 
 ## KafkaDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.KafkaDsn> ([local](./networks.md#pydantic.networks.KafkaDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.KafkaDsn> ([local](./networks.md#pydantic.networks.KafkaDsn)) ([local](./networks.md#pydantic.networks.KafkaDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any Kafka DSN.
 
@@ -415,7 +415,7 @@ A type that will accept any Kafka DSN.
 
 ## NatsDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.NatsDsn> ([local](./networks.md#pydantic.networks.NatsDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.NatsDsn> ([local](./networks.md#pydantic.networks.NatsDsn)) ([local](./networks.md#pydantic.networks.NatsDsn))
 
 **Bases:** `_BaseMultiHostUrl`
 
@@ -425,9 +425,9 @@ NATS is a connective technology built for the ever increasingly hyper-connected 
 
 ## MySQLDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MySQLDsn> ([local](./networks.md#pydantic.networks.MySQLDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MySQLDsn> ([local](./networks.md#pydantic.networks.MySQLDsn)) ([local](./networks.md#pydantic.networks.MySQLDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any MySQL DSN.
 
@@ -437,9 +437,9 @@ A type that will accept any MySQL DSN.
 
 ## MariaDBDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MariaDBDsn> ([local](./networks.md#pydantic.networks.MariaDBDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MariaDBDsn> ([local](./networks.md#pydantic.networks.MariaDBDsn)) ([local](./networks.md#pydantic.networks.MariaDBDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any MariaDB DSN.
 
@@ -449,9 +449,9 @@ A type that will accept any MariaDB DSN.
 
 ## ClickHouseDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.ClickHouseDsn> ([local](./networks.md#pydantic.networks.ClickHouseDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.ClickHouseDsn> ([local](./networks.md#pydantic.networks.ClickHouseDsn)) ([local](./networks.md#pydantic.networks.ClickHouseDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any ClickHouse DSN.
 
@@ -461,9 +461,9 @@ A type that will accept any ClickHouse DSN.
 
 ## SnowflakeDsn 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.SnowflakeDsn> ([local](./networks.md#pydantic.networks.SnowflakeDsn)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.SnowflakeDsn> ([local](./networks.md#pydantic.networks.SnowflakeDsn)) ([local](./networks.md#pydantic.networks.SnowflakeDsn))
 
-**Bases:** [`AnyUrl`](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl> ([local](./networks.md#pydantic.networks.AnyUrl)))
+**Bases:** [`AnyUrl`](https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.AnyUrl) ([local](./networks.md#pydantic.networks.AnyUrl))
 
 A type that will accept any Snowflake DSN.
 
@@ -473,19 +473,19 @@ A type that will accept any Snowflake DSN.
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-4> ([local](./networks.md#attributes-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#attributes-4> ([local](./networks.md#attributes-4)) ([local](./networks.md#attributes-4))
 
 #### host 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.SnowflakeDsn.host> ([local](./networks.md#pydantic.networks.SnowflakeDsn.host)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.SnowflakeDsn.host> ([local](./networks.md#pydantic.networks.SnowflakeDsn.host)) ([local](./networks.md#pydantic.networks.SnowflakeDsn.host))
 
 The required URL host.
 
-**Type:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Type:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 ## EmailStr 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.EmailStr> ([local](./networks.md#pydantic.networks.EmailStr)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.EmailStr> ([local](./networks.md#pydantic.networks.EmailStr)) ([local](./networks.md#pydantic.networks.EmailStr))
 
 Validate email addresses.
 
@@ -496,19 +496,19 @@ Validate email addresses.
     class Model(BaseModel):
         email: EmailStr
     
-    print(Model(email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'))
-    #> email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)'
+    print(Model(email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'))
+    #> email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)'
     
 
 ```
 
 ## NameEmail 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.NameEmail> ([local](./networks.md#pydantic.networks.NameEmail)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.NameEmail> ([local](./networks.md#pydantic.networks.NameEmail)) ([local](./networks.md#pydantic.networks.NameEmail))
 
 **Bases:** `Representation`
 
-Validate a name and email address combination, as specified by [RFC 5322](<https://datatracker.ietf.org/doc/html/rfc5322#section-3.4>).
+Validate a name and email address combination, as specified by [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4).
 
 The `NameEmail` has two properties: `name` and `email`. In case the `name` is not provided, it’s inferred from the email address.
 
@@ -519,15 +519,15 @@ The `NameEmail` has two properties: `name` and `email`. In case the `name` is no
     class User(BaseModel):
         email: NameEmail
     
-    user = User(email='Fred Bloggs <[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)>')
+    user = User(email='Fred Bloggs <[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)>')
     print(user.email)
-    #> Fred Bloggs <[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)>
+    #> Fred Bloggs <[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)>
     print(user.email.name)
     #> Fred Bloggs
     
-    user = User(email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    user = User(email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     print(user.email)
-    #> fred.bloggs <[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)>
+    #> fred.bloggs <[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)>
     print(user.email.name)
     #> fred.bloggs
     
@@ -536,7 +536,7 @@ The `NameEmail` has two properties: `name` and `email`. In case the `name` is no
 
 ## IPvAnyAddress 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyAddress> ([local](./networks.md#pydantic.networks.IPvAnyAddress)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyAddress> ([local](./networks.md#pydantic.networks.IPvAnyAddress)) ([local](./networks.md#pydantic.networks.IPvAnyAddress))
 
 Validate an IPv4 or IPv6 address.
 
@@ -571,19 +571,19 @@ Validate an IPv4 or IPv6 address.
 
 ## IPvAnyInterface 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyInterface> ([local](./networks.md#pydantic.networks.IPvAnyInterface)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyInterface> ([local](./networks.md#pydantic.networks.IPvAnyInterface)) ([local](./networks.md#pydantic.networks.IPvAnyInterface))
 
 Validate an IPv4 or IPv6 interface.
 
 ## IPvAnyNetwork 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyNetwork> ([local](./networks.md#pydantic.networks.IPvAnyNetwork)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.IPvAnyNetwork> ([local](./networks.md#pydantic.networks.IPvAnyNetwork)) ([local](./networks.md#pydantic.networks.IPvAnyNetwork))
 
 Validate an IPv4 or IPv6 network.
 
 ## validate_email 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.validate_email> ([local](./networks.md#pydantic.networks.validate_email)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.validate_email> ([local](./networks.md#pydantic.networks.validate_email)) ([local](./networks.md#pydantic.networks.validate_email))
 
 ```
  
@@ -592,23 +592,23 @@ Validate an IPv4 or IPv6 network.
 
 ```
 
-Email address validation using [email-validator](<https://pypi.org/project/email-validator/>).
+Email address validation using [email-validator](https://pypi.org/project/email-validator/).
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#returns> ([local](./networks.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#returns> ([local](./networks.md#returns)) ([local](./networks.md#returns))
 
-[`tuple`](<https://docs.python.org/3/library/stdtypes.html#tuple>)[[`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)] — A tuple containing the local part of the email (or the name for “pretty” email addresses) and the normalized email.
+[`tuple`](https://docs.python.org/3/library/stdtypes.html#tuple)[[`str`](https://docs.python.org/3/library/stdtypes.html#str), [`str`](https://docs.python.org/3/library/stdtypes.html#str)] — A tuple containing the local part of the email (or the name for “pretty” email addresses) and the normalized email.
 
 ### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#raises> ([local](./networks.md#raises)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#raises> ([local](./networks.md#raises)) ([local](./networks.md#raises))
 
   * `PydanticCustomError` — If the email is invalid.
 
 ## MAX_EMAIL_LENGTH 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MAX_EMAIL_LENGTH> ([local](./networks.md#pydantic.networks.MAX_EMAIL_LENGTH)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/networks/#pydantic.networks.MAX_EMAIL_LENGTH> ([local](./networks.md#pydantic.networks.MAX_EMAIL_LENGTH)) ([local](./networks.md#pydantic.networks.MAX_EMAIL_LENGTH))
 
 Maximum length for an email. A somewhat arbitrary but very generous number compared to what is allowed by most implementations.
 

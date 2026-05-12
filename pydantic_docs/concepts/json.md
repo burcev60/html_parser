@@ -5,11 +5,11 @@ source: https://pydantic.dev/docs/validation/latest/concepts/json
 
 ## Json Parsing
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json#json-parsing> ([local](./json.md#json-parsing)))
+<https://pydantic.dev/docs/validation/latest/concepts/json#json-parsing> ([local](./json.md#json-parsing)) ([local](./json.md#json-parsing))
 
 API Documentation
 
-[`pydantic.main.BaseModel.model_validate_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json))) [`pydantic.type_adapter.TypeAdapter.validate_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json))) [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)))
+[`pydantic.main.BaseModel.model_validate_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json)) [`pydantic.type_adapter.TypeAdapter.validate_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json)) [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))
 
 Pydantic provides builtin JSON parsing, which helps achieve:
 
@@ -17,7 +17,7 @@ Pydantic provides builtin JSON parsing, which helps achieve:
   * Support for custom errors
   * Support for `strict` specifications
 
-Here’s an example of Pydantic’s builtin JSON parsing via the [`model_validate_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json))) method, showcasing the support for `strict` specifications while parsing JSON data that doesn’t match the model’s type annotations:
+Here’s an example of Pydantic’s builtin JSON parsing via the [`model_validate_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json)) method, showcasing the support for `strict` specifications while parsing JSON data that doesn’t match the model’s type annotations:
 
 ```
  
@@ -51,15 +51,15 @@ Here’s an example of Pydantic’s builtin JSON parsing via the [`model_validat
 
 ```
 
-In v2.5.0 and above, Pydantic uses [`jiter`](<https://docs.rs/jiter/latest/jiter/>), a fast and iterable JSON parser, to parse JSON data. Using `jiter` compared to `serde` results in modest performance improvements that will get even better in the future.
+In v2.5.0 and above, Pydantic uses [`jiter`](https://docs.rs/jiter/latest/jiter/), a fast and iterable JSON parser, to parse JSON data. Using `jiter` compared to `serde` results in modest performance improvements that will get even better in the future.
 
 The `jiter` JSON parser is almost entirely compatible with the `serde` JSON parser, with one noticeable enhancement being that `jiter` supports deserialization of `inf` and `NaN` values. In the future, `jiter` is intended to enable support validation errors to include the location in the original JSON input which contained the invalid value.
 
 ### Partial JSON Parsing
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json#partial-json-parsing> ([local](./json.md#partial-json-parsing)))
+<https://pydantic.dev/docs/validation/latest/concepts/json#partial-json-parsing> ([local](./json.md#partial-json-parsing)) ([local](./json.md#partial-json-parsing))
 
-**Starting in v2.7.0** , Pydantic’s [JSON parser](<https://docs.rs/jiter/latest/jiter/>) offers support for partial JSON parsing, which is exposed via [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))). Here’s an example of this feature in action:
+**Starting in v2.7.0** , Pydantic’s [JSON parser](https://docs.rs/jiter/latest/jiter/) offers support for partial JSON parsing, which is exposed via [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)). Here’s an example of this feature in action:
 
 ```
  
@@ -95,11 +95,11 @@ This also works for deserializing partial dictionaries. For example:
 
 Validating LLM Output
 
-This feature is particularly beneficial for validating LLM outputs. We’ve written some blog posts about this topic, which you can find on [our website](<https://pydantic.dev/articles>).
+This feature is particularly beneficial for validating LLM outputs. We’ve written some blog posts about this topic, which you can find on [our website](https://pydantic.dev/articles).
 
-In future versions of Pydantic, we expect to expand support for this feature through either Pydantic’s other JSON validation functions ([`pydantic.main.BaseModel.model_validate_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json))) and [`pydantic.type_adapter.TypeAdapter.validate_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json)))) or model configuration. Stay tuned 🚀!
+In future versions of Pydantic, we expect to expand support for this feature through either Pydantic’s other JSON validation functions ([`pydantic.main.BaseModel.model_validate_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate_json)) and [`pydantic.type_adapter.TypeAdapter.validate_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.validate_json) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.validate_json))) or model configuration. Stay tuned 🚀!
 
-For now, you can use [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))) in combination with [`pydantic.main.BaseModel.model_validate`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))) to achieve the same result. Here’s an example:
+For now, you can use [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)) in combination with [`pydantic.main.BaseModel.model_validate`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate)) to achieve the same result. Here’s an example:
 
 ```
  
@@ -192,32 +192,32 @@ Using default values with partial JSON parsing
 
 ### Caching Strings
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json#caching-strings> ([local](./json.md#caching-strings)))
+<https://pydantic.dev/docs/validation/latest/concepts/json#caching-strings> ([local](./json.md#caching-strings)) ([local](./json.md#caching-strings))
 
-**Starting in v2.7.0** , Pydantic’s [JSON parser](<https://docs.rs/jiter/latest/jiter/>) offers support for configuring how Python strings are cached during JSON parsing and validation (when Python strings are constructed from Rust strings during Python validation, e.g. after `strip_whitespace=True`). The `cache_strings` setting is exposed via both [model config](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict))) and [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))).
+**Starting in v2.7.0** , Pydantic’s [JSON parser](https://docs.rs/jiter/latest/jiter/) offers support for configuring how Python strings are cached during JSON parsing and validation (when Python strings are constructed from Rust strings during Python validation, e.g. after `strip_whitespace=True`). The `cache_strings` setting is exposed via both [model config](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict)) and [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)).
 
 The `cache_strings` setting can take any of the following values:
 
   * `True` or `'all'` (the default): cache all strings
-  * `'keys'`: cache only dictionary keys, this **only** applies when used with [`pydantic_core.from_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json))) or when parsing JSON using [`Json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Json> ([local](./../api/pydantic/types.md#pydantic.types.Json)))
+  * `'keys'`: cache only dictionary keys, this **only** applies when used with [`pydantic_core.from_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.from_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.from_json)) or when parsing JSON using [`Json`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Json) ([local](./../api/pydantic/types.md#pydantic.types.Json))
   * `False` or `'none'`: no caching
 
 Using the string caching feature results in performance improvements, but increases memory usage slightly.
 
 String Caching Details
 
-  1. Strings are cached using a fully associative cache with a size of [16,384](<https://github.com/pydantic/jiter/blob/5bbdcfd22882b7b286416b22f74abd549c7b2fd7/src/py_string_cache.rs#L113>).
+  1. Strings are cached using a fully associative cache with a size of [16,384](https://github.com/pydantic/jiter/blob/5bbdcfd22882b7b286416b22f74abd549c7b2fd7/src/py_string_cache.rs#L113).
   2. Only strings where `len(string) < 64` are cached.
   3. There is some overhead to looking up the cache, which is normally worth it to avoid constructing strings. However, if you know there will be very few repeated strings in your data, you might get a performance boost by disabling this setting with `cache_strings=False`.
 
 ## JSON Serialization
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/json#json-serialization> ([local](./json.md#json-serialization)))
+<https://pydantic.dev/docs/validation/latest/concepts/json#json-serialization> ([local](./json.md#json-serialization)) ([local](./json.md#json-serialization))
 
 API Documentation
 
-[`pydantic.main.BaseModel.model_dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json)))  
-[`pydantic.type_adapter.TypeAdapter.dump_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_json)))  
-[`pydantic_core.to_json`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.to_json> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.to_json)))  
+[`pydantic.main.BaseModel.model_dump_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_dump_json) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_dump_json))  
+[`pydantic.type_adapter.TypeAdapter.dump_json`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter.dump_json) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter.dump_json))  
+[`pydantic_core.to_json`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.to_json) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.to_json))  
 
-For more information on JSON serialization, see the [serialization concepts](<https://pydantic.dev/docs/validation/latest/concepts/serialization> ([local](./serialization.md))) page.
+For more information on JSON serialization, see the [serialization concepts](https://pydantic.dev/docs/validation/latest/concepts/serialization) ([local](./serialization.md)) page.

@@ -7,9 +7,9 @@ Pydantic models are a great way to validate and serialize data for requests and 
 
 ## `httpx` requests
 
-[](<https://pydantic.dev/docs/validation/latest/examples/requests/#httpx-requests> ([local](./requests.md#httpx-requests)))
+<https://pydantic.dev/docs/validation/latest/examples/requests/#httpx-requests> ([local](./requests.md#httpx-requests)) ([local](./requests.md#httpx-requests))
 
-[`httpx`](<https://www.python-httpx.org/>) is an HTTP client for Python 3 with synchronous and asynchronous APIs. In the below example, we query the [JSONPlaceholder API](<https://jsonplaceholder.typicode.com/>) to get a user’s data and validate it with a Pydantic model.
+[`httpx`](https://www.python-httpx.org/) is an HTTP client for Python 3 with synchronous and asynchronous APIs. In the below example, we query the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) to get a user’s data and validate it with a Pydantic model.
 
 ```
  
@@ -31,12 +31,12 @@ Pydantic models are a great way to validate and serialize data for requests and 
     
     user = User.model_validate(response.json())
     print(repr(user))
-    #> User(id=1, name='Leanne Graham', email='[[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>)')
+    #> User(id=1, name='Leanne Graham', email='[[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection)')
     
 
 ```
 
-The [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) tool from Pydantic often comes in quite handy when working with HTTP requests. Consider a similar example where we are validating a list of users:
+The [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) tool from Pydantic often comes in quite handy when working with HTTP requests. Consider a similar example where we are validating a list of users:
 
 ```
  

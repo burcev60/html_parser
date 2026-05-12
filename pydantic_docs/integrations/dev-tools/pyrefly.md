@@ -3,13 +3,13 @@ title: Pyrefly
 source: https://pydantic.dev/docs/validation/latest/integrations/dev-tools/pyrefly/
 ---
 
-[Pyrefly](<https://pyrefly.org/>) is a Python type checker and language server with built-in support for a number of Pydantic-specific features. This support works out-of-the-box with Pydantic and Pyrefly installed, with no additional configuration needed.
+[Pyrefly](https://pyrefly.org/) is a Python type checker and language server with built-in support for a number of Pydantic-specific features. This support works out-of-the-box with Pydantic and Pyrefly installed, with no additional configuration needed.
 
-Pyrefly is available as both an [IDE extension](<https://pyrefly.org/en/docs/IDE/>) and a [command-line type checker](<https://pyrefly.org/en/docs/installation/>).
+Pyrefly is available as both an [IDE extension](https://pyrefly.org/en/docs/IDE/) and a [command-line type checker](https://pyrefly.org/en/docs/installation/).
 
 ## IDE extension
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/pyrefly/#ide-extension> ([local](./pyrefly.md#ide-extension)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/pyrefly/#ide-extension> ([local](./pyrefly.md#ide-extension)) ([local](./pyrefly.md#ide-extension))
 
 Pyrefly gives you IDE features such as go-to-definition and autocomplete on your Pydantic models.
 
@@ -21,7 +21,7 @@ As you type `Model()`, Pyrefly hints that you need to use the name `x_` to popul
 
 ## Type checker
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/pyrefly/#type-checker> ([local](./pyrefly.md#type-checker)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/pyrefly/#type-checker> ([local](./pyrefly.md#type-checker)) ([local](./pyrefly.md#type-checker))
 
 Pyrefly can also catch errors in your code before you run it. Consider the following example:
 
@@ -48,7 +48,7 @@ Pyrefly can also catch errors in your code before you run it. Consider the follo
 
 ```
 
-Since `Model1` declares that it is frozen using a [standard type system feature](<https://typing.python.org/en/latest/spec/dataclasses.html#the-dataclass-transform-decorator>), any type checker of your choice will catch the validation error from mutating `model1.x`. However, a type checker without special support for the Pydantic `ConfigDict` class will miss the validation error from mutating `model2.x`.
+Since `Model1` declares that it is frozen using a [standard type system feature](https://typing.python.org/en/latest/spec/dataclasses.html#the-dataclass-transform-decorator), any type checker of your choice will catch the validation error from mutating `model1.x`. However, a type checker without special support for the Pydantic `ConfigDict` class will miss the validation error from mutating `model2.x`.
 
 Pyrefly catches both errors:
 
@@ -72,4 +72,4 @@ Pyrefly catches both errors:
 
 ```
 
-See the [Pyrefly documentation](<https://pyrefly.org/en/docs/pydantic/>) for more information.
+See the [Pyrefly documentation](https://pyrefly.org/en/docs/pydantic/) for more information.

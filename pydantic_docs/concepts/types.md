@@ -3,27 +3,27 @@ title: Types
 source: https://pydantic.dev/docs/validation/latest/concepts/types
 ---
 
-Pydantic uses types to define how validation and serialization should be performed. [Built-in and standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types> ([local](./../api/pydantic/standard_library_types.md))) (such as [`int`](<https://docs.python.org/3/library/functions.html#int>), [`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`date`](<https://docs.python.org/3/library/datetime.html#datetime.date>)) can be used as is. [Strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))) can be controlled and constraints can be applied on them.
+Pydantic uses types to define how validation and serialization should be performed. [Built-in and standard library types](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types) ([local](./../api/pydantic/standard_library_types.md)) (such as [`int`](https://docs.python.org/3/library/functions.html#int), [`str`](https://docs.python.org/3/library/stdtypes.html#str), [`date`](https://docs.python.org/3/library/datetime.html#datetime.date)) can be used as is. [Strictness](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./strict_mode.md)) can be controlled and constraints can be applied on them.
 
-On top of these, Pydantic provides extra types, either [directly in the library](<https://pydantic.dev/docs/validation/latest/api/pydantic/types> ([local](./../api/pydantic/types.md))) (e.g. [`SecretStr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretStr> ([local](./../api/pydantic/types.md#pydantic.types.SecretStr)))) or in the [`pydantic-extra-types`](<https://github.com/pydantic/pydantic-extra-types>) external library. These are implemented using the patterns described in the [custom types](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./types.md#custom-types))) section. Strictness and constraints _can’t_ be applied on them.
+On top of these, Pydantic provides extra types, either [directly in the library](https://pydantic.dev/docs/validation/latest/api/pydantic/types) ([local](./../api/pydantic/types.md)) (e.g. [`SecretStr`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.SecretStr) ([local](./../api/pydantic/types.md#pydantic.types.SecretStr))) or in the [`pydantic-extra-types`](https://github.com/pydantic/pydantic-extra-types) external library. These are implemented using the patterns described in the [custom types](https://pydantic.dev/docs/validation/latest/concepts/types#custom-types) ([local](./types.md#custom-types)) section. Strictness and constraints _can’t_ be applied on them.
 
-The [built-in and standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types> ([local](./../api/pydantic/standard_library_types.md))) documentation goes over the supported types: the allowed values, the possible validation constraints, and whether [strictness](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md))) can be configured.
+The [built-in and standard library types](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types) ([local](./../api/pydantic/standard_library_types.md)) documentation goes over the supported types: the allowed values, the possible validation constraints, and whether [strictness](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./strict_mode.md)) can be configured.
 
-See also the [conversion table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table> ([local](./conversion_table.md))) for a summary of the allowed values for each type.
+See also the [conversion table](https://pydantic.dev/docs/validation/latest/concepts/conversion_table) ([local](./conversion_table.md)) for a summary of the allowed values for each type.
 
 This page will go over defining your own custom types.
 
 ## Custom Types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./types.md#custom-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#custom-types> ([local](./types.md#custom-types)) ([local](./types.md#custom-types))
 
 There are several ways to define your custom types.
 
 ### Using the annotated pattern
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern> ([local](./types.md#using-the-annotated-pattern)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#using-the-annotated-pattern> ([local](./types.md#using-the-annotated-pattern)) ([local](./types.md#using-the-annotated-pattern))
 
-The [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) can be used to make types reusable across your code base. For example, to create a type representing a positive integer:
+The [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) can be used to make types reusable across your code base. For example, to create a type representing a positive integer:
 
 ```
  
@@ -60,7 +60,7 @@ The [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fi
 
 #### Adding validation and serialization
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#adding-validation-and-serialization> ([local](./types.md#adding-validation-and-serialization)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#adding-validation-and-serialization> ([local](./types.md#adding-validation-and-serialization)) ([local](./types.md#adding-validation-and-serialization))
 
 You can add or override validation, serialization, and JSON schemas to an arbitrary type using the markers that Pydantic exports:
 
@@ -100,9 +100,9 @@ You can add or override validation, serialization, and JSON schemas to an arbitr
 
 #### Generics
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#generics> ([local](./types.md#generics)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#generics> ([local](./types.md#generics)) ([local](./types.md#generics))
 
-[Type variables](<https://docs.python.org/3/library/typing.html#typing.TypeVar>) can be used within the [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) type:
+[Type variables](https://docs.python.org/3/library/typing.html#typing.TypeVar) can be used within the [`Annotated`](https://docs.python.org/3/library/typing.html#typing.Annotated) type:
 
 ```
  
@@ -156,7 +156,7 @@ You can add or override validation, serialization, and JSON schemas to an arbitr
 
 ### Named type aliases
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#named-type-aliases> ([local](./types.md#named-type-aliases)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#named-type-aliases> ([local](./types.md#named-type-aliases)) ([local](./types.md#named-type-aliases))
 
 ✦ New in v2.11
 
@@ -164,13 +164,13 @@ Named type aliases are now fully supported.
 
 The above examples make use of _implicit_ type aliases, assigned to a variable. At runtime, Pydantic has no way of knowing the name of the variable it was assigned to, and this can be problematic for two reasons:
 
-  * The [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./json_schema.md))) of the alias won’t be converted into a [definition](<https://json-schema.org/understanding-json-schema/structuring#defs>). This is mostly useful when you are using the alias more than once in a model definition.
-  * In most cases, [recursive type aliases](<https://pydantic.dev/docs/validation/latest/concepts/types#named-recursive-types> ([local](./types.md#named-recursive-types))) won’t work.
+  * The [JSON Schema](https://pydantic.dev/docs/validation/latest/concepts/json_schema) ([local](./json_schema.md)) of the alias won’t be converted into a [definition](https://json-schema.org/understanding-json-schema/structuring#defs). This is mostly useful when you are using the alias more than once in a model definition.
+  * In most cases, [recursive type aliases](https://pydantic.dev/docs/validation/latest/concepts/types#named-recursive-types) ([local](./types.md#named-recursive-types)) won’t work.
 
-By leveraging the new [`type` statement](<https://typing.readthedocs.io/en/latest/spec/aliases.html#type-statement>) (introduced in [PEP 695](<https://peps.python.org/pep-0695/>)), you can define aliases as follows:
+By leveraging the new [`type` statement](https://typing.readthedocs.io/en/latest/spec/aliases.html#type-statement) (introduced in [PEP 695](https://peps.python.org/pep-0695/)), you can define aliases as follows:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-512> ([local](./types.md#tab-panel-512)))
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-513> ([local](./types.md#tab-panel-513)))
+  * [ Python 3.9 and above ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-512) ([local](./types.md#tab-panel-512))
+  * [ Python 3.12 and above (new syntax) ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-513) ([local](./types.md#tab-panel-513))
 
 ```
  
@@ -251,8 +251,8 @@ When to use named type aliases
 
 While (named) PEP 695 and implicit type aliases are meant to be equivalent for static type checkers, Pydantic will _not_ understand field-specific metadata inside named aliases. That is, metadata such as `alias`, `default`, `deprecated`, _cannot_ be used:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-508> ([local](./types.md#tab-panel-508)))
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-509> ([local](./types.md#tab-panel-509)))
+  * [ Python 3.9 and above ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-508) ([local](./types.md#tab-panel-508))
+  * [ Python 3.12 and above (new syntax) ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-509) ([local](./types.md#tab-panel-509))
 
 ```
  
@@ -286,14 +286,14 @@ While (named) PEP 695 and implicit type aliases are meant to be equivalent for s
 
 ```
 
-Only metadata that can be applied to the annotated type itself is allowed (e.g. [validation constraints](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints> ([local](./fields.md#field-constraints))) and JSON metadata). Trying to support field-specific metadata would require eagerly inspecting the type alias’s [`__value__`](<https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__value__>), and as such Pydantic wouldn’t be able to have the alias stored as a JSON Schema definition.
+Only metadata that can be applied to the annotated type itself is allowed (e.g. [validation constraints](https://pydantic.dev/docs/validation/latest/concepts/fields#field-constraints) ([local](./fields.md#field-constraints)) and JSON metadata). Trying to support field-specific metadata would require eagerly inspecting the type alias’s [`__value__`](https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__value__), and as such Pydantic wouldn’t be able to have the alias stored as a JSON Schema definition.
 
 Note
 
-As with implicit type aliases, [type variables](<https://docs.python.org/3/library/typing.html#typing.TypeVar>) can also be used inside the generic alias:
+As with implicit type aliases, [type variables](https://docs.python.org/3/library/typing.html#typing.TypeVar) can also be used inside the generic alias:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-510> ([local](./types.md#tab-panel-510)))
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-511> ([local](./types.md#tab-panel-511)))
+  * [ Python 3.9 and above ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-510) ([local](./types.md#tab-panel-510))
+  * [ Python 3.12 and above (new syntax) ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-511) ([local](./types.md#tab-panel-511))
 
 ```
  
@@ -324,14 +324,14 @@ As with implicit type aliases, [type variables](<https://docs.python.org/3/libra
 
 #### Named recursive types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#named-recursive-types> ([local](./types.md#named-recursive-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#named-recursive-types> ([local](./types.md#named-recursive-types)) ([local](./types.md#named-recursive-types))
 
 Named type aliases should be used whenever you need to define recursive type aliases .
 
 For instance, here is an example definition of a JSON type:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-514> ([local](./types.md#tab-panel-514)))
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-515> ([local](./types.md#tab-panel-515)))
+  * [ Python 3.9 and above ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-514) ([local](./types.md#tab-panel-514))
+  * [ Python 3.12 and above (new syntax) ](https://pydantic.dev/docs/validation/latest/concepts/types#tab-panel-515) ([local](./types.md#tab-panel-515))
 
 ```
  
@@ -406,11 +406,11 @@ For instance, here is an example definition of a JSON type:
 
 Tip
 
-Pydantic defines a [`JsonValue`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.JsonValue> ([local](./../api/pydantic/types.md#pydantic.types.JsonValue))) type as a convenience.
+Pydantic defines a [`JsonValue`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.JsonValue) ([local](./../api/pydantic/types.md#pydantic.types.JsonValue)) type as a convenience.
 
 ### Customizing validation with `__get_pydantic_core_schema__`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#customizing-validation-with-__get_pydantic_core_schema__> ([local](./types.md#customizing-validation-with-__get_pydantic_core_schema__)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#customizing-validation-with-__get_pydantic_core_schema__> ([local](./types.md#customizing-validation-with-__get_pydantic_core_schema__)) ([local](./types.md#customizing-validation-with-__get_pydantic_core_schema__))
 
 To do more extensive customization of how Pydantic handles custom classes, and in particular when you have access to the class or can subclass it, you can implement a special `__get_pydantic_core_schema__` to tell Pydantic how to generate the `pydantic-core` schema.
 
@@ -422,7 +422,7 @@ The simplest no-op implementation calls the handler with the type you are given,
 
 #### As a method on a custom type
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#as-a-method-on-a-custom-type> ([local](./types.md#as-a-method-on-a-custom-type)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#as-a-method-on-a-custom-type> ([local](./types.md#as-a-method-on-a-custom-type)) ([local](./types.md#as-a-method-on-a-custom-type))
 
 The following is an example of a type that uses `__get_pydantic_core_schema__` to customize how it gets validated. This is equivalent to implementing `__get_validators__` in Pydantic V1.
 
@@ -451,15 +451,15 @@ The following is an example of a type that uses `__get_pydantic_core_schema__` t
 
 ```
 
-See [JSON Schema](<https://pydantic.dev/docs/validation/latest/concepts/json_schema> ([local](./json_schema.md))) for more details on how to customize JSON schemas for custom types.
+See [JSON Schema](https://pydantic.dev/docs/validation/latest/concepts/json_schema) ([local](./json_schema.md)) for more details on how to customize JSON schemas for custom types.
 
 #### As an annotation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#as-an-annotation> ([local](./types.md#as-an-annotation)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#as-an-annotation> ([local](./types.md#as-an-annotation)) ([local](./types.md#as-an-annotation))
 
 Often you’ll want to parametrize your custom type by more than just generic type parameters (which you can do via the type system and will be discussed later). Or you may not actually care (or want to) make an instance of your subclass; you actually want the original type, just with some extra validation done.
 
-For example, if you were to implement `pydantic.AfterValidator` (see [Adding validation and serialization](<https://pydantic.dev/docs/validation/latest/concepts/types#adding-validation-and-serialization> ([local](./types.md#adding-validation-and-serialization)))) yourself, you’d do something similar to the following:
+For example, if you were to implement `pydantic.AfterValidator` (see [Adding validation and serialization](https://pydantic.dev/docs/validation/latest/concepts/types#adding-validation-and-serialization) ([local](./types.md#adding-validation-and-serialization))) yourself, you’d do something similar to the following:
 
 ```
  
@@ -496,7 +496,7 @@ For example, if you were to implement `pydantic.AfterValidator` (see [Adding val
 
 #### Handling third-party types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#handling-third-party-types> ([local](./types.md#handling-third-party-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#handling-third-party-types> ([local](./types.md#handling-third-party-types)) ([local](./types.md#handling-third-party-types))
 
 Another use case for the pattern in the previous section is to handle third party types.
 
@@ -635,11 +635,11 @@ You can use this approach to e.g. define behavior for Pandas or Numpy types.
 
 #### Using `GetPydanticSchema` to reduce boilerplate
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#using-getpydanticschema-to-reduce-boilerplate> ([local](./types.md#using-getpydanticschema-to-reduce-boilerplate)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#using-getpydanticschema-to-reduce-boilerplate> ([local](./types.md#using-getpydanticschema-to-reduce-boilerplate)) ([local](./types.md#using-getpydanticschema-to-reduce-boilerplate))
 
 API Documentation
 
-[`pydantic.types.GetPydanticSchema`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.GetPydanticSchema> ([local](./../api/pydantic/types.md#pydantic.types.GetPydanticSchema)))  
+[`pydantic.types.GetPydanticSchema`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.GetPydanticSchema) ([local](./../api/pydantic/types.md#pydantic.types.GetPydanticSchema))  
 
 You may notice that the above examples where we create a marker class require a good amount of boilerplate. For many simple cases you can greatly minimize this by using `pydantic.GetPydanticSchema`:
 
@@ -670,7 +670,7 @@ You may notice that the above examples where we create a marker class require a 
 
 #### Summary
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#summary> ([local](./types.md#summary)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#summary> ([local](./types.md#summary)) ([local](./types.md#summary))
 
 Let’s recap:
 
@@ -680,15 +680,15 @@ Let’s recap:
 
 ### Handling custom generic classes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#handling-custom-generic-classes> ([local](./types.md#handling-custom-generic-classes)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#handling-custom-generic-classes> ([local](./types.md#handling-custom-generic-classes)) ([local](./types.md#handling-custom-generic-classes))
 
 Caution
 
 This is an advanced technique that you might not need in the beginning. In most of the cases you will probably be fine with standard Pydantic models.
 
-You can use [Generic Classes](<https://docs.python.org/3/library/typing.html#typing.Generic>) as field types and perform custom validation based on the “type parameters” (or sub-types) with `__get_pydantic_core_schema__`.
+You can use [Generic Classes](https://docs.python.org/3/library/typing.html#typing.Generic) as field types and perform custom validation based on the “type parameters” (or sub-types) with `__get_pydantic_core_schema__`.
 
-If the Generic class that you are using as a sub-type has a classmethod `__get_pydantic_core_schema__`, you don’t need to use [`arbitrary_types_allowed`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.arbitrary_types_allowed> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.arbitrary_types_allowed))) for it to work.
+If the Generic class that you are using as a sub-type has a classmethod `__get_pydantic_core_schema__`, you don’t need to use [`arbitrary_types_allowed`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.arbitrary_types_allowed) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.arbitrary_types_allowed)) for it to work.
 
 Because the `source_type` parameter is not the same as the `cls` parameter, you can use `typing.get_args` (or `typing_extensions.get_args`) to extract the generic parameters. Then you can use the `handler` to generate a schema for them by calling `handler.generate_schema`. Note that we do not do something like `handler(get_args(source_type)[0])` because we want to generate an unrelated schema for that generic parameter, not one that is influenced by the current context of `Annotated` metadata and such. This is less important for custom types, but crucial for annotated metadata that modifies schema building.
 
@@ -840,7 +840,7 @@ Because the `source_type` parameter is not the same as the `cls` parameter, you 
 
 #### Generic containers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#generic-containers> ([local](./types.md#generic-containers)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#generic-containers> ([local](./types.md#generic-containers)) ([local](./types.md#generic-containers))
 
 The same idea can be applied to create generic container types, like a custom `Sequence` type:
 
@@ -922,11 +922,11 @@ The same idea can be applied to create generic container types, like a custom `S
 
 ### Access to field name
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/types#access-to-field-name> ([local](./types.md#access-to-field-name)))
+<https://pydantic.dev/docs/validation/latest/concepts/types#access-to-field-name> ([local](./types.md#access-to-field-name)) ([local](./types.md#access-to-field-name))
 
 Note
 
-This was not possible with Pydantic V2 to V2.3, it was [re-added](<https://github.com/pydantic/pydantic/pull/7542>) in Pydantic V2.4.
+This was not possible with Pydantic V2 to V2.3, it was [re-added](https://github.com/pydantic/pydantic/pull/7542) in Pydantic V2.4.
 
 As of Pydantic V2.4, you can access the field name via the `handler.field_name` within `__get_pydantic_core_schema__` and thereby set the field name which will be available from `info.field_name`.
 
@@ -973,7 +973,7 @@ As of Pydantic V2.4, you can access the field name via the `handler.field_name` 
 
 ```
 
-You can also access `field_name` from the markers used with `Annotated`, like [`AfterValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator))).
+You can also access `field_name` from the markers used with `Annotated`, like [`AfterValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator)).
 
 ```
  

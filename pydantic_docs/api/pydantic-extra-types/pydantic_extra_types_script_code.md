@@ -3,15 +3,15 @@ title: Script Code
 source: https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_script_code/
 ---
 
-script definitions that are based on the [ISO 15924](<https://en.wikipedia.org/wiki/ISO_15924>)
+script definitions that are based on the [ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)
 
 ## ISO_15924 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_script_code/#pydantic_extra_types.script_code.ISO_15924> ([local](./pydantic_extra_types_script_code.md#pydantic_extra_types.script_code.ISO_15924)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_script_code/#pydantic_extra_types.script_code.ISO_15924> ([local](./pydantic_extra_types_script_code.md#pydantic_extra_types.script_code.ISO_15924)) ([local](./pydantic_extra_types_script_code.md#pydantic_extra_types.script_code.ISO_15924))
 
-**Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Bases:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
-ISO_15924 parses script in the [ISO 15924](<https://en.wikipedia.org/wiki/ISO_15924>) format.
+ISO_15924 parses script in the [ISO 15924](https://en.wikipedia.org/wiki/ISO_15924) format.
 
 ```
  

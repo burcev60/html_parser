@@ -3,7 +3,7 @@ title: Forward Annotations
 source: https://pydantic.dev/docs/validation/latest/concepts/forward_annotations
 ---
 
-Forward annotations (wrapped in quotes) or using the `from __future__ import annotations` [future statement](<https://docs.python.org/3/reference/simple_stmts.html#future>) (as introduced in [PEP563](<https://www.python.org/dev/peps/pep-0563/>)) are supported:
+Forward annotations (wrapped in quotes) or using the `from __future__ import annotations` [future statement](https://docs.python.org/3/reference/simple_stmts.html#future) (as introduced in [PEP563](https://www.python.org/dev/peps/pep-0563/)) are supported:
 
 ```
  
@@ -28,11 +28,11 @@ Forward annotations (wrapped in quotes) or using the `from __future__ import ann
 
 As shown in the following sections, forward annotations are useful when you want to reference a type that is not yet defined in your code.
 
-The internal logic to resolve forward annotations is described in detail in [this section](<https://pydantic.dev/docs/validation/latest/internals/resolving_annotations> ([local](./../internals/resolving_annotations.md))).
+The internal logic to resolve forward annotations is described in detail in [this section](https://pydantic.dev/docs/validation/latest/internals/resolving_annotations) ([local](./../internals/resolving_annotations.md)).
 
 ## Self-referencing (or “Recursive”) Models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#self-referencing-or-recursive-models> ([local](./forward_annotations.md#self-referencing-or-recursive-models)))
+<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#self-referencing-or-recursive-models> ([local](./forward_annotations.md#self-referencing-or-recursive-models)) ([local](./forward_annotations.md#self-referencing-or-recursive-models))
 
 Models with self-referencing fields are also supported. These annotations will be resolved during model creation.
 
@@ -60,11 +60,11 @@ Within the model, you can either add the `from __future__ import annotations` im
 
 ### Cyclic references
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#cyclic-references> ([local](./forward_annotations.md#cyclic-references)))
+<https://pydantic.dev/docs/validation/latest/concepts/forward_annotations#cyclic-references> ([local](./forward_annotations.md#cyclic-references)) ([local](./forward_annotations.md#cyclic-references))
 
 When working with self-referencing recursive models, it is possible that you might encounter cyclic references in validation inputs. For example, this can happen when validating ORM instances with back-references from attributes.
 
-Rather than raising a [`RecursionError`](<https://docs.python.org/3/library/exceptions.html#RecursionError>) while attempting to validate data with cyclic references, Pydantic is able to detect the cyclic reference and raise an appropriate [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))):
+Rather than raising a [`RecursionError`](https://docs.python.org/3/library/exceptions.html#RecursionError) while attempting to validate data with cyclic references, Pydantic is able to detect the cyclic reference and raise an appropriate [`ValidationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError)):
 
 ```
  
@@ -99,7 +99,7 @@ Rather than raising a [`RecursionError`](<https://docs.python.org/3/library/exce
 
 ```
 
-Because this error is raised without actually exceeding the maximum recursion depth, you can catch and handle the raised [`ValidationError`](<https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError> ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError))) without needing to worry about the limited remaining recursion depth:
+Because this error is raised without actually exceeding the maximum recursion depth, you can catch and handle the raised [`ValidationError`](https://pydantic.dev/docs/validation/latest/api/pydantic-core/pydantic_core/#pydantic_core.ValidationError) ([local](./../api/pydantic-core/pydantic_core.md#pydantic_core.ValidationError)) without needing to worry about the limited remaining recursion depth:
 
 ```
  
@@ -159,7 +159,7 @@ Because this error is raised without actually exceeding the maximum recursion de
 
 ```
 
-Similarly, if Pydantic encounters a recursive reference during _serialization_ , rather than waiting for the maximum recursion depth to be exceeded, a [`ValueError`](<https://docs.python.org/3/library/exceptions.html#ValueError>) is raised immediately:
+Similarly, if Pydantic encounters a recursive reference during _serialization_ , rather than waiting for the maximum recursion depth to be exceeded, a [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError) is raised immediately:
 
 ```
  

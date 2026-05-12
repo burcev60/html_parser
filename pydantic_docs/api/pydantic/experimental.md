@@ -5,13 +5,13 @@ source: https://pydantic.dev/docs/validation/latest/api/pydantic/experimental
 
 ## Pipeline API
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pipeline-api> ([local](./experimental.md#pipeline-api)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pipeline-api> ([local](./experimental.md#pipeline-api)) ([local](./experimental.md#pipeline-api))
 
 Experimental pipeline API functionality. Be careful with this API, it’s subject to change.
 
 ## _Pipeline 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline))
 
 **Bases:** `Generic[_InT, _OutT]`
 
@@ -19,11 +19,11 @@ Abstract representation of a chain of validation, transformation, and parsing st
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#methods> ([local](./experimental.md#methods)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#methods> ([local](./experimental.md#methods)) ([local](./experimental.md#methods))
 
 #### transform 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.transform> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.transform)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.transform> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.transform)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.transform))
 
 ```
  
@@ -38,13 +38,13 @@ If used as the first step in a pipeline, the type of the field is used. That is,
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns> ([local](./experimental.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns> ([local](./experimental.md#returns)) ([local](./experimental.md#returns))
 
 `_Pipeline`[`_InT`, `_NewOutT`]
 
 #### validate_as 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.validate_as> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.validate_as> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as))
 
 ```
  
@@ -63,13 +63,13 @@ Types are parsed in Pydantic’s `lax` mode by default, but you can enable `stri
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-1> ([local](./experimental.md#returns-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-1> ([local](./experimental.md#returns-1)) ([local](./experimental.md#returns-1))
 
-`_Pipeline`[`_InT`, [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)]
+`_Pipeline`[`_InT`, [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)]
 
 #### validate_as_deferred 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.validate_as_deferred> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as_deferred)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.validate_as_deferred> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as_deferred)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.validate_as_deferred))
 
 ```
  
@@ -86,13 +86,13 @@ This is useful when you need to reference the class in it’s own type annotatio
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-2> ([local](./experimental.md#returns-2)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-2> ([local](./experimental.md#returns-2)) ([local](./experimental.md#returns-2))
 
 `_Pipeline`[`_InT`, `_NewOutT`]
 
 #### constrain 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.constrain> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.constrain)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.constrain> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.constrain)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.constrain))
 
 ```
  
@@ -122,13 +122,13 @@ Most of the time you’ll be calling a shortcut method like `gt`, `lt`, `len`, e
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-3> ([local](./experimental.md#returns-3)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-3> ([local](./experimental.md#returns-3)) ([local](./experimental.md#returns-3))
 
-[`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
+[`Any`](https://docs.python.org/3/library/typing.html#typing.Any)
 
 #### predicate 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.predicate> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.predicate)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.predicate> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.predicate)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.predicate))
 
 ```
  
@@ -141,13 +141,13 @@ Constrain a value to meet a certain predicate.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-4> ([local](./experimental.md#returns-4)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-4> ([local](./experimental.md#returns-4)) ([local](./experimental.md#returns-4))
 
 `_Pipeline`[`_InT`, `_NewOutT`]
 
 #### gt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.gt> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.gt)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.gt> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.gt)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.gt))
 
 ```
  
@@ -160,13 +160,13 @@ Constrain a value to be greater than a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-5> ([local](./experimental.md#returns-5)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-5> ([local](./experimental.md#returns-5)) ([local](./experimental.md#returns-5))
 
 `_Pipeline`[`_InT`, `_NewOutGt`]
 
 #### lt 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.lt> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.lt)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.lt> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.lt)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.lt))
 
 ```
  
@@ -179,13 +179,13 @@ Constrain a value to be less than a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-6> ([local](./experimental.md#returns-6)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-6> ([local](./experimental.md#returns-6)) ([local](./experimental.md#returns-6))
 
 `_Pipeline`[`_InT`, `_NewOutLt`]
 
 #### ge 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.ge> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.ge)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.ge> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.ge)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.ge))
 
 ```
  
@@ -198,13 +198,13 @@ Constrain a value to be greater than or equal to a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-7> ([local](./experimental.md#returns-7)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-7> ([local](./experimental.md#returns-7)) ([local](./experimental.md#returns-7))
 
 `_Pipeline`[`_InT`, `_NewOutGe`]
 
 #### le 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.le> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.le)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.le> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.le)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.le))
 
 ```
  
@@ -217,13 +217,13 @@ Constrain a value to be less than or equal to a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-8> ([local](./experimental.md#returns-8)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-8> ([local](./experimental.md#returns-8)) ([local](./experimental.md#returns-8))
 
 `_Pipeline`[`_InT`, `_NewOutLe`]
 
 #### len 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.len> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.len)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.len> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.len)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.len))
 
 ```
  
@@ -236,13 +236,13 @@ Constrain a value to have a certain length.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-9> ([local](./experimental.md#returns-9)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-9> ([local](./experimental.md#returns-9)) ([local](./experimental.md#returns-9))
 
 `_Pipeline`[`_InT`, `_NewOutLen`]
 
 #### multiple_of 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.multiple_of> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.multiple_of)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.multiple_of> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.multiple_of)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.multiple_of))
 
 ```
  
@@ -256,13 +256,13 @@ Constrain a value to be a multiple of a certain number.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-10> ([local](./experimental.md#returns-10)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-10> ([local](./experimental.md#returns-10)) ([local](./experimental.md#returns-10))
 
-`_Pipeline`[`_InT`, [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)]
+`_Pipeline`[`_InT`, [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)]
 
 #### eq 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.eq> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.eq)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.eq> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.eq)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.eq))
 
 ```
  
@@ -275,13 +275,13 @@ Constrain a value to be equal to a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-11> ([local](./experimental.md#returns-11)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-11> ([local](./experimental.md#returns-11)) ([local](./experimental.md#returns-11))
 
 `_Pipeline`[`_InT`, `_OutT`]
 
 #### not_eq 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.not_eq> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_eq)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.not_eq> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_eq)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_eq))
 
 ```
  
@@ -294,13 +294,13 @@ Constrain a value to not be equal to a certain value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-12> ([local](./experimental.md#returns-12)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-12> ([local](./experimental.md#returns-12)) ([local](./experimental.md#returns-12))
 
 `_Pipeline`[`_InT`, `_OutT`]
 
 #### in_ 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.in_> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.in_)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.in_> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.in_)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.in_))
 
 ```
  
@@ -313,13 +313,13 @@ Constrain a value to be in a certain set.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-13> ([local](./experimental.md#returns-13)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-13> ([local](./experimental.md#returns-13)) ([local](./experimental.md#returns-13))
 
 `_Pipeline`[`_InT`, `_OutT`]
 
 #### not_in 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.not_in> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_in)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.not_in> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_in)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.not_in))
 
 ```
  
@@ -332,13 +332,13 @@ Constrain a value to not be in a certain set.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-14> ([local](./experimental.md#returns-14)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-14> ([local](./experimental.md#returns-14)) ([local](./experimental.md#returns-14))
 
 `_Pipeline`[`_InT`, `_OutT`]
 
 #### otherwise 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.otherwise> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.otherwise)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.otherwise> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.otherwise)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.otherwise))
 
 ```
  
@@ -353,13 +353,13 @@ Combine two validation chains, returning the result of the first chain if it suc
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-15> ([local](./experimental.md#returns-15)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-15> ([local](./experimental.md#returns-15)) ([local](./experimental.md#returns-15))
 
 `_Pipeline`[`_InT` | `_OtherIn`, `_OutT` | `_OtherOut`]
 
 #### then 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.then> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.then)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.pipeline._Pipeline.then> ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.then)) ([local](./experimental.md#pydantic.experimental.pipeline._Pipeline.then))
 
 ```
  
@@ -372,19 +372,19 @@ Pipe the result of one validation chain into another.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-16> ([local](./experimental.md#returns-16)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-16> ([local](./experimental.md#returns-16)) ([local](./experimental.md#returns-16))
 
 `_Pipeline`[`_InT`, `_OtherOut`]
 
 ## Arguments schema API
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#arguments-schema-api> ([local](./experimental.md#arguments-schema-api)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#arguments-schema-api> ([local](./experimental.md#arguments-schema-api)) ([local](./experimental.md#arguments-schema-api))
 
 Experimental module exposing a function to generate a core schema that validates callable arguments.
 
 ## generate_arguments_schema 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema)) ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema))
 
 ```
  
@@ -402,34 +402,34 @@ Generate the schema for the arguments of a function.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-17> ([local](./experimental.md#returns-17)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#returns-17> ([local](./experimental.md#returns-17)) ([local](./experimental.md#returns-17))
 
 `CoreSchema` — The generated schema.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#parameters> ([local](./experimental.md#parameters)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#parameters> ([local](./experimental.md#parameters)) ([local](./experimental.md#parameters))
 
-**`func`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[…, [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)] 
+**`func`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[…, [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)] 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(func\)> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(func\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(func\> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(func\)) ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(func\)))
 
 The function to generate the schema for.
 
-**`schema_type`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘arguments’, ‘arguments-v3’] _Default:_ `'arguments-v3'`
+**`schema_type`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘arguments’, ‘arguments-v3’] _Default:_ `'arguments-v3'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(schema_type\)> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(schema_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(schema_type\> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(schema_type\)) ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(schema_type\)))
 
 The type of schema to generate.
 
-**`parameters_callback`** : [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[[`int`](<https://docs.python.org/3/library/functions.html#int>), [`str`](<https://docs.python.org/3/library/stdtypes.html#str>), [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)], [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘skip’] | [`None`](<https://docs.python.org/3/library/constants.html#None>)] | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`parameters_callback`** : [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[[`int`](https://docs.python.org/3/library/functions.html#int), [`str`](https://docs.python.org/3/library/stdtypes.html#str), [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)], [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘skip’] | [`None`](https://docs.python.org/3/library/constants.html#None)] | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(parameters_callback\)> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(parameters_callback\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(parameters_callback\> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(parameters_callback\)) ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(parameters_callback\)))
 
-A callable that will be invoked for each parameter. The callback should take three required arguments: the index, the name and the type annotation (or [`Parameter.empty`](<https://docs.python.org/3/library/inspect.html#inspect.Parameter.empty>) if not annotated) of the parameter. The callback can optionally return `'skip'`, so that the parameter gets excluded from the resulting schema.
+A callable that will be invoked for each parameter. The callback should take three required arguments: the index, the name and the type annotation (or [`Parameter.empty`](https://docs.python.org/3/library/inspect.html#inspect.Parameter.empty) if not annotated) of the parameter. The callback can optionally return `'skip'`, so that the parameter gets excluded from the resulting schema.
 
-**`config`** : [`ConfigDict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict> ([local](./config.md#pydantic.config.ConfigDict))) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`config`** : [`ConfigDict`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict) ([local](./config.md#pydantic.config.ConfigDict)) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(config\)> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(config\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/experimental#pydantic.experimental.arguments_schema.generate_arguments_schema\(config\> ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(config\)) ([local](./experimental.md#pydantic.experimental.arguments_schema.generate_arguments_schema\(config\)))
 
 The configuration to use.

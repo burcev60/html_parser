@@ -5,15 +5,15 @@ source: https://pydantic.dev/docs/validation/latest/examples/custom_validators/
 
 This page provides example snippets for creating more complex, custom validators in Pydantic. Many of these examples are adapted from Pydantic issues and discussions, and are intended to showcase the flexibility and power of Pydantic’s validation system.
 
-## Custom `datetime` Validator via [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) Metadata
+## Custom `datetime` Validator via [`Annotated`](https://docs.python.org/3/library/typing.html#typing.Annotated) Metadata
 
-[](<https://pydantic.dev/docs/validation/latest/examples/custom_validators/#custom-datetime-validator-via-annotated-metadata> ([local](./custom_validators.md#custom-datetime-validator-via-annotated-metadata)))
+<https://pydantic.dev/docs/validation/latest/examples/custom_validators/#custom-datetime-validator-via-annotated-metadata> ([local](./custom_validators.md#custom-datetime-validator-via-annotated-metadata)) ([local](./custom_validators.md#custom-datetime-validator-via-annotated-metadata))
 
-In this example, we’ll construct a custom validator, attached to an [`Annotated`](<https://docs.python.org/3/library/typing.html#typing.Annotated>) type, that ensures a [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) object adheres to a given timezone constraint.
+In this example, we’ll construct a custom validator, attached to an [`Annotated`](https://docs.python.org/3/library/typing.html#typing.Annotated) type, that ensures a [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) object adheres to a given timezone constraint.
 
-The custom validator supports string specification of the timezone, and will raise an error if the [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>) object does not have the correct timezone.
+The custom validator supports string specification of the timezone, and will raise an error if the [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime) object does not have the correct timezone.
 
-We use `__get_pydantic_core_schema__` in the validator to customize the schema of the annotated type (in this case, [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>)), which allows us to add custom validation logic. Notably, we use a `wrap` validator function so that we can perform operations both before and after the default `pydantic` validation of a [`datetime`](<https://docs.python.org/3/library/datetime.html#datetime.datetime>).
+We use `__get_pydantic_core_schema__` in the validator to customize the schema of the annotated type (in this case, [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime)), which allows us to add custom validation logic. Notably, we use a `wrap` validator function so that we can perform operations both before and after the default `pydantic` validation of a [`datetime`](https://docs.python.org/3/library/datetime.html#datetime.datetime).
 
 ```
  
@@ -174,7 +174,7 @@ We can also enforce UTC offset constraints in a similar way. Assuming we have a 
 
 ## Validating Nested Model Fields
 
-[](<https://pydantic.dev/docs/validation/latest/examples/custom_validators/#validating-nested-model-fields> ([local](./custom_validators.md#validating-nested-model-fields)))
+<https://pydantic.dev/docs/validation/latest/examples/custom_validators/#validating-nested-model-fields> ([local](./custom_validators.md#validating-nested-model-fields)) ([local](./custom_validators.md#validating-nested-model-fields))
 
 Here, we demonstrate two ways to validate a field of a nested model, where the validator utilizes data from the parent model.
 
@@ -293,4 +293,4 @@ The ability to mutate the context within a validator adds a lot of power to nest
 
 Note that if the context property is not included in `model_validate`, then `info.context` will be `None` and the forbidden passwords list will not get added to the context in the above implementation. As such, `validate_user_passwords` would not carry out the desired password validation.
 
-More details about validation context can be found in the [validators documentation](<https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context> ([local](./../concepts/validators.md#validation-context))).
+More details about validation context can be found in the [validators documentation](https://pydantic.dev/docs/validation/latest/concepts/validators#validation-context) ([local](./../concepts/validators.md#validation-context)).

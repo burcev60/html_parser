@@ -7,9 +7,9 @@ The MAC address module provides functionality to parse and validate MAC addresse
 
 ## MacAddress 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#pydantic_extra_types.mac_address.MacAddress> ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#pydantic_extra_types.mac_address.MacAddress> ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress)) ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress))
 
-**Bases:** [`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+**Bases:** [`str`](https://docs.python.org/3/library/stdtypes.html#str)
 
 Represents a MAC address and provides methods for conversion, validation, and serialization.
 
@@ -33,11 +33,11 @@ Represents a MAC address and provides methods for conversion, validation, and se
 
 ### Methods
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#methods> ([local](./pydantic_extra_types_mac_address.md#methods)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#methods> ([local](./pydantic_extra_types_mac_address.md#methods)) ([local](./pydantic_extra_types_mac_address.md#methods))
 
 #### validate_mac_address 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#pydantic_extra_types.mac_address.MacAddress.validate_mac_address> ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress.validate_mac_address)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#pydantic_extra_types.mac_address.MacAddress.validate_mac_address> ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress.validate_mac_address)) ([local](./pydantic_extra_types_mac_address.md#pydantic_extra_types.mac_address.MacAddress.validate_mac_address))
 
 `@staticmethod`
 
@@ -52,6 +52,6 @@ Validate a MAC Address from the provided byte value.
 
 ##### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#returns> ([local](./pydantic_extra_types_mac_address.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic-extra-types/pydantic_extra_types_mac_address/#returns> ([local](./pydantic_extra_types_mac_address.md#returns)) ([local](./pydantic_extra_types_mac_address.md#returns))
 
-[`str`](<https://docs.python.org/3/library/stdtypes.html#str>)
+[`str`](https://docs.python.org/3/library/stdtypes.html#str)

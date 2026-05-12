@@ -7,7 +7,7 @@ This module contains related classes and functions for serialization.
 
 ## PlainSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer))
 
 Plain serializers use a function to modify the output of serialization.
 
@@ -35,11 +35,11 @@ This is particularly helpful when you want to customize the serialization for an
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#attributes> ([local](./functional_serializers.md#attributes)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#attributes> ([local](./functional_serializers.md#attributes)) ([local](./functional_serializers.md#attributes))
 
 #### func 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.func> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.func)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.func> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.func)) ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.func))
 
 The serializer function.
 
@@ -47,15 +47,15 @@ The serializer function.
 
 #### return_type 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.return_type> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.return_type)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.return_type> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.return_type)) ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.return_type))
 
 The return type for the function. If omitted it will be inferred from the type annotation.
 
-**Type:** [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
+**Type:** [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)
 
 #### when_used 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.when_used> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.when_used)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.PlainSerializer.when_used> ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.when_used)) ([local](./functional_serializers.md#pydantic.functional_serializers.PlainSerializer.when_used))
 
 Determines when this serializer should be used. Accepts a string with values `'always'`, `'unless-none'`, `'json'`, and `'json-unless-none'`. Defaults to ‘always’.
 
@@ -63,7 +63,7 @@ Determines when this serializer should be used. Accepts a string with values `'a
 
 ## WrapSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer))
 
 Wrap serializers receive the raw inputs along with a handler function that applies the standard serialization logic, and can modify the resulting value before returning it as the final output of serialization.
 
@@ -124,11 +124,11 @@ For example, here’s a scenario in which a wrap serializer transforms timezones
 
 ### Attributes
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#attributes-1> ([local](./functional_serializers.md#attributes-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#attributes-1> ([local](./functional_serializers.md#attributes-1)) ([local](./functional_serializers.md#attributes-1))
 
 #### func 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.func> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.func)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.func> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.func)) ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.func))
 
 The serializer function to be wrapped.
 
@@ -136,15 +136,15 @@ The serializer function to be wrapped.
 
 #### return_type 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.return_type> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.return_type)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.return_type> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.return_type)) ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.return_type))
 
 The return type for the function. If omitted it will be inferred from the type annotation.
 
-**Type:** [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>)
+**Type:** [`Any`](https://docs.python.org/3/library/typing.html#typing.Any)
 
 #### when_used 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.when_used> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.when_used)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.WrapSerializer.when_used> ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.when_used)) ([local](./functional_serializers.md#pydantic.functional_serializers.WrapSerializer.when_used))
 
 Determines when this serializer should be used. Accepts a string with values `'always'`, `'unless-none'`, `'json'`, and `'json-unless-none'`. Defaults to ‘always’.
 
@@ -152,15 +152,15 @@ Determines when this serializer should be used. Accepts a string with values `'a
 
 ## SerializeAsAny 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.SerializeAsAny> ([local](./functional_serializers.md#pydantic.functional_serializers.SerializeAsAny)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.SerializeAsAny> ([local](./functional_serializers.md#pydantic.functional_serializers.SerializeAsAny)) ([local](./functional_serializers.md#pydantic.functional_serializers.SerializeAsAny))
 
 Annotation used to mark a type as having duck-typing serialization behavior.
 
-See [usage documentation](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-with-duck-typing> ([local](./../../concepts/serialization.md#serializing-with-duck-typing))) for more details.
+See [usage documentation](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-with-duck-typing) ([local](./../../concepts/serialization.md#serializing-with-duck-typing)) for more details.
 
 ## field_serializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer))
 
 ```
  
@@ -207,7 +207,7 @@ In the below example, a field of type `set` is used to mitigate duplication. A `
 
 ```
 
-See [the usage documentation](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./../../concepts/serialization.md#serializers))) for more information.
+See [the usage documentation](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers) ([local](./../../concepts/serialization.md#serializers)) for more information.
 
 Four signatures are supported for the decorated serializer:
 
@@ -218,50 +218,50 @@ Four signatures are supported for the decorated serializer:
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#returns> ([local](./functional_serializers.md#returns)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#returns> ([local](./functional_serializers.md#returns)) ([local](./functional_serializers.md#returns))
 
-[`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`_FieldWrapSerializerT`], `_FieldWrapSerializerT`] | [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`_FieldPlainSerializerT`], `_FieldPlainSerializerT`]
+[`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[`_FieldWrapSerializerT`], `_FieldWrapSerializerT`] | [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[`_FieldPlainSerializerT`], `_FieldPlainSerializerT`]
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#parameters> ([local](./functional_serializers.md#parameters)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#parameters> ([local](./functional_serializers.md#parameters)) ([local](./functional_serializers.md#parameters))
 
-**`*fields`** : [`str`](<https://docs.python.org/3/library/stdtypes.html#str>) _Default:_ `()`
+**`*fields`** : [`str`](https://docs.python.org/3/library/stdtypes.html#str) _Default:_ `()`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(*fields\)> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(*fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(*fields\> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(*fields\)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(*fields\)))
 
 The field names the serializer should apply to.
 
-**`mode`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘plain’, ‘wrap’] _Default:_ `'plain'`
+**`mode`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘plain’, ‘wrap’] _Default:_ `'plain'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(mode\)> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(mode\> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(mode\)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(mode\)))
 
 The serialization mode.
 
   * `plain` means the function will be called instead of the default serialization logic,
   * `wrap` means the function will be called with an argument to optionally call the default serialization logic.
 
-**`return_type`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) _Default:_ `PydanticUndefined`
+**`return_type`** : [`Any`](https://docs.python.org/3/library/typing.html#typing.Any) _Default:_ `PydanticUndefined`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(return_type\)> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(return_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(return_type\> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(return_type\)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(return_type\)))
 
 Optional return type for the function, if omitted it will be inferred from the type annotation.
 
 **`when_used`** : `WhenUsed` _Default:_ `'always'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(when_used\)> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(when_used\> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(when_used\)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(when_used\)))
 
 Determines the serializer will be used for serialization.
 
-**`check_fields`** : [`bool`](<https://docs.python.org/3/library/functions.html#bool>) | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`check_fields`** : [`bool`](https://docs.python.org/3/library/functions.html#bool) | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(check_fields\)> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(check_fields\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.field_serializer\(check_fields\> ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(check_fields\)) ([local](./functional_serializers.md#pydantic.functional_serializers.field_serializer\(check_fields\)))
 
 Whether to check that the fields actually exist on the model.
 
 ### Raises
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#raises> ([local](./functional_serializers.md#raises)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#raises> ([local](./functional_serializers.md#raises)) ([local](./functional_serializers.md#raises))
 
   * `PydanticUserError` —
   * If the decorator is used without any arguments (at least one field name must be provided).
@@ -269,7 +269,7 @@ Whether to check that the fields actually exist on the model.
 
 ## model_serializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer))
 
 ```
  
@@ -328,27 +328,27 @@ And two other signatures for `mode='wrap'`:
 
   * `(self, nxt: SerializerFunctionWrapHandler, info: SerializationInfo)`
 
-See [the usage documentation](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers> ([local](./../../concepts/serialization.md#serializers))) for more information.
+See [the usage documentation](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializers) ([local](./../../concepts/serialization.md#serializers)) for more information.
 
 ### Returns
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#returns-1> ([local](./functional_serializers.md#returns-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#returns-1> ([local](./functional_serializers.md#returns-1)) ([local](./functional_serializers.md#returns-1))
 
-`_ModelPlainSerializerT` | [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`_ModelWrapSerializerT`], `_ModelWrapSerializerT`] | [`Callable`](<https://docs.python.org/3/library/typing.html#typing.Callable>)[[`_ModelPlainSerializerT`], `_ModelPlainSerializerT`] — The decorator function.
+`_ModelPlainSerializerT` | [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[`_ModelWrapSerializerT`], `_ModelWrapSerializerT`] | [`Callable`](https://docs.python.org/3/library/typing.html#typing.Callable)[[`_ModelPlainSerializerT`], `_ModelPlainSerializerT`] — The decorator function.
 
 ### Parameters
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#parameters-1> ([local](./functional_serializers.md#parameters-1)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#parameters-1> ([local](./functional_serializers.md#parameters-1)) ([local](./functional_serializers.md#parameters-1))
 
-**`f`** : `_ModelPlainSerializerT` | `_ModelWrapSerializerT` | [`None`](<https://docs.python.org/3/library/constants.html#None>) _Default:_ `None`
+**`f`** : `_ModelPlainSerializerT` | `_ModelWrapSerializerT` | [`None`](https://docs.python.org/3/library/constants.html#None) _Default:_ `None`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(f\)> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(f\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(f\> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(f\)) ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(f\)))
 
 The function to be decorated.
 
-**`mode`** : [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>)[‘plain’, ‘wrap’] _Default:_ `'plain'`
+**`mode`** : [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal)[‘plain’, ‘wrap’] _Default:_ `'plain'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(mode\)> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(mode\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(mode\> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(mode\)) ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(mode\)))
 
 The serialization mode.
 
@@ -357,84 +357,84 @@ The serialization mode.
 
 **`when_used`** : `WhenUsed` _Default:_ `'always'`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(when_used\)> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(when_used\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(when_used\> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(when_used\)) ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(when_used\)))
 
 Determines when this serializer should be used.
 
-**`return_type`** : [`Any`](<https://docs.python.org/3/library/typing.html#typing.Any>) _Default:_ `PydanticUndefined`
+**`return_type`** : [`Any`](https://docs.python.org/3/library/typing.html#typing.Any) _Default:_ `PydanticUndefined`
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(return_type\)> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(return_type\))))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.model_serializer\(return_type\> ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(return_type\)) ([local](./functional_serializers.md#pydantic.functional_serializers.model_serializer\(return_type\)))
 
 The return type for the function. If omitted it will be inferred from the type annotation.
 
 ## FieldPlainSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldPlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldPlainSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldPlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldPlainSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.FieldPlainSerializer))
 
 A field serializer method or function in `plain` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `'core_schema.SerializerFunction | _Partial'`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `'core_schema.SerializerFunction | _Partial'`
 
 ## FieldWrapSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldWrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldWrapSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldWrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldWrapSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.FieldWrapSerializer))
 
 A field serializer method or function in `wrap` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `'core_schema.WrapSerializerFunction | _Partial'`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `'core_schema.WrapSerializerFunction | _Partial'`
 
 ## FieldSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.FieldSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.FieldSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.FieldSerializer))
 
 A field serializer method or function.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `'FieldPlainSerializer | FieldWrapSerializer'`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `'FieldPlainSerializer | FieldWrapSerializer'`
 
 ## ModelPlainSerializerWithInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializerWithInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializerWithInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithInfo)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithInfo))
 
 A model serializer method with the `info` argument, in `plain` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `Callable[[Any, SerializationInfo[Any]], Any]`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `Callable[[Any, SerializationInfo[Any]], Any]`
 
 ## ModelPlainSerializerWithoutInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializerWithoutInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithoutInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializerWithoutInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithoutInfo)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializerWithoutInfo))
 
 A model serializer method without the `info` argument, in `plain` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `Callable[[Any], Any]`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `Callable[[Any], Any]`
 
 ## ModelPlainSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelPlainSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelPlainSerializer))
 
 A model serializer method in `plain` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `'ModelPlainSerializerWithInfo | ModelPlainSerializerWithoutInfo'`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `'ModelPlainSerializerWithInfo | ModelPlainSerializerWithoutInfo'`
 
 ## ModelWrapSerializerWithInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializerWithInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializerWithInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithInfo)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithInfo))
 
 A model serializer method with the `info` argument, in `wrap` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `Callable[[Any, SerializerFunctionWrapHandler, SerializationInfo[Any]], Any]`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `Callable[[Any, SerializerFunctionWrapHandler, SerializationInfo[Any]], Any]`
 
 ## ModelWrapSerializerWithoutInfo 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializerWithoutInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithoutInfo)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializerWithoutInfo> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithoutInfo)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializerWithoutInfo))
 
 A model serializer method without the `info` argument, in `wrap` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `Callable[[Any, SerializerFunctionWrapHandler], Any]`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `Callable[[Any, SerializerFunctionWrapHandler], Any]`
 
 ## ModelWrapSerializer 
 
-[](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializer)))
+<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_serializers#pydantic.functional_serializers.ModelWrapSerializer> ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializer)) ([local](./functional_serializers.md#pydantic.functional_serializers.ModelWrapSerializer))
 
 A model serializer method in `wrap` mode.
 
-**Type:** [`TypeAlias`](<https://docs.python.org/3/library/typing.html#typing.TypeAlias>) **Default:** `'ModelWrapSerializerWithInfo | ModelWrapSerializerWithoutInfo'`
+**Type:** [`TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) **Default:** `'ModelWrapSerializerWithInfo | ModelWrapSerializerWithoutInfo'`

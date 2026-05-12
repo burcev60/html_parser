@@ -7,9 +7,9 @@ We’d love you to contribute to Pydantic!
 
 ## Issues
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#issues> ([local](./contributing.md#issues)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#issues> ([local](./contributing.md#issues)) ([local](./contributing.md#issues))
 
-Questions, feature requests and bug reports are all welcome as [discussions or issues](<https://github.com/pydantic/pydantic/issues/new/choose>). **However, to report a security vulnerability, please see our[security policy](<https://github.com/pydantic/pydantic/security/policy>).**
+Questions, feature requests and bug reports are all welcome as [discussions or issues](https://github.com/pydantic/pydantic/issues/new/choose). **However, to report a security vulnerability, please see our[security policy](https://github.com/pydantic/pydantic/security/policy).**
 
 To make it as simple as possible for us to help you, please include the output of the following call in your issue:
 
@@ -37,7 +37,7 @@ Please try to always include the above unless you’re unable to install Pydanti
 
 ## Pull Requests
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#pull-requests> ([local](./contributing.md#pull-requests)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#pull-requests> ([local](./contributing.md#pull-requests)) ([local](./contributing.md#pull-requests))
 
 It should be extremely simple to get started and create a Pull Request. Pydantic is released regularly so you should see your improvements release in a matter of days or weeks 🚀.
 
@@ -49,7 +49,7 @@ Pydantic v1 is in maintenance mode, meaning that only bug fixes and security fix
 
 To submit a fix to Pydantic v1, use the `1.10.X-fixes` as a target branch.
 
-If you’re looking for something to get your teeth into, check out the [“help wanted”](<https://github.com/pydantic/pydantic/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22>) label on github.
+If you’re looking for something to get your teeth into, check out the [“help wanted”](https://github.com/pydantic/pydantic/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) label on github.
 
 To make contributing as easy and fast as possible, you’ll want to run tests and linting locally. Luckily, Pydantic has few dependencies, doesn’t require compiling and tests don’t need access to databases, etc. Because of this, setting up and running the tests should be very simple.
 
@@ -59,19 +59,19 @@ Tip
 
 ### Prerequisites
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#prerequisites> ([local](./contributing.md#prerequisites)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#prerequisites> ([local](./contributing.md#prerequisites)) ([local](./contributing.md#prerequisites))
 
 You’ll need the following prerequisites:
 
   * Any Python version between **Python 3.9 and 3.12**
-  * [**uv**](<https://docs.astral.sh/uv/getting-started/installation/>) or other virtual environment tool
-  * [**git**](<https://git-scm.com/>) \- For version control
-  * [**make**](<https://www.gnu.org/software/make/>) \- For running development commands (or use `nmake` on Windows)
-  * [**Rust**](<https://rustup.rs/>) \- Rust stable (or nightly for coverage)
+  * [**uv**](https://docs.astral.sh/uv/getting-started/installation/) or other virtual environment tool
+  * [**git**](https://git-scm.com/) \- For version control
+  * [**make**](https://www.gnu.org/software/make/) \- For running development commands (or use `nmake` on Windows)
+  * [**Rust**](https://rustup.rs/) \- Rust stable (or nightly for coverage)
 
 ### Installation and setup
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#installation-and-setup> ([local](./contributing.md#installation-and-setup)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#installation-and-setup> ([local](./contributing.md#installation-and-setup)) ([local](./contributing.md#installation-and-setup))
 
 Fork the repository on GitHub and clone your fork locally.
 
@@ -80,7 +80,7 @@ Terminal
 ```
 
     # Clone your fork and cd into the repo directory
-    git clone [[email protected]](<https://pydantic.dev/cdn-cgi/l/email-protection>):<your username>/pydantic.git
+    git clone [[email protected]](https://pydantic.dev/cdn-cgi/l/email-protection):<your username>/pydantic.git
     cd pydantic
     
     # Install UV and pre-commit
@@ -100,7 +100,7 @@ Terminal
 
 ### Check out a new branch and make your changes
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#check-out-a-new-branch-and-make-your-changes> ([local](./contributing.md#check-out-a-new-branch-and-make-your-changes)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#check-out-a-new-branch-and-make-your-changes> ([local](./contributing.md#check-out-a-new-branch-and-make-your-changes)) ([local](./contributing.md#check-out-a-new-branch-and-make-your-changes))
 
 Create a new branch for your changes.
 
@@ -117,7 +117,7 @@ Terminal
 
 ### Run tests and linting
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#run-tests-and-linting> ([local](./contributing.md#run-tests-and-linting)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#run-tests-and-linting> ([local](./contributing.md#run-tests-and-linting)) ([local](./contributing.md#run-tests-and-linting))
 
 Run tests and linting locally to make sure everything is working as expected.
 
@@ -141,11 +141,11 @@ Terminal
 
 ### Build documentation
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#build-documentation> ([local](./contributing.md#build-documentation)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#build-documentation> ([local](./contributing.md#build-documentation)) ([local](./contributing.md#build-documentation))
 
 If you’ve made any changes to the documentation (including changes to function signatures, class definitions, or docstrings that will appear in the API documentation), make sure it builds successfully.
 
-We use `mkdocs-material[imaging]` to support social previews (see the [plugin documentation](<https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/>)).
+We use `mkdocs-material[imaging]` to support social previews (see the [plugin documentation](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/)).
 
 Terminal
 
@@ -163,7 +163,7 @@ If this isn’t working due to issues with the imaging plugin, try commenting ou
 
 #### Updating the documentation
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#updating-the-documentation> ([local](./contributing.md#updating-the-documentation)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#updating-the-documentation> ([local](./contributing.md#updating-the-documentation)) ([local](./contributing.md#updating-the-documentation))
 
 We push a new version of the documentation with each minor release, and we push to a `dev` path with each commit to `main`.
 
@@ -181,7 +181,7 @@ Maintainer shortcut - as a maintainer, you can skip the second PR and just cherr
 
 ### Commit and push your changes
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#commit-and-push-your-changes> ([local](./contributing.md#commit-and-push-your-changes)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#commit-and-push-your-changes> ([local](./contributing.md#commit-and-push-your-changes)) ([local](./contributing.md#commit-and-push-your-changes))
 
 Commit your changes, push your branch to GitHub, and create a pull request.
 
@@ -191,13 +191,13 @@ When your pull request is ready for review, add a comment with the message “pl
 
 ## Documentation style
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#documentation-style> ([local](./contributing.md#documentation-style)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#documentation-style> ([local](./contributing.md#documentation-style)) ([local](./contributing.md#documentation-style))
 
-Documentation is written in Markdown and built using [Material for MkDocs](<https://squidfunk.github.io/mkdocs-material/>). API documentation is built from docstrings using [mkdocstrings](<https://mkdocstrings.github.io/>).
+Documentation is written in Markdown and built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). API documentation is built from docstrings using [mkdocstrings](https://mkdocstrings.github.io/).
 
 ### Code documentation
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#code-documentation> ([local](./contributing.md#code-documentation)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#code-documentation> ([local](./contributing.md#code-documentation)) ([local](./contributing.md#code-documentation))
 
 When contributing to Pydantic, please make sure that all code is well documented. The following should be documented using properly formatted docstrings:
 
@@ -206,9 +206,9 @@ When contributing to Pydantic, please make sure that all code is well documented
   * Function definitions
   * Module-level variables
 
-Pydantic uses [Google-style docstrings](<https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings>) formatted according to [PEP 257](<https://www.python.org/dev/peps/pep-0257/>) guidelines. (See [Example Google Style Python Docstrings](<https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>) for further examples.)
+Pydantic uses [Google-style docstrings](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) formatted according to [PEP 257](https://www.python.org/dev/peps/pep-0257/) guidelines. (See [Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) for further examples.)
 
-[pydocstyle](<https://www.pydocstyle.org/en/stable/index.html>) is used for linting docstrings. You can run `make format` to check your docstrings.
+[pydocstyle](https://www.pydocstyle.org/en/stable/index.html) is used for linting docstrings. You can run `make format` to check your docstrings.
 
 Where this is a conflict between Google-style docstrings and pydocstyle linting, follow the pydocstyle linting hints.
 
@@ -245,7 +245,7 @@ Class attributes and function arguments should be documented in the format “na
 
 ```
 
-You may include example code in docstrings. This code should be complete, self-contained, and runnable. Docstring examples are tested, so make sure they are correct and complete. See [`BeforeValidator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator> ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator))) for an example.
+You may include example code in docstrings. This code should be complete, self-contained, and runnable. Docstring examples are tested, so make sure they are correct and complete. See [`BeforeValidator`](https://pydantic.dev/docs/validation/latest/api/pydantic/functional_validators/#pydantic.functional_validators.AfterValidator) ([local](./../api/pydantic/functional_validators.md#pydantic.functional_validators.AfterValidator)) for an example.
 
 Class and instance attributes
 
@@ -255,7 +255,7 @@ Instance attributes should be documented as “Args” in the `__init__` docstri
 
 ### Documentation Style
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#documentation-style-1> ([local](./contributing.md#documentation-style-1)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#documentation-style-1> ([local](./contributing.md#documentation-style-1)) ([local](./contributing.md#documentation-style-1))
 
 In general, documentation should be written in a friendly, approachable style. It should be easy to read and understand, and should be as concise as possible while still being complete.
 
@@ -275,21 +275,21 @@ Terminal
 
 ## Debugging Python and Rust
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#debugging-python-and-rust> ([local](./contributing.md#debugging-python-and-rust)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#debugging-python-and-rust> ([local](./contributing.md#debugging-python-and-rust)) ([local](./contributing.md#debugging-python-and-rust))
 
 If you’re working with `pydantic` and `pydantic-core`, you might find it helpful to debug Python and Rust code together. Here’s a quick guide on how to do that. This tutorial is done in VSCode, but you can use similar steps in other IDEs.
 
 ## Badges
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#badges> ([local](./contributing.md#badges)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#badges> ([local](./contributing.md#badges)) ([local](./contributing.md#badges))
 
-[![Pydantic v1](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v1.json)](<https://pydantic.dev>) [![Pydantic v2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json)](<https://pydantic.dev>)
+[![Pydantic v1](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v1.json)](https://pydantic.dev) [![Pydantic v2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json)](https://pydantic.dev)
 
 Pydantic has a badge that you can use to show that your project uses Pydantic. You can use this badge in your `README.md`:
 
 ### With Markdown
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-markdown> ([local](./contributing.md#with-markdown)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-markdown> ([local](./contributing.md#with-markdown)) ([local](./contributing.md#with-markdown))
 
 ```
  
@@ -302,7 +302,7 @@ Pydantic has a badge that you can use to show that your project uses Pydantic. Y
 
 ### With reStructuredText
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-restructuredtext> ([local](./contributing.md#with-restructuredtext)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-restructuredtext> ([local](./contributing.md#with-restructuredtext)) ([local](./contributing.md#with-restructuredtext))
 
 ```
  
@@ -319,7 +319,7 @@ Pydantic has a badge that you can use to show that your project uses Pydantic. Y
 
 ### With HTML
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-html> ([local](./contributing.md#with-html)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#with-html> ([local](./contributing.md#with-html)) ([local](./contributing.md#with-html))
 
 ```
  
@@ -332,13 +332,13 @@ Pydantic has a badge that you can use to show that your project uses Pydantic. Y
 
 ## Adding your library as part of Pydantic’s third party test suite
 
-[](<https://pydantic.dev/docs/validation/latest/get-started/contributing/#adding-your-library-as-part-of-pydantics-third-party-test-suite> ([local](./contributing.md#adding-your-library-as-part-of-pydantics-third-party-test-suite)))
+<https://pydantic.dev/docs/validation/latest/get-started/contributing/#adding-your-library-as-part-of-pydantics-third-party-test-suite> ([local](./contributing.md#adding-your-library-as-part-of-pydantics-third-party-test-suite)) ([local](./contributing.md#adding-your-library-as-part-of-pydantics-third-party-test-suite))
 
 To be able to identify regressions early during development, Pydantic runs tests on various third-party projects using Pydantic. We consider adding support for testing new open source projects (that rely heavily on Pydantic) if your said project matches some of the following criteria:
 
   * The project is actively maintained.
-  * The project makes use of Pydantic internals (e.g. relying on the [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) metaclass, typing utilities).
+  * The project makes use of Pydantic internals (e.g. relying on the [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)) metaclass, typing utilities).
   * The project is popular enough (although small projects can still be included depending on how Pydantic is being used).
   * The project CI is simple enough to be ported into Pydantic’s testing workflow.
 
-If your project meets some of these criteria, you can [open feature request](<https://github.com/pydantic/pydantic/issues/new?assignees=&labels=feature+request&projects=&template=feature_request.yml>) to discuss the inclusion of your project.
+If your project meets some of these criteria, you can [open feature request](https://github.com/pydantic/pydantic/issues/new?assignees=&labels=feature+request&projects=&template=feature_request.yml) to discuss the inclusion of your project.

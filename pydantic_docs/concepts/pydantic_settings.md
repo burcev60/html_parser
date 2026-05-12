@@ -3,11 +3,11 @@ title: Settings Management
 source: https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings
 ---
 
-[Pydantic Settings](<https://github.com/pydantic/pydantic-settings>) provides optional Pydantic features for loading a settings or config class from environment variables or secrets files.
+[Pydantic Settings](https://github.com/pydantic/pydantic-settings) provides optional Pydantic features for loading a settings or config class from environment variables or secrets files.
 
 ## Installation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#installation> ([local](./pydantic_settings.md#installation)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#installation> ([local](./pydantic_settings.md#installation)) ([local](./pydantic_settings.md#installation))
 
 Installation is as simple as:
 
@@ -22,7 +22,7 @@ Terminal
 
 ## Usage
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#usage> ([local](./pydantic_settings.md#usage)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#usage> ([local](./pydantic_settings.md#usage)) ([local](./pydantic_settings.md#usage))
 
 If you create a model that inherits from `BaseSettings`, the model initialiser will attempt to determine the values of any fields not passed as keyword arguments by reading from the environment. (Default values will still be used if the matching environment variable is not set.)
 
@@ -98,25 +98,25 @@ For example:
 
 ```
 
-Check the [`Field` documentation](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) for more information.
+Check the [`Field` documentation](https://pydantic.dev/docs/validation/latest/concepts/fields) ([local](./fields.md)) for more information.
 
   2. The environment variable name is overridden using `alias`. In this case, the environment variable `my_api_key` will be used for both validation and serialization instead of `api_key`.
 
-Check the [`Field` documentation](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases> ([local](./fields.md#field-aliases))) for more information.
+Check the [`Field` documentation](https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases) ([local](./fields.md#field-aliases)) for more information.
 
-  3. The [`AliasChoices`](<https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasChoices> ([local](./../api/pydantic/aliases.md#pydantic.aliases.AliasChoices))) class allows to have multiple environment variable names for a single field. The first environment variable that is found will be used.
+  3. The [`AliasChoices`](https://pydantic.dev/docs/validation/latest/api/pydantic/aliases/#pydantic.aliases.AliasChoices) ([local](./../api/pydantic/aliases.md#pydantic.aliases.AliasChoices)) class allows to have multiple environment variable names for a single field. The first environment variable that is found will be used.
 
-Check the [documentation on alias choices](<https://pydantic.dev/docs/validation/latest/concepts/alias#aliaspath-and-aliaschoices> ([local](./alias.md#aliaspath-and-aliaschoices))) for more information.
+Check the [documentation on alias choices](https://pydantic.dev/docs/validation/latest/concepts/alias#aliaspath-and-aliaschoices) ([local](./alias.md#aliaspath-and-aliaschoices)) for more information.
 
-  4. The [`ImportString`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ImportString> ([local](./../api/pydantic/types.md#pydantic.types.ImportString))) class allows to import an object from a string. In this case, the environment variable `special_function` will be read and the function [`math.cos`](<https://docs.python.org/3/library/math.html#math.cos>) will be imported.
+  4. The [`ImportString`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.ImportString) ([local](./../api/pydantic/types.md#pydantic.types.ImportString)) class allows to import an object from a string. In this case, the environment variable `special_function` will be read and the function [`math.cos`](https://docs.python.org/3/library/math.html#math.cos) will be imported.
 
   5. The `env_prefix` config setting allows to set a prefix for all environment variables.
 
-Check the [Environment variable names documentation](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#environment-variable-names> ([local](./pydantic_settings.md#environment-variable-names))) for more information.
+Check the [Environment variable names documentation](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#environment-variable-names) ([local](./pydantic_settings.md#environment-variable-names)) for more information.
 
 ## Validation of default values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#validation-of-default-values> ([local](./pydantic_settings.md#validation-of-default-values)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#validation-of-default-values> ([local](./pydantic_settings.md#validation-of-default-values)) ([local](./pydantic_settings.md#validation-of-default-values))
 
 Unlike pydantic `BaseModel`, default values of `BaseSettings` fields are validated by default. You can disable this behaviour by setting `validate_default=False` either in `model_config` or on field level by `Field(validate_default=False)`:
 
@@ -149,11 +149,11 @@ Unlike pydantic `BaseModel`, default values of `BaseSettings` fields are validat
 
 ```
 
-Check the [validation of default values](<https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values> ([local](./fields.md#validate-default-values))) for more information.
+Check the [validation of default values](https://pydantic.dev/docs/validation/latest/concepts/fields#validate-default-values) ([local](./fields.md#validate-default-values)) for more information.
 
 ## Environment variable names
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#environment-variable-names> ([local](./pydantic_settings.md#environment-variable-names)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#environment-variable-names> ([local](./pydantic_settings.md#environment-variable-names)) ([local](./pydantic_settings.md#environment-variable-names))
 
 By default, the environment variable name is the same as the field name.
 
@@ -183,7 +183,7 @@ There are two ways to do this:
   * Using `Field(alias=...)` (see `api_key` above)
   * Using `Field(validation_alias=...)` (see `auth_key` above)
 
-Check the [`Field` aliases documentation](<https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases> ([local](./fields.md#field-aliases))) for more information about aliases.
+Check the [`Field` aliases documentation](https://pydantic.dev/docs/validation/latest/concepts/fields#field-aliases) ([local](./fields.md#field-aliases)) for more information about aliases.
 
 To apply `env_prefix` not only to variable names but also to aliases, set `env_prefix_target='all'`. To apply `env_prefix` only to aliases and not to variable names, set `env_prefix_target='alias'`. To apply `env_prefix` only to variable names (the default behavior), set `env_prefix_target='variable'`.
 
@@ -251,7 +251,7 @@ To apply `env_prefix` not only to variable names but also to aliases, set `env_p
 
 ### Case-sensitivity
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#case-sensitivity> ([local](./pydantic_settings.md#case-sensitivity)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#case-sensitivity> ([local](./pydantic_settings.md#case-sensitivity)) ([local](./pydantic_settings.md#case-sensitivity))
 
 By default, environment variable names are case-insensitive.
 
@@ -317,7 +317,7 @@ On Windows, Python’s `os` module always treats environment variables as case-i
 
 ## Parsing environment variable values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values> ([local](./pydantic_settings.md#parsing-environment-variable-values)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values> ([local](./pydantic_settings.md#parsing-environment-variable-values)) ([local](./pydantic_settings.md#parsing-environment-variable-values))
 
 By default environment variables are parsed verbatim, including if the value is empty. You can choose to ignore empty environment variables by setting the `env_ignore_empty` config setting to `True`. This can be useful if you would prefer to use the default value for a field rather than an empty value from the environment.
 
@@ -498,9 +498,9 @@ You may also populate a complex type by providing your own source class.
 
 ### Disabling JSON parsing
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#disabling-json-parsing> ([local](./pydantic_settings.md#disabling-json-parsing)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#disabling-json-parsing> ([local](./pydantic_settings.md#disabling-json-parsing)) ([local](./pydantic_settings.md#disabling-json-parsing))
 
-pydantic-settings by default parses complex types from environment variables as JSON strings. If you want to disable this behavior for a field and parse the value in your own validator, you can annotate the field with [`NoDecode`](<https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.NoDecode> ([local](./../api/pydantic_settings.md#pydantic_settings.NoDecode))):
+pydantic-settings by default parses complex types from environment variables as JSON strings. If you want to disable this behavior for a field and parse the value in your own validator, you can annotate the field with [`NoDecode`](https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.NoDecode) ([local](./../api/pydantic_settings.md#pydantic_settings.NoDecode)):
 
 ```
  
@@ -556,7 +556,7 @@ You can also disable JSON parsing for all fields by setting the `enable_decoding
 
 ```
 
-You can force JSON parsing for a field by annotating it with [`ForceDecode`](<https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.ForceDecode> ([local](./../api/pydantic_settings.md#pydantic_settings.ForceDecode))). This will bypass the `enable_decoding` config setting:
+You can force JSON parsing for a field by annotating it with [`ForceDecode`](https://pydantic.dev/docs/validation/latest/api/pydantic_settings#pydantic_settings.ForceDecode) ([local](./../api/pydantic_settings.md#pydantic_settings.ForceDecode)). This will bypass the `enable_decoding` config setting:
 
 ```
  
@@ -589,7 +589,7 @@ You can force JSON parsing for a field by annotating it with [`ForceDecode`](<ht
 
 ## Nested model default partial updates
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-model-default-partial-updates> ([local](./pydantic_settings.md#nested-model-default-partial-updates)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-model-default-partial-updates> ([local](./pydantic_settings.md#nested-model-default-partial-updates)) ([local](./pydantic_settings.md#nested-model-default-partial-updates))
 
 By default, Pydantic settings does not allow partial updates to nested model default objects. This behavior can be overriden by setting the `nested_model_default_partial_update` flag to `True`, which will allow partial updates on nested model default object fields.
 
@@ -643,7 +643,7 @@ By default, Pydantic settings does not allow partial updates to nested model def
 
 ## Dotenv (.env) support
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dotenv-env-support> ([local](./pydantic_settings.md#dotenv-env-support)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dotenv-env-support> ([local](./pydantic_settings.md#dotenv-env-support)) ([local](./pydantic_settings.md#dotenv-env-support))
 
 Dotenv files (generally named `.env`) are a common pattern that make it easy to use environment variables in a platform-independent manner.
 
@@ -699,7 +699,7 @@ If a filename is specified for `env_file`, Pydantic will only check the current 
 
 Tip
 
-Named pipes (FIFOs) are also supported as dotenv files. This is useful for tools like [1Password Environments](<https://developer.1password.com/docs/environments>), which mount `.env` files as named pipes to provide secrets on demand without writing them to disk.
+Named pipes (FIFOs) are also supported as dotenv files. This is useful for tools like [1Password Environments](https://developer.1password.com/docs/environments), which mount `.env` files as named pipes to provide secrets on demand without writing them to disk.
 
 Even when using a dotenv file, _pydantic_ will still read environment variables as well as the dotenv file, **environment variables will always take priority over values loaded from a dotenv file**.
 
@@ -723,7 +723,7 @@ If you need to load multiple dotenv files, you can pass multiple file paths as a
 
 You can also use the keyword argument override to tell Pydantic not to load any file at all (even if one is set in the `model_config` class) by passing `None` as the instantiation keyword argument, e.g. `settings = Settings(_env_file=None)`.
 
-Because python-dotenv is used to parse the file, bash-like semantics such as `export` can be used which (depending on your OS and environment) may allow your dotenv file to also be used with `source`, see [python-dotenv’s documentation](<https://saurabh-kumar.com/python-dotenv/#usages>) for more details.
+Because python-dotenv is used to parse the file, bash-like semantics such as `export` can be used which (depending on your OS and environment) may allow your dotenv file to also be used with `source`, see [python-dotenv’s documentation](https://saurabh-kumar.com/python-dotenv/#usages) for more details.
 
 Pydantic settings consider `extra` config in case of dotenv file. It means if you set the `extra=forbid` (_default_) on `model_config` and your dotenv file contains an entry for a field that is not defined in settings model, it will raise `ValidationError` in settings construction.
 
@@ -751,20 +751,20 @@ Pydantic settings loads all the values from dotenv file and passes it to the mod
 
 ## Command Line Support
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#command-line-support> ([local](./pydantic_settings.md#command-line-support)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#command-line-support> ([local](./pydantic_settings.md#command-line-support)) ([local](./pydantic_settings.md#command-line-support))
 
 Pydantic settings provides integrated CLI support, making it easy to quickly define CLI applications using Pydantic models. There are two primary use cases for Pydantic settings CLI:
 
   1. When using a CLI to override fields in Pydantic models.
   2. When using Pydantic models to define CLIs.
 
-By default, the experience is tailored towards use case #1 and builds on the foundations established in [parsing environment variables](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values> ([local](./pydantic_settings.md#parsing-environment-variable-values))). If your use case primarily falls into #2, you will likely want to enable most of the defaults outlined at the end of [creating CLI applications](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#creating-cli-applications> ([local](./pydantic_settings.md#creating-cli-applications))).
+By default, the experience is tailored towards use case #1 and builds on the foundations established in [parsing environment variables](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values) ([local](./pydantic_settings.md#parsing-environment-variable-values)). If your use case primarily falls into #2, you will likely want to enable most of the defaults outlined at the end of [creating CLI applications](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#creating-cli-applications) ([local](./pydantic_settings.md#creating-cli-applications)).
 
 ### The Basics
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#the-basics> ([local](./pydantic_settings.md#the-basics)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#the-basics> ([local](./pydantic_settings.md#the-basics)) ([local](./pydantic_settings.md#the-basics))
 
-To get started, let’s revisit the example presented in [parsing environment variables](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values> ([local](./pydantic_settings.md#parsing-environment-variable-values))) but using a Pydantic settings CLI:
+To get started, let’s revisit the example presented in [parsing environment variables](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#parsing-environment-variable-values) ([local](./pydantic_settings.md#parsing-environment-variable-values)) but using a Pydantic settings CLI:
 
 ```
  
@@ -815,7 +815,7 @@ To get started, let’s revisit the example presented in [parsing environment va
 
 To enable CLI parsing, we simply set the `cli_parse_args` flag to a valid value, which retains similar connotations as defined in `argparse`.
 
-Note that a CLI settings source is [**the topmost source**](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#field-value-priority> ([local](./pydantic_settings.md#field-value-priority))) by default unless its [priority value is customised](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources> ([local](./pydantic_settings.md#customise-settings-sources))):
+Note that a CLI settings source is [**the topmost source**](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#field-value-priority) ([local](./pydantic_settings.md#field-value-priority)) by default unless its [priority value is customised](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources) ([local](./pydantic_settings.md#customise-settings-sources)):
 
 ```
  
@@ -856,7 +856,7 @@ Note that a CLI settings source is [**the topmost source**](<https://pydantic.de
 
 #### Lists
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#lists> ([local](./pydantic_settings.md#lists)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#lists> ([local](./pydantic_settings.md#lists)) ([local](./pydantic_settings.md#lists))
 
 CLI argument parsing of lists supports intermixing of any of the below three styles:
 
@@ -892,7 +892,7 @@ CLI argument parsing of lists supports intermixing of any of the below three sty
 
 #### Dictionaries
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dictionaries> ([local](./pydantic_settings.md#dictionaries)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dictionaries> ([local](./pydantic_settings.md#dictionaries)) ([local](./pydantic_settings.md#dictionaries))
 
 CLI argument parsing of dictionaries supports intermixing of any of the below two styles:
 
@@ -927,7 +927,7 @@ These can be used in conjunction with list forms as well, e.g:
 
 #### Literals and Enums
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#literals-and-enums> ([local](./pydantic_settings.md#literals-and-enums)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#literals-and-enums> ([local](./pydantic_settings.md#literals-and-enums)) ([local](./pydantic_settings.md#literals-and-enums))
 
 CLI argument parsing of literals and enums are converted into CLI choices.
 
@@ -960,7 +960,7 @@ CLI argument parsing of literals and enums are converted into CLI choices.
 
 #### Aliases
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#aliases> ([local](./pydantic_settings.md#aliases)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#aliases> ([local](./pydantic_settings.md#aliases)) ([local](./pydantic_settings.md#aliases))
 
 Pydantic field aliases are added as CLI argument aliases. Aliases of length one are converted into short options.
 
@@ -1003,7 +1003,7 @@ Pydantic field aliases are added as CLI argument aliases. Aliases of length one 
 
 ### Subcommands and Positional Arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#subcommands-and-positional-arguments> ([local](./pydantic_settings.md#subcommands-and-positional-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#subcommands-and-positional-arguments> ([local](./pydantic_settings.md#subcommands-and-positional-arguments)) ([local](./pydantic_settings.md#subcommands-and-positional-arguments))
 
 Subcommands and positional arguments are expressed using the `CliSubCommand` and `CliPositionalArg` annotations. The subcommand annotation can only be applied to required fields (i.e. fields that do not have a default value). Furthermore, subcommands must be a valid type derived from either a pydantic `BaseModel` or pydantic.dataclasses `dataclass`.
 
@@ -1011,7 +1011,7 @@ Parsed subcommands can be retrieved from model instances using the `get_subcomma
 
 Note
 
-CLI settings subcommands are limited to a single subparser per model. In other words, all subcommands for a model are grouped under a single subparser; it does not allow for multiple subparsers with each subparser having its own set of subcommands. For more information on subparsers, see [argparse subcommands](<https://docs.python.org/3/library/argparse.html#sub-commands>).
+CLI settings subcommands are limited to a single subparser per model. In other words, all subcommands for a model are grouped under a single subparser; it does not allow for multiple subparsers with each subparser having its own set of subcommands. For more information on subparsers, see [argparse subcommands](https://docs.python.org/3/library/argparse.html#sub-commands).
 
 Note
 
@@ -1078,7 +1078,7 @@ Note
 
 ```
 
-The `CliSubCommand` and `CliPositionalArg` annotations also support union operations and aliases. For unions of Pydantic models, it is important to remember the [nuances](<https://docs.pydantic.dev/latest/concepts/unions/>) that can arise during validation. Specifically, for unions of subcommands that are identical in content, it is recommended to break them out into separate `CliSubCommand` fields to avoid any complications. Lastly, the derived subcommand names from unions will be the names of the Pydantic model classes themselves.
+The `CliSubCommand` and `CliPositionalArg` annotations also support union operations and aliases. For unions of Pydantic models, it is important to remember the [nuances](https://docs.pydantic.dev/latest/concepts/unions/) that can arise during validation. Specifically, for unions of subcommands that are identical in content, it is recommended to break them out into separate `CliSubCommand` fields to avoid any complications. Lastly, the derived subcommand names from unions will be the names of the Pydantic model classes themselves.
 
 When assigning aliases to `CliSubCommand` or `CliPositionalArg` fields, only a single alias can be assigned. For non-union subcommands, aliasing will change the displayed help text and subcommand name. Conversely, for union subcommands, aliasing will have no tangible effect from the perspective of the CLI settings source. Lastly, for positional arguments, aliasing will change the CLI help text displayed for the field.
 
@@ -1134,7 +1134,7 @@ When assigning aliases to `CliSubCommand` or `CliPositionalArg` fields, only a s
 
 ### Creating CLI Applications
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#creating-cli-applications> ([local](./pydantic_settings.md#creating-cli-applications)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#creating-cli-applications> ([local](./pydantic_settings.md#creating-cli-applications)) ([local](./pydantic_settings.md#creating-cli-applications))
 
 The `CliApp` class provides two utility methods, `CliApp.run` and `CliApp.run_subcommand`, that can be used to run a Pydantic `BaseSettings`, `BaseModel`, or `pydantic.dataclasses.dataclass` as a CLI application. Primarily, the methods provide structure for running `cli_cmd` methods associated with models.
 
@@ -1224,7 +1224,7 @@ For `BaseModel` and `pydantic.dataclasses.dataclass` types, `CliApp.run` will in
 
 #### Asynchronous Commands
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#asynchronous-commands> ([local](./pydantic_settings.md#asynchronous-commands)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#asynchronous-commands> ([local](./pydantic_settings.md#asynchronous-commands)) ([local](./pydantic_settings.md#asynchronous-commands))
 
 Pydantic settings supports running asynchronous CLI commands via `CliApp.run` and `CliApp.run_subcommand`. With this feature, you can define async def methods within your Pydantic models (including subcommands) and have them executed just like their synchronous counterparts. Specifically:
 
@@ -1254,7 +1254,7 @@ Below is a simple example demonstrating an asynchronous top-level command:
 
 #### Asynchronous Subcommands
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#asynchronous-subcommands> ([local](./pydantic_settings.md#asynchronous-subcommands)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#asynchronous-subcommands> ([local](./pydantic_settings.md#asynchronous-subcommands)) ([local](./pydantic_settings.md#asynchronous-subcommands))
 
 As mentioned above, you can also define subcommands as async. However, only do so for the leaf (lowest-level) subcommand to avoid spawning new threads and event loops unnecessarily in parent commands:
 
@@ -1300,7 +1300,7 @@ When executing a subcommand with an asynchronous cli_cmd, Pydantic settings auto
 
 #### Printing Help
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#printing-help> ([local](./pydantic_settings.md#printing-help)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#printing-help> ([local](./pydantic_settings.md#printing-help)) ([local](./pydantic_settings.md#printing-help))
 
 The `print_help` and `format_help` methods are available for printing or formatting help.
 
@@ -1341,7 +1341,7 @@ The `print_help` and `format_help` methods are available for printing or formatt
 
 #### Serializing Arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#serializing-arguments> ([local](./pydantic_settings.md#serializing-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#serializing-arguments> ([local](./pydantic_settings.md#serializing-arguments)) ([local](./pydantic_settings.md#serializing-arguments))
 
 An instantiated Pydantic model can be serialized into its CLI arguments using the `CliApp.serialize` method. Serialization styles can be controlled using the `list_style`, `dict_style`, and `positionals_first` flags.
 
@@ -1388,7 +1388,7 @@ An instantiated Pydantic model can be serialized into its CLI arguments using th
 
 ### Mutually Exclusive Groups
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#mutually-exclusive-groups> ([local](./pydantic_settings.md#mutually-exclusive-groups)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#mutually-exclusive-groups> ([local](./pydantic_settings.md#mutually-exclusive-groups)) ([local](./pydantic_settings.md#mutually-exclusive-groups))
 
 CLI mutually exclusive groups can be created by inheriting from the `CliMutuallyExclusiveGroup` class.
 
@@ -1432,13 +1432,13 @@ A `CliMutuallyExclusiveGroup` cannot be used in a union or contain nested models
 
 ### Customizing the CLI Experience
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customizing-the-cli-experience> ([local](./pydantic_settings.md#customizing-the-cli-experience)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customizing-the-cli-experience> ([local](./pydantic_settings.md#customizing-the-cli-experience)) ([local](./pydantic_settings.md#customizing-the-cli-experience))
 
 The below flags can be used to customise the CLI experience to your needs.
 
 #### Change the Displayed Program Name
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-displayed-program-name> ([local](./pydantic_settings.md#change-the-displayed-program-name)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-displayed-program-name> ([local](./pydantic_settings.md#change-the-displayed-program-name)) ([local](./pydantic_settings.md#change-the-displayed-program-name))
 
 Change the default program name displayed in the help text usage by setting `cli_prog_name`. By default, it will derive the name of the currently executing program from `sys.argv[0]`, just like argparse.
 
@@ -1471,7 +1471,7 @@ Change the default program name displayed in the help text usage by setting `cli
 
 #### CLI Boolean Flags
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-boolean-flags> ([local](./pydantic_settings.md#cli-boolean-flags)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-boolean-flags> ([local](./pydantic_settings.md#cli-boolean-flags)) ([local](./pydantic_settings.md#cli-boolean-flags))
 
 Change whether boolean fields should be explicit or implicit by default using the `cli_implicit_flags` setting. By default, boolean fields are “explicit”, meaning a boolean value must be explicitly provided on the CLI, e.g. `--flag=True`. Conversely, boolean fields that are “implicit” derive the value from the flag itself, e.g. `--flag,--no-flag`, which removes the need for an explicit value to be passed.
 
@@ -1602,7 +1602,7 @@ For “toggle” flags, if default=`False`, `--flag` will store `True`. Otherwis
 
 #### Ignore and Retrieve Unknown Arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#ignore-and-retrieve-unknown-arguments> ([local](./pydantic_settings.md#ignore-and-retrieve-unknown-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#ignore-and-retrieve-unknown-arguments> ([local](./pydantic_settings.md#ignore-and-retrieve-unknown-arguments)) ([local](./pydantic_settings.md#ignore-and-retrieve-unknown-arguments))
 
 Change whether to ignore unknown CLI arguments and only parse known ones using `cli_ignore_unknown_args`. By default, the CLI does not ignore any args. Ignored arguments can then be retrieved using the `CliUnknownArgs` annotation.
 
@@ -1627,7 +1627,7 @@ Change whether to ignore unknown CLI arguments and only parse known ones using `
 
 #### CLI Kebab Case for Arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-kebab-case-for-arguments> ([local](./pydantic_settings.md#cli-kebab-case-for-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-kebab-case-for-arguments> ([local](./pydantic_settings.md#cli-kebab-case-for-arguments)) ([local](./pydantic_settings.md#cli-kebab-case-for-arguments))
 
 Change whether CLI arguments should use kebab case by enabling `cli_kebab_case`. By default, `cli_kebab_case=True` will ignore enum fields, and is equivalent to `cli_kebab_case='no_enums'`. To apply kebab case to everything, including enums, use `cli_kebab_case='all'`.
 
@@ -1663,7 +1663,7 @@ Change whether CLI arguments should use kebab case by enabling `cli_kebab_case`.
 
 #### Change Whether CLI Should Exit on Error
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-whether-cli-should-exit-on-error> ([local](./pydantic_settings.md#change-whether-cli-should-exit-on-error)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-whether-cli-should-exit-on-error> ([local](./pydantic_settings.md#change-whether-cli-should-exit-on-error)) ([local](./pydantic_settings.md#change-whether-cli-should-exit-on-error))
 
 Change whether the CLI internal parser will exit on error or raise a `SettingsError` exception by using `cli_exit_on_error`. By default, the CLI internal parser will exit on error.
 
@@ -1689,11 +1689,11 @@ Change whether the CLI internal parser will exit on error or raise a `SettingsEr
 
 #### Enforce Required Arguments at CLI
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#enforce-required-arguments-at-cli> ([local](./pydantic_settings.md#enforce-required-arguments-at-cli)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#enforce-required-arguments-at-cli> ([local](./pydantic_settings.md#enforce-required-arguments-at-cli)) ([local](./pydantic_settings.md#enforce-required-arguments-at-cli))
 
 Pydantic settings is designed to pull values in from various sources when instantating a model. This means a field that is required is not strictly required from any single source (e.g. the CLI). Instead, all that matters is that one of the sources provides the required value.
 
-However, if your use case [aligns more with #2](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#command-line-support> ([local](./pydantic_settings.md#command-line-support))), using Pydantic models to define CLIs, you will likely want required fields to be _strictly required at the CLI_. We can enable this behavior by using `cli_enforce_required`.
+However, if your use case [aligns more with #2](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#command-line-support) ([local](./pydantic_settings.md#command-line-support)), using Pydantic models to define CLIs, you will likely want required fields to be _strictly required at the CLI_. We can enable this behavior by using `cli_enforce_required`.
 
 Note
 
@@ -1732,7 +1732,7 @@ A required `CliPositionalArg` field is always strictly required (enforced) at th
 
 #### Change the None Type Parse String
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-none-type-parse-string> ([local](./pydantic_settings.md#change-the-none-type-parse-string)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-none-type-parse-string> ([local](./pydantic_settings.md#change-the-none-type-parse-string)) ([local](./pydantic_settings.md#change-the-none-type-parse-string))
 
 Change the CLI string value that will be parsed (e.g. “null”, “void”, “None”, etc.) into `None` by setting `cli_parse_none_str`. By default it will use the `env_parse_none_str` value if set. Otherwise, it will default to “null” if `cli_avoid_json` is `False`, and “None” if `cli_avoid_json` is `True`.
 
@@ -1759,7 +1759,7 @@ Change the CLI string value that will be parsed (e.g. “null”, “void”, �
 
 #### Hide None Type Values
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#hide-none-type-values> ([local](./pydantic_settings.md#hide-none-type-values)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#hide-none-type-values> ([local](./pydantic_settings.md#hide-none-type-values)) ([local](./pydantic_settings.md#hide-none-type-values))
 
 Hide `None` values from the CLI help text by enabling `cli_hide_none_type`.
 
@@ -1796,7 +1796,7 @@ Hide `None` values from the CLI help text by enabling `cli_hide_none_type`.
 
 #### Avoid Adding JSON CLI Options
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#avoid-adding-json-cli-options> ([local](./pydantic_settings.md#avoid-adding-json-cli-options)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#avoid-adding-json-cli-options> ([local](./pydantic_settings.md#avoid-adding-json-cli-options)) ([local](./pydantic_settings.md#avoid-adding-json-cli-options))
 
 Avoid adding complex fields that result in JSON strings at the CLI by enabling `cli_avoid_json`.
 
@@ -1842,7 +1842,7 @@ Avoid adding complex fields that result in JSON strings at the CLI by enabling `
 
 #### Use Class Docstring for Group Help Text
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-class-docstring-for-group-help-text> ([local](./pydantic_settings.md#use-class-docstring-for-group-help-text)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-class-docstring-for-group-help-text> ([local](./pydantic_settings.md#use-class-docstring-for-group-help-text)) ([local](./pydantic_settings.md#use-class-docstring-for-group-help-text))
 
 By default, when populating the group help text for nested models it will pull from the field descriptions. Alternatively, we can also configure CLI settings to pull from the class docstring instead.
 
@@ -1897,7 +1897,7 @@ If the field is a union of nested models the group help text will always be pull
 
 #### Change the CLI Flag Prefix Character
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-cli-flag-prefix-character> ([local](./pydantic_settings.md#change-the-cli-flag-prefix-character)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#change-the-cli-flag-prefix-character> ([local](./pydantic_settings.md#change-the-cli-flag-prefix-character)) ([local](./pydantic_settings.md#change-the-cli-flag-prefix-character))
 
 Change The CLI flag prefix character used in CLI optional arguments by settings `cli_flag_prefix_char`.
 
@@ -1927,7 +1927,7 @@ Change The CLI flag prefix character used in CLI optional arguments by settings 
 
 #### Suppressing Fields from CLI Help Text
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#suppressing-fields-from-cli-help-text> ([local](./pydantic_settings.md#suppressing-fields-from-cli-help-text)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#suppressing-fields-from-cli-help-text> ([local](./pydantic_settings.md#suppressing-fields-from-cli-help-text)) ([local](./pydantic_settings.md#suppressing-fields-from-cli-help-text))
 
 To suppress a field from the CLI help text, the `CliSuppress` annotation can be used for field types, or the `CLI_SUPPRESS` string constant can be used for field descriptions.
 
@@ -1967,7 +1967,7 @@ To suppress a field from the CLI help text, the `CliSuppress` annotation can be 
 
 #### CLI Shortcuts for Arguments
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-shortcuts-for-arguments> ([local](./pydantic_settings.md#cli-shortcuts-for-arguments)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#cli-shortcuts-for-arguments> ([local](./pydantic_settings.md#cli-shortcuts-for-arguments)) ([local](./pydantic_settings.md#cli-shortcuts-for-arguments))
 
 Add alternative CLI argument names (shortcuts) for fields using the `cli_shortcuts` option in `SettingsConfigDict`. This allows you to define additional names for CLI arguments, which can be especially useful for providing more user-friendly or shorter aliases for deeply nested or verbose field names.
 
@@ -2034,7 +2034,7 @@ If a shortcut collides (is mapped to multiple fields), it will apply to the firs
 
 ### Integrating with Existing Parsers
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#integrating-with-existing-parsers> ([local](./pydantic_settings.md#integrating-with-existing-parsers)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#integrating-with-existing-parsers> ([local](./pydantic_settings.md#integrating-with-existing-parsers)) ([local](./pydantic_settings.md#integrating-with-existing-parsers))
 
 A CLI settings source can be integrated with existing parsers by overriding the default CLI settings source with a user defined one that specifies the `root_parser` object.
 
@@ -2090,7 +2090,7 @@ The `formatter_class` is only applied to subcommands. The `CliSettingsSource` ne
 
 ## Secrets
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets> ([local](./pydantic_settings.md#secrets)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets> ([local](./pydantic_settings.md#secrets)) ([local](./pydantic_settings.md#secrets))
 
 Placing secret values in files is a common pattern to provide sensitive configuration to an application.
 
@@ -2155,9 +2155,9 @@ If any of `secrets_dir` is missing, it is ignored, and warning is shown. If any 
 
 ### Use Case: Docker Secrets
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-docker-secrets> ([local](./pydantic_settings.md#use-case-docker-secrets)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-docker-secrets> ([local](./pydantic_settings.md#use-case-docker-secrets)) ([local](./pydantic_settings.md#use-case-docker-secrets))
 
-Docker Secrets can be used to provide sensitive configuration to an application running in a Docker container. To use these secrets in a _pydantic_ application the process is simple. More information regarding creating, managing and using secrets in Docker see the official [Docker documentation](<https://docs.docker.com/engine/reference/commandline/secret/>).
+Docker Secrets can be used to provide sensitive configuration to an application running in a Docker container. To use these secrets in a _pydantic_ application the process is simple. More information regarding creating, managing and using secrets in Docker see the official [Docker documentation](https://docs.docker.com/engine/reference/commandline/secret/).
 
 First, define your `Settings` class with a `SettingsConfigDict` that specifies the secrets directory.
 
@@ -2176,7 +2176,7 @@ First, define your `Settings` class with a `SettingsConfigDict` that specifies t
 
 Note
 
-By default [Docker uses `/run/secrets`](<https://docs.docker.com/engine/swarm/secrets/#how-docker-manages-secrets>) as the target mount point. If you want to use a different location, change `Config.secrets_dir` accordingly.
+By default [Docker uses `/run/secrets`](https://docs.docker.com/engine/swarm/secrets/#how-docker-manages-secrets) as the target mount point. If you want to use a different location, change `Config.secrets_dir` accordingly.
 
 Then, create your secret via the Docker CLI
 
@@ -2202,7 +2202,7 @@ Terminal
 
 ## Nested Secrets
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-secrets> ([local](./pydantic_settings.md#nested-secrets)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-secrets> ([local](./pydantic_settings.md#nested-secrets)) ([local](./pydantic_settings.md#nested-secrets))
 
 The default secrets implementation, `SecretsSettingsSource`, has behaviour that is not always desired or sufficient. For example, the default implementation does not support secret fields in nested submodels.
 
@@ -2217,7 +2217,7 @@ When `secrets_dir` is missing on the file system, a warning is generated.| Use `
   
 ### Use Case: Plain Directory Layout
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-plain-directory-layout> ([local](./pydantic_settings.md#use-case-plain-directory-layout)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-plain-directory-layout> ([local](./pydantic_settings.md#use-case-plain-directory-layout)) ([local](./pydantic_settings.md#use-case-plain-directory-layout))
 
 ```
  
@@ -2282,7 +2282,7 @@ In the example below, secrets nested delimiter `'_'` is different from env neste
 
 ### Use Case: Nested Directory Layout
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-nested-directory-layout> ([local](./pydantic_settings.md#use-case-nested-directory-layout)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-nested-directory-layout> ([local](./pydantic_settings.md#use-case-nested-directory-layout)) ([local](./pydantic_settings.md#use-case-nested-directory-layout))
 
 ```
  
@@ -2347,7 +2347,7 @@ In the example below, secrets nested delimiter `'_'` is different from env neste
 
 ### Use Case: Multiple Nested Directories
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-multiple-nested-directories> ([local](./pydantic_settings.md#use-case-multiple-nested-directories)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#use-case-multiple-nested-directories> ([local](./pydantic_settings.md#use-case-multiple-nested-directories)) ([local](./pydantic_settings.md#use-case-multiple-nested-directories))
 
 ```
  
@@ -2418,17 +2418,17 @@ In the example below, secrets nested delimiter `'_'` is different from env neste
 
 ### Configuration Options
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#configuration-options> ([local](./pydantic_settings.md#configuration-options)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#configuration-options> ([local](./pydantic_settings.md#configuration-options)) ([local](./pydantic_settings.md#configuration-options))
 
 #### secrets_dir
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir> ([local](./pydantic_settings.md#secrets_dir)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir> ([local](./pydantic_settings.md#secrets_dir)) ([local](./pydantic_settings.md#secrets_dir))
 
 Path to secrets directory, same as `SecretsSettingsSource.secrets_dir`. If `list`, the last match wins. If `secrets_dir` is passed in both source constructor and model config, values are not merged (constructor wins).
 
 #### secrets_dir_missing
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir_missing> ([local](./pydantic_settings.md#secrets_dir_missing)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir_missing> ([local](./pydantic_settings.md#secrets_dir_missing)) ([local](./pydantic_settings.md#secrets_dir_missing))
 
 If `secrets_dir` does not exist, original `SecretsSettingsSource` issues a warning. However, this may be undesirable, for example if we don’t mount Docker Secrets in e.g. dev environment. Use `secrets_dir_missing` to choose:
 
@@ -2440,7 +2440,7 @@ If multiple `secrets_dir` passed, the same `secrets_dir_missing` action applies 
 
 #### secrets_dir_max_size
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir_max_size> ([local](./pydantic_settings.md#secrets_dir_max_size)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_dir_max_size> ([local](./pydantic_settings.md#secrets_dir_max_size)) ([local](./pydantic_settings.md#secrets_dir_max_size))
 
 Limit the size of `secrets_dir` for security reasons, defaults to `SECRETS_DIR_MAX_SIZE` equal to 16 MiB.
 
@@ -2450,31 +2450,31 @@ If multiple `secrets_dir` passed, the limit applies to each directory independen
 
 #### secrets_case_sensitive
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_case_sensitive> ([local](./pydantic_settings.md#secrets_case_sensitive)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_case_sensitive> ([local](./pydantic_settings.md#secrets_case_sensitive)) ([local](./pydantic_settings.md#secrets_case_sensitive))
 
 Same as `case_sensitive`, but works for secrets only. If not specified, defaults to `case_sensitive`.
 
 #### secrets_nested_delimiter
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_nested_delimiter> ([local](./pydantic_settings.md#secrets_nested_delimiter)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_nested_delimiter> ([local](./pydantic_settings.md#secrets_nested_delimiter)) ([local](./pydantic_settings.md#secrets_nested_delimiter))
 
 Same as `env_nested_delimiter`, but works for secrets only. If not specified, defaults to `env_nested_delimiter`. This option is used to implement _nested secrets directory_ layout and allows to do even nasty things like `/run/secrets/model/delim/nested1/delim/nested2`.
 
 #### secrets_nested_subdir
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_nested_subdir> ([local](./pydantic_settings.md#secrets_nested_subdir)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_nested_subdir> ([local](./pydantic_settings.md#secrets_nested_subdir)) ([local](./pydantic_settings.md#secrets_nested_subdir))
 
 Boolean flag to turn on _nested secrets directory_ mode, `False` by default. If `True`, sets `secrets_nested_delimiter` to `os.sep`. Raises `SettingsError` if `secrets_nested_delimiter` is already specified.
 
 #### secrets_prefix
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_prefix> ([local](./pydantic_settings.md#secrets_prefix)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secrets_prefix> ([local](./pydantic_settings.md#secrets_prefix)) ([local](./pydantic_settings.md#secrets_prefix))
 
 Secret path prefix, similar to `env_prefix`, but works for secrets only. Defaults to `env_prefix` if not specified. Works in both plain and nested directory modes, like `'/run/secrets/prefix_model__nested'` and `'/run/secrets/prefix_model/nested'`.
 
 ## AWS Secrets Manager
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#aws-secrets-manager> ([local](./pydantic_settings.md#aws-secrets-manager)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#aws-secrets-manager> ([local](./pydantic_settings.md#aws-secrets-manager)) ([local](./pydantic_settings.md#aws-secrets-manager))
 
 You must set one parameter:
 
@@ -2534,7 +2534,7 @@ Arrays (e.g. `MySecret--0`, `MySecret--1`) are not supported.
 
 ## Azure Key Vault
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#azure-key-vault> ([local](./pydantic_settings.md#azure-key-vault)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#azure-key-vault> ([local](./pydantic_settings.md#azure-key-vault)) ([local](./pydantic_settings.md#azure-key-vault))
 
 You must set two parameters:
 
@@ -2597,7 +2597,7 @@ Key Vault arrays (e.g. `MySecret--0`, `MySecret--1`) are not supported.
 
 ### Snake case conversion
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#snake-case-conversion> ([local](./pydantic_settings.md#snake-case-conversion)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#snake-case-conversion> ([local](./pydantic_settings.md#snake-case-conversion)) ([local](./pydantic_settings.md#snake-case-conversion))
 
 The Azure Key Vault source accepts a `snake_case_conversion` option, disabled by default, to convert Key Vault secret names by mapping them to Python’s snake_case field names, without the need to use aliases.
 
@@ -2641,7 +2641,7 @@ This setup will load Azure Key Vault secrets (e.g., `MySetting`, `mySetting`, `m
 
 ### Dash to underscore mapping
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dash-to-underscore-mapping> ([local](./pydantic_settings.md#dash-to-underscore-mapping)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#dash-to-underscore-mapping> ([local](./pydantic_settings.md#dash-to-underscore-mapping)) ([local](./pydantic_settings.md#dash-to-underscore-mapping))
 
 The Azure Key Vault source accepts a `dash_to_underscore` option, disabled by default, to support Key Vault kebab-case secret names by mapping them to Python’s snake_case field names. When enabled, dashes (`-`) in secret names are mapped to underscores (`_`) in field names during validation.
 
@@ -2689,17 +2689,17 @@ This setup will load Azure Key Vault secrets named `field-with-underscore` and `
 
 Tip
 
-Alternatively, you can configure an [alias_generator](<https://pydantic.dev/docs/validation/latest/concepts/alias#using-alias-generators> ([local](./alias.md#using-alias-generators))) to map PascalCase secrets.
+Alternatively, you can configure an [alias_generator](https://pydantic.dev/docs/validation/latest/concepts/alias#using-alias-generators) ([local](./alias.md#using-alias-generators)) to map PascalCase secrets.
 
 ## Google Cloud Secret Manager
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#google-cloud-secret-manager> ([local](./pydantic_settings.md#google-cloud-secret-manager)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#google-cloud-secret-manager> ([local](./pydantic_settings.md#google-cloud-secret-manager)) ([local](./pydantic_settings.md#google-cloud-secret-manager))
 
 Google Cloud Secret Manager allows you to store, manage, and access sensitive information as secrets in Google Cloud Platform. This integration lets you retrieve secrets directly from GCP Secret Manager for use in your Pydantic settings.
 
 ### Installation
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#installation-1> ([local](./pydantic_settings.md#installation-1)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#installation-1> ([local](./pydantic_settings.md#installation-1)) ([local](./pydantic_settings.md#installation-1))
 
 The Google Cloud Secret Manager integration requires additional dependencies:
 
@@ -2714,11 +2714,11 @@ Terminal
 
 ### Basic Usage
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#basic-usage> ([local](./pydantic_settings.md#basic-usage)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#basic-usage> ([local](./pydantic_settings.md#basic-usage)) ([local](./pydantic_settings.md#basic-usage))
 
 To use Google Cloud Secret Manager, you need to:
 
-  1. Create a `GoogleSecretManagerSettingsSource`. (See [GCP Authentication](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#gcp-authentication> ([local](./pydantic_settings.md#gcp-authentication))) for authentication options.)
+  1. Create a `GoogleSecretManagerSettingsSource`. (See [GCP Authentication](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#gcp-authentication) ([local](./pydantic_settings.md#gcp-authentication)) for authentication options.)
 
   2. Add this source to your settings customization pipeline
 
@@ -2776,11 +2776,11 @@ To use Google Cloud Secret Manager, you need to:
 
 ### GCP Authentication
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#gcp-authentication> ([local](./pydantic_settings.md#gcp-authentication)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#gcp-authentication> ([local](./pydantic_settings.md#gcp-authentication)) ([local](./pydantic_settings.md#gcp-authentication))
 
 The `GoogleSecretManagerSettingsSource` supports several authentication methods:
 
-  1. **Default credentials** \- If you don’t provide credentials or project ID, it will use [`google.auth.default()`](<https://google-auth.readthedocs.io/en/master/reference/google.auth.html#google.auth.default>) to obtain them. This works with:
+  1. **Default credentials** \- If you don’t provide credentials or project ID, it will use [`google.auth.default()`](https://google-auth.readthedocs.io/en/master/reference/google.auth.html#google.auth.default) to obtain them. This works with:
 
      * Service account credentials from `GOOGLE_APPLICATION_CREDENTIALS` environment variable
      * User credentials from `gcloud auth application-default login`
@@ -2789,13 +2789,13 @@ The `GoogleSecretManagerSettingsSource` supports several authentication methods:
 
 ### Nested Models
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-models> ([local](./pydantic_settings.md#nested-models)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#nested-models> ([local](./pydantic_settings.md#nested-models)) ([local](./pydantic_settings.md#nested-models))
 
-For nested models, Secret Manager supports the `env_nested_delimiter` setting as long as it complies with the [naming rules](<https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#create-a-secret>). In the example above, you would create secrets named `database__password` and `database__user` in Secret Manager.
+For nested models, Secret Manager supports the `env_nested_delimiter` setting as long as it complies with the [naming rules](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#create-a-secret). In the example above, you would create secrets named `database__password` and `database__user` in Secret Manager.
 
 ### Secret Versions
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secret-versions> ([local](./pydantic_settings.md#secret-versions)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#secret-versions> ([local](./pydantic_settings.md#secret-versions)) ([local](./pydantic_settings.md#secret-versions))
 
 By default, `GoogleSecretManagerSettingsSource` uses the “latest” version of secrets. You can specify a different version using the `SecretVersion` annotation.
 
@@ -2845,19 +2845,19 @@ If you have multiple fields pointing to the same secret (alias) but with differe
 
 ### Important Notes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#important-notes> ([local](./pydantic_settings.md#important-notes)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#important-notes> ([local](./pydantic_settings.md#important-notes)) ([local](./pydantic_settings.md#important-notes))
 
   1. **Case Sensitivity** : By default, secret names are case-sensitive. 
      * If you set `case_sensitive=False`, `pydantic-settings` will attempt to resolve secrets in a case-insensitive manner. It prioritizes exact matches over case-insensitive matches. For some examples of this, imagine `case_sensitive=False` and the model attribute is named `my_secret`: 
        * If Google Secret Manager has both `MY_SECRET` and `my_secret` defined - the value of `my_secret` will be returned.
        * If Google Secret Manager has `MY_SECRET`, `My_Secret`, and `my_Secret` defined - a warning will be raised and the value of `my_Secret` will be returned - as the secret names are first sorted in ASCII sort order (where lowercased letters are greater than upper case letters) and the last one is chosen (which would be `my_Secret` in this case).
-  2. **Secret Naming** : Create secrets in Google Secret Manager with names that match your field names (including any prefix). According to the [Secret Manager documentation](<https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#create-a-secret>), a secret name can contain uppercase and lowercase letters, numerals, hyphens, and underscores. The maximum allowed length for a name is 255 characters.
+  2. **Secret Naming** : Create secrets in Google Secret Manager with names that match your field names (including any prefix). According to the [Secret Manager documentation](https://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#create-a-secret), a secret name can contain uppercase and lowercase letters, numerals, hyphens, and underscores. The maximum allowed length for a name is 255 characters.
 
-For more details on creating and managing secrets in Google Cloud Secret Manager, see the [official Google Cloud documentation](<https://cloud.google.com/secret-manager/docs>).
+For more details on creating and managing secrets in Google Cloud Secret Manager, see the [official Google Cloud documentation](https://cloud.google.com/secret-manager/docs).
 
 ## Other settings source
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#other-settings-source> ([local](./pydantic_settings.md#other-settings-source)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#other-settings-source> ([local](./pydantic_settings.md#other-settings-source)) ([local](./pydantic_settings.md#other-settings-source))
 
 Other settings sources are available for common configuration files:
 
@@ -2866,7 +2866,7 @@ Other settings sources are available for common configuration files:
   * `TomlConfigSettingsSource` using `toml_file` argument
   * `YamlConfigSettingsSource` using `yaml_file` and yaml_file_encoding arguments
 
-To use them, you can use the same mechanism described [here](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources> ([local](./pydantic_settings.md#customise-settings-sources))).
+To use them, you can use the same mechanism described [here](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources) ([local](./pydantic_settings.md#customise-settings-sources)).
 
 ```
  
@@ -3071,9 +3071,9 @@ are equivalent to
 
 ### pyproject.toml
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#pyprojecttoml> ([local](./pydantic_settings.md#pyprojecttoml)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#pyprojecttoml> ([local](./pydantic_settings.md#pyprojecttoml)) ([local](./pydantic_settings.md#pyprojecttoml))
 
-“pyproject.toml” is a standardized file for providing configuration values in Python projects. [PEP 518](<https://peps.python.org/pep-0518/#tool-table>) defines a `[tool]` table that can be used to provide arbitrary tool configuration. While encouraged to use the `[tool]` table, `PyprojectTomlConfigSettingsSource` can be used to load variables from any location with in “pyproject.toml” file.
+“pyproject.toml” is a standardized file for providing configuration values in Python projects. [PEP 518](https://peps.python.org/pep-0518/#tool-table) defines a `[tool]` table that can be used to provide arbitrary tool configuration. While encouraged to use the `[tool]` table, `PyprojectTomlConfigSettingsSource` can be used to load variables from any location with in “pyproject.toml” file.
 
 This is controlled by providing `SettingsConfigDict(pyproject_toml_table_header=tuple[str, ...])` where the value is a tuple of header parts. By default, `pyproject_toml_table_header=('tool', 'pydantic-settings')` which will load variables from the `[tool.pydantic-settings]` table.
 
@@ -3194,7 +3194,7 @@ By default, `PyprojectTomlConfigSettingsSource` will only look for a “pyprojec
 
 ## Field value priority
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#field-value-priority> ([local](./pydantic_settings.md#field-value-priority)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#field-value-priority> ([local](./pydantic_settings.md#field-value-priority)) ([local](./pydantic_settings.md#field-value-priority))
 
 In the case where a value is specified for the same `Settings` field in multiple ways, the selected value is determined as follows (in descending order of priority):
 
@@ -3207,7 +3207,7 @@ In the case where a value is specified for the same `Settings` field in multiple
 
 ## Customise settings sources
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources> ([local](./pydantic_settings.md#customise-settings-sources)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#customise-settings-sources> ([local](./pydantic_settings.md#customise-settings-sources)) ([local](./pydantic_settings.md#customise-settings-sources))
 
 If the default order of priority doesn’t match your needs, it’s possible to change it by overriding the `settings_customise_sources` method of your `Settings` .
 
@@ -3217,7 +3217,7 @@ Each callable should take an instance of the settings class as its sole argument
 
 ### Changing Priority
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#changing-priority> ([local](./pydantic_settings.md#changing-priority)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#changing-priority> ([local](./pydantic_settings.md#changing-priority)) ([local](./pydantic_settings.md#changing-priority))
 
 The order of the returned callables decides the priority of inputs; first item is the highest priority.
 
@@ -3253,7 +3253,7 @@ By flipping `env_settings` and `init_settings`, environment variables now have p
 
 ### Adding sources
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#adding-sources> ([local](./pydantic_settings.md#adding-sources)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#adding-sources> ([local](./pydantic_settings.md#adding-sources)) ([local](./pydantic_settings.md#adding-sources))
 
 As explained earlier, _pydantic_ ships with multiples built-in settings sources. However, you may occasionally need to add your own custom sources, `settings_customise_sources` makes this very easy:
 
@@ -3342,7 +3342,7 @@ As explained earlier, _pydantic_ ships with multiples built-in settings sources.
 
 #### Accessing the result of previous sources
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#accessing-the-result-of-previous-sources> ([local](./pydantic_settings.md#accessing-the-result-of-previous-sources)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#accessing-the-result-of-previous-sources> ([local](./pydantic_settings.md#accessing-the-result-of-previous-sources)) ([local](./pydantic_settings.md#accessing-the-result-of-previous-sources))
 
 Each source of settings can access the output of the previous ones.
 
@@ -3377,7 +3377,7 @@ Each source of settings can access the output of the previous ones.
 
 ### Removing sources
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#removing-sources> ([local](./pydantic_settings.md#removing-sources)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#removing-sources> ([local](./pydantic_settings.md#removing-sources)) ([local](./pydantic_settings.md#removing-sources))
 
 You might also want to disable a source:
 
@@ -3420,7 +3420,7 @@ You might also want to disable a source:
 
 ## In-place reloading
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#in-place-reloading> ([local](./pydantic_settings.md#in-place-reloading)))
+<https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings#in-place-reloading> ([local](./pydantic_settings.md#in-place-reloading)) ([local](./pydantic_settings.md#in-place-reloading))
 
 In case you want to reload in-place an existing setting, you can do it by using its `__init__` method :
 

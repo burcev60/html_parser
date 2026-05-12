@@ -5,9 +5,9 @@ source: https://pydantic.dev/docs/validation/latest/concepts/dataclasses
 
 API Documentation
 
-[`@pydantic.dataclasses.dataclass`](<https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.dataclass> ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.dataclass)))  
+[`@pydantic.dataclasses.dataclass`](https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.dataclass) ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.dataclass))  
 
-If you don’t want to use Pydantic’s [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))) you can instead get the same data validation on standard [dataclasses](<https://docs.python.org/3/library/dataclasses.html#module-dataclasses>).
+If you don’t want to use Pydantic’s [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)) you can instead get the same data validation on standard [dataclasses](https://docs.python.org/3/library/dataclasses.html#module-dataclasses).
 
 ```
  
@@ -35,21 +35,21 @@ If you don’t want to use Pydantic’s [`BaseModel`](<https://pydantic.dev/docs
 
 Note
 
-Keep in mind that Pydantic dataclasses are **not** a replacement for [Pydantic models](<https://pydantic.dev/docs/validation/latest/concepts/models> ([local](./models.md))). They provide a similar functionality to stdlib dataclasses with the addition of Pydantic validation.
+Keep in mind that Pydantic dataclasses are **not** a replacement for [Pydantic models](https://pydantic.dev/docs/validation/latest/concepts/models) ([local](./models.md)). They provide a similar functionality to stdlib dataclasses with the addition of Pydantic validation.
 
 There are cases where using Pydantic models is the better choice.
 
-For more information and discussion see [pydantic/pydantic#710](<https://github.com/pydantic/pydantic/issues/710>).
+For more information and discussion see [pydantic/pydantic#710](https://github.com/pydantic/pydantic/issues/710).
 
 Similarities between Pydantic dataclasses and models include support for:
 
-  * [Configuration](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config))) support (note that dataclasses doesn’t support the `model_config` attribute as with Pydantic models)
-  * [Nested](<https://pydantic.dev/docs/validation/latest/concepts/models#nested-models> ([local](./models.md#nested-models))) classes
-  * Arguments used to instantiate the dataclass are also [copied](<https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies> ([local](./models.md#attribute-copies))).
+  * [Configuration](https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config) ([local](./dataclasses.md#dataclass-config)) support (note that dataclasses doesn’t support the `model_config` attribute as with Pydantic models)
+  * [Nested](https://pydantic.dev/docs/validation/latest/concepts/models#nested-models) ([local](./models.md#nested-models)) classes
+  * Arguments used to instantiate the dataclass are also [copied](https://pydantic.dev/docs/validation/latest/concepts/models#attribute-copies) ([local](./models.md#attribute-copies)).
 
 Some differences between Pydantic dataclasses and models include:
 
-  * The [various methods](<https://pydantic.dev/docs/validation/latest/concepts/models#model-methods-and-properties> ([local](./models.md#model-methods-and-properties))) to validate, dump and generate a JSON Schema aren’t available. Instead, you can wrap the dataclass with a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))) and make use of its methods:
+  * The [various methods](https://pydantic.dev/docs/validation/latest/concepts/models#model-methods-and-properties) ([local](./models.md#model-methods-and-properties)) to validate, dump and generate a JSON Schema aren’t available. Instead, you can wrap the dataclass with a [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)) and make use of its methods:
 
 ```
  from pydantic import TypeAdapter
@@ -71,16 +71,16 @@ Some differences between Pydantic dataclasses and models include:
 
 ```
 
-  * Validators (see the [dedicated section](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#validators-and-initialization-hooks> ([local](./dataclasses.md#validators-and-initialization-hooks)))).
+  * Validators (see the [dedicated section](https://pydantic.dev/docs/validation/latest/concepts/dataclasses#validators-and-initialization-hooks) ([local](./dataclasses.md#validators-and-initialization-hooks))).
 
-  * The [`extra`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra))) configuration behavior:
+  * The [`extra`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.extra) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.extra)) configuration behavior:
 
-    * Extra data is not included in [serialization](<https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data> ([local](./serialization.md#serializing-data))).
-    * There is no way to customize validation of extra values [using the `__pydantic_extra__` attribute](<https://pydantic.dev/docs/validation/latest/concepts/models#extra-data> ([local](./models.md#extra-data))).
+    * Extra data is not included in [serialization](https://pydantic.dev/docs/validation/latest/concepts/serialization#serializing-data) ([local](./serialization.md#serializing-data)).
+    * There is no way to customize validation of extra values [using the `__pydantic_extra__` attribute](https://pydantic.dev/docs/validation/latest/concepts/models#extra-data) ([local](./models.md#extra-data)).
   * Generic dataclasses are supported, but as with other standard library generic types, using a parameterized dataclass won’t work as expected:
 
-  * [ Python 3.9 and above ](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#tab-panel-528> ([local](./dataclasses.md#tab-panel-528)))
-  * [ Python 3.12 and above (new syntax) ](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#tab-panel-529> ([local](./dataclasses.md#tab-panel-529)))
+  * [ Python 3.9 and above ](https://pydantic.dev/docs/validation/latest/concepts/dataclasses#tab-panel-528) ([local](./dataclasses.md#tab-panel-528))
+  * [ Python 3.12 and above (new syntax) ](https://pydantic.dev/docs/validation/latest/concepts/dataclasses#tab-panel-529) ([local](./dataclasses.md#tab-panel-529))
 
 ```
  
@@ -116,9 +116,9 @@ Some differences between Pydantic dataclasses and models include:
 
 ```
 
-Instead, you can wrap the `Foo[int]` parameterized class with a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))).
+Instead, you can wrap the `Foo[int]` parameterized class with a [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)).
 
-You can use both the Pydantic’s [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) and the stdlib’s [`field()`](<https://docs.python.org/3/library/dataclasses.html#dataclasses.field>) functions:
+You can use both the Pydantic’s [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./../api/pydantic/fields.md#pydantic.fields.Field)) and the stdlib’s [`field()`](https://docs.python.org/3/library/dataclasses.html#dataclasses.field) functions:
 
 ```
  
@@ -150,13 +150,13 @@ You can use both the Pydantic’s [`Field()`](<https://pydantic.dev/docs/validat
 
 ```
 
-The Pydantic [`@dataclass`](<https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.dataclass> ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.dataclass))) decorator accepts the same arguments as the standard decorator, with the addition of a `config` parameter.
+The Pydantic [`@dataclass`](https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.dataclass) ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.dataclass)) decorator accepts the same arguments as the standard decorator, with the addition of a `config` parameter.
 
 ## Dataclass config
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config)) ([local](./dataclasses.md#dataclass-config))
 
-If you want to modify the configuration like you would with a [`BaseModel`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel))), you have two options:
+If you want to modify the configuration like you would with a [`BaseModel`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel)), you have two options:
 
   * Use the `config` parameter of the decorator.
   * Define the configuration with the `__pydantic_config__` attribute.
@@ -184,17 +184,17 @@ If you want to modify the configuration like you would with a [`BaseModel`](<htt
 
 ## Rebuilding dataclass schema
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#rebuilding-dataclass-schema> ([local](./dataclasses.md#rebuilding-dataclass-schema)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#rebuilding-dataclass-schema> ([local](./dataclasses.md#rebuilding-dataclass-schema)) ([local](./dataclasses.md#rebuilding-dataclass-schema))
 
-The [`rebuild_dataclass()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.rebuild_dataclass> ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.rebuild_dataclass))) function can be used to rebuild the core schema of the dataclass. See the [rebuilding model schema](<https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema> ([local](./models.md#rebuilding-model-schema))) section for more details.
+The [`rebuild_dataclass()`](https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.rebuild_dataclass) ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.rebuild_dataclass)) function can be used to rebuild the core schema of the dataclass. See the [rebuilding model schema](https://pydantic.dev/docs/validation/latest/concepts/models#rebuilding-model-schema) ([local](./models.md#rebuilding-model-schema)) section for more details.
 
 ## Stdlib dataclasses and Pydantic dataclasses
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#stdlib-dataclasses-and-pydantic-dataclasses> ([local](./dataclasses.md#stdlib-dataclasses-and-pydantic-dataclasses)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#stdlib-dataclasses-and-pydantic-dataclasses> ([local](./dataclasses.md#stdlib-dataclasses-and-pydantic-dataclasses)) ([local](./dataclasses.md#stdlib-dataclasses-and-pydantic-dataclasses))
 
 ### Inherit from stdlib dataclasses
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#inherit-from-stdlib-dataclasses> ([local](./dataclasses.md#inherit-from-stdlib-dataclasses)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#inherit-from-stdlib-dataclasses> ([local](./dataclasses.md#inherit-from-stdlib-dataclasses)) ([local](./dataclasses.md#inherit-from-stdlib-dataclasses))
 
 Stdlib dataclasses (nested or not) can also be inherited and Pydantic will automatically validate all the inherited fields.
 
@@ -260,9 +260,9 @@ The decorator can also be applied directly on a stdlib dataclass, in which case 
 
 ### Usage of stdlib dataclasses with `BaseModel`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#usage-of-stdlib-dataclasses-with-basemodel> ([local](./dataclasses.md#usage-of-stdlib-dataclasses-with-basemodel)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#usage-of-stdlib-dataclasses-with-basemodel> ([local](./dataclasses.md#usage-of-stdlib-dataclasses-with-basemodel)) ([local](./dataclasses.md#usage-of-stdlib-dataclasses-with-basemodel))
 
-When a standard library dataclass is used within a Pydantic model, a Pydantic dataclass or a [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter> ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter))), validation will be applied (and the [configuration](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config> ([local](./dataclasses.md#dataclass-config))) stays the same). This means that using a stdlib or a Pydantic dataclass as a field annotation is functionally equivalent.
+When a standard library dataclass is used within a Pydantic model, a Pydantic dataclass or a [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/api/pydantic/type_adapter/#pydantic.type_adapter.TypeAdapter) ([local](./../api/pydantic/type_adapter.md#pydantic.type_adapter.TypeAdapter)), validation will be applied (and the [configuration](https://pydantic.dev/docs/validation/latest/concepts/dataclasses#dataclass-config) ([local](./dataclasses.md#dataclass-config)) stays the same). This means that using a stdlib or a Pydantic dataclass as a field annotation is functionally equivalent.
 
 ```
  
@@ -312,9 +312,9 @@ When a standard library dataclass is used within a Pydantic model, a Pydantic da
 
 ### Using custom types
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#using-custom-types> ([local](./dataclasses.md#using-custom-types)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#using-custom-types> ([local](./dataclasses.md#using-custom-types)) ([local](./dataclasses.md#using-custom-types))
 
-As said above, validation is applied on standard library dataclasses. If you make use of custom types, you will get an error when trying to refer to the dataclass. To circumvent the issue, you can set the [`arbitrary_types_allowed`](<https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.arbitrary_types_allowed> ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.arbitrary_types_allowed))) configuration value on the dataclass:
+As said above, validation is applied on standard library dataclasses. If you make use of custom types, you will get an error when trying to refer to the dataclass. To circumvent the issue, you can set the [`arbitrary_types_allowed`](https://pydantic.dev/docs/validation/latest/api/pydantic/config/#pydantic.config.ConfigDict.arbitrary_types_allowed) ([local](./../api/pydantic/config.md#pydantic.config.ConfigDict.arbitrary_types_allowed)) configuration value on the dataclass:
 
 ```
  
@@ -376,9 +376,9 @@ As said above, validation is applied on standard library dataclasses. If you mak
 
 ### Checking if a dataclass is a Pydantic dataclass
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#checking-if-a-dataclass-is-a-pydantic-dataclass> ([local](./dataclasses.md#checking-if-a-dataclass-is-a-pydantic-dataclass)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#checking-if-a-dataclass-is-a-pydantic-dataclass> ([local](./dataclasses.md#checking-if-a-dataclass-is-a-pydantic-dataclass)) ([local](./dataclasses.md#checking-if-a-dataclass-is-a-pydantic-dataclass))
 
-Pydantic dataclasses are still considered dataclasses, so using [`dataclasses.is_dataclass()`](<https://docs.python.org/3/library/dataclasses.html#dataclasses.is_dataclass>) will return `True`. To check if a type is specifically a Pydantic dataclass you can use the [`is_pydantic_dataclass()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.is_pydantic_dataclass> ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.is_pydantic_dataclass))) function.
+Pydantic dataclasses are still considered dataclasses, so using [`dataclasses.is_dataclass()`](https://docs.python.org/3/library/dataclasses.html#dataclasses.is_dataclass) will return `True`. To check if a type is specifically a Pydantic dataclass you can use the [`is_pydantic_dataclass()`](https://pydantic.dev/docs/validation/latest/api/pydantic/dataclasses/#pydantic.dataclasses.is_pydantic_dataclass) ([local](./../api/pydantic/dataclasses.md#pydantic.dataclasses.is_pydantic_dataclass)) function.
 
 ```
  
@@ -409,7 +409,7 @@ Pydantic dataclasses are still considered dataclasses, so using [`dataclasses.is
 
 ## Validators and initialization hooks
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#validators-and-initialization-hooks> ([local](./dataclasses.md#validators-and-initialization-hooks)))
+<https://pydantic.dev/docs/validation/latest/concepts/dataclasses#validators-and-initialization-hooks> ([local](./dataclasses.md#validators-and-initialization-hooks)) ([local](./dataclasses.md#validators-and-initialization-hooks))
 
 Validators also work with Pydantic dataclasses:
 
@@ -439,7 +439,7 @@ Validators also work with Pydantic dataclasses:
 
 ```
 
-The dataclass [`__post_init__()`](<https://docs.python.org/3/library/dataclasses.html#dataclasses.__post_init__>) method is also supported, and will be called between the calls to _before_ and _after_ model validators.
+The dataclass [`__post_init__()`](https://docs.python.org/3/library/dataclasses.html#dataclasses.__post_init__) method is also supported, and will be called between the calls to _before_ and _after_ model validators.
 
 Example
 

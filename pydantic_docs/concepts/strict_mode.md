@@ -5,17 +5,17 @@ source: https://pydantic.dev/docs/validation/latest/concepts/strict_mode
 
 API Documentation
 
-[`pydantic.types.Strict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict> ([local](./../api/pydantic/types.md#pydantic.types.Strict)))  
+[`pydantic.types.Strict`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict) ([local](./../api/pydantic/types.md#pydantic.types.Strict))  
 
-By default, Pydantic will attempt to coerce values to the desired type when possible. For example, you can pass the string `'123'` as the input for the [`int` number type](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integers> ([local](./../api/pydantic/standard_library_types.md#integers))), and it will be converted to the value `123`. This coercion behavior is useful in many scenarios — think: UUIDs, URL parameters, HTTP headers, environment variables, dates, etc.
+By default, Pydantic will attempt to coerce values to the desired type when possible. For example, you can pass the string `'123'` as the input for the [`int` number type](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#integers) ([local](./../api/pydantic/standard_library_types.md#integers)), and it will be converted to the value `123`. This coercion behavior is useful in many scenarios — think: UUIDs, URL parameters, HTTP headers, environment variables, dates, etc.
 
 However, there are also situations where this is not desirable, and you want Pydantic to error instead of coercing data.
 
 To better support this use case, Pydantic provides a “strict mode”. When strict mode is enabled, Pydantic will be much less lenient when coercing data, and will instead error if the data is not of the correct type.
 
-Most of the time, strict mode will only allow instances of the type to be provided, although looser rules may apply to JSON input (for instance, the [date and time types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#date-and-time-types> ([local](./../api/pydantic/standard_library_types.md#date-and-time-types))) allow strings even in strict mode).
+Most of the time, strict mode will only allow instances of the type to be provided, although looser rules may apply to JSON input (for instance, the [date and time types](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types#date-and-time-types) ([local](./../api/pydantic/standard_library_types.md#date-and-time-types)) allow strings even in strict mode).
 
-The strict behavior for each type can be found in the [standard library types](<https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types> ([local](./../api/pydantic/standard_library_types.md))) documentation, and is summarized in the [conversion table](<https://pydantic.dev/docs/validation/latest/concepts/conversion_table> ([local](./conversion_table.md))).
+The strict behavior for each type can be found in the [standard library types](https://pydantic.dev/docs/validation/latest/api/pydantic/standard_library_types) ([local](./../api/pydantic/standard_library_types.md)) documentation, and is summarized in the [conversion table](https://pydantic.dev/docs/validation/latest/concepts/conversion_table) ([local](./conversion_table.md)).
 
 Here is a brief example showing the validation behavior difference in strict and the default lax mode:
 
@@ -46,15 +46,15 @@ Here is a brief example showing the validation behavior difference in strict and
 
 Strict mode can be enabled in various ways:
 
-  * [As a validation parameter](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-validation-parameter> ([local](./strict_mode.md#as-a-validation-parameter))), such as when using [`model_validate()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate> ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate))), on Pydantic models.
-  * [At the field level](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level> ([local](./strict_mode.md#at-the-field-level))).
-  * [At the configuration level](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-configuration-value> ([local](./strict_mode.md#as-a-configuration-value))) (with the possibility to override at the field level).
+  * [As a validation parameter](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-validation-parameter) ([local](./strict_mode.md#as-a-validation-parameter)), such as when using [`model_validate()`](https://pydantic.dev/docs/validation/latest/api/pydantic/base_model/#pydantic.BaseModel.model_validate) ([local](./../api/pydantic/base_model.md#pydantic.BaseModel.model_validate)), on Pydantic models.
+  * [At the field level](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level) ([local](./strict_mode.md#at-the-field-level)).
+  * [At the configuration level](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-configuration-value) ([local](./strict_mode.md#as-a-configuration-value)) (with the possibility to override at the field level).
 
 ## As a validation parameter
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-validation-parameter> ([local](./strict_mode.md#as-a-validation-parameter)))
+<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-validation-parameter> ([local](./strict_mode.md#as-a-validation-parameter)) ([local](./strict_mode.md#as-a-validation-parameter))
 
-Strict mode can be enaled on a per-validation-call basis, when using the [validation methods](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))) on [Pydantic models](<https://pydantic.dev/docs/validation/latest/concepts/models> ([local](./models.md))) and [type adapters](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./type_adapter.md))).
+Strict mode can be enaled on a per-validation-call basis, when using the [validation methods](https://pydantic.dev/docs/validation/latest/concepts/models#validating-data) ([local](./models.md#validating-data)) on [Pydantic models](https://pydantic.dev/docs/validation/latest/concepts/models) ([local](./models.md)) and [type adapters](https://pydantic.dev/docs/validation/latest/concepts/type_adapter) ([local](./type_adapter.md)).
 
 ```
  
@@ -82,9 +82,9 @@ Strict mode can be enaled on a per-validation-call basis, when using the [valida
 
 ## At the field level
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level> ([local](./strict_mode.md#at-the-field-level)))
+<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level> ([local](./strict_mode.md#at-the-field-level)) ([local](./strict_mode.md#at-the-field-level))
 
-Strict mode can be enabled on specific fields, by setting the `strict` parameter of the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function to `True`. Strict mode will be applied for such fields, even when the [validation methods](<https://pydantic.dev/docs/validation/latest/concepts/models#validating-data> ([local](./models.md#validating-data))) are called in lax mode.
+Strict mode can be enabled on specific fields, by setting the `strict` parameter of the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./../api/pydantic/fields.md#pydantic.fields.Field)) function to `True`. Strict mode will be applied for such fields, even when the [validation methods](https://pydantic.dev/docs/validation/latest/concepts/models#validating-data) ([local](./models.md#validating-data)) are called in lax mode.
 
 ```
  
@@ -115,13 +115,13 @@ Strict mode can be enabled on specific fields, by setting the `strict` parameter
 
 ### Using the `Strict()` metadata class
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./strict_mode.md#using-the-strict-metadata-class)))
+<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#using-the-strict-metadata-class> ([local](./strict_mode.md#using-the-strict-metadata-class)) ([local](./strict_mode.md#using-the-strict-metadata-class))
 
 API Documentation
 
-[`pydantic.types.Strict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict> ([local](./../api/pydantic/types.md#pydantic.types.Strict)))  
+[`pydantic.types.Strict`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict) ([local](./../api/pydantic/types.md#pydantic.types.Strict))  
 
-As an alternative to the [`Field()`](<https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field> ([local](./../api/pydantic/fields.md#pydantic.fields.Field))) function, Pydantic provides the [`Strict`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict> ([local](./../api/pydantic/types.md#pydantic.types.Strict))) metadata class, meant to be used with the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))). It also provides convenience aliases for the most common types (namely [`StrictBool`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBool> ([local](./../api/pydantic/types.md#pydantic.types.StrictBool))), [`StrictInt`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictInt> ([local](./../api/pydantic/types.md#pydantic.types.StrictInt))), [`StrictFloat`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictFloat> ([local](./../api/pydantic/types.md#pydantic.types.StrictFloat))), [`StrictStr`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictStr> ([local](./../api/pydantic/types.md#pydantic.types.StrictStr))) and [`StrictBytes`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBytes> ([local](./../api/pydantic/types.md#pydantic.types.StrictBytes)))).
+As an alternative to the [`Field()`](https://pydantic.dev/docs/validation/latest/api/pydantic/fields/#pydantic.fields.Field) ([local](./../api/pydantic/fields.md#pydantic.fields.Field)) function, Pydantic provides the [`Strict`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Strict) ([local](./../api/pydantic/types.md#pydantic.types.Strict)) metadata class, meant to be used with the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)). It also provides convenience aliases for the most common types (namely [`StrictBool`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBool) ([local](./../api/pydantic/types.md#pydantic.types.StrictBool)), [`StrictInt`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictInt) ([local](./../api/pydantic/types.md#pydantic.types.StrictInt)), [`StrictFloat`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictFloat) ([local](./../api/pydantic/types.md#pydantic.types.StrictFloat)), [`StrictStr`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictStr) ([local](./../api/pydantic/types.md#pydantic.types.StrictStr)) and [`StrictBytes`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.StrictBytes) ([local](./../api/pydantic/types.md#pydantic.types.StrictBytes))).
 
 ```
  
@@ -139,9 +139,9 @@ As an alternative to the [`Field()`](<https://pydantic.dev/docs/validation/lates
 
 ## As a configuration value
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-configuration-value> ([local](./strict_mode.md#as-a-configuration-value)))
+<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#as-a-configuration-value> ([local](./strict_mode.md#as-a-configuration-value)) ([local](./strict_mode.md#as-a-configuration-value))
 
-Strict mode behavior can be controlled at the [configuration](<https://pydantic.dev/docs/validation/latest/concepts/config> ([local](./config.md))) level. When used on a Pydantic model (or model like class such as [dataclasses](<https://pydantic.dev/docs/validation/latest/concepts/dataclasses> ([local](./dataclasses.md)))), strictness can still be overridden at the [field level](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level> ([local](./strict_mode.md#at-the-field-level))):
+Strict mode behavior can be controlled at the [configuration](https://pydantic.dev/docs/validation/latest/concepts/config) ([local](./config.md)) level. When used on a Pydantic model (or model like class such as [dataclasses](https://pydantic.dev/docs/validation/latest/concepts/dataclasses) ([local](./dataclasses.md))), strictness can still be overridden at the [field level](https://pydantic.dev/docs/validation/latest/concepts/strict_mode#at-the-field-level) ([local](./strict_mode.md#at-the-field-level)):
 
 ```
  

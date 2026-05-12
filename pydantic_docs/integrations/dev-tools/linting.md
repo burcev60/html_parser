@@ -5,9 +5,9 @@ source: https://pydantic.dev/docs/validation/latest/integrations/dev-tools/linti
 
 ## Flake8 plugin
 
-[](<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/linting/#flake8-plugin> ([local](./linting.md#flake8-plugin)))
+<https://pydantic.dev/docs/validation/latest/integrations/dev-tools/linting/#flake8-plugin> ([local](./linting.md#flake8-plugin)) ([local](./linting.md#flake8-plugin))
 
-If using Flake8 in your project, a [plugin](<https://pypi.org/project/flake8-pydantic/>) is available and can be installed using the following:
+If using Flake8 in your project, a [plugin](https://pypi.org/project/flake8-pydantic/) is available and can be installed using the following:
 
 Terminal
 

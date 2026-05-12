@@ -14,25 +14,25 @@ Validating unions feels like adding another orthogonal dimension to the validati
 
 To solve these problems, Pydantic supports three fundamental approaches to validating unions:
 
-  1. [left to right mode](<https://pydantic.dev/docs/validation/latest/concepts/unions#left-to-right-mode> ([local](./unions.md#left-to-right-mode))) \- the simplest approach, each member of the union is tried in order and the first match is returned
-  2. [smart mode](<https://pydantic.dev/docs/validation/latest/concepts/unions#smart-mode> ([local](./unions.md#smart-mode))) \- similar to “left to right mode” members are tried in order; however, validation will proceed past the first match to attempt to find a better match, this is the default mode for most union validation
-  3. [discriminated unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions))) \- only one member of the union is tried, based on a discriminator
+  1. [left to right mode](https://pydantic.dev/docs/validation/latest/concepts/unions#left-to-right-mode) ([local](./unions.md#left-to-right-mode)) \- the simplest approach, each member of the union is tried in order and the first match is returned
+  2. [smart mode](https://pydantic.dev/docs/validation/latest/concepts/unions#smart-mode) ([local](./unions.md#smart-mode)) \- similar to “left to right mode” members are tried in order; however, validation will proceed past the first match to attempt to find a better match, this is the default mode for most union validation
+  3. [discriminated unions](https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions) ([local](./unions.md#discriminated-unions)) \- only one member of the union is tried, based on a discriminator
 
 Tip
 
-In general, we recommend using [discriminated unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions))). They are both more performant and more predictable than untagged unions, as they allow you to control which member of the union to validate against.
+In general, we recommend using [discriminated unions](https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions) ([local](./unions.md#discriminated-unions)). They are both more performant and more predictable than untagged unions, as they allow you to control which member of the union to validate against.
 
 For complex cases, if you’re using untagged unions, it’s recommended to use `union_mode='left_to_right'` if you need guarantees about the order of validation attempts against the union members.
 
-If you’re looking for incredibly specialized behavior, you can use a [custom validator](<https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators> ([local](./validators.md#field-validators))).
+If you’re looking for incredibly specialized behavior, you can use a [custom validator](https://pydantic.dev/docs/validation/latest/concepts/validators#field-validators) ([local](./validators.md#field-validators)).
 
 ## Union Modes
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#union-modes> ([local](./unions.md#union-modes)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#union-modes> ([local](./unions.md#union-modes)) ([local](./unions.md#union-modes))
 
 ### Left to Right Mode
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#left-to-right-mode> ([local](./unions.md#left-to-right-mode)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#left-to-right-mode> ([local](./unions.md#left-to-right-mode)) ([local](./unions.md#left-to-right-mode))
 
 Note
 
@@ -42,7 +42,7 @@ With this approach, validation is attempted against each member of the union in 
 
 If validation fails on all members, the validation error includes the errors from all members of the union.
 
-`union_mode='left_to_right'` must be set as a [`Field`](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) parameter on union fields where you want to use it.
+`union_mode='left_to_right'` must be set as a [`Field`](https://pydantic.dev/docs/validation/latest/concepts/fields) ([local](./fields.md)) parameter on union fields where you want to use it.
 
 Union with left to right mode
 
@@ -105,7 +105,7 @@ Union with left to right - unexpected results
 
 ### Smart Mode
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#smart-mode> ([local](./unions.md#smart-mode)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#smart-mode> ([local](./unions.md#smart-mode)) ([local](./unions.md#smart-mode))
 
 Because of the potentially surprising results of `union_mode='left_to_right'`, in Pydantic >=2 the default mode for `Union` validation is `union_mode='smart'`.
 
@@ -113,7 +113,7 @@ In this mode, pydantic attempts to select the best match for the input from the 
 
 Note
 
-We reserve the right to tweak the internal `smart` matching algorithm in future versions of Pydantic. If you rely on very specific matching behavior, it’s recommended to use `union_mode='left_to_right'` or [discriminated unions](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions))).
+We reserve the right to tweak the internal `smart` matching algorithm in future versions of Pydantic. If you rely on very specific matching behavior, it’s recommended to use `union_mode='left_to_right'` or [discriminated unions](https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions) ([local](./unions.md#discriminated-unions)).
 
 Smart Mode Algorithm
 
@@ -124,7 +124,7 @@ The smart mode algorithm uses two metrics to determine the best match for the in
 
 #### Number of valid fields set
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#number-of-valid-fields-set> ([local](./unions.md#number-of-valid-fields-set)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#number-of-valid-fields-set> ([local](./unions.md#number-of-valid-fields-set)) ([local](./unions.md#number-of-valid-fields-set))
 
 Note
 
@@ -138,20 +138,20 @@ For data types where this metric is relevant, we prioritize this count over exac
 
 #### Exactness
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#exactness> ([local](./unions.md#exactness)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#exactness> ([local](./unions.md#exactness)) ([local](./unions.md#exactness))
 
 For `exactness`, Pydantic scores a match of a union member into one of the following three groups (from highest score to lowest score):
 
   * An exact type match, for example an `int` input to a `float | int` union validation is an exact type match for the `int` member
-  * Validation would have succeeded in [`strict` mode](<https://pydantic.dev/docs/validation/latest/concepts/strict_mode> ([local](./strict_mode.md)))
+  * Validation would have succeeded in [`strict` mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode) ([local](./strict_mode.md))
   * Validation would have succeeded in lax mode
 
 The union match which produced the highest exactness score will be considered the best match.
 
 In smart mode, the following steps are taken to try to select the best match for the input:
 
-  * [ BaseModel, dataclass, and TypedDict ](<https://pydantic.dev/docs/validation/latest/concepts/unions#tab-panel-526> ([local](./unions.md#tab-panel-526)))
-  * [ All other data types ](<https://pydantic.dev/docs/validation/latest/concepts/unions#tab-panel-527> ([local](./unions.md#tab-panel-527)))
+  * [ BaseModel, dataclass, and TypedDict ](https://pydantic.dev/docs/validation/latest/concepts/unions#tab-panel-526) ([local](./unions.md#tab-panel-526))
+  * [ All other data types ](https://pydantic.dev/docs/validation/latest/concepts/unions#tab-panel-527) ([local](./unions.md#tab-panel-527))
 
   1. Union members are attempted left to right, with any successful matches scored into one of the three exactness categories described above, with the valid fields set count also tallied.
   2. After all members have been evaluated, the member with the highest “valid fields set” count is returned.
@@ -201,21 +201,21 @@ In smart mode, the following steps are taken to try to select the best match for
 
 ## Discriminated unions
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions> ([local](./unions.md#discriminated-unions)) ([local](./unions.md#discriminated-unions))
 
 **Discriminated unions are sometimes referred to as “Tagged unions”.**
 
 Unions can be validated more efficiently using a discriminator, by specifically choosing which member of the union to validate against. This makes validation more efficient and also avoids a proliferation of errors when validation fails.
 
-Adding discriminator to unions also means the generated JSON schema implements the `discriminator` attribute from the [OpenAPI specification](<https://swagger.io/specification/#discriminator-object>).
+Adding discriminator to unions also means the generated JSON schema implements the `discriminator` attribute from the [OpenAPI specification](https://swagger.io/specification/#discriminator-object).
 
 ### Discriminated unions with string discriminators
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-string-discriminators> ([local](./unions.md#discriminated-unions-with-string-discriminators)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-string-discriminators> ([local](./unions.md#discriminated-unions-with-string-discriminators)) ([local](./unions.md#discriminated-unions-with-string-discriminators))
 
 Frequently, in the case of a union with multiple models, there is a common field to all members of the union that can be used to distinguish which union case the data should be validated against.
 
-To validate models based on that information, you can set a common field on each model of the union (`pet_type` in the example below), typed as accepting one or multiple literal values. When defining the discriminated union type, the `discriminator` parameter of [the `Field()` function](<https://pydantic.dev/docs/validation/latest/concepts/fields> ([local](./fields.md))) must be specified (the [`Discriminator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Discriminator> ([local](./../api/pydantic/types.md#pydantic.types.Discriminator))) type can also be used).
+To validate models based on that information, you can set a common field on each model of the union (`pet_type` in the example below), typed as accepting one or multiple literal values. When defining the discriminated union type, the `discriminator` parameter of [the `Field()` function](https://pydantic.dev/docs/validation/latest/concepts/fields) ([local](./fields.md)) must be specified (the [`Discriminator`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Discriminator) ([local](./../api/pydantic/types.md#pydantic.types.Discriminator)) type can also be used).
 
 ```
  
@@ -261,15 +261,15 @@ To validate models based on that information, you can set a common field on each
 
 ✦ New in v2.13
 
-[Root models](<https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types> ([local](./models.md#rootmodel-and-custom-root-types))) with a [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>) root type can be used in place of [`Literal`](<https://docs.python.org/3/library/typing.html#typing.Literal>) types.
+[Root models](https://pydantic.dev/docs/validation/latest/concepts/models#rootmodel-and-custom-root-types) ([local](./models.md#rootmodel-and-custom-root-types)) with a [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal) root type can be used in place of [`Literal`](https://docs.python.org/3/library/typing.html#typing.Literal) types.
 
 ### Discriminated Unions with callable `Discriminator`
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-callable-discriminator> ([local](./unions.md#discriminated-unions-with-callable-discriminator)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#discriminated-unions-with-callable-discriminator> ([local](./unions.md#discriminated-unions-with-callable-discriminator)) ([local](./unions.md#discriminated-unions-with-callable-discriminator))
 
 API Documentation
 
-[`pydantic.types.Discriminator`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Discriminator> ([local](./../api/pydantic/types.md#pydantic.types.Discriminator)))  
+[`pydantic.types.Discriminator`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Discriminator) ([local](./../api/pydantic/types.md#pydantic.types.Discriminator))  
 
 In the case of a `Union` with multiple models, sometimes there isn’t a single uniform field across all models that you can use as a discriminator. This is the perfect use case for a callable `Discriminator`.
 
@@ -401,7 +401,7 @@ For example:
 
 Note
 
-Using the [annotated pattern](<https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern> ([local](./fields.md#the-annotated-pattern))) can be handy to regroup the `Union` and `discriminator` information. See the next example for more details.
+Using the [annotated pattern](https://pydantic.dev/docs/validation/latest/concepts/fields#the-annotated-pattern) ([local](./fields.md#the-annotated-pattern)) can be handy to regroup the `Union` and `discriminator` information. See the next example for more details.
 
 There are a few ways to set a discriminator for a field, all varying slightly in syntax.
 
@@ -434,7 +434,7 @@ Python changes `Union[T]` into `T` at interpretation time, so it is not possible
 
 ### Nested Discriminated Unions
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#nested-discriminated-unions> ([local](./unions.md#nested-discriminated-unions)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#nested-discriminated-unions> ([local](./unions.md#nested-discriminated-unions)) ([local](./unions.md#nested-discriminated-unions))
 
 Only one discriminator can be set for a field but sometimes you want to combine multiple discriminators. You can do it by creating nested `Annotated` types, e.g.:
 
@@ -500,7 +500,7 @@ Only one discriminator can be set for a field but sometimes you want to combine 
 
 Tip
 
-If you want to validate data against a union, and solely a union, you can use pydantic’s [`TypeAdapter`](<https://pydantic.dev/docs/validation/latest/concepts/type_adapter> ([local](./type_adapter.md))) construct instead of inheriting from the standard `BaseModel`.
+If you want to validate data against a union, and solely a union, you can use pydantic’s [`TypeAdapter`](https://pydantic.dev/docs/validation/latest/concepts/type_adapter) ([local](./type_adapter.md)) construct instead of inheriting from the standard `BaseModel`.
 
 In the context of the previous example, we have the following:
 
@@ -519,7 +519,7 @@ In the context of the previous example, we have the following:
 
 ## Union Validation Errors
 
-[](<https://pydantic.dev/docs/validation/latest/concepts/unions#union-validation-errors> ([local](./unions.md#union-validation-errors)))
+<https://pydantic.dev/docs/validation/latest/concepts/unions#union-validation-errors> ([local](./unions.md#union-validation-errors)) ([local](./unions.md#union-validation-errors))
 
 When `Union` validation fails, error messages can be quite verbose, as they will produce validation errors for each case in the union. This is especially noticeable when dealing with recursive models, where reasons may be generated at each level of recursion. Discriminated unions help to simplify error messages in this case, as validation errors are only produced for the case with a matching discriminator value.
 
@@ -621,7 +621,7 @@ You can also customize the error type, message, and context for a `Discriminator
 
 ```
 
-You can also simplify error messages by labeling each case with a [`Tag`](<https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Tag> ([local](./../api/pydantic/types.md#pydantic.types.Tag))). This is especially useful when you have complex types like those in this example:
+You can also simplify error messages by labeling each case with a [`Tag`](https://pydantic.dev/docs/validation/latest/api/pydantic/types/#pydantic.types.Tag) ([local](./../api/pydantic/types.md#pydantic.types.Tag)). This is especially useful when you have complex types like those in this example:
 
 ```
  
